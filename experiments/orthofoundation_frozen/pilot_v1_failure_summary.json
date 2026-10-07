@@ -1,0 +1,15 @@
+{
+  "kernel": "alanchoo/rsna-knee-orthofoundation-pilot",
+  "version": 1,
+  "status": "ERROR",
+  "failure_message_from_api": "",
+  "outputs_available": [
+    "rsna-knee-orthofoundation-pilot.log"
+  ],
+  "log_content": "[]",
+  "notebook_output_available": false,
+  "our_failure_json_available": false,
+  "gpu_seconds_used_before": 3159.2,
+  "gpu_seconds_used_after": 3159.2,
+  "conclusion": "Failure occurred without Pythonexecutionartifacts; exactinfrastructurecause notyetidentified."
+}

@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-07T12:08:59.957832+00:00",
-  "stage": "PILOT_RUNNING",
+  "updated_utc": "2026-10-07T12:22:08.499329+00:00",
+  "stage": "PILOT_V1_ERROR",
   "training_started": false,
   "model": "OrthoFoundation-L / DINOv3 ViT-L/16",
   "checkpoint_sha256": "385a775822107b68eaa486336feb982e1ce7bd6d4e8c03ceb482a0bf546f2ff9",
@@ -12,8 +12,8 @@
   "gpu_quota_available_seconds_before_experiment": 18440.8,
   "kaggle_kernel": "https://www.kaggle.com/code/alanchoo/rsna-knee-orthofoundation-pilot",
   "public_score": null,
-  "note": "Kaggle pilot pipeline RUNNING; server status alone does not yet prove features or head optimizer updates. Full experiment awaits successful pilot.",
+  "note": "Pilot V1 failed with no notebook/provenance/failure outputs; downloaded log is emptyJSON[]. GPUtime unchanged3159.2s. Startup rootcause investigation; nofulltraining launched.",
   "kaggle_version": 1,
   "kaggle_kernel_id": 137481721,
-  "kaggle_status": "RUNNING"
+  "kaggle_status": "ERROR"
 }

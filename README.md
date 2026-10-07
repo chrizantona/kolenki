@@ -9,7 +9,7 @@
 | GoodPJ, авторский baseline V2 | 0.944 | Исторический результат автора; не наш запуск |
 | Наше воспроизведение baseline | 0.943 | Завершённое Kaggle scoring |
 | Наш ансамбль с дообученным ConvNeXt | **0.944** | Submission `56891310`, статус `COMPLETE` |
-| OrthoFoundation | — | GPU-pilot `RUNNING`; полный запуск после проверки. [Статус и ссылки](experiments/orthofoundation_frozen/STATUS.md) |
+| OrthoFoundation | — | Pilot V1: ошибка подготовки запуска, диагностика. [Статус и ссылки](experiments/orthofoundation_frozen/STATUS.md) |
 
 Результаты выше проверены **7 октября 2026**. Разница между двумя сабмитами — один отображаемый шаг leaderboard; это ещё не доказательство устойчивого улучшения на независимой выборке.
 

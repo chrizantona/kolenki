@@ -1,8 +1,8 @@
 # OrthoFoundation frozen features → 12-label head
 
-**Этап: GPU-pilot запущен на Kaggle, статус `RUNNING`. Полный эксперимент ещё не запущен.**
+**Этап: pilot V1 завершился с `ERROR`; выполняем диагностику запуска. Полный эксперимент ещё не запущен.**
 
-[Notebook pilot](https://www.kaggle.com/code/alanchoo/rsna-knee-orthofoundation-pilot), версия **1**, kernel `137481721`. Статус сервера подтверждён; результаты GPU-проверки и фактические обновления головы пока ожидаются.
+[Notebook pilot](https://www.kaggle.com/code/alanchoo/rsna-knee-orthofoundation-pilot), версия **1**, kernel `137481721`. Статус `ERROR` подтверждён. В output нет notebook, traceback или наших run-файлов; log содержит только `[]`. GPU-квота не списалась. По имеющимся данным, сбой произошёл на подготовке запуска; точная причина ещё проверяется. [Наблюдения](pilot_v1_failure_summary.json).
 
 Взяли опубликованный OrthoFoundation-L, основанный на DINOv3 ViT-L/16. Checkpoint скачан: **1 213 056 638 bytes**, SHA256 `385a775822107b68eaa486336feb982e1ce7bd6d4e8c03ceb482a0bf546f2ff9`. Строгая загрузка всех 368 ключей и CPU forward прошли; выход — конечный 1024-мерный CLS-вектор. Это проверка совместимости, не проверка точности.
 
