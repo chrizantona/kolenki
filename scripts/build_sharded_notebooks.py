@@ -5,10 +5,14 @@ import ast
 import base64
 import hashlib
 import importlib.util
+import inspect
 import json
 import math
 from pathlib import Path
 import re
+import shutil
+import textwrap
+import time
 import zlib
 
 import nbformat
@@ -31,9 +35,139 @@ def title_for_slug(slug):
     return title
 
 
+def validate_cache_dataset_manifest(manifest, dataset_id, global_manifest, global_root):
+    """A transport mirror may change packaging, never the global cache receipt."""
+    shard = manifest.get("shard")
+    if type(shard) is not int or shard not in range(7):
+        raise RuntimeError("Dataset mirror shard must be within 0..6")
+    if manifest.get("schema") != "rsna_knee_cache_dataset_mirror_v1":
+        raise RuntimeError("Unknown cache dataset mirror schema")
+    dataset = manifest.get("dataset", {})
+    if dataset.get("identifier") != dataset_id or type(dataset.get("version_number")) is not int or dataset["version_number"] < 1:
+        raise RuntimeError("Dataset mirror identifier/version differs from pin")
+    source = manifest.get("source", {})
+    plan = next(row for row in global_manifest["source_plan"] if row["shard"] == shard)
+    if source.get("kernel") != plan["kernel_id"] or type(source.get("version_number")) is not int or source["version_number"] < 1:
+        raise RuntimeError("Dataset mirror source kernel/version differs from global provenance")
+    pin = next(row for row in global_manifest["cache_input_fingerprints"] if row["plan_sha256"] == plan["plan_sha256"])
+    if manifest.get("fingerprint") != pin:
+        raise RuntimeError("Dataset mirror fingerprint differs from global pin")
+    archive = manifest.get("archive", {})
+    summary = json.loads((Path(global_root) / f"cache_receipts/shard_{shard}/cache_summary.json").read_text())
+    if (archive.get("filename") != "cache384_train.zip.bin" or archive.get("original_name") != "cache384_train.zip"
+            or archive.get("sha256") != pin["archive_sha256"] or archive.get("bytes") != summary["storage_bytes"]):
+        raise RuntimeError("Dataset mirror archive bytes/SHA differ from global pin")
+    receipt_archive = manifest.get("receipt_archive", {})
+    if (receipt_archive.get("filename") != "cache_receipts.tar.gz.bin"
+            or type(receipt_archive.get("bytes")) is not int or receipt_archive["bytes"] <= 0
+            or not re.fullmatch(r"[0-9a-f]{64}", receipt_archive.get("sha256", ""))):
+        raise RuntimeError("Dataset mirror receipt archive is invalid")
+    prefix = f"cache_receipts/shard_{shard}/"
+    expected = {row["path"][len(prefix):]: {"path": row["path"][len(prefix):], "bytes": row["bytes"], "sha256": row["sha256"]}
+                for row in global_manifest["members"] if row["path"].startswith(prefix)}
+    members = manifest.get("receipt_members", [])
+    if len(members) != len(expected) or {row.get("path"): row for row in members} != expected:
+        raise RuntimeError("Dataset mirror receipt members differ from global metadata")
+    for name in expected:
+        path = Path(name)
+        if path.is_absolute() or ".." in path.parts:
+            raise RuntimeError("Unsafe dataset mirror receipt path")
+    return shard
+
+
+def stream_sha256(path, deadline=None):
+    """Bound memory and include transport validation in the Python-stage budget."""
+    digest = hashlib.sha256()
+    with Path(path).open("rb") as stream:
+        while True:
+            if deadline is not None and time.monotonic() >= deadline:
+                raise RuntimeError("Dataset archive hashing exhausted Python-stage budget")
+            chunk = stream.read(8 * 1024 * 1024)
+            if not chunk:
+                break
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def prepare_cache_dataset(source, target, spec, global_manifest, global_root, unpack_archive, checkpoint, deadline):
+    """Expose exact bytes under the unchanged loader's canonical ZIP filename."""
+    started = time.monotonic()
+    manifest_file = Path(source) / "cache_dataset_manifest.json"
+    if stream_sha256(manifest_file, deadline) != spec["manifest_sha256"]:
+        raise RuntimeError("Cache dataset version manifest SHA differs from prepared pin")
+    manifest = json.loads(manifest_file.read_text())
+    shard = validate_cache_dataset_manifest(manifest, spec["dataset_id"], global_manifest, global_root)
+    if manifest != spec["manifest"] or shard != spec["shard"]:
+        raise RuntimeError("Cache dataset version manifest differs from prepared source/version")
+    archive = Path(source) / manifest["archive"]["filename"]
+    if not archive.is_file() or archive.stat().st_size != manifest["archive"]["bytes"]:
+        raise RuntimeError("Mounted dataset archive size differs from pin")
+    checkpoint("dataset_cache_full_archive_hash")
+    hash_started = time.monotonic()
+    if stream_sha256(archive, deadline) != manifest["archive"]["sha256"]:
+        raise RuntimeError("Mounted dataset archive SHA differs from pin")
+    hash_seconds = time.monotonic() - hash_started
+    checkpoint("dataset_cache_receipts_unpack")
+    if Path(target).exists():
+        raise RuntimeError("Dataset cache scratch root already exists; refuse stale files")
+    Path(target).parent.mkdir(parents=True, exist_ok=True)
+    staging = Path(target).parent / (Path(target).name + "_receipts_verified")
+    if staging.exists():
+        raise RuntimeError("Dataset receipt verification staging already exists")
+    unpack_archive(Path(source) / manifest["receipt_archive"]["filename"], staging, manifest["receipt_archive"],
+                   [row["path"] for row in manifest["receipt_members"]])
+    for row in manifest["receipt_members"]:
+        path = staging / row["path"]
+        if path.stat().st_size != row["bytes"] or stream_sha256(path, deadline) != row["sha256"]:
+            raise RuntimeError("Dataset receipt bytes/SHA differ from global pin before copy")
+    Path(target).mkdir()
+    for row in manifest["receipt_members"]:
+        destination = Path(target) / row["path"]
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(staging / row["path"], destination)
+        if stream_sha256(destination, deadline) != row["sha256"]:
+            raise RuntimeError("Copied dataset receipt bytes/SHA differ from global pin")
+    shutil.rmtree(staging)
+    (Path(target) / manifest["archive"]["original_name"]).symlink_to(archive.resolve())
+    receipt = {"shard": shard, "dataset_id": spec["dataset_id"], "dataset_version_number": manifest["dataset"]["version_number"],
+               "manifest_sha256": spec["manifest_sha256"], "source": manifest["source"],
+               "archive_sha256": manifest["archive"]["sha256"], "archive_bytes": manifest["archive"]["bytes"],
+               "archive_hash_seconds": hash_seconds, "transport_validation_seconds": time.monotonic() - started,
+               "timer_boundary": "Included in inherited Python bootstrap timer; pre-Python Kaggle mounting excluded"}
+    return Path(target), receipt
+
+
+def load_cache_dataset_map(path, plan, global_root):
+    manifest = json.loads((global_root / "global_metadata_manifest.json").read_text())
+    specs = {}
+    for key, row in json.loads(path.read_text()).items():
+        source = Path(row["manifest_path"])
+        receipt = json.loads(source.read_text())
+        shard = validate_cache_dataset_manifest(receipt, row["dataset_id"], manifest, global_root)
+        if str(shard) != key or shard in specs:
+            raise RuntimeError("Dataset map key does not match unique mirror shard")
+        specs[shard] = {"shard": shard, "dataset_id": row["dataset_id"], "manifest_sha256": RUNNER.file_sha(source), "manifest": receipt}
+    return specs
+
+
+CACHE_DATASET_HELPERS = "\n".join(inspect.getsource(function) for function in
+    (validate_cache_dataset_manifest, stream_sha256, prepare_cache_dataset))
+
+
+def dataset_scratch_guard(body):
+    """Clean owned scratch for preparation failures as well as child failures."""
+    return ("_RSNA_CACHE_DATASET_SCRATCH=None\ntry:\n" + textwrap.indent(body, "    ")
+            + "finally:\n    if _RSNA_CACHE_DATASET_SCRATCH is not None:\n"
+              "        import shutil as _rsna_scratch_shutil\n"
+              "        _rsna_scratch_shutil.rmtree(_RSNA_CACHE_DATASET_SCRATCH,ignore_errors=True)\n")
+
+
 LAUNCH_BODY = r'''bootstrap_checkpoint('imports')
 from pathlib import Path
-import base64,hashlib,json,math,os,shutil,subprocess,sys,tarfile,time,zlib
+import base64,hashlib,json,math,os,re,shutil,subprocess,sys,tarfile,tempfile,time,zlib
+if SETTINGS.get('cache_transport')=='datasets':
+    _RSNA_CACHE_DATASET_SCRATCH=Path(tempfile.mkdtemp(prefix='rsna-knee-cache-mount-',dir='/tmp'))
+# CACHE_DATASET_HELPERS
 CODE=Path('/kaggle/working/sharded_source'); CODE.mkdir(exist_ok=True)
 bootstrap_checkpoint('vendoring')
 for name,encoded in json.loads(zlib.decompress(base64.b64decode(COMPRESSED_PAYLOAD))).items():
@@ -92,7 +226,17 @@ if SETTINGS['mode'] in ('pilot','extract'):
     source_archive=assets/dinov3['filename']
     unpack(source_archive,CODE,{'bytes':source_archive.stat().st_size,'sha256':dinov3['sha256']})
     bootstrap_checkpoint('owned_cache_resolution')
-    roots=[find_input(identifier,'cache_summary.json','notebooks') for identifier in SETTINGS['cache_kernel_ids']]
+    if SETTINGS.get('cache_transport','notebooks')=='datasets':
+        roots=[]; transport=[]
+        for spec in SETTINGS['cache_dataset_specs']:
+            source=find_input(spec['dataset_id'],'cache_dataset_manifest.json')
+            root,receipt=prepare_cache_dataset(source,_RSNA_CACHE_DATASET_SCRATCH/f"shard_{spec['shard']}",
+                spec,manifest,DATA,unpack,bootstrap_checkpoint,BOOTSTRAP_MONOTONIC+SETTINGS['max_seconds'])
+            roots.append(root); transport.append(receipt)
+            Path('/kaggle/working/cache_dataset_transport.json').write_text(json.dumps({'route':'datasets','mirrors':transport},indent=2))
+            print(json.dumps({'event':'cache_dataset_transport_verified',**receipt}),flush=True)
+    else:
+        roots=[find_input(identifier,'cache_summary.json','notebooks') for identifier in SETTINGS['cache_kernel_ids']]
     cmd+=['--shards',*[str(shard) for shard in SETTINGS['shards']],'--cache-roots',*[str(root) for root in roots],
           '--dinov3-repo',str(CODE/dinov3['archive_root']),'--checkpoint',str(assets/asset_manifest['checkpoint']['filename']),
           '--assets-manifest',str(asset_file)]
@@ -134,7 +278,8 @@ def create_notebook(directory, settings, metadata):
     payload = {name: base64.b64encode(path.read_bytes()).decode() for name, path in files.items()}
     settings["source_sha256"] = {name: hashlib.sha256(path.read_bytes()).hexdigest() for name, path in files.items()}
     compressed = base64.b64encode(zlib.compress(json.dumps(payload).encode(), 9)).decode()
-    code = instrument_bootstrap(LAUNCH_BODY, compressed, settings)
+    body = dataset_scratch_guard(LAUNCH_BODY.replace("# CACHE_DATASET_HELPERS", CACHE_DATASET_HELPERS))
+    code = instrument_bootstrap(body, compressed, settings)
     notebook = nbformat.v4.new_notebook(cells=[nbformat.v4.new_markdown_cell(
         "# RSNA Knee explicit sharded fallback: " + settings["mode"] + "\n\n"
         "All-seven metadata and global longest-series selection are validated before local archive filtering. "
@@ -168,6 +313,8 @@ def main():
     parser.add_argument("--shards", type=int, nargs="+", default=[0])
     parser.add_argument("--partial-kernels", nargs="+")
     parser.add_argument("--resume-kernel")
+    parser.add_argument("--cache-transport", choices=("notebooks", "datasets"), default="notebooks")
+    parser.add_argument("--cache-dataset-map", type=Path, help="Private JSON map shard -> dataset_id + local manifest_path")
     parser.add_argument("--planned-extraction-jobs", type=int, default=7)
     parser.add_argument("--max-seconds", type=int, help="May lower, never exceed the proportional preparation cap")
     parser.add_argument("--output-root", type=Path, default=ROOT / "artifacts/kaggle/sharded")
@@ -177,14 +324,21 @@ def main():
     plan = RUNNER.validate_global(args.global_root, global_sha)
     assets_sha = RUNNER.file_sha(args.assets_manifest)
     RUNNER.make_identity(plan, config, assets_sha)
+    cache_datasets = load_cache_dataset_map(args.cache_dataset_map, plan, args.global_root) if args.cache_dataset_map else {}
+    if args.cache_transport == "datasets" and args.stage != "merge-train" and not cache_datasets:
+        raise RuntimeError("Dataset extraction requires a verified private cache dataset map")
     docker = json.loads(args.docker_metadata.read_text())["docker_image"]
     stages = [("pilot", [0]), *[("extract", [shard]) for shard in range(7)], ("merge-train", [])] if args.stage == "all" else [(args.stage, args.shards if args.stage != "merge-train" else [])]
-    default_partials = [args.owner + f"/rsna-knee-ortho-shard-{shard}" for shard in range(7)]
+    dataset_route = args.cache_transport == "datasets"
+    pilot_slug = "rsna-knee-ortho-dataset-pilot" if dataset_route else "rsna-knee-ortho-sharded-pilot"
+    shard_prefix = "rsna-knee-ortho-dataset-shard-" if dataset_route else "rsna-knee-ortho-shard-"
+    merge_slug = "rsna-knee-ortho-dataset-merge-heads" if dataset_route else "rsna-knee-ortho-merge-heads"
+    default_partials = [args.owner + "/" + shard_prefix + str(shard) for shard in range(7)]
     for mode, shards in stages:
         if len(set(shards)) != len(shards) or not set(shards).issubset(range(7)):
             raise RuntimeError("Shard group must be distinct and within 0..6")
         group = "-".join(map(str, sorted(shards)))
-        slug = "rsna-knee-ortho-sharded-pilot" if mode == "pilot" else ("rsna-knee-ortho-shard-" + group if mode == "extract" else "rsna-knee-ortho-merge-heads")
+        slug = pilot_slug if mode == "pilot" else (shard_prefix + group if mode == "extract" else merge_slug)
         image_count = sum(int(RUNNER.owned_mask(plan, uid, set(shards)).sum()) for uid in plan["ids"]) * 4 if shards else 0
         cap = RUNNER.allocated_extraction_cap(image_count) if shards else RUNNER.HEAD_JOB_RESERVE_SECONDS
         budget = RUNNER.PILOT_BUDGET_SECONDS if mode == "pilot" else cap
@@ -194,24 +348,28 @@ def main():
             budget = args.max_seconds
         resume = args.resume_kernel if mode == "extract" else None
         if args.stage == "all" and mode == "extract" and shards == [0]:
-            resume = args.owner + "/rsna-knee-ortho-sharded-pilot"
+            resume = args.owner + "/" + pilot_slug
         if resume == args.owner + "/" + slug:
             raise RuntimeError("Resume kernel cannot be the output itself")
         cache_ids = [plan["kernel_by_shard"][shard] for shard in sorted(shards)]
+        if dataset_route and not set(shards).issubset(cache_datasets):
+            raise RuntimeError("Every requested shard requires its verified dataset mirror; no mixed transport fallback")
+        dataset_specs = [cache_datasets[shard] for shard in sorted(shards)] if dataset_route else []
         partials = args.partial_kernels or default_partials if mode == "merge-train" else []
         settings = {"mode": mode, "shards": sorted(shards), "config": config, "global_manifest_sha256": global_sha,
                     "assets_manifest_sha256": assets_sha, "metadata_dataset": args.metadata_dataset,
                     "assets_dataset": args.assets_dataset, "cache_kernel_ids": cache_ids, "partial_kernels": partials,
+                    "cache_transport": args.cache_transport, "cache_dataset_specs": dataset_specs,
                     "resume_kernel": resume, "max_seconds": budget, "expected_images_for_shards": image_count,
                     "planned_extraction_jobs": args.planned_extraction_jobs,
                     "total_frozen_budget_seconds": config["max_extract_seconds"], "head_fit_budget_seconds": 1200,
                     "head_job_reserve_seconds": RUNNER.HEAD_JOB_RESERVE_SECONDS}
-        datasets = [args.metadata_dataset] + ([args.assets_dataset] if mode != "merge-train" else [])
+        datasets = [args.metadata_dataset] + ([args.assets_dataset] if mode != "merge-train" else []) + [row["dataset_id"] for row in dataset_specs]
         metadata = {"id": args.owner + "/" + slug, "title": title_for_slug(slug),
                     "code_file": "train.ipynb", "language": "python", "kernel_type": "notebook", "is_private": True,
                     "enable_gpu": True, "enable_tpu": False, "enable_internet": False, "machine_shape": "NvidiaTeslaT4",
                     "competition_sources": [], "dataset_sources": datasets,
-                    "kernel_sources": partials if mode == "merge-train" else cache_ids + ([resume] if resume else []),
+                    "kernel_sources": partials if mode == "merge-train" else ([] if dataset_route else cache_ids) + ([resume] if resume else []),
                     "docker_image": docker, "docker_image_pinning_type": "original"}
         directory = args.output_root / slug
         create_notebook(directory, settings, metadata)

@@ -1,0 +1,27 @@
+{
+  "download_complete": true,
+  "source_kernel": "alanchoo/rsna-knee-cnxt-cache-0-zip",
+  "source_version_number": 1,
+  "archive_filename": "cache384_train.zip.bin",
+  "archive_original_name": "cache384_train.zip",
+  "archive_bytes": 10241860213,
+  "archive_sha256": "31b3dd3934e79931fa78195315bef1b58d8432bae841b7920c6d4497262e764c",
+  "central_directory_manifest_verified": true,
+  "zip_members": 3511,
+  "existing_load_cache_mixed_verified": true,
+  "original_pin_unchanged": true,
+  "fingerprint": {
+    "plan_sha256": "ddd0c339d29d875e2aaeb9e38a15fd6804e1ba6aaebb8f4977aadc0cae113db9",
+    "metadata_sha256": "ab5fb8a7714346b53d4038c6fc41f2f0555e38c384b30f8bfaf0dd77d76b6e1b",
+    "summary_sha256": "2982a09847900f9c84e94ca3e492a52353c6d219ac51b28a7957c852fee248ae",
+    "archive_sha256": "31b3dd3934e79931fa78195315bef1b58d8432bae841b7920c6d4497262e764c",
+    "manifest_sha256": "d1597336ef00be65c862238e0993a23311ef8279ee220c1efc024890bc2c3cd0",
+    "source_summary_sha256": "650e44a5c7ed2bb72082c25ea48059ebcef2655290757a5a0713be5940e9eded",
+    "repack_receipt_sha256": "e93119c90f953ec2c83b15210350b4baa99255e6d639f4d8247fb1cef1120eb2"
+  },
+  "resume_and_verification_seconds": 552.74,
+  "initial_transfer_seconds_before_disconnect": 600,
+  "active_transfer_and_verification_seconds": 1152.74,
+  "mean_active_MBps": 8.88,
+  "timing_note": "Includes initial600s and resumed transfer+verification; excludes idle time between attempts."
+}

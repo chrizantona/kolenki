@@ -1,0 +1,48 @@
+{
+  "schema": "dataset_pilot_static_verification_v1",
+  "status": "prepared_not_launched",
+  "remote_dataset_ready": "not checked by builder; root launch gate required",
+  "tests": {
+    "count": 37,
+    "command": "python -m unittest discover -s tests",
+    "result": "PASS",
+    "seconds": 8.675
+  },
+  "artifacts": {
+    "train.ipynb": {
+      "bytes": 73003,
+      "sha256": "b45777f46f6eef9d79aca988b474624445768bdf4fefd43f037d3798f519aab4"
+    },
+    "kernel-metadata.json": {
+      "bytes": 696,
+      "sha256": "0aa94dbd4307dab00bc90796bf49c5848604112e26566ab878acb5d106ebfdae"
+    },
+    "stage_config.json": {
+      "bytes": 6221,
+      "sha256": "e6d1c5ef2ec7da08211c83cebabffa636d358ab61e73b9d58578e101033cb0b5"
+    }
+  },
+  "builder_sha256": "8ecc00b2298e71fe58238abc32500c0249a4a63a7fe74a67e9cbb3e0a23b3995",
+  "runner_sha256": "ffc2d904e25f7bdbd506f8c6cd58607484ffacc0305a9665fd538778ca122441",
+  "transport_tests_sha256": "1301b6c1d26d6d06705bf71a9988d5400214c1cef7d29a2e8933962bd80d88bd",
+  "core_modules_match_published_pilot": true,
+  "config_matches_published_pilot": true,
+  "payload_files": 8,
+  "payload_bytes_exact": true,
+  "notebook_nbformat_ast_valid": true,
+  "manifest_pins": {
+    "global": "b2a87794d768ca3f6ee3968345f840f1028cff004708a2b3e0cfdfcfb2c15e60",
+    "encoder": "6feeb03c976483c2b91cca667f4fdbefa998d3620a93eb6006de22a13cbdeb4f",
+    "cache_dataset": "b8e48ce53c2085b93f1b1396ff24a25cf5835f8f289f82f32df9074d5a029327"
+  },
+  "inputs": [
+    "alanchoo/rsna-knee-ortho-global-metadata-v1",
+    "alanchoo/orthofoundation-l-assets-v1",
+    "alanchoo/rsna-knee-cache-0-bin-v1"
+  ],
+  "kernel_sources": [],
+  "runtime_seconds": 600,
+  "expected_images_for_shard": 12240,
+  "scratch": "Owned tempfile directory under /tmp; outer finally cleans all preparation/launch/report failures; SIGKILL cannot collect scratch as working outputs",
+  "timer": "Full archive streaming SHA included in inherited Python-stage elapsed timer/projection; no automatic cap relaxation; pre-Python mounts excluded"
+}

@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-07T13:51:09.525970+00:00",
+  "updated_utc": "2026-10-07T14:12:09.559784+00:00",
   "stage": "SINGLE_CACHE_PRE_PYTHON_ERROR_DATASET_MIRROR_PREPARATION",
   "training_started": false,
   "public_score": null,
@@ -29,5 +29,11 @@
   "additional_gpu_billed_seconds": 0.0,
   "metadata_assets_gpu_probe_passed": true,
   "metadata_assets_gpu_probe_id": 137493072,
-  "gpu_quota_available_seconds_last_snapshot": 18369.248
+  "gpu_quota_available_seconds_last_snapshot": 18369.248,
+  "dataset_route_code_review_passed": true,
+  "dataset_route_tests_passed": 37,
+  "cache0_full_local_sha_verified": true,
+  "cache0_remote_dataset_ready": false,
+  "dataset_pilot_status": "PREPARED_NOT_LAUNCHED",
+  "dataset_pilot_notebook_sha256": "b45777f46f6eef9d79aca988b474624445768bdf4fefd43f037d3798f519aab4"
 }
