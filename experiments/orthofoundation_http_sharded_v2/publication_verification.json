@@ -1,0 +1,218 @@
+{
+  "checked_at_utc": "2026-10-07T16:09:59.451790+00:00",
+  "static_verification_only": true,
+  "public_runtime_tests_rerun": false,
+  "private_fixture_tests": 25,
+  "private_fixture_exit_code": 0,
+  "copied_exact_file_count": 40,
+  "all8notebooks_AST_nbformat_and_scientific8_bytepins": true,
+  "all6transport_source_bytepins": true,
+  "source_index_audited_no_UID_medical_rows_or_credentials": true,
+  "only4artifact_filenames_copied_per_notebook": true,
+  "access_jobs_approval_files_READtemplates_pilotfeatures_not_copied": true,
+  "nonportable_private_builder_omitted_sha256": "1f1f70722646f1890f3937a833e5e8f48ddc590236e27d2e8dee8b4eff38e56c",
+  "private_preparation_receipt_sha256": "f974a437550ceab02652929d4033ea60a6099e5df7da35cbf82142b90fb08689",
+  "no_Git_API_GPU_UI_or_URL_access": true,
+  "files": [
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-0-v2/train.ipynb",
+      "bytes": 133186,
+      "sha256": "f76733db02b5808a0026a232c75a0b495c7388bcfb96c91a38574bc763624782"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-0-v2/kernel-metadata.json",
+      "bytes": 767,
+      "sha256": "f3631a4095dfd7c1e68c757b9ff7f3a7686755d005e6b7097bc58cd5e99db982"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-0-v2/launch_settings.json",
+      "bytes": 721,
+      "sha256": "c661d69790b6f8054957c451b7683bfcdbb48b7c5f1bb2a7af1cd66feef3ac91"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-0-v2/stage_config.json",
+      "bytes": 2620,
+      "sha256": "3a9dfbdaf0872532ecb62f445372b4422e9c25304f6fc2d16735ff406da9625b"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-1-v2/train.ipynb",
+      "bytes": 133136,
+      "sha256": "6e1941e59db8bfe678112828dbdac9e11b988209af421d756a79547429c02a93"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-1-v2/kernel-metadata.json",
+      "bytes": 712,
+      "sha256": "95ea8743dd049b963f0552185734bb55192d040ccd08a6e12327245677a51da9"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-1-v2/launch_settings.json",
+      "bytes": 721,
+      "sha256": "0fb5079aa2d1a2e5e828c61e90447afd83fc29ba6bea984ede3e85fe15f1c9cf"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-1-v2/stage_config.json",
+      "bytes": 2577,
+      "sha256": "113e35b92dbd07b382aca7d1467e467c4695b3e3d5f207e42540b5c3391fb200"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-2-v2/train.ipynb",
+      "bytes": 133136,
+      "sha256": "4609778527439eb7b10fffdc5909c68dffe173fb3e59fab7a7ee86c19011a383"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-2-v2/kernel-metadata.json",
+      "bytes": 712,
+      "sha256": "9ca8f9ef250147677cd7d0446eb97a942e49965256e931ca3a70a60b3389f449"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-2-v2/launch_settings.json",
+      "bytes": 721,
+      "sha256": "bd858ccd589e840be98ba5e50393f6c4bdd985653cff38592ec3a18a9846cda9"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-2-v2/stage_config.json",
+      "bytes": 2577,
+      "sha256": "d140a06532c7910b5c39a23b8459e8b87adeeb8b63172333a5cafea835c2b494"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-3-v2/train.ipynb",
+      "bytes": 133136,
+      "sha256": "334e24a3bc182e4d53930526b1cad2a1eb009f71529bf1d7c57044c11dfd8c92"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-3-v2/kernel-metadata.json",
+      "bytes": 712,
+      "sha256": "902d5468bc354f98c6fd4e639c62e918b73fe061888c2a7eb53fc641d951415f"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-3-v2/launch_settings.json",
+      "bytes": 721,
+      "sha256": "084b6cb85988a61f84bbabb456d9f1399472b86014cd60d8f7ac0b8574711f5a"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-3-v2/stage_config.json",
+      "bytes": 2577,
+      "sha256": "d3cc6b18b2bac04ca1ec7e1be1e410a01108f3e2dd5ee2a1eeef899d208b36dd"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-4-v2/train.ipynb",
+      "bytes": 133136,
+      "sha256": "ffa781592d87230da6c00dcf51caf692874fabf255cd516f2fb6642e10c62914"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-4-v2/kernel-metadata.json",
+      "bytes": 712,
+      "sha256": "48cd7699c02504cce885c2afb195279885d793d7229b2e9d2779708940ebcf3b"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-4-v2/launch_settings.json",
+      "bytes": 721,
+      "sha256": "64bd92acee8abcece69459240a73c7ca8cefe5a09c9035614b66be3058bc0fb3"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-4-v2/stage_config.json",
+      "bytes": 2577,
+      "sha256": "71bcdf5125fcdca7c381548aa899cb9988ddf5e24632cba733a73e6c50b81cf2"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-5-v2/train.ipynb",
+      "bytes": 133698,
+      "sha256": "1eb0d4063471150b477e2b3902ec91dac43f53a6bd08a8467010c9a4845a826d"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-5-v2/kernel-metadata.json",
+      "bytes": 712,
+      "sha256": "b742bf388dbd68bfd2133e5fd500e5e1e7a0e8117394e1e592fb5cc4af6322af"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-5-v2/launch_settings.json",
+      "bytes": 721,
+      "sha256": "bdf8bcfea3b0d31a69166e2a11702a29323e8aa018ad3af68e239d3d7dc302eb"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-5-v2/stage_config.json",
+      "bytes": 2584,
+      "sha256": "61013759893fbee12805beabcc6e8d49de37b8589931c4b1e12f80c4ee47af45"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-6-v2/train.ipynb",
+      "bytes": 133135,
+      "sha256": "e89f6e32ffe1a74194bcc403430a6c8b0e328be5e143e76d56dd070c544e7c5e"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-6-v2/kernel-metadata.json",
+      "bytes": 712,
+      "sha256": "14805dca7b53c771d35857004d8bbb080d690684a7e515c3a62c8c7f4f986ed1"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-6-v2/launch_settings.json",
+      "bytes": 721,
+      "sha256": "0f8e4e8ee6ca4fba0d33e059ea4c9d9efcd8e82def71b2eb007aecb47136a05c"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-shard-6-v2/stage_config.json",
+      "bytes": 2577,
+      "sha256": "e6ba48428e5cd46d6f54ac1bd96451a9f38ccc6ba7fcb84a02e51b034751c5b4"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-merge-heads-v2/train.ipynb",
+      "bytes": 96270,
+      "sha256": "dd812f249a74163f78d3f84058f708ed1836a8218fb6754d96e5adf2164115cc"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-merge-heads-v2/kernel-metadata.json",
+      "bytes": 962,
+      "sha256": "7e1404f8e6e133457bc14a38b7a5b0ecceb0a3c549b9d3fecb65692517fa281b"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-merge-heads-v2/launch_settings.json",
+      "bytes": 739,
+      "sha256": "8c15473d4d4dc9d8bc4f59b01b5331e1ef672b971dc1a65a2ebd95fac5f70f5d"
+    },
+    {
+      "path": "notebooks/orthofoundation/http_sharded_v2/rsna-knee-ortho-http-merge-heads-v2/stage_config.json",
+      "bytes": 2818,
+      "sha256": "12376259bf897bd1ef0c32981a392201911e57be382f2c750d9f204b43cb6bc3"
+    },
+    {
+      "path": "scripts/http_sharded_v2/transport.py",
+      "bytes": 5649,
+      "sha256": "aa372cf5d853e57025aee39c1696ef7bff00dd9aa46bfc62030bea7f0700b24d"
+    },
+    {
+      "path": "scripts/http_sharded_v2/forecast.py",
+      "bytes": 5483,
+      "sha256": "249caa17b0752f58bd530a35c613cb6e5ec8b0e13978cd92c8aa4dc8a5aa45ab"
+    },
+    {
+      "path": "scripts/http_sharded_v2/approval.py",
+      "bytes": 2190,
+      "sha256": "195deaacc6ba80957a06705fc72ac46adaeccd947f58532e920ae1624d119809"
+    },
+    {
+      "path": "scripts/http_sharded_v2/download.py",
+      "bytes": 6040,
+      "sha256": "b82bda2eb05b7e723b01ce67b6278752d7ece010259f768e20d69a99a55fbaa5"
+    },
+    {
+      "path": "scripts/http_sharded_v2/parent_guard.py",
+      "bytes": 4643,
+      "sha256": "11c5430b2e5e961189bf16a1be2e0cfc06c63baa56e3ea36f57f18492c93e50f"
+    },
+    {
+      "path": "scripts/http_sharded_v2/transfer_reviewed.py",
+      "bytes": 12326,
+      "sha256": "7212063963481c5fe35ee2d27c61ef101d506a93372326f5501f6771615206ed"
+    },
+    {
+      "path": "experiments/orthofoundation_http_sharded_v2/source_index.json",
+      "bytes": 17154,
+      "sha256": "0e450019b7f37a39701d78be46f1ea39b76614f90948c6096f0a1fe3eb2544b7"
+    },
+    {
+      "path": "experiments/orthofoundation_http_sharded_v2/preparation_receipt.json",
+      "bytes": 9860,
+      "sha256": "f974a437550ceab02652929d4033ea60a6099e5df7da35cbf82142b90fb08689"
+    }
+  ]
+}

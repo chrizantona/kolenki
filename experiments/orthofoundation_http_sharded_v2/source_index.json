@@ -1,0 +1,448 @@
+[
+  {
+    "archive": {
+      "bytes": 10241860213,
+      "filename": "cache384_train.zip",
+      "sha256": "31b3dd3934e79931fa78195315bef1b58d8432bae841b7920c6d4497262e764c"
+    },
+    "cache_kernel_id": "alanchoo/rsna-knee-cnxt-cache-0-zip",
+    "expected_images": 12240,
+    "fingerprint": {
+      "archive_sha256": "31b3dd3934e79931fa78195315bef1b58d8432bae841b7920c6d4497262e764c",
+      "manifest_sha256": "d1597336ef00be65c862238e0993a23311ef8279ee220c1efc024890bc2c3cd0",
+      "metadata_sha256": "ab5fb8a7714346b53d4038c6fc41f2f0555e38c384b30f8bfaf0dd77d76b6e1b",
+      "plan_sha256": "ddd0c339d29d875e2aaeb9e38a15fd6804e1ba6aaebb8f4977aadc0cae113db9",
+      "repack_receipt_sha256": "e93119c90f953ec2c83b15210350b4baa99255e6d639f4d8247fb1cef1120eb2",
+      "source_summary_sha256": "650e44a5c7ed2bb72082c25ea48059ebcef2655290757a5a0713be5940e9eded",
+      "summary_sha256": "2982a09847900f9c84e94ca3e492a52353c6d219ac51b28a7957c852fee248ae"
+    },
+    "job_filename_alias": "cache384_train.zip.bin",
+    "job_id": "shard_0",
+    "origin": {
+      "filename": "cache384_train.zip.bin",
+      "identifier": "alanchoo/rsna-knee-cache-0-bin-v1",
+      "kind": "dataset",
+      "version_number": 1
+    },
+    "original_npy_byte_identity_claim": true,
+    "receipt_members": [
+      {
+        "bytes": 632893,
+        "path": "cache384_train_meta.csv",
+        "sha256": "ab5fb8a7714346b53d4038c6fc41f2f0555e38c384b30f8bfaf0dd77d76b6e1b"
+      },
+      {
+        "bytes": 1011,
+        "path": "cache_summary.json",
+        "sha256": "2982a09847900f9c84e94ca3e492a52353c6d219ac51b28a7957c852fee248ae"
+      },
+      {
+        "bytes": 1667720,
+        "path": "cache_zip_manifest.json",
+        "sha256": "d1597336ef00be65c862238e0993a23311ef8279ee220c1efc024890bc2c3cd0"
+      },
+      {
+        "bytes": 530106,
+        "path": "port/plan.csv",
+        "sha256": "ddd0c339d29d875e2aaeb9e38a15fd6804e1ba6aaebb8f4977aadc0cae113db9"
+      },
+      {
+        "bytes": 691,
+        "path": "repack_receipt.json",
+        "sha256": "e93119c90f953ec2c83b15210350b4baa99255e6d639f4d8247fb1cef1120eb2"
+      },
+      {
+        "bytes": 406,
+        "path": "source_cache_summary.json",
+        "sha256": "650e44a5c7ed2bb72082c25ea48059ebcef2655290757a5a0713be5940e9eded"
+      }
+    ],
+    "runtime_seconds": 1204,
+    "shard": 0,
+    "storage_kind": "exact_npy_repack"
+  },
+  {
+    "archive": {
+      "bytes": 10275094284,
+      "filename": "cache384_train.zip",
+      "sha256": "b7d73673925bba6e43908b54c5d27a7b027383853d4046028517b46bd65755fe"
+    },
+    "cache_kernel_id": "alanchoo/rsna-knee-cnxt-cache-1-zip",
+    "expected_images": 12528,
+    "fingerprint": {
+      "archive_sha256": "b7d73673925bba6e43908b54c5d27a7b027383853d4046028517b46bd65755fe",
+      "manifest_sha256": "3cea62d88455a6f0d6037f870d4e2f129e4c06f0e8c841f0e36144f66ade1fb8",
+      "metadata_sha256": "e5ffddbd03f620bf6bf4519412b501602369181991ec5c587c087a0629f27063",
+      "plan_sha256": "f011f6bc9e4258a950240610c4c0c9414bdc8555f5ce0c721ae620254f37f80c",
+      "repack_receipt_sha256": "609b4b5c2f24818e1dd42f24607871d91fb18fdd531ae721beb31460e6a2b5b3",
+      "source_summary_sha256": "c6f8487ddcdcb53dcbd5c6254c361fb66fd3caadacdfd8cdcae95a30073a1f2a",
+      "summary_sha256": "fd5c59300123e5914ac67a071b4a2754bc5b02c0fb8fdb764353dd47a9454b34"
+    },
+    "job_filename_alias": "cache384_train.zip.bin",
+    "job_id": "shard_1",
+    "origin": {
+      "filename": "cache384_train.zip",
+      "identifier": "alanchoo/rsna-knee-cnxt-cache-1-zip",
+      "kind": "kernel",
+      "version_number": 1
+    },
+    "original_npy_byte_identity_claim": true,
+    "receipt_members": [
+      {
+        "bytes": 643878,
+        "path": "cache384_train_meta.csv",
+        "sha256": "e5ffddbd03f620bf6bf4519412b501602369181991ec5c587c087a0629f27063"
+      },
+      {
+        "bytes": 1007,
+        "path": "cache_summary.json",
+        "sha256": "fd5c59300123e5914ac67a071b4a2754bc5b02c0fb8fdb764353dd47a9454b34"
+      },
+      {
+        "bytes": 1696682,
+        "path": "cache_zip_manifest.json",
+        "sha256": "3cea62d88455a6f0d6037f870d4e2f129e4c06f0e8c841f0e36144f66ade1fb8"
+      },
+      {
+        "bytes": 539235,
+        "path": "port/plan.csv",
+        "sha256": "f011f6bc9e4258a950240610c4c0c9414bdc8555f5ce0c721ae620254f37f80c"
+      },
+      {
+        "bytes": 687,
+        "path": "repack_receipt.json",
+        "sha256": "609b4b5c2f24818e1dd42f24607871d91fb18fdd531ae721beb31460e6a2b5b3"
+      },
+      {
+        "bytes": 402,
+        "path": "source_cache_summary.json",
+        "sha256": "c6f8487ddcdcb53dcbd5c6254c361fb66fd3caadacdfd8cdcae95a30073a1f2a"
+      }
+    ],
+    "runtime_seconds": 1231,
+    "shard": 1,
+    "storage_kind": "exact_npy_repack"
+  },
+  {
+    "archive": {
+      "bytes": 10302281809,
+      "filename": "cache384_train.zip",
+      "sha256": "c7703128578cb7eac8141e309f0ada35a3eb616ff2ec6d19a611160a7ef5cc38"
+    },
+    "cache_kernel_id": "alanchoo/rsna-knee-cnxt-cache-2-zip",
+    "expected_images": 12580,
+    "fingerprint": {
+      "archive_sha256": "c7703128578cb7eac8141e309f0ada35a3eb616ff2ec6d19a611160a7ef5cc38",
+      "manifest_sha256": "8ac9904d5a501f3103581755d8c16c6c542d7f04b1e7231689c8096a8f0cfc52",
+      "metadata_sha256": "88d3dc06b9bb788d0f0ed23cf95e4eb8a502c378042d9bb8fe09f9e198fd3d7b",
+      "plan_sha256": "32fc0fbdd03759d1a6b7167ace7ff7659b550b78e4cfc038f370e4dfb7509793",
+      "repack_receipt_sha256": "be02689ae9e44e455795d771c65ad6851d7c31ed0ce7b7e8c5a3540bc9ad2c92",
+      "source_summary_sha256": "e30d65b481432d2c7182b0b618b56e88c9dfbc11e95701c39ef083a15a28fa9a",
+      "summary_sha256": "a7041fbd39b0f348ca50480b8598a72917f2a06af8787c09cf2c5af9d2b5a5e1"
+    },
+    "job_filename_alias": "cache384_train.zip.bin",
+    "job_id": "shard_2",
+    "origin": {
+      "filename": "cache384_train.zip",
+      "identifier": "alanchoo/rsna-knee-cnxt-cache-2-zip",
+      "kind": "kernel",
+      "version_number": 1
+    },
+    "original_npy_byte_identity_claim": true,
+    "receipt_members": [
+      {
+        "bytes": 646487,
+        "path": "cache384_train_meta.csv",
+        "sha256": "88d3dc06b9bb788d0f0ed23cf95e4eb8a502c378042d9bb8fe09f9e198fd3d7b"
+      },
+      {
+        "bytes": 1007,
+        "path": "cache_summary.json",
+        "sha256": "a7041fbd39b0f348ca50480b8598a72917f2a06af8787c09cf2c5af9d2b5a5e1"
+      },
+      {
+        "bytes": 1703817,
+        "path": "cache_zip_manifest.json",
+        "sha256": "8ac9904d5a501f3103581755d8c16c6c542d7f04b1e7231689c8096a8f0cfc52"
+      },
+      {
+        "bytes": 541554,
+        "path": "port/plan.csv",
+        "sha256": "32fc0fbdd03759d1a6b7167ace7ff7659b550b78e4cfc038f370e4dfb7509793"
+      },
+      {
+        "bytes": 691,
+        "path": "repack_receipt.json",
+        "sha256": "be02689ae9e44e455795d771c65ad6851d7c31ed0ce7b7e8c5a3540bc9ad2c92"
+      },
+      {
+        "bytes": 402,
+        "path": "source_cache_summary.json",
+        "sha256": "e30d65b481432d2c7182b0b618b56e88c9dfbc11e95701c39ef083a15a28fa9a"
+      }
+    ],
+    "runtime_seconds": 1236,
+    "shard": 2,
+    "storage_kind": "exact_npy_repack"
+  },
+  {
+    "archive": {
+      "bytes": 10277511797,
+      "filename": "cache384_train.zip",
+      "sha256": "b0f85db02d32467da7d433b4cfd6b10d71b15f9419d52119f19ef9abbf9cec3e"
+    },
+    "cache_kernel_id": "alanchoo/rsna-knee-cnxt-cache-3-zip",
+    "expected_images": 12332,
+    "fingerprint": {
+      "archive_sha256": "b0f85db02d32467da7d433b4cfd6b10d71b15f9419d52119f19ef9abbf9cec3e",
+      "manifest_sha256": "57d66f07c984973dc987a6657f695764ebb53ff0c18283508c5a91af8902af49",
+      "metadata_sha256": "1fa77f37dca90b7954403ee4644594230b5ba73fe76bc52ef637bb6cc9d23be8",
+      "plan_sha256": "6a11265070ec73995cfd9f61c63f506063bc39397605c4f053f05dc48b52b395",
+      "repack_receipt_sha256": "1216666293208ff5f807ca677a433053913d52a7f0876b19f057866219510614",
+      "source_summary_sha256": "a982b5c47dea05d26aaefc967108b73c761fa2b1eb32193ad5de329efede8e89",
+      "summary_sha256": "532b7d09f048d4f05dc86b6bb689d72c6d2004cde9f5e15d0cd6256d2c785f21"
+    },
+    "job_filename_alias": "cache384_train.zip.bin",
+    "job_id": "shard_3",
+    "origin": {
+      "filename": "cache384_train.zip",
+      "identifier": "alanchoo/rsna-knee-cnxt-cache-3-zip",
+      "kind": "kernel",
+      "version_number": 1
+    },
+    "original_npy_byte_identity_claim": true,
+    "receipt_members": [
+      {
+        "bytes": 639992,
+        "path": "cache384_train_meta.csv",
+        "sha256": "1fa77f37dca90b7954403ee4644594230b5ba73fe76bc52ef637bb6cc9d23be8"
+      },
+      {
+        "bytes": 1011,
+        "path": "cache_summary.json",
+        "sha256": "532b7d09f048d4f05dc86b6bb689d72c6d2004cde9f5e15d0cd6256d2c785f21"
+      },
+      {
+        "bytes": 1686718,
+        "path": "cache_zip_manifest.json",
+        "sha256": "57d66f07c984973dc987a6657f695764ebb53ff0c18283508c5a91af8902af49"
+      },
+      {
+        "bytes": 536147,
+        "path": "port/plan.csv",
+        "sha256": "6a11265070ec73995cfd9f61c63f506063bc39397605c4f053f05dc48b52b395"
+      },
+      {
+        "bytes": 687,
+        "path": "repack_receipt.json",
+        "sha256": "1216666293208ff5f807ca677a433053913d52a7f0876b19f057866219510614"
+      },
+      {
+        "bytes": 406,
+        "path": "source_cache_summary.json",
+        "sha256": "a982b5c47dea05d26aaefc967108b73c761fa2b1eb32193ad5de329efede8e89"
+      }
+    ],
+    "runtime_seconds": 1213,
+    "shard": 3,
+    "storage_kind": "exact_npy_repack"
+  },
+  {
+    "archive": {
+      "bytes": 10260139326,
+      "filename": "cache384_train.zip",
+      "sha256": "369c83f8edbbac058a7f366d1a3a5794739531ba08f3f142cbe172dd56b1e146"
+    },
+    "cache_kernel_id": "alanchoo/rsna-knee-cnxt-cache-4-zip",
+    "expected_images": 12364,
+    "fingerprint": {
+      "archive_sha256": "369c83f8edbbac058a7f366d1a3a5794739531ba08f3f142cbe172dd56b1e146",
+      "manifest_sha256": "15c48b723c6aaa0f34b7311fa5d1f2d92d97c86ad69d02678245d5d5af7584bd",
+      "metadata_sha256": "fe8867bd7eb6a5653fabe5000c849e4d2e4ddb446df9cef0213ea3fb9b84eecb",
+      "plan_sha256": "d363bf2bd578048d5b27199648e265fb5b3406a4538be4cc53b220fd568824d0",
+      "repack_receipt_sha256": "c67df6920c5f748d1a4e4054aeabc2a3e03b71944b21a24350af240733ffa075",
+      "source_summary_sha256": "f468addcaa1243ff647eb161a8f4ccaaf749ce62edce53d2de19b3be8ccb4bcf",
+      "summary_sha256": "a862d42e8547f3d54b84c216814ed9503ab86c2406a9a26bd43042cb183f99e3"
+    },
+    "job_filename_alias": "cache384_train.zip.bin",
+    "job_id": "shard_4",
+    "origin": {
+      "filename": "cache384_train.zip",
+      "identifier": "alanchoo/rsna-knee-cnxt-cache-4-zip",
+      "kind": "kernel",
+      "version_number": 1
+    },
+    "original_npy_byte_identity_claim": true,
+    "receipt_members": [
+      {
+        "bytes": 639046,
+        "path": "cache384_train_meta.csv",
+        "sha256": "fe8867bd7eb6a5653fabe5000c849e4d2e4ddb446df9cef0213ea3fb9b84eecb"
+      },
+      {
+        "bytes": 1011,
+        "path": "cache_summary.json",
+        "sha256": "a862d42e8547f3d54b84c216814ed9503ab86c2406a9a26bd43042cb183f99e3"
+      },
+      {
+        "bytes": 1684342,
+        "path": "cache_zip_manifest.json",
+        "sha256": "15c48b723c6aaa0f34b7311fa5d1f2d92d97c86ad69d02678245d5d5af7584bd"
+      },
+      {
+        "bytes": 535327,
+        "path": "port/plan.csv",
+        "sha256": "d363bf2bd578048d5b27199648e265fb5b3406a4538be4cc53b220fd568824d0"
+      },
+      {
+        "bytes": 686,
+        "path": "repack_receipt.json",
+        "sha256": "c67df6920c5f748d1a4e4054aeabc2a3e03b71944b21a24350af240733ffa075"
+      },
+      {
+        "bytes": 406,
+        "path": "source_cache_summary.json",
+        "sha256": "f468addcaa1243ff647eb161a8f4ccaaf749ce62edce53d2de19b3be8ccb4bcf"
+      }
+    ],
+    "runtime_seconds": 1216,
+    "shard": 4,
+    "storage_kind": "exact_npy_repack"
+  },
+  {
+    "archive": {
+      "bytes": 10364472100,
+      "filename": "cache384_train.zip",
+      "sha256": "239160bd8c25f9bb7f2d94dadaca0abd57169cf4e86ef4c3f52027bcb779efff"
+    },
+    "cache_kernel_id": "alanchoo/rsna-knee-cnxt-cache-5-direct-zip",
+    "expected_images": 12496,
+    "fingerprint": {
+      "archive_sha256": "239160bd8c25f9bb7f2d94dadaca0abd57169cf4e86ef4c3f52027bcb779efff",
+      "direct_decode_metadata_sha256": "34745efdb75de3949d8ce56cf56599b52679f3fa7a8d8d4579f2759d417e9dae",
+      "direct_decode_receipt_sha256": "ba9d84bb6883554e1b69a3ce8426e9dc45b680fd76174e20224f0387c66e9e30",
+      "manifest_sha256": "f467f477478f7a3cf4fdcced39cf2e063579fabbe71d4955d586ff26b306d9fa",
+      "metadata_sha256": "85c14b30de0b3e2a591d0f59b563e9c3752215b2b4dc8793ce46971cabc60bc7",
+      "plan_sha256": "2f293f279783b8c2481c21d3af7f6441ebf0d50a37a86e132ad8d20bc980b597",
+      "reference_summary_sha256": "35825df8a91fd866ed3df5adae73855d3ef0520062899b6d8600f687adbeaf9b",
+      "source_summary_sha256": "1fd89c689f31313c9e6db1e63a466e445878e79d809f823c251924c22a0eb140",
+      "summary_sha256": "5370ee29ff299a5bb85c4e3cf7bcc2dce23856616d6b56334416b5b3f90c10a2"
+    },
+    "job_filename_alias": "cache384_train.zip.bin",
+    "job_id": "shard_5",
+    "origin": {
+      "filename": "cache384_train.zip",
+      "identifier": "alanchoo/rsna-knee-cnxt-cache-5-direct-zip",
+      "kind": "kernel",
+      "version_number": 1
+    },
+    "original_npy_byte_identity_claim": false,
+    "receipt_members": [
+      {
+        "bytes": 640755,
+        "path": "cache384_train_meta.csv",
+        "sha256": "85c14b30de0b3e2a591d0f59b563e9c3752215b2b4dc8793ce46971cabc60bc7"
+      },
+      {
+        "bytes": 1155,
+        "path": "cache_summary.json",
+        "sha256": "5370ee29ff299a5bb85c4e3cf7bcc2dce23856616d6b56334416b5b3f90c10a2"
+      },
+      {
+        "bytes": 1905469,
+        "path": "cache_zip_manifest.json",
+        "sha256": "f467f477478f7a3cf4fdcced39cf2e063579fabbe71d4955d586ff26b306d9fa"
+      },
+      {
+        "bytes": 1216591,
+        "path": "direct_decode_metadata.json",
+        "sha256": "34745efdb75de3949d8ce56cf56599b52679f3fa7a8d8d4579f2759d417e9dae"
+      },
+      {
+        "bytes": 1176,
+        "path": "direct_decode_receipt.json",
+        "sha256": "ba9d84bb6883554e1b69a3ce8426e9dc45b680fd76174e20224f0387c66e9e30"
+      },
+      {
+        "bytes": 536739,
+        "path": "port/plan.csv",
+        "sha256": "2f293f279783b8c2481c21d3af7f6441ebf0d50a37a86e132ad8d20bc980b597"
+      },
+      {
+        "bytes": 402,
+        "path": "reference_cache_summary.json",
+        "sha256": "35825df8a91fd866ed3df5adae73855d3ef0520062899b6d8600f687adbeaf9b"
+      },
+      {
+        "bytes": 604,
+        "path": "source_cache_summary.json",
+        "sha256": "1fd89c689f31313c9e6db1e63a466e445878e79d809f823c251924c22a0eb140"
+      }
+    ],
+    "runtime_seconds": 1228,
+    "shard": 5,
+    "storage_kind": "competition_dicom"
+  },
+  {
+    "archive": {
+      "bytes": 8773191852,
+      "filename": "cache384_train.zip",
+      "sha256": "b0196a1fb89272fa91aa16023477d745cc82414cdac7047657ca9e079ee7a4fa"
+    },
+    "cache_kernel_id": "alanchoo/rsna-knee-cnxt-cache-6-zip",
+    "expected_images": 10796,
+    "fingerprint": {
+      "archive_sha256": "b0196a1fb89272fa91aa16023477d745cc82414cdac7047657ca9e079ee7a4fa",
+      "manifest_sha256": "aa3be67abdd715c74c597e3a02b98cda01d7b59d0ecf50fa465c15ce7433f325",
+      "metadata_sha256": "f430ac2666fc458b6401a31acefc095c65c2467c03d6d7bdb3f0819ebe9454ee",
+      "plan_sha256": "b17605be3bcc36b00c7974c7084b952b8309bf08b77cc0d887c701cc63f107cd",
+      "repack_receipt_sha256": "0993f73b1c00646bec20e9edf89766098a06e55df56ce27c7854cc55fb15befb",
+      "source_summary_sha256": "5505d293529518a60706f1873e68ce3d6c13ed5f1b25e37c0fdb7c86710f3da0",
+      "summary_sha256": "6a828ea6b59def42684a769413aa9f7017779a472977cb5fa04b03c9728c9c28"
+    },
+    "job_filename_alias": "cache384_train.zip.bin",
+    "job_id": "shard_6",
+    "origin": {
+      "filename": "cache384_train.zip",
+      "identifier": "alanchoo/rsna-knee-cnxt-cache-6-zip",
+      "kind": "kernel",
+      "version_number": 1
+    },
+    "original_npy_byte_identity_claim": true,
+    "receipt_members": [
+      {
+        "bytes": 549400,
+        "path": "cache384_train_meta.csv",
+        "sha256": "f430ac2666fc458b6401a31acefc095c65c2467c03d6d7bdb3f0819ebe9454ee"
+      },
+      {
+        "bytes": 1009,
+        "path": "cache_summary.json",
+        "sha256": "6a828ea6b59def42684a769413aa9f7017779a472977cb5fa04b03c9728c9c28"
+      },
+      {
+        "bytes": 1448259,
+        "path": "cache_zip_manifest.json",
+        "sha256": "aa3be67abdd715c74c597e3a02b98cda01d7b59d0ecf50fa465c15ce7433f325"
+      },
+      {
+        "bytes": 460297,
+        "path": "port/plan.csv",
+        "sha256": "b17605be3bcc36b00c7974c7084b952b8309bf08b77cc0d887c701cc63f107cd"
+      },
+      {
+        "bytes": 686,
+        "path": "repack_receipt.json",
+        "sha256": "0993f73b1c00646bec20e9edf89766098a06e55df56ce27c7854cc55fb15befb"
+      },
+      {
+        "bytes": 406,
+        "path": "source_cache_summary.json",
+        "sha256": "5505d293529518a60706f1873e68ce3d6c13ed5f1b25e37c0fdb7c86710f3da0"
+      }
+    ],
+    "runtime_seconds": 1069,
+    "shard": 6,
+    "storage_kind": "exact_npy_repack"
+  }
+]

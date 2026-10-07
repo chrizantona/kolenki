@@ -1,0 +1,21 @@
+{
+  "prepared_request_only": true,
+  "actual_wire_verified": false,
+  "kernel_id": "alanchoo/rsna-knee-ortho-http-merge-heads-v2",
+  "sdk_operation": "kernels_push",
+  "sdk_timeout_argument": "1530",
+  "SaveKernel": {
+    "sessionTimeoutSeconds": 1530
+  },
+  "python_owned_deadline_seconds": 1500,
+  "accelerator": "NvidiaTeslaT4",
+  "is_private": true,
+  "enable_internet": false,
+  "pinned_docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+  "launch_allowed": false,
+  "gates": [
+    "Actual V2 MRI pilot PASS",
+    "All-seven HTTP+startup+GPU forecast fits total9300 and every original cap",
+    "Seven complete V2 compact feature outputs and fresh quota"
+  ]
+}

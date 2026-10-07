@@ -1,0 +1,61 @@
+{
+  "pilot_only": true,
+  "feature_identity": "7f0e16dc1c34e8c0920f567db2ebb68f55c470c09ce77dd7c0aa238cd5ec6c77",
+  "shards": [
+    0
+  ],
+  "feature_extraction": {
+    "complete": true,
+    "newly_written": 16,
+    "images_encoded": 308,
+    "seconds": 4.24230056600004
+  },
+  "head_smoke": {
+    "epochs": 1,
+    "optimizer_updates": 1,
+    "n_gradient_studies": 16,
+    "gradient_ids_sha256": "381dab35b72f651ada32da33bf0fe7245c32ace97b949d78e2eecbe35d46bfbb",
+    "gold_used_for_gradients": 0,
+    "fixed_final_epoch": true,
+    "gold_checkpoint_selection": false,
+    "seconds": 0.8950424749999684,
+    "history": [
+      {
+        "epoch": 1,
+        "loss": 0.6678107976913452,
+        "updates": 1
+      }
+    ],
+    "head_code_sha256": "c814b1bcbf1ac1322b717c1f1e6ba7b9173357e956e9104b2c77d0351a833f1f",
+    "training_code_sha256": "928121a030aabf4fc58594da967ad98ff43a7ce915474d69a909ab09652a7dc1",
+    "checkpoint_receipt": {
+      "filename": "smoke_head.pt",
+      "bytes": 1486132,
+      "sha256": "35fb30303f1bf61344f0125c788b9aaff147009f68a1afe03fa6bafce84a6567"
+    }
+  },
+  "total_images_for_shards": 12240,
+  "projected_extraction_seconds_for_shards": 375.6548307100925,
+  "max_seconds": 900,
+  "budget_projection": {
+    "images_per_second": 72.6021165186807,
+    "startup_seconds": 207.06470432099997,
+    "planned_extraction_jobs": 7,
+    "projected_extraction_seconds_for_shards": 375.6548307100925,
+    "allocated_extraction_cap_seconds": 1204,
+    "fits_allocated_shard_budget": true,
+    "reserved_pilot_seconds": 900,
+    "projected_all_shards_frozen_seconds": 2624.8456610917383,
+    "projected_total_frozen_seconds": 3524.8456610917383,
+    "projected_total_including_head_seconds": 4724.845661091738,
+    "projected_total_including_head_job_seconds": 5024.845661091738,
+    "head_fit_budget_seconds": 1200,
+    "head_job_reserve_seconds": 1500,
+    "total_frozen_budget_seconds": 9300,
+    "fits_total_frozen_budget": true,
+    "timer_boundary": "Python orchestrator_start through final stage export; pre-Python Kaggle input mounting excluded",
+    "gpu_quota_guaranteed": false
+  },
+  "peak_gpu_allocated_gb": 1.328124416,
+  "head_training_complete": false
+}

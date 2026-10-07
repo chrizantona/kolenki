@@ -36,4 +36,5 @@ __pycache__/
 transfer_job.json
 **/transfer_job.json
 **/cache_read_job.json
+**/http_launch_approval.json
 **/fixture_tmp/

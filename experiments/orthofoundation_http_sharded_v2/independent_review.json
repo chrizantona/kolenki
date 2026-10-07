@@ -1,0 +1,210 @@
+{
+  "schema": "http_sharded_v2_independent_review_v1",
+  "verdict": "PASS_STATIC_REVIEW_WITH_EXTERNAL_TRUSTED_ROOT_GATE",
+  "critical_findings": [],
+  "important_findings": [],
+  "preparation_receipt_sha256": "f974a437550ceab02652929d4033ea60a6099e5df7da35cbf82142b90fb08689",
+  "source_index_sha256": "0e450019b7f37a39701d78be46f1ea39b76614f90948c6096f0a1fe3eb2544b7",
+  "verified_source_sha256": {
+    "build.py": "1f1f70722646f1890f3937a833e5e8f48ddc590236e27d2e8dee8b4eff38e56c",
+    "transport.py": "aa372cf5d853e57025aee39c1696ef7bff00dd9aa46bfc62030bea7f0700b24d",
+    "forecast.py": "249caa17b0752f58bd530a35c613cb6e5ec8b0e13978cd92c8aa4dc8a5aa45ab",
+    "approval.py": "195deaacc6ba80957a06705fc72ac46adaeccd947f58532e920ae1624d119809",
+    "download.py": "b82bda2eb05b7e723b01ce67b6278752d7ece010259f768e20d69a99a55fbaa5",
+    "parent_guard.py": "11c5430b2e5e961189bf16a1be2e0cfc06c63baa56e3ea36f57f18492c93e50f",
+    "transfer_reviewed.py": "7212063963481c5fe35ee2d27c61ef101d506a93372326f5501f6771615206ed",
+    "test_http.py": "575614a85e86e139dc6348aac528adf411846bdc3c04b473f72e9369d46f96f6",
+    "test_contracts.py": "724f07b4d181a9269245653e691c514dcb0a3bd186f223bd2ac782ef53544bee"
+  },
+  "scientific_source_sha256": {
+    "orthofoundation/__init__.py": "f3df43207f5d18497b4f698aa91c746bf81dcd4edb74b81784136acd8aa52cf1",
+    "orthofoundation/cache.py": "700767576eb7b6d9dfa22f77bdf2088411ba4bdf6036c80db58bf608c96f7485",
+    "orthofoundation/data.py": "f3b63ab922f0452c065126dc2ef1c87442a0b988dff29d25c201666a8a5310aa",
+    "orthofoundation/encoder.py": "86defa5f943bfc161603c7b377bbf08a9d5c2a270d01b1df5c039ab59cff7ecb",
+    "orthofoundation/heads.py": "c814b1bcbf1ac1322b717c1f1e6ba7b9173357e956e9104b2c77d0351a833f1f",
+    "orthofoundation/run.py": "740c2e2599516b1876e7d7226bb0f11c51205cbdaec0b6eebf44dc740c659e10",
+    "orthofoundation/train.py": "928121a030aabf4fc58594da967ad98ff43a7ce915474d69a909ab09652a7dc1",
+    "sharded_frozen_extract.py": "86265241778c40a3822c2a8d11f4f3f746a48b47101def338120dd86937ee4f2"
+  },
+  "feature_identity": "7f0e16dc1c34e8c0920f567db2ebb68f55c470c09ce77dd7c0aa238cd5ec6c77",
+  "global_counts": {
+    "studies": 4407,
+    "weak": 4349,
+    "gold": 58,
+    "series": 24371,
+    "selected_series": 21334,
+    "images": 85336
+  },
+  "global_manifest_sha256": "b2a87794d768ca3f6ee3968345f840f1028cff004708a2b3e0cfdfcfb2c15e60",
+  "fresh_tests": {
+    "command": "../venv/bin/python -m unittest -v test_http.py test_contracts.py",
+    "tests": 25,
+    "elapsed_seconds": 7.034,
+    "exit_code": 0,
+    "scope": "localhost/owned-process/CPU-synthetic fixtures only"
+  },
+  "verified": {
+    "all8_notebook_and_metadata_receipt_hashes": true,
+    "all8_decoded_scientific_payloads_byte_exact_to_frozen_V2_pilot_and_current_sources": true,
+    "V2_config_byte_provenance_and_settings_equal": true,
+    "source_index_equals_actual_verified_all7_global_metadata_in_memory": true,
+    "Range_AST_identical_to_reviewed_original_transfer_loop": true,
+    "strict_cache_lookup_override_preserves_actual_V2_pilot_resume_reference": true,
+    "source5_fresh_DICOM_honest_no_original_NPY_identity_claim": true,
+    "first_cell_timer_inherited_through_owned_parent_fresh_exec_nested_scientific_runner": true,
+    "owned_TMP_cleanup_and_timeout_orphan_fixtures": true,
+    "merge_requires_all7_disjoint_complete_partials_before_fixed_head_training": true,
+    "no_account_token_or_scoped_URL_in_prepared_payloads": true,
+    "all_read_job_templates_null_and_not_launchable": true,
+    "private_T4_tiny_input_mounts_no_competition_or_bulk_cache_sources": true
+  },
+  "budget": {
+    "seven_caps_seconds": [
+      1204,
+      1231,
+      1236,
+      1213,
+      1216,
+      1228,
+      1069
+    ],
+    "pilot_reserved_seconds": 900,
+    "caps_plus_pilot_seconds": 9297,
+    "total_extraction_cap_seconds": 9300,
+    "wire_cleanup_headroom_seconds_per_job": 30,
+    "head_job_cap_seconds": 1500,
+    "head_prepare_fit_seconds": [
+      300,
+      1200
+    ],
+    "independently_recomputed_ROOT_conservative_forecast_seconds": 6736.867162468794,
+    "every_shard_forecast_fits": true,
+    "pre_Python_mount_time_included": false
+  },
+  "artifacts": [
+    {
+      "mode": "extract",
+      "shards": [
+        0
+      ],
+      "kernel_id": "alanchoo/rsna-knee-ortho-http-shard-0-v2",
+      "runtime_seconds": 1204,
+      "wire_timeout_seconds": 1234,
+      "notebook_sha256": "f76733db02b5808a0026a232c75a0b495c7388bcfb96c91a38574bc763624782",
+      "metadata_sha256": "f3631a4095dfd7c1e68c757b9ff7f3a7686755d005e6b7097bc58cd5e99db982"
+    },
+    {
+      "mode": "extract",
+      "shards": [
+        1
+      ],
+      "kernel_id": "alanchoo/rsna-knee-ortho-http-shard-1-v2",
+      "runtime_seconds": 1231,
+      "wire_timeout_seconds": 1261,
+      "notebook_sha256": "6e1941e59db8bfe678112828dbdac9e11b988209af421d756a79547429c02a93",
+      "metadata_sha256": "95ea8743dd049b963f0552185734bb55192d040ccd08a6e12327245677a51da9"
+    },
+    {
+      "mode": "extract",
+      "shards": [
+        2
+      ],
+      "kernel_id": "alanchoo/rsna-knee-ortho-http-shard-2-v2",
+      "runtime_seconds": 1236,
+      "wire_timeout_seconds": 1266,
+      "notebook_sha256": "4609778527439eb7b10fffdc5909c68dffe173fb3e59fab7a7ee86c19011a383",
+      "metadata_sha256": "9ca8f9ef250147677cd7d0446eb97a942e49965256e931ca3a70a60b3389f449"
+    },
+    {
+      "mode": "extract",
+      "shards": [
+        3
+      ],
+      "kernel_id": "alanchoo/rsna-knee-ortho-http-shard-3-v2",
+      "runtime_seconds": 1213,
+      "wire_timeout_seconds": 1243,
+      "notebook_sha256": "334e24a3bc182e4d53930526b1cad2a1eb009f71529bf1d7c57044c11dfd8c92",
+      "metadata_sha256": "902d5468bc354f98c6fd4e639c62e918b73fe061888c2a7eb53fc641d951415f"
+    },
+    {
+      "mode": "extract",
+      "shards": [
+        4
+      ],
+      "kernel_id": "alanchoo/rsna-knee-ortho-http-shard-4-v2",
+      "runtime_seconds": 1216,
+      "wire_timeout_seconds": 1246,
+      "notebook_sha256": "ffa781592d87230da6c00dcf51caf692874fabf255cd516f2fb6642e10c62914",
+      "metadata_sha256": "48cd7699c02504cce885c2afb195279885d793d7229b2e9d2779708940ebcf3b"
+    },
+    {
+      "mode": "extract",
+      "shards": [
+        5
+      ],
+      "kernel_id": "alanchoo/rsna-knee-ortho-http-shard-5-v2",
+      "runtime_seconds": 1228,
+      "wire_timeout_seconds": 1258,
+      "notebook_sha256": "1eb0d4063471150b477e2b3902ec91dac43f53a6bd08a8467010c9a4845a826d",
+      "metadata_sha256": "b742bf388dbd68bfd2133e5fd500e5e1e7a0e8117394e1e592fb5cc4af6322af"
+    },
+    {
+      "mode": "extract",
+      "shards": [
+        6
+      ],
+      "kernel_id": "alanchoo/rsna-knee-ortho-http-shard-6-v2",
+      "runtime_seconds": 1069,
+      "wire_timeout_seconds": 1099,
+      "notebook_sha256": "e89f6e32ffe1a74194bcc403430a6c8b0e328be5e143e76d56dd070c544e7c5e",
+      "metadata_sha256": "14805dca7b53c771d35857004d8bbb080d690684a7e515c3a62c8c7f4f986ed1"
+    },
+    {
+      "mode": "merge-train",
+      "shards": [],
+      "kernel_id": "alanchoo/rsna-knee-ortho-http-merge-heads-v2",
+      "runtime_seconds": 1500,
+      "wire_timeout_seconds": 1530,
+      "notebook_sha256": "dd812f249a74163f78d3f84058f708ed1836a8218fb6754d96e5adf2164115cc",
+      "metadata_sha256": "7e1404f8e6e133457bc14a38b7a5b0ecceb0a3c549b9d3fecb65692517fa281b"
+    }
+  ],
+  "external_trust_boundary": {
+    "owner": "ROOT",
+    "approval_is_trusted_ROOT_assertion_not_self_authenticating_evidence": true,
+    "notebook_accepts_syntactically_valid_receipt_hashes_without_embedded_expected_receipt_pins": true,
+    "ROOT_required_before_each_job": [
+      "Independently seal exact three actual pilot-report SHA256 values and measured rates",
+      "Inspect exact private approval file and matching sealed source index",
+      "Recheck exact scoped READ ZIP version/origin and readiness",
+      "Observe fresh quota and reserve all remaining work plus head job",
+      "Explicitly authorize that job; watcher cannot self-approve"
+    ],
+    "confirmed_by_ROOT_before_verdict": true,
+    "notebook_assertion_is_not_cryptographic_receipt_authentication": true
+  },
+  "declined_to_judge": [
+    "Future scoped READ URL readiness, expiry and actual remote origin/version; no URLs issued in this preparation",
+    "Live GPU quota and actual SaveKernel wire/server notebook bytes; require ROOT launch receipts",
+    "Cold-source sustained HTTP/GPU throughput, full extraction completion and final head quality; future actual runs required",
+    "Pre-Python mount duration; outside Python deadline by explicit design"
+  ],
+  "reviewer_actions": {
+    "Kaggle_or_remote_API": false,
+    "GPU_or_MRI_execution": false,
+    "Git_or_UI": false,
+    "scientific_or_transport_source_mutations": false,
+    "real_jobs_created": false
+  },
+  "fork_warning_assessment": "Python3.13 multithreaded-fork fixture warning persists. Independent parent deadline bounds potential child deadlock; the scientific process starts via fresh exec, and timeout/group cleanup tests pass.",
+  "launch_authorized_by_reviewer": false,
+  "public_copy_verification": {
+    "files_checked": 40,
+    "all_declared_bytes_and_sha256_match": true,
+    "publication_verification_sha256": "988d1067561d710d5c1ab506bbd7940c3ae245b6c3f7919cd92d15937a995a25",
+    "public_runtime_fixtures_rerun": false,
+    "private_source_fixtures_fresh_rerun": true
+  },
+  "versioned_config_yaml_sha256": "f3c4334f97df527d22dd2b0da3b6220ec466c1333efe7e99a471b955a74ba919",
+  "prepared_only": true
+}

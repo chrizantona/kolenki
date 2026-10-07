@@ -1,0 +1,142 @@
+{
+  "complete": true,
+  "route": "direct_http",
+  "origin": {
+    "kind": "dataset",
+    "identifier": "alanchoo/rsna-knee-cache-0-bin-v1",
+    "version_number": 1,
+    "filename": "cache384_train.zip.bin"
+  },
+  "urls_or_credentials_written_to_output": false,
+  "expected_bytes": 10241860213,
+  "expected_sha256": "31b3dd3934e79931fa78195315bef1b58d8432bae841b7920c6d4497262e764c",
+  "download_range_checks": [
+    {
+      "start": 0,
+      "end": 536870911,
+      "bytes": 536870912,
+      "crc32_diagnostic": "3f1cb45b"
+    },
+    {
+      "start": 536870912,
+      "end": 1073741823,
+      "bytes": 536870912,
+      "crc32_diagnostic": "f548ddac"
+    },
+    {
+      "start": 1073741824,
+      "end": 1610612735,
+      "bytes": 536870912,
+      "crc32_diagnostic": "e6004d36"
+    },
+    {
+      "start": 1610612736,
+      "end": 2147483647,
+      "bytes": 536870912,
+      "crc32_diagnostic": "b26d13bf"
+    },
+    {
+      "start": 2147483648,
+      "end": 2684354559,
+      "bytes": 536870912,
+      "crc32_diagnostic": "63c29f8e"
+    },
+    {
+      "start": 2684354560,
+      "end": 3221225471,
+      "bytes": 536870912,
+      "crc32_diagnostic": "d7bb287b"
+    },
+    {
+      "start": 3221225472,
+      "end": 3758096383,
+      "bytes": 536870912,
+      "crc32_diagnostic": "04002121"
+    },
+    {
+      "start": 3758096384,
+      "end": 4294967295,
+      "bytes": 536870912,
+      "crc32_diagnostic": "978c0186"
+    },
+    {
+      "start": 4294967296,
+      "end": 4831838207,
+      "bytes": 536870912,
+      "crc32_diagnostic": "9d5ba22c"
+    },
+    {
+      "start": 4831838208,
+      "end": 5368709119,
+      "bytes": 536870912,
+      "crc32_diagnostic": "faf99a4c"
+    },
+    {
+      "start": 5368709120,
+      "end": 5905580031,
+      "bytes": 536870912,
+      "crc32_diagnostic": "14dbf62a"
+    },
+    {
+      "start": 5905580032,
+      "end": 6442450943,
+      "bytes": 536870912,
+      "crc32_diagnostic": "619af70e"
+    },
+    {
+      "start": 6442450944,
+      "end": 6979321855,
+      "bytes": 536870912,
+      "crc32_diagnostic": "3447efd1"
+    },
+    {
+      "start": 6979321856,
+      "end": 7516192767,
+      "bytes": 536870912,
+      "crc32_diagnostic": "56aff5f4"
+    },
+    {
+      "start": 7516192768,
+      "end": 8053063679,
+      "bytes": 536870912,
+      "crc32_diagnostic": "7b711b66"
+    },
+    {
+      "start": 8053063680,
+      "end": 8589934591,
+      "bytes": 536870912,
+      "crc32_diagnostic": "433f6293"
+    },
+    {
+      "start": 8589934592,
+      "end": 9126805503,
+      "bytes": 536870912,
+      "crc32_diagnostic": "1a3672b3"
+    },
+    {
+      "start": 9126805504,
+      "end": 9663676415,
+      "bytes": 536870912,
+      "crc32_diagnostic": "a9fd0d6f"
+    },
+    {
+      "start": 9663676416,
+      "end": 10200547327,
+      "bytes": 536870912,
+      "crc32_diagnostic": "81f76d64"
+    },
+    {
+      "start": 10200547328,
+      "end": 10241860212,
+      "bytes": 41312885,
+      "crc32_diagnostic": "9914632d"
+    }
+  ],
+  "download_retry_count": 0,
+  "download_range_max_bytes": 536870912,
+  "download_http_status": 206,
+  "downloaded_bytes": 10241860213,
+  "downloaded_sha256": "31b3dd3934e79931fa78195315bef1b58d8432bae841b7920c6d4497262e764c",
+  "download_sha256_verified": true,
+  "seconds": 112.68251957300004
+}

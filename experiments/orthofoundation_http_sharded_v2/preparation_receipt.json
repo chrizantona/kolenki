@@ -1,0 +1,203 @@
+{
+  "prepared_only": true,
+  "launched": false,
+  "launch_allowed": false,
+  "all7_original_ZIP_pins_from_verified_metadata": true,
+  "all_archive_bytes": 70494551381,
+  "source_index_sha256": "0e450019b7f37a39701d78be46f1ea39b76614f90948c6096f0a1fe3eb2544b7",
+  "global_manifest_sha256": "b2a87794d768ca3f6ee3968345f840f1028cff004708a2b3e0cfdfcfb2c15e60",
+  "scientific_source_sha256": {
+    "orthofoundation/__init__.py": "f3df43207f5d18497b4f698aa91c746bf81dcd4edb74b81784136acd8aa52cf1",
+    "orthofoundation/cache.py": "700767576eb7b6d9dfa22f77bdf2088411ba4bdf6036c80db58bf608c96f7485",
+    "orthofoundation/data.py": "f3b63ab922f0452c065126dc2ef1c87442a0b988dff29d25c201666a8a5310aa",
+    "orthofoundation/encoder.py": "86defa5f943bfc161603c7b377bbf08a9d5c2a270d01b1df5c039ab59cff7ecb",
+    "orthofoundation/heads.py": "c814b1bcbf1ac1322b717c1f1e6ba7b9173357e956e9104b2c77d0351a833f1f",
+    "orthofoundation/run.py": "740c2e2599516b1876e7d7226bb0f11c51205cbdaec0b6eebf44dc740c659e10",
+    "orthofoundation/train.py": "928121a030aabf4fc58594da967ad98ff43a7ce915474d69a909ab09652a7dc1",
+    "sharded_frozen_extract.py": "86265241778c40a3822c2a8d11f4f3f746a48b47101def338120dd86937ee4f2"
+  },
+  "scientific_config": {
+    "experiment": "orthofoundation_frozen_attention_http_v2",
+    "encoder": "dinov3_vitl16",
+    "extraction_variant": "author_no_rope",
+    "feature_dim": 1024,
+    "checkpoint_sha256": "385a775822107b68eaa486336feb982e1ce7bd6d4e8c03ceb482a0bf546f2ff9",
+    "checkpoint_bytes": 1213056638,
+    "resolution": 224,
+    "slices_per_slot": 4,
+    "fov": 0.92,
+    "image_batch_size": 16,
+    "workers": 2,
+    "pilot_studies": 16,
+    "max_extract_seconds": 9300,
+    "head_kind": "attention",
+    "head_dim": 256,
+    "head_dropout": 0.2,
+    "head_epochs": 12,
+    "head_batch_size": 64,
+    "head_lr": 0.001,
+    "head_weight_decay": 0.01,
+    "weak_holdout_fold": 0,
+    "seed": 42
+  },
+  "feature_identity": "7f0e16dc1c34e8c0920f567db2ebb68f55c470c09ce77dd7c0aa238cd5ec6c77",
+  "v2_pilot_notebook_sha256_unchanged": "b6d2bf7b398a604bb68c757772b2bd1dd24479efd033be6f82b5ae043d974770",
+  "seven_caps_seconds": [
+    1204,
+    1231,
+    1236,
+    1213,
+    1216,
+    1228,
+    1069
+  ],
+  "sum_caps_plus_pilot_seconds": 9297,
+  "head_job_seconds": 1500,
+  "source5_storage_kind": "competition_dicom",
+  "source5_original_NPY_identity_claim": false,
+  "remaining_kernel_ZIP_versions": {
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "4": 1,
+    "5": 1,
+    "6": 1
+  },
+  "version_authority": "Owner confirmed existing ZIP outputs V1; underlying NPY versions are separate. Owner rechecks exact ZIP version before issuing each scoped read.",
+  "transport_source_sha256": {
+    "transport.py": "aa372cf5d853e57025aee39c1696ef7bff00dd9aa46bfc62030bea7f0700b24d",
+    "forecast.py": "249caa17b0752f58bd530a35c613cb6e5ec8b0e13978cd92c8aa4dc8a5aa45ab",
+    "approval.py": "195deaacc6ba80957a06705fc72ac46adaeccd947f58532e920ae1624d119809",
+    "parent_guard.py": "11c5430b2e5e961189bf16a1be2e0cfc06c63baa56e3ea36f57f18492c93e50f",
+    "transfer_reviewed.py": "7212063963481c5fe35ee2d27c61ef101d506a93372326f5501f6771615206ed",
+    "download.py": "b82bda2eb05b7e723b01ce67b6278752d7ece010259f768e20d69a99a55fbaa5"
+  },
+  "builder_sha256": "1f1f70722646f1890f3937a833e5e8f48ddc590236e27d2e8dee8b4eff38e56c",
+  "artifacts": [
+    {
+      "mode": "extract",
+      "shards": [
+        0
+      ],
+      "kernel_id": "alanchoo/rsna-knee-ortho-http-shard-0-v2",
+      "runtime_seconds": 1204,
+      "wire_timeout_seconds": 1234,
+      "notebook_sha256": "f76733db02b5808a0026a232c75a0b495c7388bcfb96c91a38574bc763624782",
+      "metadata_sha256": "f3631a4095dfd7c1e68c757b9ff7f3a7686755d005e6b7097bc58cd5e99db982",
+      "directory": "/Users/chrizantona/Documents/Codex/2026-10-06/https-www-kaggle-com-competitions-rsna/work/direct_http_sharded_v2/prepared/rsna-knee-ortho-http-shard-0-v2"
+    },
+    {
+      "mode": "extract",
+      "shards": [
+        1
+      ],
+      "kernel_id": "alanchoo/rsna-knee-ortho-http-shard-1-v2",
+      "runtime_seconds": 1231,
+      "wire_timeout_seconds": 1261,
+      "notebook_sha256": "6e1941e59db8bfe678112828dbdac9e11b988209af421d756a79547429c02a93",
+      "metadata_sha256": "95ea8743dd049b963f0552185734bb55192d040ccd08a6e12327245677a51da9",
+      "directory": "/Users/chrizantona/Documents/Codex/2026-10-06/https-www-kaggle-com-competitions-rsna/work/direct_http_sharded_v2/prepared/rsna-knee-ortho-http-shard-1-v2"
+    },
+    {
+      "mode": "extract",
+      "shards": [
+        2
+      ],
+      "kernel_id": "alanchoo/rsna-knee-ortho-http-shard-2-v2",
+      "runtime_seconds": 1236,
+      "wire_timeout_seconds": 1266,
+      "notebook_sha256": "4609778527439eb7b10fffdc5909c68dffe173fb3e59fab7a7ee86c19011a383",
+      "metadata_sha256": "9ca8f9ef250147677cd7d0446eb97a942e49965256e931ca3a70a60b3389f449",
+      "directory": "/Users/chrizantona/Documents/Codex/2026-10-06/https-www-kaggle-com-competitions-rsna/work/direct_http_sharded_v2/prepared/rsna-knee-ortho-http-shard-2-v2"
+    },
+    {
+      "mode": "extract",
+      "shards": [
+        3
+      ],
+      "kernel_id": "alanchoo/rsna-knee-ortho-http-shard-3-v2",
+      "runtime_seconds": 1213,
+      "wire_timeout_seconds": 1243,
+      "notebook_sha256": "334e24a3bc182e4d53930526b1cad2a1eb009f71529bf1d7c57044c11dfd8c92",
+      "metadata_sha256": "902d5468bc354f98c6fd4e639c62e918b73fe061888c2a7eb53fc641d951415f",
+      "directory": "/Users/chrizantona/Documents/Codex/2026-10-06/https-www-kaggle-com-competitions-rsna/work/direct_http_sharded_v2/prepared/rsna-knee-ortho-http-shard-3-v2"
+    },
+    {
+      "mode": "extract",
+      "shards": [
+        4
+      ],
+      "kernel_id": "alanchoo/rsna-knee-ortho-http-shard-4-v2",
+      "runtime_seconds": 1216,
+      "wire_timeout_seconds": 1246,
+      "notebook_sha256": "ffa781592d87230da6c00dcf51caf692874fabf255cd516f2fb6642e10c62914",
+      "metadata_sha256": "48cd7699c02504cce885c2afb195279885d793d7229b2e9d2779708940ebcf3b",
+      "directory": "/Users/chrizantona/Documents/Codex/2026-10-06/https-www-kaggle-com-competitions-rsna/work/direct_http_sharded_v2/prepared/rsna-knee-ortho-http-shard-4-v2"
+    },
+    {
+      "mode": "extract",
+      "shards": [
+        5
+      ],
+      "kernel_id": "alanchoo/rsna-knee-ortho-http-shard-5-v2",
+      "runtime_seconds": 1228,
+      "wire_timeout_seconds": 1258,
+      "notebook_sha256": "1eb0d4063471150b477e2b3902ec91dac43f53a6bd08a8467010c9a4845a826d",
+      "metadata_sha256": "b742bf388dbd68bfd2133e5fd500e5e1e7a0e8117394e1e592fb5cc4af6322af",
+      "directory": "/Users/chrizantona/Documents/Codex/2026-10-06/https-www-kaggle-com-competitions-rsna/work/direct_http_sharded_v2/prepared/rsna-knee-ortho-http-shard-5-v2"
+    },
+    {
+      "mode": "extract",
+      "shards": [
+        6
+      ],
+      "kernel_id": "alanchoo/rsna-knee-ortho-http-shard-6-v2",
+      "runtime_seconds": 1069,
+      "wire_timeout_seconds": 1099,
+      "notebook_sha256": "e89f6e32ffe1a74194bcc403430a6c8b0e328be5e143e76d56dd070c544e7c5e",
+      "metadata_sha256": "14805dca7b53c771d35857004d8bbb080d690684a7e515c3a62c8c7f4f986ed1",
+      "directory": "/Users/chrizantona/Documents/Codex/2026-10-06/https-www-kaggle-com-competitions-rsna/work/direct_http_sharded_v2/prepared/rsna-knee-ortho-http-shard-6-v2"
+    },
+    {
+      "mode": "merge-train",
+      "shards": [],
+      "kernel_id": "alanchoo/rsna-knee-ortho-http-merge-heads-v2",
+      "runtime_seconds": 1500,
+      "wire_timeout_seconds": 1530,
+      "notebook_sha256": "dd812f249a74163f78d3f84058f708ed1836a8218fb6754d96e5adf2164115cc",
+      "metadata_sha256": "7e1404f8e6e133457bc14a38b7a5b0ecceb0a3c549b9d3fecb65692517fa281b",
+      "directory": "/Users/chrizantona/Documents/Codex/2026-10-06/https-www-kaggle-com-competitions-rsna/work/direct_http_sharded_v2/prepared/rsna-knee-ortho-http-merge-heads-v2"
+    }
+  ],
+  "no_actual_read_jobs_or_URLs_created": true,
+  "no_API_GPU_Git_UI_used": true,
+  "meanmax_adapter_status": "Existing V1 adapter cannot consume V2 bank identity unchanged; separate explicit V2 adaptation required.",
+  "local_fixture_validation": {
+    "checked_at_utc": "2026-10-07T16:03:32.320413+00:00",
+    "command": "../venv/bin/python -m unittest -v test_http.py test_contracts.py",
+    "tests": 25,
+    "exit_code": 0,
+    "elapsed_seconds": 7.313,
+    "network": "localhost fixtures only; no Kaggle/API",
+    "exact8scientific_payloads_and_all7_archive_pins": true,
+    "source5_fresh_DICOM_honest": true,
+    "precise_original_cache_key_override_and_actual_V2pilot_resume_ref": true,
+    "owned_group_timeout_and_postprepare_scratch_cleanup": true,
+    "all7_fullmerge_and_missing_overlap_refusal_CPU_synthetic": true,
+    "whole_HTTP_70GB_forecast_and_owner_gate_required": true,
+    "repeat_build_all8_notebooks_byte_identical": true,
+    "source_sha256": {
+      "build.py": "1f1f70722646f1890f3937a833e5e8f48ddc590236e27d2e8dee8b4eff38e56c",
+      "transport.py": "aa372cf5d853e57025aee39c1696ef7bff00dd9aa46bfc62030bea7f0700b24d",
+      "forecast.py": "249caa17b0752f58bd530a35c613cb6e5ec8b0e13978cd92c8aa4dc8a5aa45ab",
+      "approval.py": "195deaacc6ba80957a06705fc72ac46adaeccd947f58532e920ae1624d119809",
+      "download.py": "b82bda2eb05b7e723b01ce67b6278752d7ece010259f768e20d69a99a55fbaa5",
+      "parent_guard.py": "11c5430b2e5e961189bf16a1be2e0cfc06c63baa56e3ea36f57f18492c93e50f",
+      "transfer_reviewed.py": "7212063963481c5fe35ee2d27c61ef101d506a93372326f5501f6771615206ed",
+      "test_http.py": "575614a85e86e139dc6348aac528adf411846bdc3c04b473f72e9369d46f96f6",
+      "test_contracts.py": "724f07b4d181a9269245653e691c514dcb0a3bd186f223bd2ac782ef53544bee",
+      "source_index.json": "0e450019b7f37a39701d78be46f1ea39b76614f90948c6096f0a1fe3eb2544b7"
+    },
+    "warning": "Python3.13 fork-in-multithreaded-fixture warning; bounded by independent parent watchdog."
+  }
+}

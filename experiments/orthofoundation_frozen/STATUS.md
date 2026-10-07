@@ -1,6 +1,6 @@
 # OrthoFoundation frozen features → 12-label head
 
-**Этап: model-assets GPU probe прошёл; основной pilot V1/V2 упал до наблюдаемого Python, а подключение всех cache зависает. HTTP pilot скачал и проверил полный cache SHA за 581.26 s, затем закончился по лимиту 600 s до MRI/head. Готовим отдельную версию с pilot900 s и строгим общим budget9300 s. Свежий журнал — [запуск по одному архиву](../orthofoundation_sharded/STATUS.md). Полное обучение ещё не подтверждено.**
+**Этап: настоящий MRI pilot V2 PASS —16 studies/308 images, finite features, одно реальное обновление головы, Gold исключён.** [Verified pilot](../orthofoundation_http_cache0_pilot_v2/STATUS.md). Полное извлечение всех4407 studies и12-epoch головы ещё не запущены; свежий журнал — [HTTP sharded route](../orthofoundation_sharded/STATUS.md).
 
 [Notebook pilot](https://www.kaggle.com/code/alanchoo/rsna-knee-orthofoundation-pilot), kernel `137481721`. В обеих версиях output содержит только log `[]`, traceback и наши run-файлы отсутствуют, GPU-квота не списалась. Точная причина не раскрыта API. [V1](pilot_v1_failure_summary.json) · [V2](pilot_v2_failure_summary.json). Образ и model assets затем проверены отдельным успешным тестом ниже. Отдельный probe с семью MRI-cache inputs и competition input не показал пользовательского Python за час и был отменён; [receipt отмены](../orthofoundation_sharded/cache_probe_cancellation_receipt.json).
 
