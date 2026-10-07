@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-07T17:19:34.140570+00:00",
-  "stage": "HTTP_V2_3_SHARDS_COMPLETE_SHARD3_ACCEPTED",
+  "updated_utc": "2026-10-07T17:56:07.814594+00:00",
+  "stage": "HTTP_V2_4_SHARDS_COMPLETE_READY_FOR_NEXT_GATE",
   "training_started": false,
   "model": "OrthoFoundation-L / DINOv3 ViT-L/16",
   "checkpoint_sha256": "385a775822107b68eaa486336feb982e1ce7bd6d4e8c03ceb482a0bf546f2ff9",
@@ -12,7 +12,7 @@
   "gpu_quota_available_seconds_before_experiment": 18440.8,
   "kaggle_kernel": "https://www.kaggle.com/code/alanchoo/rsna-knee-orthofoundation-pilot",
   "public_score": null,
-  "note": "Actual shards0\u20132 COMPLETE: 1933 study partials / 37348 images ROOT + independent PASS. Shard3 accepted exact V1/T4/wire1243. Conservative owner forecast uses measured minimum GPU rate58.7047. Full bank and production training/AUC incomplete; no new submission.",
+  "note": "Actual shards0\u20133 COMPLETE: 2568 study partials / 49680 images ROOT + independent PASS. No active extraction claimed. Full merged bank and production training/AUC incomplete; no new submission.",
   "kaggle_version": 2,
   "kaggle_kernel_id": 137481721,
   "kaggle_status": "ERROR",
@@ -47,7 +47,7 @@
   "http_v2_encoder_images_per_second": 72.6021165186807,
   "http_v2_peak_gpu_allocated_gb": 1.328124416,
   "full_production_training_started": false,
-  "conservative_full_frozen_forecast_seconds": 7015.121867209428,
+  "conservative_full_frozen_forecast_seconds": 9154.144840937819,
   "full7_code_review_passed": true,
   "full_extraction_first_shard_kernel": "alanchoo/rsna-knee-ortho-http-shard-0-v2",
   "full_extraction_first_shard_id": 137510617,
@@ -55,12 +55,13 @@
   "complete_extraction_shards": [
     0,
     1,
-    2
+    2,
+    3
   ],
-  "actual_feature_partial_studies": 1933,
-  "actual_selected_images": 37348,
+  "actual_feature_partial_studies": 2568,
+  "actual_selected_images": 49680,
   "full_extraction_bank_complete": false,
   "quality_AUC_measured": false,
-  "active_extraction_shard": 3,
-  "active_extraction_kernel_id": 137515960
+  "active_extraction_shard": null,
+  "active_extraction_kernel_id": null
 }

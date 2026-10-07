@@ -1,6 +1,6 @@
 # Full HTTP OrthoFoundation V2
 
-**Actual extraction 3/7 verified: shards0–2 COMPLETE, 1,933 study partials / 37,348 images.
+**Actual extraction 4/7 verified: shards0–3 COMPLETE, 2,568 study partials / 49,680 images.
 Merge and production training have not run; AUC remains unmeasured.** [Preparation receipt](preparation_receipt.json) and
 [source-index pins](source_index.json) contain only aggregate counts, references,
 file sizes and hashes, without medical rows or scoped access URLs.
@@ -78,7 +78,7 @@ in214.95seconds. One finite smoke update/Gold0; production heads still untrained
 [Execution receipt](shard2_execution_receipt.json),
 [ROOT validation](shard2_ROOT_partial_validation.json),
 [independent validation](shard2_independent_partial_validation.json).
-The [updated owner measurements](owner_measurements.json) use the minimum
+The [then-current short-pilot measurements](owner_measurements_short_pilot_v1.json) use the minimum
 actual same-identity short-pilot GPU rate58.7047images/s. Faster steady-state
 102.7images/s is recorded separately. Conservative full-route forecast7015.12s
 still fits total9300 and every shard cap. ROOT authorized shard3 after both actual validations; Kaggle accepted
@@ -88,3 +88,27 @@ The fixed-model [inference plan](INFERENCE_PLAN.md) describes the separate Ortho
 branch and preprocessing parity checks. Aggregate Gold58 comparison code and its
 [independent review](independent_gold_diagnostics_review.json) are ready; actual
 Ortho probability CSVs and training receipts do not exist yet.
+
+Actual shard3 COMPLETE:635 independently verified partials,3,083slots/12,332images;
+parent1144.438s/exit0/cleanup. Full10.278GB ZIPSHA matched; download978.243s,
+0retries. Encoding the remaining12,036images took120.066s. Source8 was also
+[downloaded from the actual immutable outputs and hash-checked](shard3_source8_remote_audit.json).
+[Execution receipt](shard3_execution_receipt.json), [ROOT validation](shard3_ROOT_partial_validation.json),
+[independent validation](shard3_independent_partial_validation.json).
+
+The [legacy model with this slower HTTP measurement](shard3_slower_HTTP_projection.json)
+projects9724.195s and fails the9300s/full-route and future shard caps.
+ROOT explicitly revised the operational model after four complete measured jobs:
+minimum full-stage decode/load/encoder/NPZ rate100.245images/s, minimum observed
+HTTP10.506MB/s, and maximum startup residual rounded up to99.0s. The residual
+retains imports, weights, initial16-study pilot/cold CUDA warmup, smoke head,
+checks, export and cleanup. Projecting all plannedimages also doublecounts pilot
+images. [Current owner measurements](owner_measurements.json) and
+[independent phase review](independent_phase_forecast_review.json) document the
+new empirical model and historical policy without changing scientific settings.
+
+Rounded forecast9154.145s fits9300s and all original caps. Remaining4/5/6 margins
+are17.073/17.826/27.247s: another2%HTTP slowdown would break4/5. The model is
+an estimate from actual jobs, not a guarantee. Hard watchdogs, fresh quota,
+sequential actual verification and a separate ROOT gate remain mandatory.
+Shard4 has not yet been launched. Production heads/AUC remain pending.

@@ -1,0 +1,123 @@
+{
+  "schema": "independent_HTTP_v2_empirical_phase_forecast_review_v1",
+  "verdict": "PASS_EXPLICIT_EMPIRICAL_PHASE_MODEL_REVIEW",
+  "critical_findings": [],
+  "important_findings": [],
+  "ROOT_draft_sha256": "cc16afd18c6847c3b46d6c0189f4de204514f80fe8689b0ab221b18e647d2f78",
+  "forecast_source_sha256": "249caa17b0752f58bd530a35c613cb6e5ec8b0e13978cd92c8aa4dc8a5aa45ab",
+  "source_index_sha256": "0e450019b7f37a39701d78be46f1ea39b76614f90948c6096f0a1fe3eb2544b7",
+  "feature_identity": "7f0e16dc1c34e8c0920f567db2ebb68f55c470c09ce77dd7c0aa238cd5ec6c77",
+  "actual_completed_shards_used": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "actual_source_receipt_sha256": [
+    {
+      "shard": 0,
+      "parent": "a33776d0ead531956a8c8c3d766f0ffd2050bda89d0f3e36e565bc360f1cef47",
+      "download": "bd3d8d8c50032c08f77ad8e643dec213586c8808d853ffd1446cdc0f9e57c819",
+      "extraction": "69e445bc330788569690285a04fca425150e5f26546a5e3a8dfa36684ff61360",
+      "ROOT_validation": "7fc6ae5c791cb9ebda5af3d34def5c6f7e1f1ad74f94c0be3d5a7e0fee5a3bee",
+      "independent_validation": "a86de58d01486d0a2bdb21f22d66c502b1c3f07020865f7f0472a6330ba1dfb7"
+    },
+    {
+      "shard": 1,
+      "parent": "23c0d495ee85693ff768e26af77983dd65ac19feae5f0415dceb1b2e062ede9a",
+      "download": "8647e18226b07e6f64350db7a432c5b3a877a6ec21e3dedc0a26463d615e53d5",
+      "extraction": "2e42a9265c896b5bbdc30f1c149273c174239996076c3bb0cd4718bad459dd9d",
+      "ROOT_validation": "0767a75bbf7a422188cfc247d42d8b08d919bd33818ecf18d32219706618fdb5",
+      "independent_validation": "d1f37549ad0c4b5bed95b727b1556e1b6cd0fd953466d92dff535553a1edf756"
+    },
+    {
+      "shard": 2,
+      "parent": "bc56e752c81361ccfae8ab898d7d271d4124e024e2b1695bb8505bd6da3da272",
+      "download": "1d409f6dc4f886c77ddf5148c947ab455eabd78888b9c05e0b78a92713915584",
+      "extraction": "de7f81d37cdab63cee11a783ee5ea435e82bcaa49c5ab5d3005ef2e514874319",
+      "ROOT_validation": "8ddf87cc9c12c9b58434879e114d781e8770fc6930e8bb18e41c52beca42ba4f",
+      "independent_validation": "4fed14b708e9f6d6cbb333649704edf12fefdb642bc886101e71db13e14e2b5d"
+    },
+    {
+      "shard": 3,
+      "parent": "06c13542073af3387344f7658995e6109f6b187f82a4650f3f2447f290958e87",
+      "download": "e61565b9d16ac53aacfa8ca6366ba8450a1910ffde275fbd6cb6a04a843c4100",
+      "extraction": "7090b67da4ed435c49d1d8d8c36eb9b0ae77f968029bdb49289e1af05686e5e2",
+      "ROOT_validation": "e86b15ccb86bd5255e16bf2f729577d691d898af15f5da9ddf6e27c9f5e486cf",
+      "independent_validation": "e6631ea013a07832b2390bab2a9406fed83e58eff0eae3a5eb50385a494bdc04"
+    }
+  ],
+  "independently_recomputed": {
+    "minimum_HTTP_bytes_per_second": 10506094.862005167,
+    "minimum_long_full_stage_images_per_second": 100.24517690851755,
+    "maximum_guard_residual_seconds": 98.56600396699997,
+    "prior_pilot_startup_seconds": 94.38218474799993,
+    "operational_startup_rounded_seconds": 99.0,
+    "maximum_observed_notebook_guard_boundary_bookkeeping_seconds": 0.08158399667502181,
+    "all85336_images_projected": true,
+    "pilot_reserve_seconds": 900,
+    "total_extraction_forecast_seconds": 9154.144840937819,
+    "total_extraction_limit_seconds": 9300,
+    "head_job_reserve_seconds": 1500,
+    "total_forecast_plus_head_job_seconds": 10654.144840937819,
+    "remaining_shard_cap_margins": [
+      {
+        "shard": 4,
+        "projected_seconds": 1198.926856985386,
+        "hard_cap_seconds": 1216,
+        "margin_seconds": 17.07314301461406
+      },
+      {
+        "shard": 5,
+        "projected_seconds": 1210.1743188334576,
+        "hard_cap_seconds": 1228,
+        "margin_seconds": 17.82568116654238
+      },
+      {
+        "shard": 6,
+        "projected_seconds": 1041.7533155900585,
+        "hard_cap_seconds": 1069,
+        "margin_seconds": 27.24668440994151
+      }
+    ]
+  },
+  "policy_judgment": "Legitimate explicit operational revision after four completed jobs: long full-stage decode/load/encoder/NPZ throughput is separated from the measured residual covering initial pilot/cold CUDA/weights/imports/smoke/checks/export/cleanup. Startup is retained and rounded upward for the small notebook/guard boundary. Applying steady throughput to every planned image additionally counts initial-pilot images, conservatively.",
+  "previous_policy_disclosed": {
+    "historical_short_pilot_measurements_sha256": "48042dbfeb209a92d4efc141779db8c7ab45a8807048b3d304acd1988cd3ae08",
+    "short_pilot_GPU_images_per_second": 58.704743606303595,
+    "same_new_HTTP_stress_total_seconds": 9724.194694278343,
+    "fits_total": false,
+    "fits_every_shard": false,
+    "historical_policy_must_be_retained_separately": true
+  },
+  "uncertainty": "Four observed extrema are empirical measurements, not guaranteed bounds or confidence intervals. Remaining margins are narrow. A 2% lower HTTP rate exceeds remaining shard4/5 hard caps. Pre-Python Kaggle preparation/mount time is excluded.",
+  "HTTP_two_percent_slower": {
+    "total_seconds": 9291.081003498164,
+    "remaining_failed_shards": [
+      4,
+      5
+    ]
+  },
+  "unchanged_controls": {
+    "seven_original_shard_caps": [
+      1204,
+      1231,
+      1236,
+      1213,
+      1216,
+      1228,
+      1069
+    ],
+    "total_extraction_cap": 9300,
+    "head_fit_cap": 1200,
+    "head_job_cap": 1500,
+    "hard_watchdogs": true,
+    "scientific_source_config_and_feature_identity": true
+  },
+  "ROOT_owner_policy_declaration_and_fresh_quota_gate_required_separately": true,
+  "GPU_launch_authority_granted": false,
+  "guaranteed_future_completion_claim": false,
+  "actual_ML_quality_claim": false,
+  "actual_full_bank_or_production_head_complete": false,
+  "validation_activity": "Read-only local aggregate report hashes and arithmetic; no API/GPU/Git/UI or scientific pipeline changes."
+}

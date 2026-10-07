@@ -1,114 +1,253 @@
 {
+  "schema": "ROOT_empirical_phase_measurements_v2",
   "ROOT_independently_recomputed_measured_rates": true,
-  "updated_utc": "2026-10-07T17:08:18.301067+00:00",
+  "updated_utc": "2026-10-07T17:47:41.252810+00:00",
   "feature_identity": "7f0e16dc1c34e8c0920f567db2ebb68f55c470c09ce77dd7c0aa238cd5ec6c77",
+  "operational_policy_revision": "After four complete measured jobs, separate full-stage decode/load/encoder/NPZ throughput from startup residual that includes first16 pilot, cold CUDA warmup, smoke head, imports, weights, checks, export and cleanup. All planned images projected additionally, conservatively doublecounting pilot images. This is a new empirical model, not silent substitution in the short-pilot model.",
   "measured": {
-    "http_bytes_per_second": 17620117.61715252,
-    "non_transport_startup_seconds": 94.38218474799993,
-    "gpu_images_per_second": 58.704743606303595
+    "http_bytes_per_second": 10506094.862005167,
+    "non_transport_startup_seconds": 99.0,
+    "gpu_images_per_second": 100.24517690851755
   },
-  "gpu_rate_policy": "minimum measured same-identity short-pilot rates; do not raise from higher steady-state rate",
-  "source_pilot_receipts": [
+  "completed_shards_measured": [
     {
-      "source": "V2_MRI_pilot",
-      "gpu_images_per_second": 72.6021165186807,
-      "actual_pilot_report_sha256": "3665c5e5701c54fcc4a9849f90caea7374bde1cae3166389f330aef4738b4028"
+      "shard": 0,
+      "http_bytes_per_second": 42362472.33810496,
+      "new_full_stage_images_per_second": 106.50316085668366,
+      "residual_seconds_including_initial_pilot_smoke_export_and_cleanup": 47.523133572000006,
+      "new_images_encoded": 11932,
+      "new_extraction_seconds": 112.03423357600002,
+      "download_seconds": 241.767291844,
+      "parent_seconds": 401.324658992,
+      "source_receipt_sha256": {
+        "parent": "a33776d0ead531956a8c8c3d766f0ffd2050bda89d0f3e36e565bc360f1cef47",
+        "download": "bd3d8d8c50032c08f77ad8e643dec213586c8808d853ffd1446cdc0f9e57c819",
+        "extraction": "69e445bc330788569690285a04fca425150e5f26546a5e3a8dfa36684ff61360",
+        "ROOT_validation": "7fc6ae5c791cb9ebda5af3d34def5c6f7e1f1ad74f94c0be3d5a7e0fee5a3bee",
+        "independent_validation": "a86de58d01486d0a2bdb21f22d66c502b1c3f07020865f7f0472a6330ba1dfb7"
+      }
     },
     {
-      "source": "shard0_short_pilot",
-      "gpu_images_per_second": 72.6021165186807,
-      "actual_pilot_report_sha256": "0817175c024b165e1546822ecadf83fcc2d0323b0b488a3e6faad084ac6d2dce"
+      "shard": 1,
+      "http_bytes_per_second": 97598731.39608413,
+      "new_full_stage_images_per_second": 107.84522370114304,
+      "residual_seconds_including_initial_pilot_smoke_export_and_cleanup": 50.506129117,
+      "new_images_encoded": 12232,
+      "new_extraction_seconds": 113.42180562300001,
+      "download_seconds": 105.27897378400002,
+      "parent_seconds": 269.206908524,
+      "source_receipt_sha256": {
+        "parent": "23c0d495ee85693ff768e26af77983dd65ac19feae5f0415dceb1b2e062ede9a",
+        "download": "8647e18226b07e6f64350db7a432c5b3a877a6ec21e3dedc0a26463d615e53d5",
+        "extraction": "2e42a9265c896b5bbdc30f1c149273c174239996076c3bb0cd4718bad459dd9d",
+        "ROOT_validation": "0767a75bbf7a422188cfc247d42d8b08d919bd33818ecf18d32219706618fdb5",
+        "independent_validation": "d1f37549ad0c4b5bed95b727b1556e1b6cd0fd953466d92dff535553a1edf756"
+      }
     },
     {
-      "source": "shard1_short_pilot",
-      "gpu_images_per_second": 75.2367825586136,
-      "actual_pilot_report_sha256": "81e6adf016ab2fdbd0a0494bb763d3afaf5fd04136a09083656c05b3fa4f4649"
+      "shard": 2,
+      "http_bytes_per_second": 47928511.23345781,
+      "new_full_stage_images_per_second": 102.71297337075589,
+      "residual_seconds_including_initial_pilot_smoke_export_and_cleanup": 98.56600396699997,
+      "new_images_encoded": 12284,
+      "new_extraction_seconds": 119.59540841700004,
+      "download_seconds": 214.951008155,
+      "parent_seconds": 433.112420539,
+      "source_receipt_sha256": {
+        "parent": "bc56e752c81361ccfae8ab898d7d271d4124e024e2b1695bb8505bd6da3da272",
+        "download": "1d409f6dc4f886c77ddf5148c947ab455eabd78888b9c05e0b78a92713915584",
+        "extraction": "de7f81d37cdab63cee11a783ee5ea435e82bcaa49c5ab5d3005ef2e514874319",
+        "ROOT_validation": "8ddf87cc9c12c9b58434879e114d781e8770fc6930e8bb18e41c52beca42ba4f",
+        "independent_validation": "4fed14b708e9f6d6cbb333649704edf12fefdb642bc886101e71db13e14e2b5d"
+      }
     },
     {
-      "source": "shard2_short_pilot",
-      "gpu_images_per_second": 58.704743606303595,
-      "actual_pilot_report_sha256": "ec5b6e8e47898ad204f992ea5f60f7ddeee9ffc2d49715a94a5edbf80b2e330f"
+      "shard": 3,
+      "http_bytes_per_second": 10506094.862005167,
+      "new_full_stage_images_per_second": 100.24517690851755,
+      "residual_seconds_including_initial_pilot_smoke_export_and_cleanup": 46.12996043800001,
+      "new_images_encoded": 12036,
+      "new_extraction_seconds": 120.06562680799993,
+      "download_seconds": 978.242813528,
+      "parent_seconds": 1144.438400774,
+      "source_receipt_sha256": {
+        "parent": "06c13542073af3387344f7658995e6109f6b187f82a4650f3f2447f290958e87",
+        "download": "e61565b9d16ac53aacfa8ca6366ba8450a1910ffde275fbd6cb6a04a843c4100",
+        "extraction": "7090b67da4ed435c49d1d8d8c36eb9b0ae77f968029bdb49289e1af05686e5e2",
+        "ROOT_validation": "e86b15ccb86bd5255e16bf2f729577d691d898af15f5da9ddf6e27c9f5e486cf",
+        "independent_validation": "e6631ea013a07832b2390bab2a9406fed83e58eff0eae3a5eb50385a494bdc04"
+      }
     }
   ],
-  "source_index_sha256": "0e450019b7f37a39701d78be46f1ea39b76614f90948c6096f0a1fe3eb2544b7",
-  "forecast": {
+  "previous_short_pilot_measurements_sha256": "48042dbfeb209a92d4efc141779db8c7ab45a8807048b3d304acd1988cd3ae08",
+  "previous_short_pilot_policy_retained": "owner_measurements_short_pilot_v1.json",
+  "previous_model_stress_with_new_HTTP": {
     "schema": "http_sharded_v2_forecast",
     "all_archive_bytes": 70494551381,
-    "http_bytes_per_second": 17620117.61715252,
+    "http_bytes_per_second": 10506094.862005167,
     "gpu_images_per_second": 58.704743606303595,
     "non_transport_startup_seconds_per_job": 94.38218474799993,
-    "transport_seconds_all_seven": 4000.799138388056,
+    "transport_seconds_all_seven": 6709.871965456971,
     "startup_seconds_all_seven": 660.6752932359996,
     "GPU_feature_seconds_all_85336_images": 1453.6474355853722,
     "pilot_reserved_seconds": 900,
-    "projected_total_extraction_seconds": 7015.121867209428,
+    "projected_total_extraction_seconds": 9724.194694278343,
+    "total_extraction_cap_seconds": 9300,
+    "fits_total": false,
+    "fits_every_shard": false,
+    "head_fit_seconds": 1200,
+    "head_job_reserve_seconds": 1500,
+    "projected_total_plus_head_job_seconds": 11224.194694278343,
+    "shards": [
+      {
+        "shard": 0,
+        "http_seconds": 974.8493943300703,
+        "gpu_seconds": 208.50103838432733,
+        "non_transport_startup_seconds": 94.38218474799993,
+        "projected_seconds": 1277.7326174623975,
+        "cap_seconds": 1204,
+        "fits_cap": false
+      },
+      {
+        "shard": 1,
+        "http_seconds": 978.0127077625607,
+        "gpu_seconds": 213.40694516984092,
+        "non_transport_startup_seconds": 94.38218474799993,
+        "projected_seconds": 1285.8018376804016,
+        "cap_seconds": 1231,
+        "fits_cap": false
+      },
+      {
+        "shard": 2,
+        "http_seconds": 980.6004937436604,
+        "gpu_seconds": 214.2927338950031,
+        "non_transport_startup_seconds": 94.38218474799993,
+        "projected_seconds": 1289.2754123866634,
+        "cap_seconds": 1236,
+        "fits_cap": false
+      },
+      {
+        "shard": 3,
+        "http_seconds": 978.242813528,
+        "gpu_seconds": 210.06820305192196,
+        "non_transport_startup_seconds": 94.38218474799993,
+        "projected_seconds": 1282.693201327922,
+        "cap_seconds": 1213,
+        "fits_cap": false
+      },
+      {
+        "shard": 4,
+        "http_seconds": 976.5892523115649,
+        "gpu_seconds": 210.6133038058679,
+        "non_transport_startup_seconds": 94.38218474799993,
+        "projected_seconds": 1281.5847408654327,
+        "cap_seconds": 1216,
+        "fits_cap": false
+      },
+      {
+        "shard": 5,
+        "http_seconds": 986.5199425794889,
+        "gpu_seconds": 212.86184441589495,
+        "non_transport_startup_seconds": 94.38218474799993,
+        "projected_seconds": 1293.7639717433838,
+        "cap_seconds": 1228,
+        "fits_cap": false
+      },
+      {
+        "shard": 6,
+        "http_seconds": 835.0573612016265,
+        "gpu_seconds": 183.90336686251615,
+        "non_transport_startup_seconds": 94.38218474799993,
+        "projected_seconds": 1113.3429128121425,
+        "cap_seconds": 1069,
+        "fits_cap": false
+      }
+    ],
+    "launch_authorized": false,
+    "remaining_gates": [
+      "Actual MRI pilot PASS and sealed measured receipts",
+      "Fresh quota before every job"
+    ],
+    "timer_boundary": "Python HTTP, hashing, setup, encoder and export; pre-Python Kaggle mounting excluded"
+  },
+  "forecast": {
+    "schema": "http_sharded_v2_forecast",
+    "all_archive_bytes": 70494551381,
+    "http_bytes_per_second": 10506094.862005167,
+    "gpu_images_per_second": 100.24517690851755,
+    "non_transport_startup_seconds_per_job": 99.0,
+    "transport_seconds_all_seven": 6709.871965456971,
+    "startup_seconds_all_seven": 693.0,
+    "GPU_feature_seconds_all_85336_images": 851.2728754808476,
+    "pilot_reserved_seconds": 900,
+    "projected_total_extraction_seconds": 9154.144840937819,
     "total_extraction_cap_seconds": 9300,
     "fits_total": true,
     "fits_every_shard": true,
     "head_fit_seconds": 1200,
     "head_job_reserve_seconds": 1500,
-    "projected_total_plus_head_job_seconds": 8515.12186720943,
+    "projected_total_plus_head_job_seconds": 10654.144840937819,
     "shards": [
       {
         "shard": 0,
-        "http_seconds": 581.259469178,
-        "gpu_seconds": 208.50103838432733,
-        "non_transport_startup_seconds": 94.38218474799993,
-        "projected_seconds": 884.1426923103272,
+        "http_seconds": 974.8493943300703,
+        "gpu_seconds": 122.10063743186433,
+        "non_transport_startup_seconds": 99.0,
+        "projected_seconds": 1195.9500317619345,
         "cap_seconds": 1204,
         "fits_cap": true
       },
       {
         "shard": 1,
-        "http_seconds": 583.1456127169993,
-        "gpu_seconds": 213.40694516984092,
-        "non_transport_startup_seconds": 94.38218474799993,
-        "projected_seconds": 890.9347426348401,
+        "http_seconds": 978.0127077625607,
+        "gpu_seconds": 124.97359360673173,
+        "non_transport_startup_seconds": 99.0,
+        "projected_seconds": 1201.9863013692925,
         "cap_seconds": 1231,
         "fits_cap": true
       },
       {
         "shard": 2,
-        "http_seconds": 584.6885947555263,
-        "gpu_seconds": 214.2927338950031,
-        "non_transport_startup_seconds": 94.38218474799993,
-        "projected_seconds": 893.3635133985292,
+        "http_seconds": 980.6004937436604,
+        "gpu_seconds": 125.49232180497168,
+        "non_transport_startup_seconds": 99.0,
+        "projected_seconds": 1205.0928155486322,
         "cap_seconds": 1236,
         "fits_cap": true
       },
       {
         "shard": 3,
-        "http_seconds": 583.2828145820791,
-        "gpu_seconds": 210.06820305192196,
-        "non_transport_startup_seconds": 94.38218474799993,
-        "projected_seconds": 887.7332023820011,
+        "http_seconds": 978.242813528,
+        "gpu_seconds": 123.01838732105809,
+        "non_transport_startup_seconds": 99.0,
+        "projected_seconds": 1200.2612008490582,
         "cap_seconds": 1213,
         "fits_cap": true
       },
       {
         "shard": 4,
-        "http_seconds": 582.2968693473499,
-        "gpu_seconds": 210.6133038058679,
-        "non_transport_startup_seconds": 94.38218474799993,
-        "projected_seconds": 887.2923579012177,
+        "http_seconds": 976.5892523115649,
+        "gpu_seconds": 123.33760467382113,
+        "non_transport_startup_seconds": 99.0,
+        "projected_seconds": 1198.926856985386,
         "cap_seconds": 1216,
         "fits_cap": true
       },
       {
         "shard": 5,
-        "http_seconds": 588.2180996289478,
-        "gpu_seconds": 212.86184441589495,
-        "non_transport_startup_seconds": 94.38218474799993,
-        "projected_seconds": 895.4621287928426,
+        "http_seconds": 986.5199425794889,
+        "gpu_seconds": 124.65437625396868,
+        "non_transport_startup_seconds": 99.0,
+        "projected_seconds": 1210.1743188334576,
         "cap_seconds": 1228,
         "fits_cap": true
       },
       {
         "shard": 6,
-        "http_seconds": 497.9076781791529,
-        "gpu_seconds": 183.90336686251615,
-        "non_transport_startup_seconds": 94.38218474799993,
-        "projected_seconds": 776.193229789669,
+        "http_seconds": 835.0573612016265,
+        "gpu_seconds": 107.69595438843197,
+        "non_transport_startup_seconds": 99.0,
+        "projected_seconds": 1041.7533155900585,
         "cap_seconds": 1069,
         "fits_cap": true
       }
@@ -120,6 +259,105 @@
     ],
     "timer_boundary": "Python HTTP, hashing, setup, encoder and export; pre-Python Kaggle mounting excluded"
   },
+  "sensitivity_HTTP_two_percent_slower": {
+    "schema": "http_sharded_v2_forecast",
+    "all_archive_bytes": 70494551381,
+    "http_bytes_per_second": 10295972.964765063,
+    "gpu_images_per_second": 100.24517690851755,
+    "non_transport_startup_seconds_per_job": 99.0,
+    "transport_seconds_all_seven": 6846.808128017318,
+    "startup_seconds_all_seven": 693.0,
+    "GPU_feature_seconds_all_85336_images": 851.2728754808476,
+    "pilot_reserved_seconds": 900,
+    "projected_total_extraction_seconds": 9291.081003498164,
+    "total_extraction_cap_seconds": 9300,
+    "fits_total": true,
+    "fits_every_shard": false,
+    "head_fit_seconds": 1200,
+    "head_job_reserve_seconds": 1500,
+    "projected_total_plus_head_job_seconds": 10791.081003498164,
+    "shards": [
+      {
+        "shard": 0,
+        "http_seconds": 994.7442799286432,
+        "gpu_seconds": 122.10063743186433,
+        "non_transport_startup_seconds": 99.0,
+        "projected_seconds": 1215.8449173605075,
+        "cap_seconds": 1204,
+        "fits_cap": false
+      },
+      {
+        "shard": 1,
+        "http_seconds": 997.9721507781233,
+        "gpu_seconds": 124.97359360673173,
+        "non_transport_startup_seconds": 99.0,
+        "projected_seconds": 1221.945744384855,
+        "cap_seconds": 1231,
+        "fits_cap": true
+      },
+      {
+        "shard": 2,
+        "http_seconds": 1000.6127487180208,
+        "gpu_seconds": 125.49232180497168,
+        "non_transport_startup_seconds": 99.0,
+        "projected_seconds": 1225.1050705229925,
+        "cap_seconds": 1236,
+        "fits_cap": true
+      },
+      {
+        "shard": 3,
+        "http_seconds": 998.206952579592,
+        "gpu_seconds": 123.01838732105809,
+        "non_transport_startup_seconds": 99.0,
+        "projected_seconds": 1220.22533990065,
+        "cap_seconds": 1213,
+        "fits_cap": false
+      },
+      {
+        "shard": 4,
+        "http_seconds": 996.5196452158827,
+        "gpu_seconds": 123.33760467382113,
+        "non_transport_startup_seconds": 99.0,
+        "projected_seconds": 1218.8572498897038,
+        "cap_seconds": 1216,
+        "fits_cap": false
+      },
+      {
+        "shard": 5,
+        "http_seconds": 1006.6530026321316,
+        "gpu_seconds": 124.65437625396868,
+        "non_transport_startup_seconds": 99.0,
+        "projected_seconds": 1230.3073788861002,
+        "cap_seconds": 1228,
+        "fits_cap": false
+      },
+      {
+        "shard": 6,
+        "http_seconds": 852.099348164925,
+        "gpu_seconds": 107.69595438843197,
+        "non_transport_startup_seconds": 99.0,
+        "projected_seconds": 1058.795302553357,
+        "cap_seconds": 1069,
+        "fits_cap": true
+      }
+    ],
+    "launch_authorized": false,
+    "remaining_gates": [
+      "Actual MRI pilot PASS and sealed measured receipts",
+      "Fresh quota before every job"
+    ],
+    "timer_boundary": "Python HTTP, hashing, setup, encoder and export; pre-Python Kaggle mounting excluded"
+  },
+  "phase_policy_judgment": "ROOT explicitly declares revised empirical phase model after independent recomputation and review; historical short-pilot policy and its latest-HTTP stress failure retained.",
+  "limitations": "Minimum and maximum of four actual jobs are empirical bounds, not guaranteed future bounds; remaining cap margins are narrow. Pre-Python mounting excluded. Same existing hard watchdogs and sequential actual validation required.",
+  "forecast_source_sha256": "249caa17b0752f58bd530a35c613cb6e5ec8b0e13978cd92c8aa4dc8a5aa45ab",
+  "source_index_sha256": "0e450019b7f37a39701d78be46f1ea39b76614f90948c6096f0a1fe3eb2544b7",
   "production_training_complete": false,
-  "new_submission_sent": false
+  "new_submission_sent": false,
+  "next_GPU_launch_authorized_by_receipt": false,
+  "unrounded_max_residual_startup_seconds": 98.56600396699997,
+  "startup_boundary_reserve_policy": "Round98.566003967 maximum measured guard residual up to99.0s; this covers independently observed <=0.0816s notebook bootstrap/guard boundary bookkeeping with additional reserve.",
+  "ROOT_owner_policy_declared_utc": "2026-10-07T17:56:07.771404+00:00",
+  "independent_phase_policy_review_sha256": "efb38cd24342f503da7a4e77ae0f8fa5424b0a6d863ab8233bf2780ca067251b",
+  "reviewed_ROOT_draft_sha256": "cc16afd18c6847c3b46d6c0189f4de204514f80fe8689b0ab221b18e647d2f78"
 }

@@ -1,0 +1,89 @@
+{
+  "schema": "http_sharded_v2_forecast",
+  "all_archive_bytes": 70494551381,
+  "http_bytes_per_second": 10506094.862005167,
+  "gpu_images_per_second": 58.704743606303595,
+  "non_transport_startup_seconds_per_job": 94.38218474799993,
+  "transport_seconds_all_seven": 6709.871965456971,
+  "startup_seconds_all_seven": 660.6752932359996,
+  "GPU_feature_seconds_all_85336_images": 1453.6474355853722,
+  "pilot_reserved_seconds": 900,
+  "projected_total_extraction_seconds": 9724.194694278343,
+  "total_extraction_cap_seconds": 9300,
+  "fits_total": false,
+  "fits_every_shard": false,
+  "head_fit_seconds": 1200,
+  "head_job_reserve_seconds": 1500,
+  "projected_total_plus_head_job_seconds": 11224.194694278343,
+  "shards": [
+    {
+      "shard": 0,
+      "http_seconds": 974.8493943300703,
+      "gpu_seconds": 208.50103838432733,
+      "non_transport_startup_seconds": 94.38218474799993,
+      "projected_seconds": 1277.7326174623975,
+      "cap_seconds": 1204,
+      "fits_cap": false
+    },
+    {
+      "shard": 1,
+      "http_seconds": 978.0127077625607,
+      "gpu_seconds": 213.40694516984092,
+      "non_transport_startup_seconds": 94.38218474799993,
+      "projected_seconds": 1285.8018376804016,
+      "cap_seconds": 1231,
+      "fits_cap": false
+    },
+    {
+      "shard": 2,
+      "http_seconds": 980.6004937436604,
+      "gpu_seconds": 214.2927338950031,
+      "non_transport_startup_seconds": 94.38218474799993,
+      "projected_seconds": 1289.2754123866634,
+      "cap_seconds": 1236,
+      "fits_cap": false
+    },
+    {
+      "shard": 3,
+      "http_seconds": 978.242813528,
+      "gpu_seconds": 210.06820305192196,
+      "non_transport_startup_seconds": 94.38218474799993,
+      "projected_seconds": 1282.693201327922,
+      "cap_seconds": 1213,
+      "fits_cap": false
+    },
+    {
+      "shard": 4,
+      "http_seconds": 976.5892523115649,
+      "gpu_seconds": 210.6133038058679,
+      "non_transport_startup_seconds": 94.38218474799993,
+      "projected_seconds": 1281.5847408654327,
+      "cap_seconds": 1216,
+      "fits_cap": false
+    },
+    {
+      "shard": 5,
+      "http_seconds": 986.5199425794889,
+      "gpu_seconds": 212.86184441589495,
+      "non_transport_startup_seconds": 94.38218474799993,
+      "projected_seconds": 1293.7639717433838,
+      "cap_seconds": 1228,
+      "fits_cap": false
+    },
+    {
+      "shard": 6,
+      "http_seconds": 835.0573612016265,
+      "gpu_seconds": 183.90336686251615,
+      "non_transport_startup_seconds": 94.38218474799993,
+      "projected_seconds": 1113.3429128121425,
+      "cap_seconds": 1069,
+      "fits_cap": false
+    }
+  ],
+  "launch_authorized": false,
+  "remaining_gates": [
+    "Actual MRI pilot PASS and sealed measured receipts",
+    "Fresh quota before every job"
+  ],
+  "timer_boundary": "Python HTTP, hashing, setup, encoder and export; pre-Python Kaggle mounting excluded"
+}
