@@ -1,0 +1,23 @@
+{
+  "id": "alanchoo/rsna-knee-orthofoundation-meanmax",
+  "title": "RSNA Knee OrthoFoundation MeanMax Comparison",
+  "code_file": "compare.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "machine_shape": "NvidiaTeslaT4",
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "dataset_sources": [
+    "alanchoo/orthofoundation-l-assets-v1"
+  ],
+  "kernel_sources": [
+    "alanchoo/rsna-knee-orthofoundation-full"
+  ],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+  "docker_image_pinning_type": "original"
+}

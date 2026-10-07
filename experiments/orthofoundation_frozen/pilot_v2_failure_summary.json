@@ -1,0 +1,25 @@
+{
+  "kernel": "alanchoo/rsna-knee-orthofoundation-pilot",
+  "version": 2,
+  "status": "ERROR",
+  "failure_message_from_api": "",
+  "outputs_available": [
+    "rsna-knee-orthofoundation-pilot.log"
+  ],
+  "log_content": "[]",
+  "notebook_output_available": false,
+  "our_failure_json_available": false,
+  "live_log_events": 0,
+  "gpu_seconds_used_before": 3159.2,
+  "gpu_seconds_used_after": 3159.2,
+  "gpu_reserved_seconds_after": 0,
+  "unchanged_from_v1": [
+    "source",
+    "config",
+    "docker_image",
+    "T4",
+    "input_sources",
+    "timeout"
+  ],
+  "conclusion": "The unchanged retry reproduced the failure before observable Python execution. Exact root cause remains unresolved; minimal input probes are next. Full training was not launched."
+}

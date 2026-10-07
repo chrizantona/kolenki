@@ -1,0 +1,24 @@
+{
+  "checked_utc": "2026-10-07T12:30:50.312715+00:00",
+  "command": "python -m unittest discover -s tests -v",
+  "tests_passed": 18,
+  "tests_failed": 0,
+  "independent_review": "Approved for publication; no Critical or Important findings. GPU quality/runtime and complete full bank remain unverified.",
+  "checks": {
+    "core7_unchanged": true,
+    "notebook_payload_sha_matches_checkout": true,
+    "local_markdown_links_checked": 37,
+    "secret_pattern_scan": "PASS"
+  },
+  "source_sha256": {
+    "scripts/compare_frozen_heads.py": "277843a391562237589164780925445a5d47483f275f86b0c2d8f40e5cbdd211",
+    "scripts/build_head_comparison_notebook.py": "16130152888be650d44f717f41801f3b57321b2522b8975ffb5aae2ed0eaf181",
+    "configs/orthofoundation_meanmax.yaml": "39e1209ca251f3781725762977a4bc2c5a6f622bb0eac303df3157f151033f8b",
+    "tests/test_head_comparison.py": "7359810188dbdf0618b1b310f3a3523099873ddb25d50a86c1914222120a7143"
+  },
+  "limitations": [
+    "No completed original full feature bank yet",
+    "No GPU or head-comparison quality result yet",
+    "Same seed/settings do not imply identical minibatch order"
+  ]
+}
