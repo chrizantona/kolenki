@@ -1,6 +1,6 @@
 # OrthoFoundation frozen features → 12-label head
 
-**Этап: model-assets GPU probe прошёл; основной pilot V1/V2 упал до наблюдаемого Python, а подключение всех cache зависает. Private Dataset pilot принят и RUNNING, но фактических MRI/head logs пока нет. Свежий журнал — [запуск по одному архиву](../orthofoundation_sharded/STATUS.md). Полное обучение ещё не подтверждено.**
+**Этап: model-assets GPU probe прошёл; основной pilot V1/V2 упал до наблюдаемого Python, а подключение всех cache зависает. HTTP pilot скачал и проверил полный cache SHA за 581.26 s, затем закончился по лимиту 600 s до MRI/head. Готовим отдельную версию с pilot900 s и строгим общим budget9300 s. Свежий журнал — [запуск по одному архиву](../orthofoundation_sharded/STATUS.md). Полное обучение ещё не подтверждено.**
 
 [Notebook pilot](https://www.kaggle.com/code/alanchoo/rsna-knee-orthofoundation-pilot), kernel `137481721`. В обеих версиях output содержит только log `[]`, traceback и наши run-файлы отсутствуют, GPU-квота не списалась. Точная причина не раскрыта API. [V1](pilot_v1_failure_summary.json) · [V2](pilot_v2_failure_summary.json). Образ и model assets затем проверены отдельным успешным тестом ниже. Отдельный probe с семью MRI-cache inputs и competition input не показал пользовательского Python за час и был отменён; [receipt отмены](../orthofoundation_sharded/cache_probe_cancellation_receipt.json).
 
@@ -23,4 +23,4 @@
 
 Kaggle assets и MRI-cache приватные; ссылка на notebook не открывает другу приватные inputs. В Git лежат код, описание и проверяемые результаты, без MRI, report text, labels и весов.
 
-Для исходного feature schema подготовлено [сравнение attention и mean+max](../orthofoundation_meanmax/STATUS.md), которое повторно encoder не запускает. Если признаки получены новым sharded orchestrator, сначала нужен проверенный schema adapter.
+Для исходного feature schema подготовлено [сравнение attention и mean+max](../orthofoundation_meanmax/STATUS.md), которое повторно encoder не запускает. Для нового sharded bank [adapter уже подготовлен и проверен](../orthofoundation_sharded_meanmax/STATUS.md); запуск ждёт реального завершённого attention-bank и отдельно зафиксированного SHA.

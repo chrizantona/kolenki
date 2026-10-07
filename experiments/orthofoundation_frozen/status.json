@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-07T13:51:09.525970+00:00",
-  "stage": "GPU_ASSET_SMOKE_PASS_CACHE_DATASET_MIRROR_PREPARATION",
+  "updated_utc": "2026-10-07T15:39:38.996225+00:00",
+  "stage": "HTTP_TRANSPORT_PASS_MRI_PILOT_TIMEOUT_V2_PREPARING",
   "training_started": false,
   "model": "OrthoFoundation-L / DINOv3 ViT-L/16",
   "checkpoint_sha256": "385a775822107b68eaa486336feb982e1ce7bd6d4e8c03ceb482a0bf546f2ff9",
@@ -12,7 +12,7 @@
   "gpu_quota_available_seconds_before_experiment": 18440.8,
   "kaggle_kernel": "https://www.kaggle.com/code/alanchoo/rsna-knee-orthofoundation-pilot",
   "public_score": null,
-  "note": "Asset T4 smoke and CSV CPU probe passed. Bulk-cache diagnostic cancelled with zero GPU charge. Single notebook-output cache pilot137491819/V1 failed before first Python cell, zero GPU charge. Exact-byte private dataset mirror being prepared; actual MRI/head training not started.",
+  "note": "V1 verified exact full cache archive via HTTP in581.26s, then cell timeout600s at second SHA scan before MRI/head. Both jobs terminal. Preparing separately versioned900s pilot; no full extraction or new submission.",
   "kaggle_version": 2,
   "kaggle_kernel_id": 137481721,
   "kaggle_status": "ERROR",
@@ -20,5 +20,17 @@
   "asset_probe_url": "https://www.kaggle.com/code/alanchoo/rsna-knee-ortho-asset-startup-probe",
   "competition_cpu_probe_passed": true,
   "active_experiment": "../orthofoundation_sharded/status.json",
-  "metadata_assets_gpu_probe_passed": true
+  "metadata_assets_gpu_probe_passed": true,
+  "http_pilot_url": "https://www.kaggle.com/code/alanchoo/rsna-knee-ortho-http-cache0-pilot",
+  "http_pilot_kernel_id": 137503798,
+  "http_pilot_version": 1,
+  "observed_http_python_bootstrap": true,
+  "observed_http_mri_encoding": false,
+  "observed_http_head_optimizer_updates": false,
+  "http_pilot_terminal_status": "CANCEL_ACKNOWLEDGED",
+  "http_download_full_sha_verified": true,
+  "http_download_seconds": 581.259469178,
+  "dataset_pilot_status": "ERROR",
+  "gpu_quota_available_seconds_last_snapshot": 17755.813000000002,
+  "gpu_quota_reserved_seconds_last_snapshot": 0
 }

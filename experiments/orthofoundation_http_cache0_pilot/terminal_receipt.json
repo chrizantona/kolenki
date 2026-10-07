@@ -1,0 +1,61 @@
+{
+  "experiment": "orthofoundation_frozen_attention_v1",
+  "route": "direct_http",
+  "kernel": "alanchoo/rsna-knee-ortho-http-cache0-pilot",
+  "kernel_id": 137503798,
+  "version_number": 1,
+  "notebook_sha256": "444a375eb5cd7a085617d4a4ec0b067709ed4f01b654b7477728ba3c986fa796",
+  "actual_python_execution_proven": true,
+  "official_terminal_status": "CANCEL_ACKNOWLEDGED",
+  "failure_class": "nbclient_cell_timeout",
+  "configured_session_timeout_seconds": 600,
+  "first_python_stream_seconds": 7.724508644,
+  "parent_launch_stream_seconds": 7.781894717,
+  "cell_timeout_stream_seconds": 607.738824817,
+  "python_to_cell_timeout_seconds": 600.014316173,
+  "latest_persisted_python_stage": "dataset_cache_full_archive_hash",
+  "download": {
+    "complete": true,
+    "bytes": 10241860213,
+    "sha256": "31b3dd3934e79931fa78195315bef1b58d8432bae841b7920c6d4497262e764c",
+    "range_count": 20,
+    "retry_count": 0,
+    "seconds": 581.259469178,
+    "mb_per_second": 17.62011761715252,
+    "source_origin": {
+      "kind": "dataset",
+      "identifier": "alanchoo/rsna-knee-cache-0-bin-v1",
+      "version_number": 1,
+      "filename": "cache384_train.zip.bin"
+    }
+  },
+  "guard_report_exported": false,
+  "owned_scratch_cleanup_observed": false,
+  "server_timeout_and_guard_race_order_not_proven": true,
+  "actual_MRI_forward_proven": false,
+  "features_exported": false,
+  "head_optimizer_updates_proven": false,
+  "training_complete": false,
+  "no_new_submission": true,
+  "old_dataset_pilot": {
+    "kernel": "alanchoo/rsna-knee-ortho-dataset-pilot",
+    "version_number": 1,
+    "terminal_status": "ERROR",
+    "python_execution_proven": false,
+    "output_json_files": 0
+  },
+  "fresh_quota": {
+    "used_seconds": 3844.187,
+    "remaining_seconds": 17755.813000000002,
+    "reserved_seconds": 0
+  },
+  "outputs_checked_no_account_token_or_actual_scoped_URL": true,
+  "next_GPU_job_authorized": false,
+  "checked_at_utc": "2026-10-07T15:39:38.996225+00:00",
+  "reviewed_public_fixtures": {
+    "tests": 17,
+    "seconds": 6.437,
+    "status": "PASS",
+    "scope": "localhost and owned-process fixtures; not MRI quality"
+  }
+}

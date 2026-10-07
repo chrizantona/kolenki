@@ -1,0 +1,53 @@
+{
+  "schema": "http_cache0_publication_static_v1",
+  "status": "prepared_reviewed_source_only_execution_not_certified",
+  "checked_at_utc": "2026-10-07T15:29:33.561001+00:00",
+  "network_calls_during_publication": 0,
+  "Kaggle_API_calls": 0,
+  "forbidden_access_job_read_or_copied": false,
+  "scoped_URL_or_account_token_copied": false,
+  "MRI_or_clinical_row_manifest_copied": false,
+  "notebook_sha256": "444a375eb5cd7a085617d4a4ec0b067709ed4f01b654b7477728ba3c986fa796",
+  "metadata_sha256": "b3c680caaa80e1a90532893f6c3de9318c00f3841a8e87ac009b8234cdd0e6b1",
+  "notebook_and_metadata_byte_identical_to_approved_preparation": true,
+  "nbformat_AST_valid": true,
+  "notebook_has_no_execution_outputs": true,
+  "scientific_payload_files": 8,
+  "scientific_payload_bytes_match_current_frozen_sources": true,
+  "scientific_source_sha256": {
+    "orthofoundation/__init__.py": "f3df43207f5d18497b4f698aa91c746bf81dcd4edb74b81784136acd8aa52cf1",
+    "orthofoundation/cache.py": "700767576eb7b6d9dfa22f77bdf2088411ba4bdf6036c80db58bf608c96f7485",
+    "orthofoundation/data.py": "f3b63ab922f0452c065126dc2ef1c87442a0b988dff29d25c201666a8a5310aa",
+    "orthofoundation/encoder.py": "86defa5f943bfc161603c7b377bbf08a9d5c2a270d01b1df5c039ab59cff7ecb",
+    "orthofoundation/heads.py": "c814b1bcbf1ac1322b717c1f1e6ba7b9173357e956e9104b2c77d0351a833f1f",
+    "orthofoundation/run.py": "740c2e2599516b1876e7d7226bb0f11c51205cbdaec0b6eebf44dc740c659e10",
+    "orthofoundation/train.py": "928121a030aabf4fc58594da967ad98ff43a7ce915474d69a909ab09652a7dc1",
+    "sharded_frozen_extract.py": "ffc2d904e25f7bdbd506f8c6cd58607484ffacc0305a9665fd538778ca122441"
+  },
+  "scientific_config_matches_preparation": true,
+  "runtime_seconds": 600,
+  "reviewed_Range_source_sha256": "7212063963481c5fe35ee2d27c61ef101d506a93372326f5501f6771615206ed",
+  "exact_reused_Range_block_sha256": "7dc06032963322a7dcdb7300cf7047bb5ccc3d9d034b9fbb146ce1dc354bbcfd",
+  "Range_block_AST_matches_reviewed_block": true,
+  "transport_source_sha256": {
+    "download.py": "15efe3d24f78261e8d11b1307720716918c081c0fdac087fecba86c87ef9899c",
+    "parent_guard.py": "11c5430b2e5e961189bf16a1be2e0cfc06c63baa56e3ea36f57f18492c93e50f",
+    "transfer_reviewed.py": "7212063963481c5fe35ee2d27c61ef101d506a93372326f5501f6771615206ed",
+    "test_http.py": "6f31477c98d476da2994dd498bb625f32c8938b742f33c610c250f81a5f534bf"
+  },
+  "preparation_receipt_sha256": "5a9f44343ecdc12f9d1d3a3b70e3dc321bc5d3c6d852eb4199e552971c554698",
+  "original_builder_sha256": "b32517ef5d485ac7bc83df3d4f0c9930a74cd48321cea40423cdbb4da9da8ce4",
+  "original_builder_published": false,
+  "builder_note": "Local builder uses author-specific absolute paths; immutable approved notebook embeds complete generated execution sources",
+  "fixture_review": {
+    "tests": 17,
+    "PASS_receipt_time_utc": "2026-10-07T15:11:57.023962+00:00",
+    "original_test_source_sha256": "0a17cd6c8a69342a2140c9657b956bd9ae7fdff66fe7e57ed584ab26cc379cd2",
+    "public_test_changes": "Repository paths/import path only; inverse transform byte-equal to original",
+    "original_test_source_sha_verified": true,
+    "test_bodies_ported_without_logic_changes": true,
+    "network_fixtures_rerun_during_publication": false,
+    "evidence": "Original sealed local review receipt records 17 PASS; no execution/model-quality claim from copying"
+  },
+  "execution_tracking": "Actual accepted/executed Kaggle receipt belongs to launch owner and is separate from this static verification"
+}

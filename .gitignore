@@ -35,4 +35,5 @@ __pycache__/
 # Temporary scoped upload jobs and protocol fixture scratch
 transfer_job.json
 **/transfer_job.json
+**/cache_read_job.json
 **/fixture_tmp/

@@ -1,0 +1,86 @@
+{
+  "schema": "orthofoundation_http_cache0_pilot_launch_v1",
+  "checked_at_utc": "2026-10-07T15:27:05.558545+00:00",
+  "kernel": "alanchoo/rsna-knee-ortho-http-cache0-pilot",
+  "kernel_id": 137503798,
+  "version": 1,
+  "url": "https://www.kaggle.com/code/alanchoo/rsna-knee-ortho-http-cache0-pilot",
+  "stage": "PYTHON_PARENT_STARTED_MRI_RESULT_PENDING",
+  "notebook_sha256": "444a375eb5cd7a085617d4a4ec0b067709ed4f01b654b7477728ba3c986fa796",
+  "accepted_server_source": {
+    "kernel_id": 137503798,
+    "ref": "alanchoo/rsna-knee-ortho-http-cache0-pilot",
+    "version": 1,
+    "kernel_type": "notebook",
+    "is_private": true,
+    "enable_gpu": true,
+    "enable_internet": true,
+    "machine_shape": "NvidiaTeslaT4",
+    "dataset_sources": [
+      "alanchoo/orthofoundation-l-assets-v1",
+      "alanchoo/rsna-knee-ortho-global-metadata-v1",
+      "alanchoo/rsna-knee-ortho-http-cache0-read-v1"
+    ],
+    "kernel_sources": [],
+    "competition_sources": [],
+    "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+    "server_source_sha256": "06ebedb2f02936ceb89413b73690d735e36920addacfd3b2d18cc57e10b5defc",
+    "local_notebook_sha256": "444a375eb5cd7a085617d4a4ec0b067709ed4f01b654b7477728ba3c986fa796",
+    "cell_source_sha256": [
+      "3c6e5b76328c614e5a0b8b7b9b5715f454d2887995694989bb76a3058745f7ac",
+      "7f5fd2ab7ce0df3fd3d913679633a62175339feea2e642e533eedfbf3448f40c",
+      "5fc98bf19f8d658a4ce99030dec54ecd19d57cd4e04f2338768b54f7747c2404"
+    ],
+    "checks": {
+      "kernel_id": true,
+      "slug": true,
+      "version": true,
+      "private_gpu_internet": true,
+      "notebook_type": true,
+      "machine_shape": true,
+      "docker_image": true,
+      "dataset_sources": true,
+      "no_kernel_sources": true,
+      "no_competition_sources": true,
+      "every_cell_exact": true
+    },
+    "notebook_reserialization_allowed": true,
+    "server_runtime_readback_available": false
+  },
+  "runtime_requested_seconds": 600,
+  "owned_parent_deadline_seconds": 600,
+  "pre_python_mount_bounded": false,
+  "source_origin": {
+    "kind": "dataset",
+    "identifier": "alanchoo/rsna-knee-cache-0-bin-v1",
+    "version_number": 1,
+    "filename": "cache384_train.zip.bin"
+  },
+  "launch_quota_available_seconds": 15553.040644,
+  "launch_quota_floor_seconds": 11697,
+  "maximum_our_active_jobs": 2,
+  "actual_bootstrap_events": [
+    {
+      "event": "bootstrap_start",
+      "diagnostic_schema": 1
+    },
+    {
+      "diagnostic_schema": 1,
+      "event": "bootstrap_checkpoint",
+      "stage": "notebook_start",
+      "unix_seconds": 1791386497.8049283
+    },
+    {
+      "diagnostic_schema": 1,
+      "event": "bootstrap_checkpoint",
+      "stage": "http_parent_launch",
+      "unix_seconds": 1791386497.859753
+    }
+  ],
+  "observed_python_bootstrap": true,
+  "observed_mri_encoding": null,
+  "observed_head_optimizer_updates": null,
+  "actual_mri_pilot_passed": null,
+  "additional_submission_sent": false,
+  "private_job_urls_credentials_and_patient_rows_omitted": true
+}
