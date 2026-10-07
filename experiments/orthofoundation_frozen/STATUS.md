@@ -1,6 +1,6 @@
 # OrthoFoundation frozen features → 12-label head
 
-**MRI pilot V2 PASS; полное извлечение идёт по одному архиву.** Проверены 5/7 частей: 3 208 study partials / 62 044изображений; Shard5 запущен. Production training и Ortho AUC пока не готовы. Актуальные запуски и actual receipts: [HTTP V2 журнал](../orthofoundation_http_sharded_v2/STATUS.md), [машинный статус](status.json).
+**MRI pilot V2 PASS; полное извлечение идёт по одному архиву.** Проверены 6/7 частей: 3 853 study partials / 74 540изображений; Следующий запуск ещё не принят. Production training и Ortho AUC пока не готовы. Актуальные запуски и actual receipts: [HTTP V2 журнал](../orthofoundation_http_sharded_v2/STATUS.md), [машинный статус](status.json).
 
 Взяли опубликованный OrthoFoundation-L на основе DINOv3 ViT-L/16. Encoder заморожен, выдаёт 1024-мерный CLS-вектор с каждого среза. Checkpoint1 213 056 638bytes, SHA256 `385a775822107b68eaa486336feb982e1ce7bd6d4e8c03ceb482a0bf546f2ff9`. [Asset provenance](asset_manifest.json). Первый эксперимент сохраняет авторский `author_no_rope`; canonical RoPE — отдельная будущая абляция.
 

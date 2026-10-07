@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-07T18:23:22.854842+00:00",
-  "stage": "HTTP_V2_5_SHARDS_COMPLETE_SHARD5_ACCEPTED",
+  "updated_utc": "2026-10-07T18:38:55.593143+00:00",
+  "stage": "HTTP_V2_6_SHARDS_COMPLETE_READY_FOR_NEXT_GATE",
   "training_started": false,
   "model": "OrthoFoundation-L / DINOv3 ViT-L/16",
   "checkpoint_sha256": "385a775822107b68eaa486336feb982e1ce7bd6d4e8c03ceb482a0bf546f2ff9",
@@ -12,7 +12,7 @@
   "gpu_quota_available_seconds_before_experiment": 18440.8,
   "kaggle_kernel": "https://www.kaggle.com/code/alanchoo/rsna-knee-orthofoundation-pilot",
   "public_score": null,
-  "note": "Actual shards0\u20134 COMPLETE: 3208 study partials / 62044 images ROOT + independent PASS. Shard5 accepted exact reviewed V2. Full merged bank and production training/AUC incomplete; no new submission.",
+  "note": "Actual shards0\u20135 COMPLETE: 3853 study partials / 74540 images ROOT + independent PASS. No active extraction claimed. Full merged bank and production training/AUC incomplete; no new submission.",
   "kaggle_version": 2,
   "kaggle_kernel_id": 137481721,
   "kaggle_status": "ERROR",
@@ -57,12 +57,13 @@
     1,
     2,
     3,
-    4
+    4,
+    5
   ],
-  "actual_feature_partial_studies": 3208,
-  "actual_selected_images": 62044,
+  "actual_feature_partial_studies": 3853,
+  "actual_selected_images": 74540,
   "full_extraction_bank_complete": false,
   "quality_AUC_measured": false,
-  "active_extraction_shard": 5,
-  "active_extraction_kernel_id": 137523281
+  "active_extraction_shard": null,
+  "active_extraction_kernel_id": null
 }

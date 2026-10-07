@@ -1,0 +1,33 @@
+{
+  "all3_PASS": true,
+  "downloaded_only_24_pinned_remote_scientific_files": true,
+  "local_code_fabricated_or_copied": false,
+  "remote_mutations": false,
+  "URLs_and_credentials_omitted": true,
+  "shards": [
+    {
+      "shard": 0,
+      "kernel_id": 137510617,
+      "immutable_version": 1,
+      "remote_inventory_files": 953,
+      "exact8_remote_scientific_sources_verified": true,
+      "audit_sha256": "92113cc1b1e5630f4104674d614d15a06a9b5660648b71c7e9d1e86118293178"
+    },
+    {
+      "shard": 1,
+      "kernel_id": 137512753,
+      "immutable_version": 1,
+      "remote_inventory_files": 969,
+      "exact8_remote_scientific_sources_verified": true,
+      "audit_sha256": "359e53ab5a2430b832ee07bcd00226c711bff65dd1bb4efb5590651abcbd209a"
+    },
+    {
+      "shard": 2,
+      "kernel_id": 137514112,
+      "immutable_version": 1,
+      "remote_inventory_files": 974,
+      "exact8_remote_scientific_sources_verified": true,
+      "audit_sha256": "7dc48b206f6cb85319187b3871bdeda348be4048bffb5dd02be79f7f182b9360"
+    }
+  ]
+}

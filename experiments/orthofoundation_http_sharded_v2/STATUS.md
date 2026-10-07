@@ -1,6 +1,6 @@
 # Full HTTP OrthoFoundation V2
 
-**Actual extraction 5/7 verified: shards0–4 COMPLETE, 3,208 study partials / 62,044 images.
+**Actual extraction 6/7 verified: shards0–5 COMPLETE, 3,853 study partials / 74,540 images.
 Merge and production training have not run; AUC remains unmeasured.** [Preparation receipt](preparation_receipt.json) and
 [source-index pins](source_index.json) contain only aggregate counts, references,
 file sizes and hashes, without medical rows or scoped access URLs.
@@ -122,4 +122,19 @@ new12,064images in113.275s. [Execution receipt](shard4_execution_receipt.json),
 so ownerphasepolicyb71e remains unchanged. ROOT then approved shard5 only;
 accepted V1/kernel137523281 at18:21:01UTC, actualPython confirmed.
 [Launch receipt](shard5_launch_receipt.json). This source uses separatelydecoded
-DICOM; no original-NPY byte-identity claim. Two extractionparts remain incomplete.
+DICOM; no original-NPY byte-identity claim. Two extractionparts were incomplete at that launch.
+
+Actual shard5 COMPLETE:645 independently verified partials,3,124slots/12,496images;
+parent390.501s/exit0/cleanup. Full10.364GB direct-ZIP SHA matched, HTTP207.795s;
+new12,192images in115.784s. [Execution receipt](shard5_execution_receipt.json),
+[ROOT validation](shard5_ROOT_partial_validation.json), [independent validation](shard5_independent_partial_validation.json).
+[Actual timing bounds cover this job](shard5_ROOT_owner_bounds_revalidation.json);
+ownerphasepolicyb71e is unchanged. Source5 preserves its fresh-DICOM provenance
+and original-NPY-byte-identity=false. Six completed parts contain3,853study
+partials/74,540images, with disjoint slot ownership; these are not unique merged
+study counts. Last shard6 is individually ROOT-approved, awaiting acceptance.
+
+All eight scientific source files were also downloaded from the actual immutable
+shard0–2 outputs, closing the earlier local .py inventory omission.
+[Aggregate remote-source audit](prior_shards012_remote_source8_aggregate.json)
+records24 exactsize/SHA matches; no local source copy is presented as remote evidence.

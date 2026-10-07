@@ -1,0 +1,67 @@
+{
+  "pass": true,
+  "kernel": "alanchoo/rsna-knee-ortho-http-shard-1-v2",
+  "kernel_id": 137512753,
+  "version": 1,
+  "official_status": "COMPLETE",
+  "total_remote_inventory_files": 969,
+  "expected_source_files": 8,
+  "present_source_files": 8,
+  "missing_expected_source_files": [],
+  "downloaded_verified_files": [
+    {
+      "file": "sharded_source/orthofoundation/__init__.py",
+      "bytes": 82,
+      "sha256": "f3df43207f5d18497b4f698aa91c746bf81dcd4edb74b81784136acd8aa52cf1",
+      "exact_size_SHA_match": true
+    },
+    {
+      "file": "sharded_source/orthofoundation/cache.py",
+      "bytes": 20259,
+      "sha256": "700767576eb7b6d9dfa22f77bdf2088411ba4bdf6036c80db58bf608c96f7485",
+      "exact_size_SHA_match": true
+    },
+    {
+      "file": "sharded_source/orthofoundation/data.py",
+      "bytes": 4953,
+      "sha256": "f3b63ab922f0452c065126dc2ef1c87442a0b988dff29d25c201666a8a5310aa",
+      "exact_size_SHA_match": true
+    },
+    {
+      "file": "sharded_source/orthofoundation/encoder.py",
+      "bytes": 2659,
+      "sha256": "86defa5f943bfc161603c7b377bbf08a9d5c2a270d01b1df5c039ab59cff7ecb",
+      "exact_size_SHA_match": true
+    },
+    {
+      "file": "sharded_source/orthofoundation/heads.py",
+      "bytes": 2305,
+      "sha256": "c814b1bcbf1ac1322b717c1f1e6ba7b9173357e956e9104b2c77d0351a833f1f",
+      "exact_size_SHA_match": true
+    },
+    {
+      "file": "sharded_source/orthofoundation/run.py",
+      "bytes": 14292,
+      "sha256": "740c2e2599516b1876e7d7226bb0f11c51205cbdaec0b6eebf44dc740c659e10",
+      "exact_size_SHA_match": true
+    },
+    {
+      "file": "sharded_source/orthofoundation/train.py",
+      "bytes": 8806,
+      "sha256": "928121a030aabf4fc58594da967ad98ff43a7ce915474d69a909ab09652a7dc1",
+      "exact_size_SHA_match": true
+    },
+    {
+      "file": "sharded_source/sharded_frozen_extract.py",
+      "bytes": 33042,
+      "sha256": "86265241778c40a3822c2a8d11f4f3f746a48b47101def338120dd86937ee4f2",
+      "exact_size_SHA_match": true
+    }
+  ],
+  "all_pinned_source8_match": true,
+  "remote_mutations": false,
+  "local_code_copied_into_outputs": false,
+  "cookie_free": true,
+  "URLs_and_credentials_omitted": true,
+  "seconds": 4.756847166980151
+}

@@ -1,0 +1,17 @@
+{
+  "ROOT_actual_partial_PASS": true,
+  "shard": 5,
+  "partial_studies": 645,
+  "selected_slot_series": 3124,
+  "images_k4": 12496,
+  "feature_identity": "7f0e16dc1c34e8c0920f567db2ebb68f55c470c09ce77dd7c0aa238cd5ec6c77",
+  "all_features_finite_global_ownership_and_file_SHA_verified": true,
+  "exact_source8_config_provenance": true,
+  "full_source_archive_SHA_verified": true,
+  "owned_tmp_removed": true,
+  "head_training_complete": false,
+  "orchestrator_elapsed_seconds": 384.434669655,
+  "parent_seconds": 390.50117215499995,
+  "download_seconds": 207.794694824,
+  "partial_manifest_sha256": "9ed1e8dc0a654b5036122c732ecf1e06bb9a8b02445a5b03d8d5e30ac6b0b3f3"
+}
