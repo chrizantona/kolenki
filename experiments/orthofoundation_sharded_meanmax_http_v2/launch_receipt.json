@@ -1,0 +1,36 @@
+{
+  "schema": "ROOT_HTTP_V2_meanmax_CPU_actual_launch_receipt_v1",
+  "kernel_ref": "alanchoo/rsna-knee-ortho-http-meanmax-v2",
+  "kernel_id": 137530978,
+  "version": 1,
+  "accepted_utc": "2026-10-07T19:41:24+00:00",
+  "CPU_private_offline_actual_wire": true,
+  "Python_cap_seconds": 1500,
+  "SaveKernel_sessionTimeoutSeconds": 1530,
+  "encoder_calls_requested": 0,
+  "ROOT_gate_sha256": "bf51e3ab44f3019a88ae0a1a7b41eabe9b77132202bfc658ec5b9041bfade88a",
+  "actual_request_checks": {
+    "slug": true,
+    "actual_timeout": true,
+    "notebook": true,
+    "language": true,
+    "private": true,
+    "GPU_disabled": true,
+    "TPU_disabled": true,
+    "offline": true,
+    "CPU_machineShape_omitted": true,
+    "pinned_image": true,
+    "exact_metadata_input": true,
+    "exact_completed_attention_input": true,
+    "no_competition_inputs": true,
+    "every_cell_source_exact": true
+  },
+  "private_actual_evidence_sha256": {
+    "push_receipt": "203c8113841406f58c528c65e2250ab8ef0ee409eb4bc654ed3aa76e36966639",
+    "actual_SaveKernel_wire": "90e485ead9ff1f6a8d1b34125ca8664141fe8d6b9c7b995de3b1014d519601ca",
+    "fresh_launch_gate": "504335a83fe2b0e99af5112f8fe3b3221f2fb3b2a788498d8dccc5311d9451cf",
+    "launch_attempt": "64eb53afdea9ee7f206cce2647044aaaab80dd5fa65d2c83581d47cd534334b0"
+  },
+  "training_and_quality_verified": false,
+  "no_new_submission": true
+}

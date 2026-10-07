@@ -4,7 +4,7 @@
 `acc8b0c85639833cb51fd101de6b0fe605667150e88d2fdb7476b94ef6f46f74`.
 A separate [CPU executable](../../notebooks/orthofoundation/http_meanmax_cpu_executable_v2/)
 with this external pin passed [independent review](../orthofoundation_http_sharded_v2/meanmax_cpu_executable_independent_review.json).
-Actual meanmax training is still pending. Original placeholder below is preserved
+CPU job V1/kernel137530978 accepted at19:41:24UTC. [Launch receipt](launch_receipt.json); actual training and AUC independently verified: weak0.7684756935, Gold0.7353974449. [Results](result_receipt.json), [independent audit](../orthofoundation_http_sharded_v2/meanmax_CPU_independent_validation.json). Original placeholder below is preserved
 as preparation history and remains disabled; no MRI/encoder/GPU re-run is needed.
 
 The separate V2 adapter uses the versioned 9300-second extraction orchestrator.
@@ -56,3 +56,6 @@ run a fresh vendored import and synthetic CPU comparison without encoder calls.
 Sources: [V2 comparator](../../scripts/compare_sharded_heads_http_v2.py),
 [V2 builder](../../scripts/build_sharded_head_comparison_notebook_http_v2.py),
 [V2 mean/max config](../../configs/orthofoundation_meanmax_http_v2.yaml).
+
+
+Actual CPU comparison COMPLETE (137530978/V1): fixed12epochs/660updates CV and12epochs/816updates production; Gold gradients/selection0. Same externally sealed4407bank. Both meanmax heads reproduce original CSVs; both attention source heads also replay. Weak delta+0.008147, Gold delta−0.000663. This does not establish clinical or leaderboard improvement; no new submission. GPU quota unchanged. Runtimevalidation89.200s/head140.727s/total229.931s; notebook did not emit a hard-parent cleanup receipt, so cleanup is not claimed.

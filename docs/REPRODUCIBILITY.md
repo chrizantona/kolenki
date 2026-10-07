@@ -35,7 +35,7 @@ Runtime обучения: Python 3.12.13, PyTorch 2.10.0+cu128, NumPy 2.0.2, pan
 4. Checkpoint hash и predictions на фиксированной validation; macro/per-class AUC и ограниченная Gold-диагностика.
 5. Kaggle kernel version, status и submission receipt. `RUNNING`/`COMPLETE` kernel не равны успешному hidden scoring; score записываем только после подтверждения.
 
-Для OrthoFoundation актуальный журнал — [STATUS.md](../experiments/orthofoundation_frozen/STATUS.md). Отсутствующий score означает, что результат ещё не измерен, а не нулевой AUC.
+Для OrthoFoundation полный bank и обе attention-головы уже обучены и проверены. [Результаты](ORTHO_RESULTS.md): weak holdout AUC0.760328 и Gold58 AUC0.736061. Отсутствует именно leaderboard score этой отдельной ветки; это не означает отсутствие локальной диагностики. [Actual journal](../experiments/orthofoundation_http_sharded_v2/STATUS.md).
 
 ## Как повторить текущий подход
 

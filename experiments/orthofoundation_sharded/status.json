@@ -78,7 +78,7 @@
   "full_production_training_started": true,
   "conservative_full_frozen_forecast_seconds": 9154.144840937819,
   "full7_code_review_passed": true,
-  "v2_meanmax_comparison_training_started": false,
+  "v2_meanmax_comparison_training_started": true,
   "full_extraction_first_shard_kernel": "alanchoo/rsna-knee-ortho-http-shard-0-v2",
   "full_extraction_first_shard_id": 137510617,
   "full_extraction_first_shard_accepted": true,
@@ -111,5 +111,8 @@
   "source_bank_sha256": "acc8b0c85639833cb51fd101de6b0fe605667150e88d2fdb7476b94ef6f46f74",
   "completed_merge_kernel": "alanchoo/rsna-knee-ortho-http-merge-heads-v2",
   "completed_merge_kernel_id": 137526746,
-  "completed_merge_version": 1
+  "completed_merge_version": 1,
+  "v2_meanmax_comparison_complete_verified": true,
+  "v2_meanmax_weak_holdout_macro_auc": 0.7684756934985999,
+  "v2_meanmax_gold58_macro_auc": 0.7353974448610665
 }

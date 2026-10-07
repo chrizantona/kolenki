@@ -1,0 +1,251 @@
+{
+  "schema": "watcher_actual_meanmax_CPU_comparison_verification_v1",
+  "watcher_PASS": true,
+  "kernel_id": 137530978,
+  "immutable_version": 1,
+  "official_status": "COMPLETE",
+  "device": "cpu",
+  "all10_actual_remote_source_SHA_exact": true,
+  "feature_identity": "7f0e16dc1c34e8c0920f567db2ebb68f55c470c09ce77dd7c0aa238cd5ec6c77",
+  "source_bank_sha256": "acc8b0c85639833cb51fd101de6b0fe605667150e88d2fdb7476b94ef6f46f74",
+  "all4407_source_bank_files_rehashed_again": true,
+  "feature_studies": 4407,
+  "selected_slots": 21334,
+  "images_k4": 85336,
+  "config_changed_keys_only": [
+    "experiment",
+    "head_kind"
+  ],
+  "head_training_complete": true,
+  "encoder_forward_calls": 0,
+  "encoder_optimizer_updates": 0,
+  "weak_gradient_studies": 4349,
+  "weak_holdout_gradient_studies": 3479,
+  "weak_holdout_studies": 870,
+  "Gold_excluded_studies": 58,
+  "splits_exact_and_disjoint": true,
+  "checkpoints": {
+    "head.pt": {
+      "bytes": 1359234,
+      "sha256": "8935d1285963932b37bd6ca22527c6226cf486c97ef3f5e9439dafec85688f3c",
+      "epochs": 12,
+      "optimizer_updates": 816,
+      "n_gradient_studies": 4349,
+      "Gold_gradient_studies": 0,
+      "FP32_weights_finite": true,
+      "strict_meanmax_state_loaded": true
+    },
+    "head_weak_holdout.pt": {
+      "bytes": 1360031,
+      "sha256": "d356d8e4b3016dafa80c709871a32b3a66c699b2564c420db3ef111d743ab83a",
+      "epochs": 12,
+      "optimizer_updates": 660,
+      "n_gradient_studies": 3479,
+      "Gold_gradient_studies": 0,
+      "FP32_weights_finite": true,
+      "strict_meanmax_state_loaded": true
+    }
+  },
+  "CPU_saved_meanmax_prediction_replay": {
+    "production_head": {
+      "n": 58,
+      "ids_sha256": "3918e0c230d6c8d16e073b3c2537d173011b705c71b494493591e6afa5f510ea",
+      "labels_order": [
+        "ACL",
+        "MCL",
+        "Medial Meniscus",
+        "Lateral Meniscus",
+        "Medial OA",
+        "Lateral OA",
+        "PF OA",
+        "Effusion",
+        "Synovitis",
+        "Baker's",
+        "Contusion",
+        "Fracture"
+      ],
+      "device": "cpu",
+      "device_name": "CPU",
+      "torch_version": "2.8.0",
+      "dtype": "float32",
+      "autocast": false,
+      "cuda_matmul_tf32_during_replay": false,
+      "probability_tolerances": {
+        "atol": 2e-06,
+        "rtol": 2e-05
+      },
+      "tolerance_rule": "abs(replay-source) <= atol + rtol*abs(source)",
+      "comparison_space": "Sigmoid probabilities against original exported CSV; source raw logits were not exported",
+      "logits_and_probabilities_finite": true,
+      "max_absolute_probability_difference": 3.398078918248615e-07,
+      "replay_probability_sha256": "ff697bc34cbed20bec16571d5a9e2b51d2c4fc86ac4c0a61d971b3b6b7a11576",
+      "replay_logits_sha256": "793840f94f484e0d3056826b04f8a7c7a338d4f9251ec7543481103f97c8ac74",
+      "array_digest_format": "FP32 native little-endian row-major values; original CSV row/label order",
+      "source_prediction_csv_sha256": "3100d47563e676dfdbb10eabddac4e59f27446f1b9326e8bf88f818b598c79b6",
+      "seconds": 0.0676124159945175,
+      "checkpoint_receipt": {
+        "filename": "head.pt",
+        "bytes": 1359234,
+        "sha256": "8935d1285963932b37bd6ca22527c6226cf486c97ef3f5e9439dafec85688f3c"
+      }
+    },
+    "weak_holdout_head": {
+      "n": 870,
+      "ids_sha256": "e3802af7c364076b8c35a48ebd7a8383f3b887c84670fdb699dc8550463964a5",
+      "labels_order": [
+        "ACL",
+        "MCL",
+        "Medial Meniscus",
+        "Lateral Meniscus",
+        "Medial OA",
+        "Lateral OA",
+        "PF OA",
+        "Effusion",
+        "Synovitis",
+        "Baker's",
+        "Contusion",
+        "Fracture"
+      ],
+      "device": "cpu",
+      "device_name": "CPU",
+      "torch_version": "2.8.0",
+      "dtype": "float32",
+      "autocast": false,
+      "cuda_matmul_tf32_during_replay": false,
+      "probability_tolerances": {
+        "atol": 2e-06,
+        "rtol": 2e-05
+      },
+      "tolerance_rule": "abs(replay-source) <= atol + rtol*abs(source)",
+      "comparison_space": "Sigmoid probabilities against original exported CSV; source raw logits were not exported",
+      "logits_and_probabilities_finite": true,
+      "max_absolute_probability_difference": 4.4433418272538105e-07,
+      "replay_probability_sha256": "b0eb0c44a452e0d8a6c91a475848b11e0c7aa97e8dced4a44ff0fa5c760afd01",
+      "replay_logits_sha256": "871bcfcac13eb17e2f808272c81571aed1e11dbf7e70b33069e532dd97478f15",
+      "array_digest_format": "FP32 native little-endian row-major values; original CSV row/label order",
+      "source_prediction_csv_sha256": "c7f37ec74d11e47f77e361645c4f891a5033128a6825d12d60c7a96023e5cff6",
+      "seconds": 0.6839156250352971,
+      "checkpoint_receipt": {
+        "filename": "head_weak_holdout.pt",
+        "bytes": 1360031,
+        "sha256": "d356d8e4b3016dafa80c709871a32b3a66c699b2564c420db3ef111d743ab83a"
+      }
+    }
+  },
+  "both_attention_source_predictions_replayed_by_job_before_fit": true,
+  "private_prediction_CSV_full_rows_targets_finite_and_ROC_recomputed": true,
+  "metrics": {
+    "weak_holdout_metrics": {
+      "n": 870,
+      "macro_auc": 0.7684756934985999,
+      "per_class_auc": {
+        "ACL": 0.7561050854062481,
+        "MCL": 0.7266349445215714,
+        "Medial Meniscus": 0.7571099112490709,
+        "Lateral Meniscus": 0.7434184079113104,
+        "Medial OA": 0.8054825663757255,
+        "Lateral OA": 0.7703638238326704,
+        "PF OA": 0.7531192538307794,
+        "Effusion": 0.8094370717321537,
+        "Synovitis": 0.802673932175192,
+        "Baker's": 0.7946238911510858,
+        "Contusion": 0.7205978379162736,
+        "Fracture": 0.7821415958811173
+      },
+      "target_kind": "thresholded_public_teacher_consensus; not expert ground truth",
+      "classes_with_both_labels": 12
+    },
+    "gold_metrics": {
+      "n": 58,
+      "macro_auc": 0.7353974448610665,
+      "per_class_auc": {
+        "ACL": 0.6654411764705882,
+        "MCL": 0.5328798185941043,
+        "Medial Meniscus": 0.719951923076923,
+        "Lateral Meniscus": 0.7167701863354037,
+        "Medial OA": 0.9162790697674419,
+        "Lateral OA": 0.851063829787234,
+        "PF OA": 0.7335907335907336,
+        "Effusion": 0.8695652173913043,
+        "Synovitis": 0.7156511350059737,
+        "Baker's": 0.8333333333333333,
+        "Contusion": 0.6869095816464237,
+        "Fracture": 0.5833333333333334
+      },
+      "target_kind": "official_expert_labels; diagnostic only",
+      "classes_with_both_labels": 12
+    }
+  },
+  "macro_auc_delta_meanmax_minus_attention": {
+    "weak_holdout_metrics": 0.0081473702299113,
+    "gold_metrics": -0.0006633239612255926
+  },
+  "per_label_auc_delta_meanmax_minus_attention": {
+    "weak_holdout_metrics": {
+      "ACL": 0.02481002792751852,
+      "MCL": 0.01027967062663615,
+      "Medial Meniscus": 0.004902067940366406,
+      "Lateral Meniscus": -0.0031623801824176567,
+      "Medial OA": 0.015577160352785335,
+      "Lateral OA": 0.013810856497555646,
+      "PF OA": 0.021868087941372294,
+      "Effusion": 0.0071341833636915375,
+      "Synovitis": 0.010560705975961038,
+      "Baker's": 0.013831941905844136,
+      "Contusion": -0.014483421606326652,
+      "Fracture": -0.007360457984052493
+    },
+    "gold_metrics": {
+      "ACL": 0.03676470588235292,
+      "MCL": -0.013605442176870763,
+      "Medial Meniscus": -0.013221153846153855,
+      "Lateral Meniscus": 0.0496894409937888,
+      "Medial OA": 0.010852713178294726,
+      "Lateral OA": -1.1102230246251565e-16,
+      "PF OA": 0.007722007722007707,
+      "Effusion": -0.007453416149068359,
+      "Synovitis": 0.00955794504181584,
+      "Baker's": 0.0380434782608694,
+      "Contusion": -0.0026990553306343035,
+      "Fracture": -0.123611111111111
+    }
+  },
+  "validation_seconds": 89.19962245300002,
+  "head_training_seconds": 140.727078651,
+  "total_seconds": 229.930749575,
+  "parent_cleanup_report_not_emitted_by_this_notebook": true,
+  "fresh_GPU_quota": {
+    "used_seconds": 7675.796,
+    "remaining_seconds": 13924.204,
+    "reserved_seconds": 0
+  },
+  "proof_sha256": {
+    "run/config.json": "06f32ac7188042a41da252fa897ce700c9813b616aa74fa08f6dd30d1b76dac4",
+    "run/provenance.json": "ae56d079fc31a32eb97432f5738a2b5368b8ced3117fd39e150c6cb359f72e55",
+    "run/training_report.json": "4886773008d4f7c6fe3c6a5f2114caacf0b5b6cc9369e2b6840f790f1ba709a3",
+    "run/head.pt": "8935d1285963932b37bd6ca22527c6226cf486c97ef3f5e9439dafec85688f3c",
+    "run/head_weak_holdout.pt": "d356d8e4b3016dafa80c709871a32b3a66c699b2564c420db3ef111d743ab83a",
+    "bootstrap_progress.json": "4d9fc0075d28d7e4a2bf01b7431bcb12d299a97d7896dba60c73b08feaa7dbe4",
+    "run/gold_predictions.csv": "3100d47563e676dfdbb10eabddac4e59f27446f1b9326e8bf88f818b598c79b6",
+    "run/weak_holdout_predictions.csv": "c7f37ec74d11e47f77e361645c4f891a5033128a6825d12d60c7a96023e5cff6",
+    "run/gradient_train_ids.csv": "e13699c66972e6a1828fe2d1a42ce8fe29984b6e4559af9985f6a9615fb8707d",
+    "run/excluded_gold_ids.csv": "31b0931fac9a6143517cf69e5fd97232949680e1c6b756950dfca3d82a0b2fa2",
+    "run/weak_holdout_ids.csv": "9cd8b2ed9b6a68dbbba788fa7c5f31bd801e1c8f193232b238af5e08c5fe56e9",
+    "run/weak_holdout_gradient_ids.csv": "baa0989841a30d208002c92b1bdc92c3933e26c69a8a0102d15e263651a0f7b6",
+    "sharded_compare_source/orthofoundation/__init__.py": "f3df43207f5d18497b4f698aa91c746bf81dcd4edb74b81784136acd8aa52cf1",
+    "sharded_compare_source/orthofoundation/cache.py": "700767576eb7b6d9dfa22f77bdf2088411ba4bdf6036c80db58bf608c96f7485",
+    "sharded_compare_source/orthofoundation/data.py": "f3b63ab922f0452c065126dc2ef1c87442a0b988dff29d25c201666a8a5310aa",
+    "sharded_compare_source/orthofoundation/encoder.py": "86defa5f943bfc161603c7b377bbf08a9d5c2a270d01b1df5c039ab59cff7ecb",
+    "sharded_compare_source/orthofoundation/heads.py": "c814b1bcbf1ac1322b717c1f1e6ba7b9173357e956e9104b2c77d0351a833f1f",
+    "sharded_compare_source/orthofoundation/run.py": "740c2e2599516b1876e7d7226bb0f11c51205cbdaec0b6eebf44dc740c659e10",
+    "sharded_compare_source/orthofoundation/train.py": "928121a030aabf4fc58594da967ad98ff43a7ce915474d69a909ab09652a7dc1",
+    "sharded_compare_source/orthofoundation_http_v2/sharded_frozen_extract.py": "86265241778c40a3822c2a8d11f4f3f746a48b47101def338120dd86937ee4f2",
+    "sharded_compare_source/compare_frozen_heads.py": "277843a391562237589164780925445a5d47483f275f86b0c2d8f40e5cbdd211",
+    "sharded_compare_source/compare_sharded_heads.py": "dffad26c0739d7b5fc0f206ecf225371b3efe69809303da4977bdc55217da8a8"
+  },
+  "private_download_inventory_sha256": "f78355ce2c6314f5ef9abce71e32713ef5a766e6ce539a34a5cb1f4b3c34f658",
+  "patient_rows_tokens_and_access_URLs_omitted": true,
+  "model_training_during_local_verification": false,
+  "no_new_submission": true,
+  "local_verify_seconds": 4.226236500020605
+}

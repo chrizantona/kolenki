@@ -9,7 +9,7 @@
 | Наш отдельный ConvNeXt reader | Не измерен на этом split | 0.911160 |
 | Frozen Ortho CLS + attention | 0.760328 | 0.736061 |
 | Заранее заданный 50/50 ConvNeXt + attention | — | 0.908313 |
-| Frozen Ortho + mean/max | Проверка ещё не выполнена | — |
+| Frozen Ortho + mean/max | 0.768476 | 0.735397 |
 | Slot-centered Ridge probe | Код готовится, fit ещё не выполнен | — |
 
 Gold — 58 экспертно размеченных исследований. У полного ансамбля **0.944** нет
@@ -34,13 +34,19 @@ Bootstrap парный по studies, 2000 repeats, seed42; веса blend зар
 Validation head: 3479 weak studies, 12epochs/660updates; production:4349weak,
 12epochs/816updates. Gold gradients/checkpoint selection **0**.
 
+Авторы OrthoFoundation сообщают downstream-результаты после **полного fine-tuning**.
+Мы проверили другой, более дешёвый режим: frozen CLS и отдельную голову.
+Поэтому слабый результат нашей ветки не опровергает результаты авторов.
+[Закреплённый авторский README](https://github.com/ytrsk/OrthoFoundation/blob/4ae0a0aa1a5eedf578c1ec8db3e82bd9fac68470/README.md).
+
 Результат пока слабый. Возможные ограничения выбранного эксперимента: только
 четыре среза на серию, один global CLS вместо spatial patch tokens и полностью
 замороженный encoder. Это гипотезы, а не доказанная причина. Признаки различаются
 между studies; полной потери сигнала или тотального feature collapse не установлено.
 
-Сейчас выполняем два дешёвых сравнения на **том же** банке и split: mean/max голову
-и один заранее объявленный slot-centered/scaled Ridge probe (alpha1000).
+Mean/max сравнение на **том же** банке и split завершено: weak AUC вырос на
+0.00815, Gold практически не изменился. GPU повторно не использовался.
+Остался один заранее объявленный slot-centered/scaled Ridge probe (alpha1000).
 Статистики нормализации Ridge считаются только на gradient IDs соответствующего
 fit; Gold/holdout в них не участвуют. Encoder повторно не запускается.
 Если другой readout существенно улучшит weak holdout, исследуем оптимизацию

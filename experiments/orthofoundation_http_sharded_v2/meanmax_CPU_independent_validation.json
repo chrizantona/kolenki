@@ -1,0 +1,255 @@
+{
+  "schema": "independent_actual_meanmax_CPU_validation_v1",
+  "independent_PASS": true,
+  "Critical_findings": [],
+  "Important_findings": [],
+  "kernel_id": 137530978,
+  "immutable_version": 1,
+  "official_COMPLETE_origin": "Externally supplied ROOT/watcher accepted-source and terminal readback receipts; this review made no API requests",
+  "review_mode": "Actual saved-model CPU inference and immutable output checks; no fitting or encoder execution",
+  "feature_identity": "7f0e16dc1c34e8c0920f567db2ebb68f55c470c09ce77dd7c0aa238cd5ec6c77",
+  "externally_sealed_attention_source_ROOT_seal_sha256": "7bd85a75523a95e071c91b831f631d1a9674612e7443693df60a8cf19828a6ee",
+  "source_bank_sha256": "acc8b0c85639833cb51fd101de6b0fe605667150e88d2fdb7476b94ef6f46f74",
+  "all4407_bank_snapshots_hashed_and_validated": true,
+  "bank_bytes": 172303771,
+  "feature_studies": 4407,
+  "selected_slot_series": 21334,
+  "images_k4": 85336,
+  "valid_feature_vectors_finite_and_nonzero": true,
+  "all10_downloaded_source_sha256": {
+    "orthofoundation/__init__.py": "f3df43207f5d18497b4f698aa91c746bf81dcd4edb74b81784136acd8aa52cf1",
+    "orthofoundation/cache.py": "700767576eb7b6d9dfa22f77bdf2088411ba4bdf6036c80db58bf608c96f7485",
+    "orthofoundation/data.py": "f3b63ab922f0452c065126dc2ef1c87442a0b988dff29d25c201666a8a5310aa",
+    "orthofoundation/encoder.py": "86defa5f943bfc161603c7b377bbf08a9d5c2a270d01b1df5c039ab59cff7ecb",
+    "orthofoundation/heads.py": "c814b1bcbf1ac1322b717c1f1e6ba7b9173357e956e9104b2c77d0351a833f1f",
+    "orthofoundation/run.py": "740c2e2599516b1876e7d7226bb0f11c51205cbdaec0b6eebf44dc740c659e10",
+    "orthofoundation/train.py": "928121a030aabf4fc58594da967ad98ff43a7ce915474d69a909ab09652a7dc1",
+    "orthofoundation_http_v2/sharded_frozen_extract.py": "86265241778c40a3822c2a8d11f4f3f746a48b47101def338120dd86937ee4f2",
+    "compare_frozen_heads.py": "277843a391562237589164780925445a5d47483f275f86b0c2d8f40e5cbdd211",
+    "compare_sharded_heads.py": "dffad26c0739d7b5fc0f206ecf225371b3efe69809303da4977bdc55217da8a8"
+  },
+  "source8_and_config_science_unchanged": true,
+  "config_changed_keys_only": [
+    "experiment",
+    "head_kind"
+  ],
+  "splits": {
+    "weak": 4349,
+    "weak_gradient": 3479,
+    "weak_holdout": 870,
+    "Gold": 58,
+    "exact_saved_ID_order_and_disjointness": true,
+    "Gold_gradient_studies": 0
+  },
+  "fixed_training_controls": {
+    "CV_epochs": 12,
+    "production_epochs": 12,
+    "CV_updates": 660,
+    "production_updates": 816,
+    "seed": 42,
+    "no_Gold_checkpoint_selection": true
+  },
+  "checkpoints": {
+    "head.pt": {
+      "bytes": 1359234,
+      "sha256": "8935d1285963932b37bd6ca22527c6226cf486c97ef3f5e9439dafec85688f3c",
+      "strict_state_loaded": true,
+      "finite_FP32": true,
+      "parameter_count": 338444,
+      "epochs": 12,
+      "optimizer_updates": 816,
+      "gradient_studies": 4349,
+      "Gold_gradient_studies": 0,
+      "fixed_final_epoch": true,
+      "Gold_checkpoint_selection": false
+    },
+    "head_weak_holdout.pt": {
+      "bytes": 1360031,
+      "sha256": "d356d8e4b3016dafa80c709871a32b3a66c699b2564c420db3ef111d743ab83a",
+      "strict_state_loaded": true,
+      "finite_FP32": true,
+      "parameter_count": 338444,
+      "epochs": 12,
+      "optimizer_updates": 660,
+      "gradient_studies": 3479,
+      "Gold_gradient_studies": 0,
+      "fixed_final_epoch": true,
+      "Gold_checkpoint_selection": false
+    }
+  },
+  "meanmax_CPU_replay": {
+    "production_head": {
+      "n": 58,
+      "ids_sha256": "3918e0c230d6c8d16e073b3c2537d173011b705c71b494493591e6afa5f510ea",
+      "device": "cpu",
+      "dtype": "float32",
+      "autocast": false,
+      "TF32": false,
+      "finite_logits_and_probabilities": true,
+      "atol": 2e-06,
+      "rtol": 2e-05,
+      "max_absolute_probability_difference": 3.398078918248615e-07,
+      "checkpoint_sha256": "8935d1285963932b37bd6ca22527c6226cf486c97ef3f5e9439dafec85688f3c",
+      "prediction_csv_sha256": "3100d47563e676dfdbb10eabddac4e59f27446f1b9326e8bf88f818b598c79b6",
+      "replay_probability_sha256": "ff697bc34cbed20bec16571d5a9e2b51d2c4fc86ac4c0a61d971b3b6b7a11576",
+      "replay_logits_sha256": "793840f94f484e0d3056826b04f8a7c7a338d4f9251ec7543481103f97c8ac74"
+    },
+    "weak_holdout_head": {
+      "n": 870,
+      "ids_sha256": "e3802af7c364076b8c35a48ebd7a8383f3b887c84670fdb699dc8550463964a5",
+      "device": "cpu",
+      "dtype": "float32",
+      "autocast": false,
+      "TF32": false,
+      "finite_logits_and_probabilities": true,
+      "atol": 2e-06,
+      "rtol": 2e-05,
+      "max_absolute_probability_difference": 4.4433418272538105e-07,
+      "checkpoint_sha256": "d356d8e4b3016dafa80c709871a32b3a66c699b2564c420db3ef111d743ab83a",
+      "prediction_csv_sha256": "c7f37ec74d11e47f77e361645c4f891a5033128a6825d12d60c7a96023e5cff6",
+      "replay_probability_sha256": "b0eb0c44a452e0d8a6c91a475848b11e0c7aa97e8dced4a44ff0fa5c760afd01",
+      "replay_logits_sha256": "871bcfcac13eb17e2f808272c81571aed1e11dbf7e70b33069e532dd97478f15"
+    }
+  },
+  "source_attention_CPU_replay": {
+    "production_head": {
+      "n": 58,
+      "ids_sha256": "3918e0c230d6c8d16e073b3c2537d173011b705c71b494493591e6afa5f510ea",
+      "device": "cpu",
+      "dtype": "float32",
+      "autocast": false,
+      "TF32": false,
+      "finite_logits_and_probabilities": true,
+      "atol": 2e-06,
+      "rtol": 2e-05,
+      "max_absolute_probability_difference": 1.843147278135504e-07,
+      "checkpoint_sha256": "fc7076cdeacdf4476460904ae1bfb6928768f604c72e8f6c0ee7a0edaa205e9d",
+      "prediction_csv_sha256": "189436eed35e40aa2a72fe635982fe0f2522c328e118b1e838a04d2308f4646d",
+      "replay_probability_sha256": "a9e7a793f5f4cbacdd2d505e1f1778a19f856d5210afc835234f778005dbb038",
+      "replay_logits_sha256": "cc20bb840342cc8de585cc9f90f5334c19a61a445fcda879c1a636d2b404720c"
+    },
+    "weak_holdout_head": {
+      "n": 870,
+      "ids_sha256": "e3802af7c364076b8c35a48ebd7a8383f3b887c84670fdb699dc8550463964a5",
+      "device": "cpu",
+      "dtype": "float32",
+      "autocast": false,
+      "TF32": false,
+      "finite_logits_and_probabilities": true,
+      "atol": 2e-06,
+      "rtol": 2e-05,
+      "max_absolute_probability_difference": 3.0886535640206603e-07,
+      "checkpoint_sha256": "3a93d1b710db7494357c5fb6b23d557bbddef4f27ca225f17b6b5d2309db675b",
+      "prediction_csv_sha256": "034226bc518497df09d8a4276aab7d2e074c92af32fca9afe06b800075b7c6af",
+      "replay_probability_sha256": "43d700bf7dd8612c4bae58a6f545188dd3b7b4bd130bcbcb9472556955b1d1d5",
+      "replay_logits_sha256": "701a70a30d825c12b8c070e58adf7b45ed99b4fce30b345b537ebc2082485b5a"
+    }
+  },
+  "recomputed_metrics": {
+    "gold_metrics": {
+      "n": 58,
+      "macro_auc": 0.7353974448610665,
+      "per_label_auc": {
+        "ACL": 0.6654411764705882,
+        "MCL": 0.5328798185941043,
+        "Medial Meniscus": 0.719951923076923,
+        "Lateral Meniscus": 0.7167701863354037,
+        "Medial OA": 0.9162790697674419,
+        "Lateral OA": 0.851063829787234,
+        "PF OA": 0.7335907335907336,
+        "Effusion": 0.8695652173913043,
+        "Synovitis": 0.7156511350059737,
+        "Baker's": 0.8333333333333333,
+        "Contusion": 0.6869095816464237,
+        "Fracture": 0.5833333333333334
+      },
+      "classes_with_both_labels": 12,
+      "target_kind": "official_expert_labels; diagnostic only",
+      "positive_support": {
+        "ACL": 24,
+        "MCL": 9,
+        "Medial Meniscus": 26,
+        "Lateral Meniscus": 23,
+        "Medial OA": 15,
+        "Lateral OA": 11,
+        "PF OA": 21,
+        "Effusion": 35,
+        "Synovitis": 27,
+        "Baker's": 12,
+        "Contusion": 19,
+        "Fracture": 18
+      },
+      "probabilities_finite_in_unit_interval": true
+    },
+    "weak_holdout_metrics": {
+      "n": 870,
+      "macro_auc": 0.7684756934985999,
+      "per_label_auc": {
+        "ACL": 0.7561050854062481,
+        "MCL": 0.7266349445215714,
+        "Medial Meniscus": 0.7571099112490709,
+        "Lateral Meniscus": 0.7434184079113104,
+        "Medial OA": 0.8054825663757255,
+        "Lateral OA": 0.7703638238326704,
+        "PF OA": 0.7531192538307794,
+        "Effusion": 0.8094370717321537,
+        "Synovitis": 0.802673932175192,
+        "Baker's": 0.7946238911510858,
+        "Contusion": 0.7205978379162736,
+        "Fracture": 0.7821415958811173
+      },
+      "classes_with_both_labels": 12,
+      "target_kind": "thresholded_public_teacher_consensus; not expert ground truth",
+      "positive_support": {
+        "ACL": 178,
+        "MCL": 127,
+        "Medial Meniscus": 356,
+        "Lateral Meniscus": 157,
+        "Medial OA": 316,
+        "Lateral OA": 219,
+        "PF OA": 395,
+        "Effusion": 504,
+        "Synovitis": 109,
+        "Baker's": 217,
+        "Contusion": 154,
+        "Fracture": 67
+      },
+      "probabilities_finite_in_unit_interval": true
+    }
+  },
+  "macro_auc_delta_meanmax_minus_attention": {
+    "weak_holdout_metrics": 0.0081473702299113,
+    "gold_metrics": -0.0006633239612255926
+  },
+  "time_budget_checks": {
+    "validation_seconds": 89.19962245300002,
+    "validation_cap": 300,
+    "fit_seconds": 140.727078651,
+    "fit_cap": 1200,
+    "total_python_seconds": 229.930749575,
+    "python_cap": 1500,
+    "complete_bootstrap": true
+  },
+  "evidence_sha256": {
+    "download_receipt": "be17d86e60bcdcddbb6f884a9f0be76f238cfaf741f5f8a24a7ed936eed8e218",
+    "accepted_source_receipt": "16829e83a0c2e47fc9dd953a84e17c8d1f7674591398cb180cb11b30c9548bbe",
+    "terminal_status_receipt": "4ebf67560867a41fcd043c42d9639a22efb020409126bf7516cd62ef7527b8e7",
+    "download_inventory": "f78355ce2c6314f5ef9abce71e32713ef5a766e6ce539a34a5cb1f4b3c34f658",
+    "training_report": "4886773008d4f7c6fe3c6a5f2114caacf0b5b6cc9369e2b6840f790f1ba709a3",
+    "provenance": "ae56d079fc31a32eb97432f5738a2b5368b8ced3117fd39e150c6cb359f72e55",
+    "config": "06f32ac7188042a41da252fa897ce700c9813b616aa74fa08f6dd30d1b76dac4",
+    "executable_notebook": "0e4af08cbf54d78c1daf381d5cb00cc8c918c2534f0e6e874f33a1b848be86fc"
+  },
+  "all60_output_files_immutable_pre_post": true,
+  "patient_rows_IDs_private_CSVs_credentials_and_access_URLs_omitted": true,
+  "interpretation": "Weak metric is thresholded teacher agreement. Gold58 is a diagnostic population, not clean patient OOF or a leaderboard result. Meanmax Gold delta does not establish equivalence or improvement. No tuning, blending, integration or submission performed.",
+  "declined_to_judge": [
+    "Current remote Kaggle status, privacy and immutable version independently over API; trusted external readback boundary explicitly recorded",
+    "Hard parent process-group cleanup: this CPU comparison notebook emits no parent cleanup receipt; reported timings and COMPLETE bootstrap checked",
+    "Exact reproducibility of past gradients or epoch losses: immutable source, checkpoint metadata, histories and saved ID proofs checked; no retraining",
+    "Statistical significance of head differences; Gold58 uncertainty and possible upstream-pretraining overlap remain",
+    "Any clinical efficacy or leaderboard score"
+  ],
+  "independent_verification_seconds": 5.72618329199031,
+  "launch_authority": false
+}

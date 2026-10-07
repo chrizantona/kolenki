@@ -1,0 +1,43 @@
+{
+  "schema": "curated_meanmax_CPU_launch_v1",
+  "observed_utc": "2026-10-07T19:43:22.328133+00:00",
+  "kernel_ref": "alanchoo/rsna-knee-ortho-http-meanmax-v2",
+  "kernel_id": 137530978,
+  "version": 1,
+  "url": "https://www.kaggle.com/code/alanchoo/rsna-knee-ortho-http-meanmax-v2",
+  "accepted_server_every_cell_exact": true,
+  "private": true,
+  "device": "cpu",
+  "GPU_requested": false,
+  "enable_internet": false,
+  "server_machine_shape": "None",
+  "actual_SaveKernel_sessionTimeoutSeconds": 1530,
+  "Python_stage_seconds": 1500,
+  "input_versions": {
+    "global_metadata": 1,
+    "attention_complete_source": 1
+  },
+  "feature_identity": "7f0e16dc1c34e8c0920f567db2ebb68f55c470c09ce77dd7c0aa238cd5ec6c77",
+  "source_bank_sha256": "acc8b0c85639833cb51fd101de6b0fe605667150e88d2fdb7476b94ef6f46f74",
+  "notebook_sha256": "0e4af08cbf54d78c1daf381d5cb00cc8c918c2534f0e6e874f33a1b848be86fc",
+  "metadata_sha256": "c6f0a75fac2e5ced09cb43ba98ea9c57a3b278e629cfd5f72eb257d464f64fdd",
+  "stage_settings_sha256": "af2a2ed3e764ccd780759a6945c45bc5ae658b59cfe2562959dcd4b6030b9501",
+  "ROOT_approval_sha256": "bf51e3ab44f3019a88ae0a1a7b41eabe9b77132202bfc658ec5b9041bfade88a",
+  "static_review_sha256": "b5289bcc12710e51350f351a0c96319ab8513e3d7bfe11a8974dc930aa86c673",
+  "ROOT_source_seal_sha256": "7bd85a75523a95e071c91b831f631d1a9674612e7443693df60a8cf19828a6ee",
+  "proof_sha256": {
+    "meanmax_CPU_accepted_source.json": "16829e83a0c2e47fc9dd953a84e17c8d1f7674591398cb180cb11b30c9548bbe",
+    "meanmax_CPU_push_receipt.json": "203c8113841406f58c528c65e2250ab8ef0ee409eb4bc654ed3aa76e36966639",
+    "meanmax_CPU_actual_SaveKernel_wire.json": "90e485ead9ff1f6a8d1b34125ca8664141fe8d6b9c7b995de3b1014d519601ca",
+    "meanmax_CPU_fresh_launch_gate.json": "504335a83fe2b0e99af5112f8fe3b3221f2fb3b2a788498d8dccc5311d9451cf",
+    "meanmax_CPU_live.json": "60713e06f67e1974c4955ba40adbcfc78d8345dcd8537d5c16e562e96ea7c4cf"
+  },
+  "actual_Python_observed": true,
+  "meanmax_training_completion_observed": false,
+  "new_submission_performed": false,
+  "patient_rows_tokens_and_URL_capabilities_published": false,
+  "first_Python_live_seconds": 11.291602518,
+  "comparison_child_launch_live_seconds": 11.810097588,
+  "meanmax_gradient_start_observed": false,
+  "meanmax_gradient_start_evidence": "Child launched; pre-fit full bank/checkpoint validation is still running, no gradient proof yet."
+}
