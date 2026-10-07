@@ -1,6 +1,6 @@
 # OrthoFoundation: текущий запуск по одному архиву
 
-**MRI pilot PASS; проверены 7/7 extraction-частей: 4 413 study partials / 85 336срезов.** Запуск сборки и обучения attention принят Kaggle; веса/AUC ещё не проверены. Полный банк, production training и AUC пока не готовы. Текущие actual receipts, Kaggle-ссылки и прогноз — в [HTTP V2 журнале](../orthofoundation_http_sharded_v2/STATUS.md). [Машинный статус](status.json).
+**Полное извлечение и attention training завершены на Kaggle и независимо проверены.** Банк: 4 407 исследований / 85 336 срезов. Weak holdout AUC **0.760328**, Gold58 AUC **0.736061**. Нового leaderboard score нет; ветка пока уступает нашему отдельному ConvNeXt на Gold и в ансамбль не добавлена. [Полный журнал](../orthofoundation_http_sharded_v2/STATUS.md), [результаты](../../docs/ORTHO_RESULTS.md).
 
 На Kaggle pilot действительно обработал 16 weak studies / 308 MRI-срезов и сделал одно обновление пробной головы; Gold в градиентах — 0. Encoder: 72.6 images/s, peak1.33GB, owned runtime217.8s, cleanup подтверждён. [Независимо проверенный pilot](../orthofoundation_http_cache0_pilot_v2/root_MRI_validation.json). Smoke-обновление проверяет работоспособность, а не заменяет полное обучение.
 

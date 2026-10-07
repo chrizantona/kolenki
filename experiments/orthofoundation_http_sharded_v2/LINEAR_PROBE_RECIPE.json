@@ -1,0 +1,25 @@
+{
+  "schema": "predeclared_Ortho_slot_centered_Ridge_probe_v1",
+  "declared_utc": "2026-10-07T19:23:51.780384+00:00",
+  "probe_results_viewed": false,
+  "reason": "Fixed diagnostic to separate weak nonlinear head fit from same-bank feature limitations after concentrated CLS covariance and weak teacher agreement; no hyperparameter search",
+  "source_bank_sha256": "acc8b0c85639833cb51fd101de6b0fe605667150e88d2fdb7476b94ef6f46f74",
+  "ROOT_source_seal_sha256": "7bd85a75523a95e071c91b831f631d1a9674612e7443693df60a8cf19828a6ee",
+  "features": "mean K4 vectors separately for each of six slots, then concatenate6144 coordinates plus6mask indicators",
+  "normalization": "per-slot observed-only mean/std fit on each model gradient IDs only; absent slots0; stdfloor0.001",
+  "Ridge": {
+    "alpha": 1000,
+    "fit_intercept": true,
+    "solver": "cholesky"
+  },
+  "targets": "weak probability clipped[0.0001,0.9999], logit transform; sigmoid exactly once afterprediction",
+  "CV_gradient": 3479,
+  "weak_holdout": 870,
+  "production_gradient": 4349,
+  "Gold_postfit_diagnostic": 58,
+  "Gold_gradient_or_model_selection": 0,
+  "encoder_training_or_GPU": false,
+  "hyperparameter_search": false,
+  "training_executed": false,
+  "submission_authorized": false
+}

@@ -1,5 +1,12 @@
 # EXP-OF-002 on the HTTP V2 sharded feature bank — preparation only
 
+**Update after actual attention completion:** independently sealed full bank exists:
+`acc8b0c85639833cb51fd101de6b0fe605667150e88d2fdb7476b94ef6f46f74`.
+A separate [CPU executable](../../notebooks/orthofoundation/http_meanmax_cpu_executable_v2/)
+with this external pin passed [independent review](../orthofoundation_http_sharded_v2/meanmax_cpu_executable_independent_review.json).
+Actual meanmax training is still pending. Original placeholder below is preserved
+as preparation history and remains disabled; no MRI/encoder/GPU re-run is needed.
+
 The separate V2 adapter uses the versioned 9300-second extraction orchestrator.
 The expected global feature identity is
 `7f0e16dc1c34e8c0920f567db2ebb68f55c470c09ce77dd7c0aa238cd5ec6c77`.

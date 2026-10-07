@@ -1,0 +1,319 @@
+{
+  "schema": "ROOT_http_v2_attention_full_bank_seal_v1",
+  "ROOT_actual_full_merge_PASS": true,
+  "sealed_at_utc": "2026-10-07T19:15:28.279846+00:00",
+  "source_kernel": "alanchoo/rsna-knee-ortho-http-merge-heads-v2",
+  "kernel_version_origin_verified_separately_by_ROOT": true,
+  "feature_identity": "7f0e16dc1c34e8c0920f567db2ebb68f55c470c09ce77dd7c0aa238cd5ec6c77",
+  "source_bank_sha256": "acc8b0c85639833cb51fd101de6b0fe605667150e88d2fdb7476b94ef6f46f74",
+  "feature_bank_receipt": {
+    "studies": 4407,
+    "bytes": 172303771,
+    "sha256": "acc8b0c85639833cb51fd101de6b0fe605667150e88d2fdb7476b94ef6f46f74",
+    "digest_format": "sorted filename<TAB>bytes<TAB>sha256<LF>",
+    "every_uid_geometry_identity_and_values_checked": true,
+    "selected_slot_series": 21334,
+    "images_k4": 85336,
+    "global_masks_series_positions_and_native_sharded_provenance_checked": true,
+    "receipt_origin": "Current full bank measured for comparison with independently sealed attention-source bank SHA256"
+  },
+  "source_bank_pin_origin": "ROOT independently validated completed immutable output BEFORE meanmax comparison; not a job-supplied expected hash",
+  "ROOT_partial_source_map_sha256": "837077d2ea8562b3776b20a1cfbb46cebdfb810dff5ce09f0d95962f5dd4c21d",
+  "independently_sealed_source_partials": [
+    {
+      "shard": 0,
+      "partial_manifest_sha256": "950567a0e19a87737104f79f31af3ccd330d6c69333fe16cef84154becdff31a",
+      "kernel_id": "alanchoo/rsna-knee-ortho-http-shard-0-v2",
+      "root_confirmed_completed_kernel_version": 1,
+      "ROOT_receipt_sha256": "7fc6ae5c791cb9ebda5af3d34def5c6f7e1f1ad74f94c0be3d5a7e0fee5a3bee",
+      "independent_receipt_sha256": "a86de58d01486d0a2bdb21f22d66c502b1c3f07020865f7f0472a6330ba1dfb7",
+      "partial_studies": 632,
+      "selected_slots": 3060,
+      "images_k4": 12240
+    },
+    {
+      "shard": 1,
+      "partial_manifest_sha256": "99daab1a933359c2cb26cc6150884b09a266018a86da10dae53a16bd40bb52c7",
+      "kernel_id": "alanchoo/rsna-knee-ortho-http-shard-1-v2",
+      "root_confirmed_completed_kernel_version": 1,
+      "ROOT_receipt_sha256": "0767a75bbf7a422188cfc247d42d8b08d919bd33818ecf18d32219706618fdb5",
+      "independent_receipt_sha256": "d1f37549ad0c4b5bed95b727b1556e1b6cd0fd953466d92dff535553a1edf756",
+      "partial_studies": 648,
+      "selected_slots": 3132,
+      "images_k4": 12528
+    },
+    {
+      "shard": 2,
+      "partial_manifest_sha256": "4054aa52087aea8a84c7e941f6215fff64677993acc335ceffd7ab5e8734bb05",
+      "kernel_id": "alanchoo/rsna-knee-ortho-http-shard-2-v2",
+      "root_confirmed_completed_kernel_version": 1,
+      "ROOT_receipt_sha256": "8ddf87cc9c12c9b58434879e114d781e8770fc6930e8bb18e41c52beca42ba4f",
+      "independent_receipt_sha256": "4fed14b708e9f6d6cbb333649704edf12fefdb642bc886101e71db13e14e2b5d",
+      "partial_studies": 653,
+      "selected_slots": 3145,
+      "images_k4": 12580
+    },
+    {
+      "shard": 3,
+      "partial_manifest_sha256": "8ecfbd50c638b7a73bacd2c1bbd8e0276a2edf3913276694c783b973a832f474",
+      "kernel_id": "alanchoo/rsna-knee-ortho-http-shard-3-v2",
+      "root_confirmed_completed_kernel_version": 1,
+      "ROOT_receipt_sha256": "e86b15ccb86bd5255e16bf2f729577d691d898af15f5da9ddf6e27c9f5e486cf",
+      "independent_receipt_sha256": "e6631ea013a07832b2390bab2a9406fed83e58eff0eae3a5eb50385a494bdc04",
+      "partial_studies": 635,
+      "selected_slots": 3083,
+      "images_k4": 12332
+    },
+    {
+      "shard": 4,
+      "partial_manifest_sha256": "4b7428a0ba07b17b4b8a074209d4ae25aab5c24fd17b8e9124cc7fdc85092bab",
+      "kernel_id": "alanchoo/rsna-knee-ortho-http-shard-4-v2",
+      "root_confirmed_completed_kernel_version": 1,
+      "ROOT_receipt_sha256": "233c5675cc985f435c296200566128c3f0e568095a2ef381cfaf6390fbad1ad5",
+      "independent_receipt_sha256": "474e7d42d4140865bc6f904a8fa1f4b98509d18a92d70c11465559634d856a16",
+      "partial_studies": 640,
+      "selected_slots": 3091,
+      "images_k4": 12364
+    },
+    {
+      "shard": 5,
+      "partial_manifest_sha256": "9ed1e8dc0a654b5036122c732ecf1e06bb9a8b02445a5b03d8d5e30ac6b0b3f3",
+      "kernel_id": "alanchoo/rsna-knee-ortho-http-shard-5-v2",
+      "root_confirmed_completed_kernel_version": 1,
+      "ROOT_receipt_sha256": "1edb88008694ad1c5f1eb4f35a21c77174d3828335064ca77e77998d8a1cc8fc",
+      "independent_receipt_sha256": "4dec2c3dcc4ce99295db692c6354fc1ad51c2af054e9c7e5fc7a68c4acc4c6bf",
+      "partial_studies": 645,
+      "selected_slots": 3124,
+      "images_k4": 12496
+    },
+    {
+      "shard": 6,
+      "partial_manifest_sha256": "3ed48187a79ab2af7380e2069a7b422816bbb7f600273e7789ed79d22568c1a8",
+      "kernel_id": "alanchoo/rsna-knee-ortho-http-shard-6-v2",
+      "root_confirmed_completed_kernel_version": 1,
+      "ROOT_receipt_sha256": "30bc5e52f5a4efd96ff296c916e39d6162ec119116803c6aeeead1d12a3c7237",
+      "independent_receipt_sha256": "6931388627576c729a28c1d69d11ea18931600a2018fe07e001d86a2e4591bd6",
+      "partial_studies": 560,
+      "selected_slots": 2699,
+      "images_k4": 10796
+    }
+  ],
+  "merged_array_union_receipt": {
+    "all_studies_exact_array_union_checked": 4407,
+    "all7_shards": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "selected_slots": 21334,
+    "images_k4": 85336,
+    "comparison": "Exact dtypes and values for FP16 features, masks, FP32 positions, selected series and provenance; NPZ container bytes may differ",
+    "merged_snapshot_bank_sha256": "acc8b0c85639833cb51fd101de6b0fe605667150e88d2fdb7476b94ef6f46f74",
+    "merged_snapshot_bank_bytes": 172303771,
+    "source_and_merged_hashes_bound_to_exact_array_snapshot_bytes": true,
+    "reconstruction_tmp_removed": true
+  },
+  "global_metadata_manifest_sha256": "b2a87794d768ca3f6ee3968345f840f1028cff004708a2b3e0cfdfcfb2c15e60",
+  "assets_manifest_sha256": "6feeb03c976483c2b91cca667f4fdbefa998d3620a93eb6006de22a13cbdeb4f",
+  "approved_config_yaml_sha256": "f3c4334f97df527d22dd2b0da3b6220ec466c1333efe7e99a471b955a74ba919",
+  "downloaded_source8_sha256": {
+    "orthofoundation/__init__.py": "f3df43207f5d18497b4f698aa91c746bf81dcd4edb74b81784136acd8aa52cf1",
+    "orthofoundation/cache.py": "700767576eb7b6d9dfa22f77bdf2088411ba4bdf6036c80db58bf608c96f7485",
+    "orthofoundation/data.py": "f3b63ab922f0452c065126dc2ef1c87442a0b988dff29d25c201666a8a5310aa",
+    "orthofoundation/encoder.py": "86defa5f943bfc161603c7b377bbf08a9d5c2a270d01b1df5c039ab59cff7ecb",
+    "orthofoundation/heads.py": "c814b1bcbf1ac1322b717c1f1e6ba7b9173357e956e9104b2c77d0351a833f1f",
+    "orthofoundation/run.py": "740c2e2599516b1876e7d7226bb0f11c51205cbdaec0b6eebf44dc740c659e10",
+    "orthofoundation/train.py": "928121a030aabf4fc58594da967ad98ff43a7ce915474d69a909ab09652a7dc1",
+    "sharded_frozen_extract.py": "86265241778c40a3822c2a8d11f4f3f746a48b47101def338120dd86937ee4f2"
+  },
+  "validator_source_sha256": {
+    "scripts/compare_frozen_heads.py": "277843a391562237589164780925445a5d47483f275f86b0c2d8f40e5cbdd211",
+    "scripts/compare_sharded_heads_http_v2.py": "dffad26c0739d7b5fc0f206ecf225371b3efe69809303da4977bdc55217da8a8"
+  },
+  "validation_helper_sha256": "dcb6e90aa90c14e22f901d0aedc05b592ae4d9198014a12d450b2ee7e3675ef4",
+  "actual_output_file_sha256": {
+    "http_parent_report.json": "ee0c294e0387cf33b77251d640c088112de444cf7b400fc676b93201a02174ba",
+    "run/config.json": "7d8788fe098898f0fd7eb828a4a033fcfb3ea4ffc8b98e8334c4eb31e75da0c1",
+    "run/provenance.json": "2f14f3b67cbed9a8c5a3e9130cccac7d1da1fe9dab82994867e8990a8ff48f42",
+    "run/merge_report.json": "e115c76feca6f3e42209a2e7677fa238c47a14d027a0b5f213e05bd81d0c79c3",
+    "run/training_report.json": "1d99daa37023883c6f4ce5dc9ec59a851c6adc6b0c4ca15804b2d6f9155edb52",
+    "run/head.pt": "fc7076cdeacdf4476460904ae1bfb6928768f604c72e8f6c0ee7a0edaa205e9d",
+    "run/head_weak_holdout.pt": "3a93d1b710db7494357c5fb6b23d557bbddef4f27ca225f17b6b5d2309db675b",
+    "run/gold_predictions.csv": "189436eed35e40aa2a72fe635982fe0f2522c328e118b1e838a04d2308f4646d",
+    "run/weak_holdout_predictions.csv": "034226bc518497df09d8a4276aab7d2e074c92af32fca9afe06b800075b7c6af",
+    "run/gradient_train_ids.csv": "e13699c66972e6a1828fe2d1a42ce8fe29984b6e4559af9985f6a9615fb8707d",
+    "run/excluded_gold_ids.csv": "31b0931fac9a6143517cf69e5fd97232949680e1c6b756950dfca3d82a0b2fa2",
+    "run/weak_holdout_ids.csv": "9cd8b2ed9b6a68dbbba788fa7c5f31bd801e1c8f193232b238af5e08c5fe56e9",
+    "run/weak_holdout_gradient_ids.csv": "baa0989841a30d208002c92b1bdc92c3933e26c69a8a0102d15e263651a0f7b6",
+    "sharded_source/orthofoundation/__init__.py": "f3df43207f5d18497b4f698aa91c746bf81dcd4edb74b81784136acd8aa52cf1",
+    "sharded_source/orthofoundation/cache.py": "700767576eb7b6d9dfa22f77bdf2088411ba4bdf6036c80db58bf608c96f7485",
+    "sharded_source/orthofoundation/data.py": "f3b63ab922f0452c065126dc2ef1c87442a0b988dff29d25c201666a8a5310aa",
+    "sharded_source/orthofoundation/encoder.py": "86defa5f943bfc161603c7b377bbf08a9d5c2a270d01b1df5c039ab59cff7ecb",
+    "sharded_source/orthofoundation/heads.py": "c814b1bcbf1ac1322b717c1f1e6ba7b9173357e956e9104b2c77d0351a833f1f",
+    "sharded_source/orthofoundation/run.py": "740c2e2599516b1876e7d7226bb0f11c51205cbdaec0b6eebf44dc740c659e10",
+    "sharded_source/orthofoundation/train.py": "928121a030aabf4fc58594da967ad98ff43a7ce915474d69a909ab09652a7dc1",
+    "sharded_source/sharded_frozen_extract.py": "86265241778c40a3822c2a8d11f4f3f746a48b47101def338120dd86937ee4f2"
+  },
+  "counts": {
+    "studies": 4407,
+    "weak": 4349,
+    "Gold": 58,
+    "CV_gradient": 3479,
+    "weak_holdout": 870,
+    "production_gradient": 4349,
+    "selected_slots": 21334,
+    "images_k4": 85336
+  },
+  "both_heads": {
+    "epochs": 12,
+    "CV_optimizer_updates": 660,
+    "production_optimizer_updates": 816,
+    "Gold_gradient_rows": 0,
+    "Gold_checkpoint_selection": false
+  },
+  "attention_prediction_replay": {
+    "production_head": {
+      "n": 58,
+      "ids_sha256": "3918e0c230d6c8d16e073b3c2537d173011b705c71b494493591e6afa5f510ea",
+      "labels_order": [
+        "ACL",
+        "MCL",
+        "Medial Meniscus",
+        "Lateral Meniscus",
+        "Medial OA",
+        "Lateral OA",
+        "PF OA",
+        "Effusion",
+        "Synovitis",
+        "Baker's",
+        "Contusion",
+        "Fracture"
+      ],
+      "device": "cpu",
+      "device_name": "CPU",
+      "torch_version": "2.8.0",
+      "dtype": "float32",
+      "autocast": false,
+      "cuda_matmul_tf32_during_replay": false,
+      "probability_tolerances": {
+        "atol": 2e-06,
+        "rtol": 2e-05
+      },
+      "tolerance_rule": "abs(replay-source) <= atol + rtol*abs(source)",
+      "comparison_space": "Sigmoid probabilities against original exported CSV; source raw logits were not exported",
+      "logits_and_probabilities_finite": true,
+      "max_absolute_probability_difference": 1.843147278135504e-07,
+      "replay_probability_sha256": "fa98739b4081acdb579cc9d4d1885f4584d43ca669b8f766d603961ad0afee3f",
+      "replay_logits_sha256": "7817fd8919cacb7db58b18eef5134e8088b023d242f490d54768a06057459ab3",
+      "array_digest_format": "FP32 native little-endian row-major values; original CSV row/label order",
+      "source_prediction_csv_sha256": "189436eed35e40aa2a72fe635982fe0f2522c328e118b1e838a04d2308f4646d",
+      "seconds": 0.06098583398852497,
+      "source_checkpoint_receipt": {
+        "filename": "head.pt",
+        "bytes": 1485814,
+        "sha256": "fc7076cdeacdf4476460904ae1bfb6928768f604c72e8f6c0ee7a0edaa205e9d"
+      }
+    },
+    "weak_holdout_head": {
+      "n": 870,
+      "ids_sha256": "e3802af7c364076b8c35a48ebd7a8383f3b887c84670fdb699dc8550463964a5",
+      "labels_order": [
+        "ACL",
+        "MCL",
+        "Medial Meniscus",
+        "Lateral Meniscus",
+        "Medial OA",
+        "Lateral OA",
+        "PF OA",
+        "Effusion",
+        "Synovitis",
+        "Baker's",
+        "Contusion",
+        "Fracture"
+      ],
+      "device": "cpu",
+      "device_name": "CPU",
+      "torch_version": "2.8.0",
+      "dtype": "float32",
+      "autocast": false,
+      "cuda_matmul_tf32_during_replay": false,
+      "probability_tolerances": {
+        "atol": 2e-06,
+        "rtol": 2e-05
+      },
+      "tolerance_rule": "abs(replay-source) <= atol + rtol*abs(source)",
+      "comparison_space": "Sigmoid probabilities against original exported CSV; source raw logits were not exported",
+      "logits_and_probabilities_finite": true,
+      "max_absolute_probability_difference": 3.0886535640206603e-07,
+      "replay_probability_sha256": "43d700bf7dd8612c4bae58a6f545188dd3b7b4bd130bcbcb9472556955b1d1d5",
+      "replay_logits_sha256": "701a70a30d825c12b8c070e58adf7b45ed99b4fce30b345b537ebc2082485b5a",
+      "array_digest_format": "FP32 native little-endian row-major values; original CSV row/label order",
+      "source_prediction_csv_sha256": "034226bc518497df09d8a4276aab7d2e074c92af32fca9afe06b800075b7c6af",
+      "seconds": 0.5842469580238685,
+      "source_checkpoint_receipt": {
+        "filename": "head_weak_holdout.pt",
+        "bytes": 1486599,
+        "sha256": "3a93d1b710db7494357c5fb6b23d557bbddef4f27ca225f17b6b5d2309db675b"
+      }
+    }
+  },
+  "checkpoint_receipts": {
+    "head.pt": {
+      "filename": "head.pt",
+      "bytes": 1485814,
+      "sha256": "fc7076cdeacdf4476460904ae1bfb6928768f604c72e8f6c0ee7a0edaa205e9d"
+    },
+    "head_weak_holdout.pt": {
+      "filename": "head_weak_holdout.pt",
+      "bytes": 1486599,
+      "sha256": "3a93d1b710db7494357c5fb6b23d557bbddef4f27ca225f17b6b5d2309db675b"
+    }
+  },
+  "weak_holdout_metrics": {
+    "n": 870,
+    "macro_auc": 0.7603283232686886,
+    "per_class_auc": {
+      "ACL": 0.7312950574787296,
+      "MCL": 0.7163552738949353,
+      "Medial Meniscus": 0.7522078433087045,
+      "Lateral Meniscus": 0.7465807880937281,
+      "Medial OA": 0.7899054060229401,
+      "Lateral OA": 0.7565529673351148,
+      "PF OA": 0.7312511658894071,
+      "Effusion": 0.8023028883684622,
+      "Synovitis": 0.792113226199231,
+      "Baker's": 0.7807919492452416,
+      "Contusion": 0.7350812595226003,
+      "Fracture": 0.7895020538651698
+    },
+    "target_kind": "thresholded_public_teacher_consensus; not expert ground truth",
+    "classes_with_both_labels": 12
+  },
+  "gold_metrics": {
+    "n": 58,
+    "macro_auc": 0.7360607688222921,
+    "per_class_auc": {
+      "ACL": 0.6286764705882353,
+      "MCL": 0.546485260770975,
+      "Medial Meniscus": 0.7331730769230769,
+      "Lateral Meniscus": 0.6670807453416149,
+      "Medial OA": 0.9054263565891472,
+      "Lateral OA": 0.8510638297872342,
+      "PF OA": 0.7258687258687259,
+      "Effusion": 0.8770186335403727,
+      "Synovitis": 0.7060931899641578,
+      "Baker's": 0.7952898550724639,
+      "Contusion": 0.689608636977058,
+      "Fracture": 0.7069444444444444
+    },
+    "target_kind": "official_expert_labels; diagnostic only",
+    "classes_with_both_labels": 12
+  },
+  "validated_seconds": 84.72766191599658,
+  "limits": "Weak holdout is teacher agreement; Gold58 diagnostic. No new training, encoder inference, clean patient OOF or leaderboard-gain claim.",
+  "root_confirmed_kernel_version": 1
+}

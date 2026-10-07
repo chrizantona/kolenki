@@ -1,0 +1,296 @@
+{
+  "schema": "Ortho_actual_full_attention_independent_array_statistics_v1",
+  "independent_helper_private_receipt_sha256": "48e061f6ca59cf83b04239a63710aa1a414ca22ee05bc42741bf6cbc26870762",
+  "ROOT_seal_sha256": "7bd85a75523a95e071c91b831f631d1a9674612e7443693df60a8cf19828a6ee",
+  "full_bank_and_root_receipt_stable_fields_match": true,
+  "strict_FP32_finite_both_head_states": true,
+  "parent_seconds": 139.58075747000004,
+  "preparation_seconds": 95.25006842599998,
+  "head_training_seconds": 39.48972288600004,
+  "orchestrator_seconds": 134.739791912,
+  "timing_caps_seconds": [
+    300,
+    1200,
+    1500
+  ],
+  "feature_statistics": {
+    "source_bank_sha256": "acc8b0c85639833cb51fd101de6b0fe605667150e88d2fdb7476b94ef6f46f74",
+    "n_studies": 4407,
+    "valid_slice_vectors": 85336,
+    "every_valid_vector_finite_and_nonzero": true,
+    "absent_features_and_positions_zero": true,
+    "slot_present_study_counts": [
+      4150,
+      4248,
+      4407,
+      4266,
+      3406,
+      857
+    ],
+    "slot_order": [
+      "FS Sagittal",
+      "FS Coronal",
+      "FS Axial",
+      "nonFS Sagittal",
+      "nonFS Coronal",
+      "nonFS Axial"
+    ],
+    "mask_pattern_counts": {
+      "111110": 2516,
+      "111111": 566,
+      "111100": 745,
+      "111010": 120,
+      "101110": 157,
+      "011110": 8,
+      "011101": 229,
+      "111011": 21,
+      "011111": 16,
+      "011100": 4,
+      "111101": 23,
+      "101111": 2
+    },
+    "max_abs_feature": 3.1484375,
+    "slice_vector_L2_norm": {
+      "min": 11.758876016052472,
+      "p05": 13.106261334573409,
+      "median": 14.67460241781368,
+      "p95": 16.83310534328036,
+      "max": 17.988250469702358
+    },
+    "pooled_study_L2_norm": {
+      "min": 6.529285081656573,
+      "p05": 6.682494210176538,
+      "median": 7.170019568825197,
+      "p95": 9.078480369401058,
+      "max": 9.782556114192298
+    },
+    "unique_FP32_pooled_study_vector_hashes": 4406,
+    "pooled_between_study_channel_std_mean": 0.07098152727786254,
+    "pooled_between_study_channel_std_max": 0.18243092354919271,
+    "all_slice_channel_std_mean": 0.3853749764278999,
+    "random_disjoint_study_pair_cosine": {
+      "seed": 20261007,
+      "pairs": 2203,
+      "summary": {
+        "min": 0.5999611733208703,
+        "p05": 0.7844910338198701,
+        "median": 0.9181871358254857,
+        "p95": 0.9745533126790904,
+        "max": 0.9926440355348767
+      }
+    },
+    "interpretation": "Descriptive pooled/vector variation and masks only; nonconstant features do not establish clinical signal or explain poor AUC. No Gold tuning or model selection."
+  },
+  "population_metrics_with_support": {
+    "gold_metrics": {
+      "n": 58,
+      "macro_auc": 0.7360607688222921,
+      "all12_classes_defined": true,
+      "per_class": {
+        "ACL": {
+          "positive": 24,
+          "negative": 34,
+          "auc": 0.6286764705882353,
+          "probability_min": 0.038657375,
+          "probability_max": 0.56785643,
+          "probability_std": 0.12712481012948257
+        },
+        "MCL": {
+          "positive": 9,
+          "negative": 49,
+          "auc": 0.546485260770975,
+          "probability_min": 0.07122029,
+          "probability_max": 0.38042098,
+          "probability_std": 0.07601765822089758
+        },
+        "Medial Meniscus": {
+          "positive": 26,
+          "negative": 32,
+          "auc": 0.7331730769230769,
+          "probability_min": 0.19931868,
+          "probability_max": 0.8581141,
+          "probability_std": 0.17328433627167053
+        },
+        "Lateral Meniscus": {
+          "positive": 23,
+          "negative": 35,
+          "auc": 0.6670807453416149,
+          "probability_min": 0.07814438,
+          "probability_max": 0.55486596,
+          "probability_std": 0.10288695356558031
+        },
+        "Medial OA": {
+          "positive": 15,
+          "negative": 43,
+          "auc": 0.9054263565891472,
+          "probability_min": 0.048255425,
+          "probability_max": 0.85802436,
+          "probability_std": 0.2126625993878293
+        },
+        "Lateral OA": {
+          "positive": 11,
+          "negative": 47,
+          "auc": 0.8510638297872342,
+          "probability_min": 0.052515615,
+          "probability_max": 0.68902,
+          "probability_std": 0.14794598054065844
+        },
+        "PF OA": {
+          "positive": 21,
+          "negative": 37,
+          "auc": 0.7258687258687259,
+          "probability_min": 0.09225064,
+          "probability_max": 0.87271553,
+          "probability_std": 0.184708246967579
+        },
+        "Effusion": {
+          "positive": 35,
+          "negative": 23,
+          "auc": 0.8770186335403727,
+          "probability_min": 0.24424687,
+          "probability_max": 0.9724717,
+          "probability_std": 0.19353977950897777
+        },
+        "Synovitis": {
+          "positive": 27,
+          "negative": 31,
+          "auc": 0.7060931899641578,
+          "probability_min": 0.11730744,
+          "probability_max": 0.6829951,
+          "probability_std": 0.13582672201861715
+        },
+        "Baker's": {
+          "positive": 12,
+          "negative": 46,
+          "auc": 0.7952898550724639,
+          "probability_min": 0.10099916,
+          "probability_max": 0.761267,
+          "probability_std": 0.15585167250624846
+        },
+        "Contusion": {
+          "positive": 19,
+          "negative": 39,
+          "auc": 0.689608636977058,
+          "probability_min": 0.06364707,
+          "probability_max": 0.55942005,
+          "probability_std": 0.1256028525746917
+        },
+        "Fracture": {
+          "positive": 18,
+          "negative": 40,
+          "auc": 0.7069444444444444,
+          "probability_min": 0.072671756,
+          "probability_max": 0.31611085,
+          "probability_std": 0.05900754903544563
+        }
+      },
+      "source_csv_sha256": "189436eed35e40aa2a72fe635982fe0f2522c328e118b1e838a04d2308f4646d"
+    },
+    "weak_holdout_metrics": {
+      "n": 870,
+      "macro_auc": 0.7603283232686886,
+      "all12_classes_defined": true,
+      "per_class": {
+        "ACL": {
+          "positive": 178,
+          "negative": 692,
+          "auc": 0.7312950574787296,
+          "probability_min": 0.05605803,
+          "probability_max": 0.6218242,
+          "probability_std": 0.09528761595677245
+        },
+        "MCL": {
+          "positive": 127,
+          "negative": 743,
+          "auc": 0.7163552738949353,
+          "probability_min": 0.044255596,
+          "probability_max": 0.4042804,
+          "probability_std": 0.06339856827203122
+        },
+        "Medial Meniscus": {
+          "positive": 356,
+          "negative": 514,
+          "auc": 0.7522078433087045,
+          "probability_min": 0.09500233,
+          "probability_max": 0.8744355,
+          "probability_std": 0.17214152419394224
+        },
+        "Lateral Meniscus": {
+          "positive": 157,
+          "negative": 713,
+          "auc": 0.7465807880937281,
+          "probability_min": 0.038772915,
+          "probability_max": 0.5747254,
+          "probability_std": 0.09153007629865521
+        },
+        "Medial OA": {
+          "positive": 316,
+          "negative": 554,
+          "auc": 0.7899054060229401,
+          "probability_min": 0.039005857,
+          "probability_max": 0.90355486,
+          "probability_std": 0.20458964383434897
+        },
+        "Lateral OA": {
+          "positive": 219,
+          "negative": 651,
+          "auc": 0.7565529673351148,
+          "probability_min": 0.033769857,
+          "probability_max": 0.72412413,
+          "probability_std": 0.14184709249195998
+        },
+        "PF OA": {
+          "positive": 395,
+          "negative": 475,
+          "auc": 0.7312511658894071,
+          "probability_min": 0.06697473,
+          "probability_max": 0.89305246,
+          "probability_std": 0.19567852640812639
+        },
+        "Effusion": {
+          "positive": 504,
+          "negative": 366,
+          "auc": 0.8023028883684622,
+          "probability_min": 0.13241524,
+          "probability_max": 0.96522206,
+          "probability_std": 0.20832938817433672
+        },
+        "Synovitis": {
+          "positive": 109,
+          "negative": 761,
+          "auc": 0.792113226199231,
+          "probability_min": 0.057916895,
+          "probability_max": 0.6920472,
+          "probability_std": 0.1152223646723274
+        },
+        "Baker's": {
+          "positive": 217,
+          "negative": 653,
+          "auc": 0.7807919492452416,
+          "probability_min": 0.055942565,
+          "probability_max": 0.88040656,
+          "probability_std": 0.14804219286143913
+        },
+        "Contusion": {
+          "positive": 154,
+          "negative": 716,
+          "auc": 0.7350812595226003,
+          "probability_min": 0.046282124,
+          "probability_max": 0.5766919,
+          "probability_std": 0.09143083061343013
+        },
+        "Fracture": {
+          "positive": 67,
+          "negative": 803,
+          "auc": 0.7895020538651698,
+          "probability_min": 0.052182637,
+          "probability_max": 0.34042662,
+          "probability_std": 0.04027827586451915
+        }
+      },
+      "source_csv_sha256": "034226bc518497df09d8a4276aab7d2e074c92af32fca9afe06b800075b7c6af"
+    }
+  },
+  "no_raw_medical_rows_or_identifiers": true,
+  "encoder_forward_or_training": false
+}

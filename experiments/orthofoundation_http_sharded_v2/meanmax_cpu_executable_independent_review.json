@@ -1,0 +1,70 @@
+{
+  "schema": "HTTP_V2_independent_meanmax_CPU_executable_preparation_review_v1",
+  "prepared_static_review_PASS": true,
+  "actual_comparison_training_performed": false,
+  "launch_authority_from_reviewer": false,
+  "critical_findings": [],
+  "important_findings": [],
+  "artifact_sha256": {
+    "compare.ipynb": "0e4af08cbf54d78c1daf381d5cb00cc8c918c2534f0e6e874f33a1b848be86fc",
+    "kernel-metadata.json": "c6f0a75fac2e5ced09cb43ba98ea9c57a3b278e629cfd5f72eb257d464f64fdd",
+    "stage_config.json": "af2a2ed3e764ccd780759a6945c45bc5ae658b59cfe2562959dcd4b6030b9501"
+  },
+  "embedded10_source_sha256": {
+    "orthofoundation/__init__.py": "f3df43207f5d18497b4f698aa91c746bf81dcd4edb74b81784136acd8aa52cf1",
+    "orthofoundation/cache.py": "700767576eb7b6d9dfa22f77bdf2088411ba4bdf6036c80db58bf608c96f7485",
+    "orthofoundation/data.py": "f3b63ab922f0452c065126dc2ef1c87442a0b988dff29d25c201666a8a5310aa",
+    "orthofoundation/encoder.py": "86defa5f943bfc161603c7b377bbf08a9d5c2a270d01b1df5c039ab59cff7ecb",
+    "orthofoundation/heads.py": "c814b1bcbf1ac1322b717c1f1e6ba7b9173357e956e9104b2c77d0351a833f1f",
+    "orthofoundation/run.py": "740c2e2599516b1876e7d7226bb0f11c51205cbdaec0b6eebf44dc740c659e10",
+    "orthofoundation/train.py": "928121a030aabf4fc58594da967ad98ff43a7ce915474d69a909ab09652a7dc1",
+    "orthofoundation_http_v2/sharded_frozen_extract.py": "86265241778c40a3822c2a8d11f4f3f746a48b47101def338120dd86937ee4f2",
+    "compare_frozen_heads.py": "277843a391562237589164780925445a5d47483f275f86b0c2d8f40e5cbdd211",
+    "compare_sharded_heads.py": "dffad26c0739d7b5fc0f206ecf225371b3efe69809303da4977bdc55217da8a8"
+  },
+  "embedded_sources_byte_exact_to_reviewed_current_sources": true,
+  "nbformat_and_all_code_AST_valid": true,
+  "CPU_private_offline": true,
+  "kernel_title_normalizes_to_exact_id": true,
+  "inputs": {
+    "metadata_dataset": "alanchoo/rsna-knee-ortho-global-metadata-v1",
+    "completed_attention_source_kernel": "alanchoo/rsna-knee-ortho-http-merge-heads-v2",
+    "ROOT_confirmed_immutable_source_version": 1,
+    "no_MRI_encoder_weight_or_competition_mounts": true
+  },
+  "source_bank_sha256": "acc8b0c85639833cb51fd101de6b0fe605667150e88d2fdb7476b94ef6f46f74",
+  "ROOT_source_seal_sha256": "7bd85a75523a95e071c91b831f631d1a9674612e7443693df60a8cf19828a6ee",
+  "independent_actual_full_audit_sha256": "f7187dcb54cc7226e5aa5de6a246cb95e1e3858bc2289ff805c2af2f1c7f45dc",
+  "feature_identity": "7f0e16dc1c34e8c0920f567db2ebb68f55c470c09ce77dd7c0aa238cd5ec6c77",
+  "config_changed_keys": [
+    "experiment",
+    "head_kind"
+  ],
+  "head_epochs": 12,
+  "weak_CV_split_counts": [
+    3479,
+    870
+  ],
+  "production_weak_count": 4349,
+  "Gold_excluded_from_gradients_and_selection": 58,
+  "seed": 42,
+  "unchanged_core_run_training": true,
+  "seed_caveat": "Different head initialization consumes RNG differently; identical minibatch order and CPU/GPU byte equality are not promised.",
+  "CPU_source_checkpoint_probability_replay_tolerances": {
+    "atol": 2e-06,
+    "rtol": 2e-05
+  },
+  "full_external_bank_pin_and_both_attention_checkpoint_replays_mandatory_before_fit": true,
+  "runtime": {
+    "earliest_BOOTSTRAP_start_inherited_by_child": true,
+    "validation_reserve_seconds": 300,
+    "head_fit_budget_seconds": 1200,
+    "Python_stage_cap_seconds": 1500,
+    "parent_subprocess_timeout_uses_remaining_original_budget": true,
+    "pre_Python_mount_time_outside_cap": true
+  },
+  "verification": "Offline generated-notebook/source/config/hash/AST inspection. Reviewed comparator unchanged; fresh full80 repository tests passed9.253s during repaired inference review. No model fitting or API call.",
+  "privacy": "Decoded payload source scan found no account credential, scoped URL, weights or medical rows; prediction/gradient-ID outputs remain private.",
+  "external_gate_condition": "ROOT must separately authorize one CPU job and confirm current immutable private COMPLETE source V1/global-metadata READY V1, SDK inputs and final wire timeout. The notebook bank pin is bound to the actual independently reviewed full source; no self-issued expected pin.",
+  "metric_limits": "Meanmax results absent; same-bank diagnostic comparison only, no leaderboard improvement/clean patient OOF/ensemble integration claim."
+}

@@ -1,9 +1,8 @@
 # Full HTTP OrthoFoundation V2
 
-**Actual extraction 7/7 verified: shards0–6 COMPLETE, 4,413 study partials / 85,336 images.
-Merge+attention job accepted; complete-bank/head validation pending, AUC remains unmeasured.** [Preparation receipt](preparation_receipt.json) and
-[source-index pins](source_index.json) contain only aggregate counts, references,
-file sizes and hashes, without medical rows or scoped access URLs.
+**Полное извлечение и attention training завершены на Kaggle и независимо проверены.** Банк: 4 407 исследований / 85 336 срезов. Weak holdout AUC **0.760328**, Gold58 AUC **0.736061**. Нового leaderboard score нет; ветка пока уступает нашему отдельному ConvNeXt на Gold и в ансамбль не добавлена.
+
+[ROOT full-bank/checkpoint seal](ROOT_actual_full_merge_seal.json), [independent full audit](merge_independent_full_validation.json), [actual execution receipt](merge_execution_receipt.json), [Gold diagnostic](gold_attention_diagnostics/Gold_diagnostics.json). Нижние записи — датированная история запуска; заявления о pending относятся к состоянию на момент соответствующего события.
 
 The separate [pilot V2 journal](../orthofoundation_http_cache0_pilot_v2/STATUS.md)
 and [independent MRI proof](../orthofoundation_http_cache0_pilot_v2/root_MRI_validation.json)
@@ -155,3 +154,6 @@ actual partialmanifest seals, offline pinnedT4/image and Python1500/wire1530 cap
 [Repaired launcher review](independent_merge_launcher_review.json) passed17fixtures
 and refused an independentlysealed mismatched manifest across all7actualsources.
 Production gradient start/completion and AUC remain unverified at this receipt.
+
+
+Actual merge+attention COMPLETE: exact union of all7 sealed banks, 4,407 unique studies, 21,334 slots /85,336 images. Both fixed12epoch heads trained: CV3,479 weak studies/660updates, production4,349 weak/816updates, Gold gradients/selection0. Parent139.581s, training39.490s, scratch cleaned. ROOT independently reconstructed every merged array and replayed both heads; a separate reviewer confirmed bank/state/predictions/AUC. No new submission. CPU meanmax executable now independently reviewed with actual full-bank pin; execution requires a separate one-job ROOT authority.

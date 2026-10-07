@@ -18,7 +18,7 @@
 
 Из-за зависания Kaggle при подключении семи cache-архивов подготовлен [запуск по одному архиву](../experiments/orthofoundation_sharded/STATUS.md): глобальный выбор series сохраняется, partial features строго объединяются перед обучением. Реальный MRI pilot уже прошёл; перед каждой extraction-частью проверяем фактические предыдущие outputs и свежую GPU-квоту.
 
-Следом подготовлен [EXP-OF-002: attention против mean+max](../experiments/orthofoundation_meanmax/STATUS.md). Он использует те же 4407 сохранённых feature-файлов, labels/split/seed/optimizer и фиксированные 12 эпох. Меняется только тип головы; извлечение признаков не повторяется. Пока полного feature bank нет, запуск остаётся в очереди. Для нового sharded bank потребуется отдельно проверенный schema adapter.
+Следом подготовлен [EXP-OF-002: attention против mean+max](../experiments/orthofoundation_meanmax/STATUS.md). Он использует те же 4407 сохранённых feature-файлов, labels/split/seed/optimizer и фиксированные 12 эпох. Меняется только тип головы; извлечение признаков не повторяется. Полный feature bank уже получен и независимо проверен. V2 adapter и новый CPU notebook с фактическим SHA банка прошли review; запускаем отдельное сравнение.
 
 Для оценки именно выигрыша медицинского предобучения нужен отдельный контроль с обычным DINOv3-L при одинаковых input/head/split. Сравнение только с ConvNeXt смешивает архитектуру и pretraining.
 
@@ -68,3 +68,8 @@
 После измеренного HTTP download581.26 s подготовлен [versioned pilotV2](../experiments/orthofoundation_http_cache0_pilot_v2/STATUS.md): только execution budget увеличен до pilot900/total9300 s, model/head settings сохранены. Full7/merge и mean+max для его нового source identity требуют своих artifacts/review; старый V1 adapter автоматически не применяем.
 
 Актуальная HTTP V2 ветка прошла реальный MRI pilot; полное извлечение выполняется последовательно, каждый завершённый partial bank проверяется независимо. [Full journal](../experiments/orthofoundation_http_sharded_v2/STATUS.md) содержит actual receipts. [V2 mean/max adapter](../experiments/orthofoundation_sharded_meanmax_http_v2/STATUS.md) уже прошёл review53 tests; его placeholder остаётся неисполняемым до завершённого полного банка и внешнего SHA pin.
+
+
+## Фактическое обновление 7 октября, после полного Ortho training
+
+Attention завершён: weak holdout AUC0.760328, Gold58 AUC0.736061. Заранее заданный 50/50 probability blend с отдельным ConvNeXt дал0.908313 против0.911160 reader-only; доказанного улучшения нет. [Результаты](ORTHO_RESULTS.md). Следующие дешёвые проверки: mean/max и один заранее заданный slot-centered Ridge probe; они не повторяют encoder и не расходуют GPU. Экстракция/attention завершены, старые записи «bank pending» выше относятся к подготовке. Замороженный CLS/K4 эксперимент не оценивает полное fine-tuning OrthoFoundation.

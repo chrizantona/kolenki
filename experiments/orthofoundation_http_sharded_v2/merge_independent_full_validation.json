@@ -1,0 +1,242 @@
+{
+  "schema": "HTTP_V2_independent_actual_full_attention_validation_v1",
+  "independent_actual_full_merge_PASS": true,
+  "critical_findings": [],
+  "important_findings": [],
+  "actual_attention_kernel": "alanchoo/rsna-knee-ortho-http-merge-heads-v2",
+  "ROOT_confirmed_complete_version": 1,
+  "version_origin_verified_by_trusted_ROOT_not_reviewer_API": true,
+  "feature_identity": "7f0e16dc1c34e8c0920f567db2ebb68f55c470c09ce77dd7c0aa238cd5ec6c77",
+  "source_bank_sha256": "acc8b0c85639833cb51fd101de6b0fe605667150e88d2fdb7476b94ef6f46f74",
+  "ROOT_seal_sha256": "7bd85a75523a95e071c91b831f631d1a9674612e7443693df60a8cf19828a6ee",
+  "independent_private_audit_sha256": "48e061f6ca59cf83b04239a63710aa1a414ca22ee05bc42741bf6cbc26870762",
+  "validation_helper_sha256": "dcb6e90aa90c14e22f901d0aedc05b592ae4d9198014a12d450b2ee7e3675ef4",
+  "ROOT_partial_source_map_sha256": "837077d2ea8562b3776b20a1cfbb46cebdfb810dff5ce09f0d95962f5dd4c21d",
+  "downloaded_source8_sha256": {
+    "orthofoundation/__init__.py": "f3df43207f5d18497b4f698aa91c746bf81dcd4edb74b81784136acd8aa52cf1",
+    "orthofoundation/cache.py": "700767576eb7b6d9dfa22f77bdf2088411ba4bdf6036c80db58bf608c96f7485",
+    "orthofoundation/data.py": "f3b63ab922f0452c065126dc2ef1c87442a0b988dff29d25c201666a8a5310aa",
+    "orthofoundation/encoder.py": "86defa5f943bfc161603c7b377bbf08a9d5c2a270d01b1df5c039ab59cff7ecb",
+    "orthofoundation/heads.py": "c814b1bcbf1ac1322b717c1f1e6ba7b9173357e956e9104b2c77d0351a833f1f",
+    "orthofoundation/run.py": "740c2e2599516b1876e7d7226bb0f11c51205cbdaec0b6eebf44dc740c659e10",
+    "orthofoundation/train.py": "928121a030aabf4fc58594da967ad98ff43a7ce915474d69a909ab09652a7dc1",
+    "sharded_frozen_extract.py": "86265241778c40a3822c2a8d11f4f3f746a48b47101def338120dd86937ee4f2"
+  },
+  "approved_config_yaml_sha256": "f3c4334f97df527d22dd2b0da3b6220ec466c1333efe7e99a471b955a74ba919",
+  "assets_manifest_sha256": "6feeb03c976483c2b91cca667f4fdbefa998d3620a93eb6006de22a13cbdeb4f",
+  "counts": {
+    "studies": 4407,
+    "weak": 4349,
+    "Gold": 58,
+    "CV_gradient": 3479,
+    "weak_holdout": 870,
+    "production_gradient": 4349,
+    "selected_slots": 21334,
+    "images_k4": 85336
+  },
+  "feature_bank_receipt": {
+    "studies": 4407,
+    "bytes": 172303771,
+    "sha256": "acc8b0c85639833cb51fd101de6b0fe605667150e88d2fdb7476b94ef6f46f74",
+    "digest_format": "sorted filename<TAB>bytes<TAB>sha256<LF>",
+    "every_uid_geometry_identity_and_values_checked": true,
+    "selected_slot_series": 21334,
+    "images_k4": 85336,
+    "global_masks_series_positions_and_native_sharded_provenance_checked": true,
+    "receipt_origin": "Current full bank measured for comparison with independently sealed attention-source bank SHA256"
+  },
+  "exact_source_array_union": {
+    "all_studies_exact_array_union_checked": 4407,
+    "all7_shards": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "selected_slots": 21334,
+    "images_k4": 85336,
+    "comparison": "Exact dtypes and values for FP16 features, masks, FP32 positions, selected series and provenance; NPZ container bytes may differ",
+    "merged_snapshot_bank_sha256": "acc8b0c85639833cb51fd101de6b0fe605667150e88d2fdb7476b94ef6f46f74",
+    "merged_snapshot_bank_bytes": 172303771,
+    "source_and_merged_hashes_bound_to_exact_array_snapshot_bytes": true,
+    "reconstruction_tmp_removed": true
+  },
+  "all7_external_actual_partial_receipts_checked": true,
+  "all_scored_and_unscored_training_rows_sealed": true,
+  "both_heads": {
+    "epochs": 12,
+    "CV_optimizer_updates": 660,
+    "production_optimizer_updates": 816,
+    "Gold_gradient_rows": 0,
+    "Gold_checkpoint_selection": false
+  },
+  "strict_finite_FP32_both_checkpoint_states": true,
+  "checkpoint_receipts": {
+    "head.pt": {
+      "filename": "head.pt",
+      "bytes": 1485814,
+      "sha256": "fc7076cdeacdf4476460904ae1bfb6928768f604c72e8f6c0ee7a0edaa205e9d"
+    },
+    "head_weak_holdout.pt": {
+      "filename": "head_weak_holdout.pt",
+      "bytes": 1486599,
+      "sha256": "3a93d1b710db7494357c5fb6b23d557bbddef4f27ca225f17b6b5d2309db675b"
+    }
+  },
+  "attention_prediction_replay": {
+    "production_head": {
+      "n": 58,
+      "ids_sha256": "3918e0c230d6c8d16e073b3c2537d173011b705c71b494493591e6afa5f510ea",
+      "labels_order": [
+        "ACL",
+        "MCL",
+        "Medial Meniscus",
+        "Lateral Meniscus",
+        "Medial OA",
+        "Lateral OA",
+        "PF OA",
+        "Effusion",
+        "Synovitis",
+        "Baker's",
+        "Contusion",
+        "Fracture"
+      ],
+      "device": "cpu",
+      "device_name": "CPU",
+      "torch_version": "2.8.0",
+      "dtype": "float32",
+      "autocast": false,
+      "cuda_matmul_tf32_during_replay": false,
+      "probability_tolerances": {
+        "atol": 2e-06,
+        "rtol": 2e-05
+      },
+      "tolerance_rule": "abs(replay-source) <= atol + rtol*abs(source)",
+      "comparison_space": "Sigmoid probabilities against original exported CSV; source raw logits were not exported",
+      "logits_and_probabilities_finite": true,
+      "max_absolute_probability_difference": 1.843147278135504e-07,
+      "replay_probability_sha256": "fa98739b4081acdb579cc9d4d1885f4584d43ca669b8f766d603961ad0afee3f",
+      "replay_logits_sha256": "7817fd8919cacb7db58b18eef5134e8088b023d242f490d54768a06057459ab3",
+      "array_digest_format": "FP32 native little-endian row-major values; original CSV row/label order",
+      "source_prediction_csv_sha256": "189436eed35e40aa2a72fe635982fe0f2522c328e118b1e838a04d2308f4646d",
+      "seconds": 0.09512833401095122,
+      "source_checkpoint_receipt": {
+        "filename": "head.pt",
+        "bytes": 1485814,
+        "sha256": "fc7076cdeacdf4476460904ae1bfb6928768f604c72e8f6c0ee7a0edaa205e9d"
+      }
+    },
+    "weak_holdout_head": {
+      "n": 870,
+      "ids_sha256": "e3802af7c364076b8c35a48ebd7a8383f3b887c84670fdb699dc8550463964a5",
+      "labels_order": [
+        "ACL",
+        "MCL",
+        "Medial Meniscus",
+        "Lateral Meniscus",
+        "Medial OA",
+        "Lateral OA",
+        "PF OA",
+        "Effusion",
+        "Synovitis",
+        "Baker's",
+        "Contusion",
+        "Fracture"
+      ],
+      "device": "cpu",
+      "device_name": "CPU",
+      "torch_version": "2.8.0",
+      "dtype": "float32",
+      "autocast": false,
+      "cuda_matmul_tf32_during_replay": false,
+      "probability_tolerances": {
+        "atol": 2e-06,
+        "rtol": 2e-05
+      },
+      "tolerance_rule": "abs(replay-source) <= atol + rtol*abs(source)",
+      "comparison_space": "Sigmoid probabilities against original exported CSV; source raw logits were not exported",
+      "logits_and_probabilities_finite": true,
+      "max_absolute_probability_difference": 3.0886535640206603e-07,
+      "replay_probability_sha256": "43d700bf7dd8612c4bae58a6f545188dd3b7b4bd130bcbcb9472556955b1d1d5",
+      "replay_logits_sha256": "701a70a30d825c12b8c070e58adf7b45ed99b4fce30b345b537ebc2082485b5a",
+      "array_digest_format": "FP32 native little-endian row-major values; original CSV row/label order",
+      "source_prediction_csv_sha256": "034226bc518497df09d8a4276aab7d2e074c92af32fca9afe06b800075b7c6af",
+      "seconds": 0.972191832959652,
+      "source_checkpoint_receipt": {
+        "filename": "head_weak_holdout.pt",
+        "bytes": 1486599,
+        "sha256": "3a93d1b710db7494357c5fb6b23d557bbddef4f27ca225f17b6b5d2309db675b"
+      }
+    }
+  },
+  "gold_metrics": {
+    "n": 58,
+    "macro_auc": 0.7360607688222921,
+    "per_class_auc": {
+      "ACL": 0.6286764705882353,
+      "MCL": 0.546485260770975,
+      "Medial Meniscus": 0.7331730769230769,
+      "Lateral Meniscus": 0.6670807453416149,
+      "Medial OA": 0.9054263565891472,
+      "Lateral OA": 0.8510638297872342,
+      "PF OA": 0.7258687258687259,
+      "Effusion": 0.8770186335403727,
+      "Synovitis": 0.7060931899641578,
+      "Baker's": 0.7952898550724639,
+      "Contusion": 0.689608636977058,
+      "Fracture": 0.7069444444444444
+    },
+    "target_kind": "official_expert_labels; diagnostic only",
+    "classes_with_both_labels": 12
+  },
+  "weak_holdout_metrics": {
+    "n": 870,
+    "macro_auc": 0.7603283232686886,
+    "per_class_auc": {
+      "ACL": 0.7312950574787296,
+      "MCL": 0.7163552738949353,
+      "Medial Meniscus": 0.7522078433087045,
+      "Lateral Meniscus": 0.7465807880937281,
+      "Medial OA": 0.7899054060229401,
+      "Lateral OA": 0.7565529673351148,
+      "PF OA": 0.7312511658894071,
+      "Effusion": 0.8023028883684622,
+      "Synovitis": 0.792113226199231,
+      "Baker's": 0.7807919492452416,
+      "Contusion": 0.7350812595226003,
+      "Fracture": 0.7895020538651698
+    },
+    "target_kind": "thresholded_public_teacher_consensus; not expert ground truth",
+    "classes_with_both_labels": 12
+  },
+  "population_support_and_feature_statistics_receipt_sha256": "6745bbe2b6aefebe29d501f859a1e418ff66c1f30a8503ebaf5ce860278d75a4",
+  "every_valid_feature_vector_finite_nonzero": true,
+  "absent_features_and_positions_zero": true,
+  "parent_seconds": 139.58075747000004,
+  "preparation_seconds": 95.25006842599998,
+  "head_training_seconds": 39.48972288600004,
+  "orchestrator_seconds": 134.739791912,
+  "verified_runtime_caps_seconds": {
+    "preparation": 300,
+    "head_fit": 1200,
+    "Python_parent": 1500,
+    "server_wire": 1530
+  },
+  "owned_parent_tmp_removed": true,
+  "owned_independent_reconstruction_tmp_removed": true,
+  "independent_helper_seconds": 71.59680495801149,
+  "source_bank_and_critical_receipts_pre_post_unchanged": true,
+  "verification_activities": {
+    "offline_file_SHA_and_arrays": true,
+    "CPU_saved_head_prediction_replay": true,
+    "encoder_forward": false,
+    "model_training": false,
+    "API_GPU_Git_UI": false
+  },
+  "no_raw_medical_rows_or_identifiers_published": true,
+  "next_job_authorized_by_reviewer": false,
+  "limits": "AUC is honestly reproduced: Gold58 diagnostic, weak870 teacher agreement. No clean patient OOF, calibrated clinical performance or leaderboard gain claimed; production inference/blending not performed."
+}

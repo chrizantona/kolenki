@@ -2,14 +2,14 @@
 
 Рабочий репозиторий команды **alanchoo**: исследование данных, воспроизводимый публичный baseline и собственные эксперименты по распознаванию 12 патологий на MRI колена.
 
-**Подтверждённый результат: public score 0.944.** Мы воспроизвели публичный ансамбль GoodPJ, дообучили один ConvNeXt-reader и отправили ансамбль с нашими весами. Следующий эксперимент — замороженный **OrthoFoundation → признаки срезов → наша голова на 12 целей**.
+**Подтверждённый результат: public score 0.944.** Мы воспроизвели публичный ансамбль GoodPJ, дообучили один ConvNeXt-reader и отправили ансамбль с нашими весами. Обучили также **замороженный OrthoFoundation → признаки срезов → наша голова на 12 целей**; первые результаты этой ветки пока слабее ConvNeXt.
 
 | Запуск | Public score | Что подтверждено |
 |---|---:|---|
 | GoodPJ, авторский baseline V2 | 0.944 | Исторический результат автора; не наш запуск |
 | Наше воспроизведение baseline | 0.943 | Завершённое Kaggle scoring |
 | Наш ансамбль с дообученным ConvNeXt | **0.944** | Submission `56891310`, статус `COMPLETE` |
-| OrthoFoundation | — | **MRI pilot PASS:** 16 studies / 308 images, конечные признаки и реальное обновление головы. 72.6 images/s, 1.33 GB. **7/7 extraction завершены и проверены:** 4 413 study partials / 85 336 images. Сборка и обучение attention запущены на Kaggle; AUC ещё не измерен. [Статус и ссылки](experiments/orthofoundation_sharded/STATUS.md) |
+| OrthoFoundation + attention | — | Полный bank и две головы проверены: weak holdout AUC **0.7603**, Gold58 AUC **0.7361**. [Результаты и дальнейший план](docs/ORTHO_RESULTS.md) |
 
 Результаты выше проверены **7 октября 2026**. Разница между двумя сабмитами — один отображаемый шаг leaderboard; это ещё не доказательство устойчивого улучшения на независимой выборке.
 
@@ -26,7 +26,7 @@
 
 Наши Kaggle notebooks и подготовленные caches сейчас приватные: наличие ссылки не даёт другому аккаунту доступ к inputs. Здесь публикуются описание и код; большие MRI, caches, checkpoints, токены и тексты медицинских отчётов в Git не хранятся.
 
-[Что именно обучаем в новой OrthoFoundation-ветке](docs/ORTHO_CURRENT.md): данные → замороженный MRI encoder → attention или mean/max голова.
+[Как устроена OrthoFoundation-ветка](docs/ORTHO_CURRENT.md): данные → замороженный MRI encoder → attention или mean/max голова.
 
 [Отдельная Ortho inference-ветка](experiments/orthofoundation_inference/STATUS.md) подготовлена и
 [прошла независимое ревью](experiments/orthofoundation_inference/independent_inference_preparation_review.json):

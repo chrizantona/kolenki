@@ -1,6 +1,6 @@
 # OrthoFoundation frozen features → 12-label head
 
-**MRI pilot V2 PASS; полное извлечение идёт по одному архиву.** Проверены 7/7 частей: 4 413 study partials / 85 336изображений; Запуск сборки и обучения attention принят Kaggle; веса/AUC ещё не проверены. Production training и Ortho AUC пока не готовы. Актуальные запуски и actual receipts: [HTTP V2 журнал](../orthofoundation_http_sharded_v2/STATUS.md), [машинный статус](status.json).
+**Полное извлечение и attention training завершены на Kaggle и независимо проверены.** Банк: 4 407 исследований / 85 336 срезов. Weak holdout AUC **0.760328**, Gold58 AUC **0.736061**. Нового leaderboard score нет; ветка пока уступает нашему отдельному ConvNeXt на Gold и в ансамбль не добавлена. [Полный журнал](../orthofoundation_http_sharded_v2/STATUS.md), [результаты](../../docs/ORTHO_RESULTS.md).
 
 Взяли опубликованный OrthoFoundation-L на основе DINOv3 ViT-L/16. Encoder заморожен, выдаёт 1024-мерный CLS-вектор с каждого среза. Checkpoint1 213 056 638bytes, SHA256 `385a775822107b68eaa486336feb982e1ce7bd6d4e8c03ceb482a0bf546f2ff9`. [Asset provenance](asset_manifest.json). Первый эксперимент сохраняет авторский `author_no_rope`; canonical RoPE — отдельная будущая абляция.
 
