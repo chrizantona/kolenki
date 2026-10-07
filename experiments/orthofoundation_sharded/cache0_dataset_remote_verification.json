@@ -1,0 +1,67 @@
+{
+  "ref": "alanchoo/rsna-knee-cache-0-bin-v1",
+  "version_number": 1,
+  "status": "ready",
+  "is_private": true,
+  "inventory": {
+    "datasetFiles": [
+      {
+        "name": "cache384_train.zip.bin",
+        "creationDate": "2026-10-07T14:27:52.149Z",
+        "totalBytes": 10241860213
+      },
+      {
+        "name": "cache_dataset_manifest.json",
+        "creationDate": "2026-10-07T14:25:13.543Z",
+        "totalBytes": 3273
+      },
+      {
+        "name": "cache_receipts.tar.gz.bin",
+        "creationDate": "2026-10-07T14:25:13.684Z",
+        "totalBytes": 540224
+      }
+    ]
+  },
+  "archive_local_full_sha256": "31b3dd3934e79931fa78195315bef1b58d8432bae841b7920c6d4497262e764c",
+  "archive_full_remote_sha256_independently_recomputed": false,
+  "archive_remote_content_length": 10241860213,
+  "remote_storage_checksum": {
+    "storage_md5_available": true,
+    "storage_md5_matches_local_full_archive": true,
+    "local_md5": "5b8482cfaf9205319214a0405bee547d"
+  },
+  "remote_range_checks": [
+    {
+      "start": 0,
+      "end": 65535,
+      "bytes": 65536,
+      "sha256": "709cbfde2c0c97f61b86c6e81324ae38135dfcf20b1be83770b62d336c75f001",
+      "matches_local": true,
+      "status_code": 206
+    },
+    {
+      "start": 10241794677,
+      "end": 10241860212,
+      "bytes": 65536,
+      "sha256": "62962ee57dcff846efd4b944c892d0b0a1a05ef49212a8b3042d2818521f95c8",
+      "matches_local": true,
+      "status_code": 206
+    }
+  ],
+  "small_files_verified": [
+    {
+      "filename": "cache_dataset_manifest.json",
+      "bytes": 3273,
+      "sha256": "b8e48ce53c2085b93f1b1396ff24a25cf5835f8f289f82f32df9074d5a029327",
+      "matches_local": true
+    },
+    {
+      "filename": "cache_receipts.tar.gz.bin",
+      "bytes": 540224,
+      "sha256": "40f6aa63e75254507b2460219f7a20a3269ae8789c4d0f5be6e95125588088cd",
+      "matches_local": true
+    }
+  ],
+  "large_file_not_downloaded_again": true,
+  "remote_transport_verification": "exact remote inventory/size, first and last64KiB match local immutable validated archive; small receipts/manifest verified fully"
+}

@@ -1,0 +1,20 @@
+{
+  "prepared_not_launched": true,
+  "independent_review": "PASS_no_critical_or_important_blockers",
+  "tests": 17,
+  "independent_test_seconds": 12.2,
+  "source_sha256": {
+    "transfer.py": "7212063963481c5fe35ee2d27c61ef101d506a93372326f5501f6771615206ed",
+    "supervise.py": "99f7e08c49d15043c464f2e10870d603875b273fb66a586a30737b78a1d7e790",
+    "test_transfer.py": "bd56192232a7d4133ef2a64adf9eefaba1bc02d87e0a7256431fdfdd59f3c4be",
+    "build_notebook.py": "9fdea92707289020e147d846f864ceeb725acc5745da66ba0ecdc6871262756b"
+  },
+  "production_cloud_transfer_executed": false,
+  "actual_url_host_ttl_finalize_verified": false,
+  "does_not_change_scientific_sources": true,
+  "root_published_source_tests": {
+    "tests": 17,
+    "seconds": 12.03,
+    "status": "PASS"
+  }
+}

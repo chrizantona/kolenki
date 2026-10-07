@@ -31,3 +31,8 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .DS_Store
+
+# Temporary scoped upload jobs and protocol fixture scratch
+transfer_job.json
+**/transfer_job.json
+**/fixture_tmp/
