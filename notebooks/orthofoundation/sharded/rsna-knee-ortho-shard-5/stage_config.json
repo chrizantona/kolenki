@@ -1,0 +1,55 @@
+{
+  "mode": "extract",
+  "shards": [
+    5
+  ],
+  "config": {
+    "experiment": "orthofoundation_frozen_attention_v1",
+    "encoder": "dinov3_vitl16",
+    "extraction_variant": "author_no_rope",
+    "feature_dim": 1024,
+    "checkpoint_sha256": "385a775822107b68eaa486336feb982e1ce7bd6d4e8c03ceb482a0bf546f2ff9",
+    "checkpoint_bytes": 1213056638,
+    "resolution": 224,
+    "slices_per_slot": 4,
+    "fov": 0.92,
+    "image_batch_size": 16,
+    "workers": 2,
+    "pilot_studies": 16,
+    "max_extract_seconds": 9000,
+    "head_kind": "attention",
+    "head_dim": 256,
+    "head_dropout": 0.2,
+    "head_epochs": 12,
+    "head_batch_size": 64,
+    "head_lr": 0.001,
+    "head_weight_decay": 0.01,
+    "weak_holdout_fold": 0,
+    "seed": 42
+  },
+  "global_manifest_sha256": "b2a87794d768ca3f6ee3968345f840f1028cff004708a2b3e0cfdfcfb2c15e60",
+  "assets_manifest_sha256": "6feeb03c976483c2b91cca667f4fdbefa998d3620a93eb6006de22a13cbdeb4f",
+  "metadata_dataset": "alanchoo/rsna-knee-ortho-global-metadata-v1",
+  "assets_dataset": "alanchoo/orthofoundation-l-assets-v1",
+  "cache_kernel_ids": [
+    "alanchoo/rsna-knee-cnxt-cache-5-direct-zip"
+  ],
+  "partial_kernels": [],
+  "resume_kernel": null,
+  "max_seconds": 1228,
+  "expected_images_for_shards": 12496,
+  "planned_extraction_jobs": 7,
+  "total_frozen_budget_seconds": 9000,
+  "head_fit_budget_seconds": 1200,
+  "head_job_reserve_seconds": 1500,
+  "source_sha256": {
+    "orthofoundation/__init__.py": "f3df43207f5d18497b4f698aa91c746bf81dcd4edb74b81784136acd8aa52cf1",
+    "orthofoundation/cache.py": "700767576eb7b6d9dfa22f77bdf2088411ba4bdf6036c80db58bf608c96f7485",
+    "orthofoundation/data.py": "f3b63ab922f0452c065126dc2ef1c87442a0b988dff29d25c201666a8a5310aa",
+    "orthofoundation/encoder.py": "86defa5f943bfc161603c7b377bbf08a9d5c2a270d01b1df5c039ab59cff7ecb",
+    "orthofoundation/heads.py": "c814b1bcbf1ac1322b717c1f1e6ba7b9173357e956e9104b2c77d0351a833f1f",
+    "orthofoundation/run.py": "740c2e2599516b1876e7d7226bb0f11c51205cbdaec0b6eebf44dc740c659e10",
+    "orthofoundation/train.py": "928121a030aabf4fc58594da967ad98ff43a7ce915474d69a909ab09652a7dc1",
+    "sharded_frozen_extract.py": "ffc2d904e25f7bdbd506f8c6cd58607484ffacc0305a9665fd538778ca122441"
+  }
+}

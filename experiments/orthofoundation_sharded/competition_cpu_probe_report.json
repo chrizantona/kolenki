@@ -1,0 +1,47 @@
+{
+  "complete": true,
+  "tables": [
+    {
+      "name": "train.csv",
+      "bytes": 5690007,
+      "sha256": "8ca2203c0e9d61c080c7a314c7cdb51c1b03a1d9eb4770819f7f34af53ef4e33",
+      "rows": 4407,
+      "columns": [
+        "StudyInstanceUID",
+        "Report",
+        "ACL",
+        "MCL",
+        "Medial Meniscus",
+        "Lateral Meniscus",
+        "Medial OA",
+        "Lateral OA",
+        "PF OA",
+        "Effusion",
+        "Synovitis",
+        "Baker's",
+        "Contusion",
+        "Fracture"
+      ]
+    },
+    {
+      "name": "train_series.csv",
+      "bytes": 3458834,
+      "sha256": "573c1d80772bf41211c91b149c95677385a1c22d63f485c347f1b46c0177aef3",
+      "rows": 24371,
+      "columns": [
+        "StudyInstanceUID",
+        "SeriesInstanceUID",
+        "Fluid_Sensitive",
+        "Fat_Suppression",
+        "Anatomical_Plane"
+      ]
+    }
+  ],
+  "cpu_finite": true,
+  "hardware": "CPU; supplemental mount evidence",
+  "decoded_mri_volumes": 0,
+  "kaggle_url": "https://www.kaggle.com/code/alanchoo/rsna-knee-ortho-competition-cpu-probe",
+  "kernel_id": 137487431,
+  "version": 1,
+  "status": "COMPLETE"
+}

@@ -1,0 +1,18 @@
+{
+  "kernel": "alanchoo/rsna-knee-ortho-cache-probe",
+  "kernel_id": 137484725,
+  "version": 1,
+  "ui_run_reference": 356066408,
+  "action": "Cancel selected version through authenticated native Arc View versions menu",
+  "ui_action_reported_approx_utc": "2026-10-07T13:36Z",
+  "checked_at_utc": "2026-10-07T13:37:40.919915+00:00",
+  "official_status": "CANCEL_ACKNOWLEDGED",
+  "observed_python_startup": false,
+  "deliberate_diagnostic_cancellation": true,
+  "not_code_error_or_confirmed_root_cause": true,
+  "gpu_used_after_cancellation_seconds": 3199.361,
+  "gpu_used_before_probe_seconds": 3199.361,
+  "probe_billed_gpu_seconds": 0.0,
+  "data_and_source_deleted": false,
+  "guessed_session_id_cancel_attempted": false
+}

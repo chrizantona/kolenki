@@ -58,3 +58,9 @@ Visible demo содержит 3 исследования и служит про�
 - Лицензия репозитория не переоформляет сторонние code/data/weights; сохраняем авторство и проверяем их условия отдельно.
 
 Для диагностики Kaggle bootstrap первый code cell сохраняет `bootstrap_start.json` до ML-импортов. Последующие этапы пишутся в `bootstrap_progress.json`; Python-ошибка сохраняет фазу и traceback в `bootstrap_failure.json`, после чего запуск завершается ошибкой. Отсутствие этих файлов ограничивает диагностику: оно само по себе не раскрывает причину сбоя инфраструктуры.
+
+## OrthoFoundation по одному архиву
+
+[Sharded journal](../experiments/orthofoundation_sharded/STATUS.md) описывает подготовленные pilot, семь extract jobs и merge/head job. Builder читает приватные global metadata и asset manifest, проверяет pins и встраивает только код. Используются те же семь основных модулей, но отдельный orchestrator и отдельная feature identity. Для повторения потребуются собственный доступ к двум приватным datasets и MRI-cache outputs; одних публичных notebooks в Git недостаточно.
+
+Не меняйте выбор series отдельно в каждом архиве: шесть studies пересекают границы архивов. Merge принимает только проверенное полное глобальное покрытие. Caps ограничивают Python-stage; задержка Kaggle до первого cell ими не ограничена. Existing mean/max comparator требует adapter для нового schema.

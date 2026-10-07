@@ -1,0 +1,10 @@
+{
+  "kernel_id": 137491819,
+  "version": 1,
+  "status": "ERROR",
+  "failure_message": "",
+  "output_log_bytes": 2,
+  "observed_python_bootstrap": false,
+  "actual_gpu_used_seconds": 3199.361,
+  "additional_gpu_billed_seconds": 0.0
+}

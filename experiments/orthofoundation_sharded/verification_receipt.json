@@ -1,0 +1,135 @@
+{
+  "core7_byte_unchanged": true,
+  "runner_identity_unchanged": true,
+  "private_global_manifest_sha256": "b2a87794d768ca3f6ee3968345f840f1028cff004708a2b3e0cfdfcfb2c15e60",
+  "files": {
+    "scripts/sharded_frozen_extract.py": "ffc2d904e25f7bdbd506f8c6cd58607484ffacc0305a9665fd538778ca122441",
+    "scripts/build_sharded_notebooks.py": "9ea72ec16abd471fef464f7ec37f49e1d94c5e1182caa3f0798157e92000ae03",
+    "tests/test_sharded_fallback.py": "fac47c275b2385eda476fe2cd80baa5eaedbb881d6069a4e960e0676c48dfa81"
+  },
+  "prepared_notebooks": [
+    {
+      "mode": "merge-train",
+      "shards": [],
+      "notebook_sha256": "d99a7d80f66960e24aa6d4da687d76d145bc40278613cbc2a8b56d122b52a140",
+      "max_seconds": 1500,
+      "source_payload_byte_exact": true,
+      "nbformat_ast_valid": true,
+      "title_slug_exact": true,
+      "id": "alanchoo/rsna-knee-ortho-merge-heads",
+      "title": "Rsna Knee Ortho Merge Heads"
+    },
+    {
+      "mode": "extract",
+      "shards": [
+        0
+      ],
+      "notebook_sha256": "67e77f7d9bcf4af2f2cde4c242d0b6cf1909353a25bbc4e4d9c665119189f8a7",
+      "max_seconds": 1204,
+      "source_payload_byte_exact": true,
+      "nbformat_ast_valid": true,
+      "title_slug_exact": true,
+      "id": "alanchoo/rsna-knee-ortho-shard-0",
+      "title": "Rsna Knee Ortho Shard 0"
+    },
+    {
+      "mode": "extract",
+      "shards": [
+        1
+      ],
+      "notebook_sha256": "19d87837400d6fb56962c72cab59d58e026e0626b1fc3c73c306e4b8b6511d05",
+      "max_seconds": 1231,
+      "source_payload_byte_exact": true,
+      "nbformat_ast_valid": true,
+      "title_slug_exact": true,
+      "id": "alanchoo/rsna-knee-ortho-shard-1",
+      "title": "Rsna Knee Ortho Shard 1"
+    },
+    {
+      "mode": "extract",
+      "shards": [
+        2
+      ],
+      "notebook_sha256": "9ecf60d588ec64d4540c340c2a98314b04d578320fde65599bf559fefb8d76a6",
+      "max_seconds": 1236,
+      "source_payload_byte_exact": true,
+      "nbformat_ast_valid": true,
+      "title_slug_exact": true,
+      "id": "alanchoo/rsna-knee-ortho-shard-2",
+      "title": "Rsna Knee Ortho Shard 2"
+    },
+    {
+      "mode": "extract",
+      "shards": [
+        3
+      ],
+      "notebook_sha256": "dd793a1101a84c631b2b035fa0bd780a88cd03e9eb707fe9a951ebc78bab2efb",
+      "max_seconds": 1213,
+      "source_payload_byte_exact": true,
+      "nbformat_ast_valid": true,
+      "title_slug_exact": true,
+      "id": "alanchoo/rsna-knee-ortho-shard-3",
+      "title": "Rsna Knee Ortho Shard 3"
+    },
+    {
+      "mode": "extract",
+      "shards": [
+        4
+      ],
+      "notebook_sha256": "49a1243173d53a0c2c169061aa207a65efaa8f6980c7d33ae585e30b1cde4012",
+      "max_seconds": 1216,
+      "source_payload_byte_exact": true,
+      "nbformat_ast_valid": true,
+      "title_slug_exact": true,
+      "id": "alanchoo/rsna-knee-ortho-shard-4",
+      "title": "Rsna Knee Ortho Shard 4"
+    },
+    {
+      "mode": "extract",
+      "shards": [
+        5
+      ],
+      "notebook_sha256": "f8a8db12b84aa1097c919c7f684a72ab81ac1b0a46583162240bfd738584a3cc",
+      "max_seconds": 1228,
+      "source_payload_byte_exact": true,
+      "nbformat_ast_valid": true,
+      "title_slug_exact": true,
+      "id": "alanchoo/rsna-knee-ortho-shard-5",
+      "title": "Rsna Knee Ortho Shard 5"
+    },
+    {
+      "mode": "extract",
+      "shards": [
+        6
+      ],
+      "notebook_sha256": "993f377954a0902d839f3dd5080c61e049a45d5e765a85ec2503e1ff5c73986e",
+      "max_seconds": 1069,
+      "source_payload_byte_exact": true,
+      "nbformat_ast_valid": true,
+      "title_slug_exact": true,
+      "id": "alanchoo/rsna-knee-ortho-shard-6",
+      "title": "Rsna Knee Ortho Shard 6"
+    },
+    {
+      "mode": "pilot",
+      "shards": [
+        0
+      ],
+      "notebook_sha256": "444565b98fa691a857bdb5c121dfb5e70b7a58cb39fd1646b8db01464c09f9d5",
+      "max_seconds": 600,
+      "source_payload_byte_exact": true,
+      "nbformat_ast_valid": true,
+      "title_slug_exact": true,
+      "id": "alanchoo/rsna-knee-ortho-sharded-pilot",
+      "title": "Rsna Knee Ortho Sharded Pilot"
+    }
+  ],
+  "new_contract_tests_passed": 11,
+  "all_tests_passed": 31,
+  "title_normalized_slug_equals_id_all9": true,
+  "pilot_plus_7_shard_python_caps_seconds": 8997,
+  "head_job_reserve_seconds": 1500,
+  "head_fit_budget_seconds": 1200,
+  "pre_python_mount_bound": false,
+  "existing_meanmax_schema_adapter_ready": false
+}

@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-07T12:33:49.055019+00:00",
-  "stage": "GPU_ASSET_SMOKE_PASS_CACHE_MOUNT_DIAGNOSTIC",
+  "updated_utc": "2026-10-07T13:44:27.281215+00:00",
+  "stage": "GPU_ASSET_SMOKE_PASS_CACHE_DATASET_MIRROR_PREPARATION",
   "training_started": false,
   "model": "OrthoFoundation-L / DINOv3 ViT-L/16",
   "checkpoint_sha256": "385a775822107b68eaa486336feb982e1ce7bd6d4e8c03ceb482a0bf546f2ff9",
@@ -12,10 +12,12 @@
   "gpu_quota_available_seconds_before_experiment": 18440.8,
   "kaggle_kernel": "https://www.kaggle.com/code/alanchoo/rsna-knee-orthofoundation-pilot",
   "public_score": null,
-  "note": "Asset-only GPU probe COMPLETE: strict checkpoint load and finite frozen author_no_rope forward passed on T4. Both main pilots failed before user code. Isolating seven-cache plus competition mounts next; full training not launched.",
+  "note": "Asset T4 smoke and CSV CPU probe passed. Bulk-cache diagnostic cancelled with zero GPU charge. Single notebook-output cache pilot137491819/V1 failed before first Python cell, zero GPU charge. Exact-byte private dataset mirror being prepared; actual MRI/head training not started.",
   "kaggle_version": 2,
   "kaggle_kernel_id": 137481721,
   "kaggle_status": "ERROR",
   "gpu_asset_smoke_passed": true,
-  "asset_probe_url": "https://www.kaggle.com/code/alanchoo/rsna-knee-ortho-asset-startup-probe"
+  "asset_probe_url": "https://www.kaggle.com/code/alanchoo/rsna-knee-ortho-asset-startup-probe",
+  "competition_cpu_probe_passed": true,
+  "active_experiment": "../orthofoundation_sharded/status.json"
 }

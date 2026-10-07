@@ -1,0 +1,22 @@
+{
+  "id": "alanchoo/rsna-knee-ortho-shard-6",
+  "title": "Rsna Knee Ortho Shard 6",
+  "code_file": "train.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "machine_shape": "NvidiaTeslaT4",
+  "competition_sources": [],
+  "dataset_sources": [
+    "alanchoo/rsna-knee-ortho-global-metadata-v1",
+    "alanchoo/orthofoundation-l-assets-v1"
+  ],
+  "kernel_sources": [
+    "alanchoo/rsna-knee-cnxt-cache-6-zip"
+  ],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+  "docker_image_pinning_type": "original"
+}
