@@ -1,0 +1,32 @@
+{
+  "schema": "actual_http_v2_shard_launch",
+  "shard": 0,
+  "accepted_at_utc": "2026-10-07T16:22:26.271034+00:00",
+  "kernel": "alanchoo/rsna-knee-ortho-http-shard-0-v2",
+  "kernel_id": 137510617,
+  "version_number": 1,
+  "url": "https://www.kaggle.com/code/alanchoo/rsna-knee-ortho-http-shard-0-v2",
+  "prepared_notebook_sha256": "f76733db02b5808a0026a232c75a0b495c7388bcfb96c91a38574bc763624782",
+  "prepared_metadata_sha256": "f3631a4095dfd7c1e68c757b9ff7f3a7686755d005e6b7097bc58cd5e99db982",
+  "actual_SaveKernel_request_checked": true,
+  "actual_wire_timeout_seconds": 1234,
+  "owned_Python_timeout_seconds": 1204,
+  "machine_shape": "NvidiaTeslaT4",
+  "private": true,
+  "source8_config_exact_to_reviewed_V2": true,
+  "input_versions": {
+    "model_assets": 2,
+    "global_metadata": 1,
+    "private_read_job": 1,
+    "resume_MRI_pilot": 1
+  },
+  "source_archive_version": 1,
+  "live_quota_before_launch_seconds": 17520.175,
+  "quota_reserved_before_launch_seconds": 0,
+  "all_previous_our_jobs_terminal": true,
+  "Python_bootstrap_independently_observed": false,
+  "full_partial_bank_verified": false,
+  "production_training_started": false,
+  "new_submission_sent": false,
+  "access_URLs_account_token_and_medical_rows_published": false
+}

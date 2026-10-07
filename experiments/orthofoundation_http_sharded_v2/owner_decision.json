@@ -14,10 +14,12 @@
   "source_index_sha256": "0e450019b7f37a39701d78be46f1ea39b76614f90948c6096f0a1fe3eb2544b7",
   "review_passed": true,
   "ROOT_shard0_launch_authorized": true,
-  "shard0_remote_acceptance_verified": false,
+  "shard0_remote_acceptance_verified": true,
   "full_extraction_completed": false,
   "full_production_training_started": false,
   "new_submission_sent": false,
   "updated_utc": "2026-10-07T16:16:10.087233+00:00",
-  "gate_boundary": "private gate is an explicit trusted ROOT assertion; exact report hashes and measurements were checked independently before authority"
+  "gate_boundary": "private gate is an explicit trusted ROOT assertion; exact report hashes and measurements were checked independently before authority",
+  "shard0_kernel_id": 137510617,
+  "shard0_version_number": 1
 }

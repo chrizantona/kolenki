@@ -1,7 +1,9 @@
 # Full HTTP OrthoFoundation V2
 
 **Independent static review PASS; first full extraction shard authorized.
-Remote acceptance is not yet verified. Merge and production training have not run.** [Preparation receipt](preparation_receipt.json) and
+Kaggle accepted shard0 V1/kernel137510617 at16:22:26 UTC.
+Python execution and complete bank are not yet independently verified; merge
+and production training have not run. [Actual launch receipt](shard0_launch_receipt.json).** [Preparation receipt](preparation_receipt.json) and
 [source-index pins](source_index.json) contain only aggregate counts, references,
 file sizes and hashes, without medical rows or scoped access URLs.
 

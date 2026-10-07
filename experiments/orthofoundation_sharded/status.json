@@ -1,6 +1,6 @@
 {
   "updated_utc": "2026-10-07T16:16:10.087233+00:00",
-  "stage": "HTTP_V2_MRI_PILOT_PASS_SHARD0_AUTHORIZED",
+  "stage": "HTTP_V2_SHARD0_ACCEPTED",
   "training_started": false,
   "public_score": null,
   "pilot_kernel": "alanchoo/rsna-knee-ortho-sharded-pilot",
@@ -21,7 +21,7 @@
   "private_metadata_manifest_sha256": "b2a87794d768ca3f6ee3968345f840f1028cff004708a2b3e0cfdfcfb2c15e60",
   "private_metadata_archive_sha256": "d039882cb40ca35f7dc1f14f73032420e2390c6950bf06f162f8523f5c192315",
   "competition_cpu_probe_passed": true,
-  "note": "V2 MRI pilot PASS:16weak/308images/finitefeatures/head1optimizerupdate/Gold0/cleanup. Full7+merge code independently reviewed; ROOT authorized shard0, remote acceptance pending. No production training,AUC or new submission.",
+  "note": "V2 MRI pilot PASS:16weak/308images. Reviewed full7+merge pipeline; shard0 accepted with exact SaveKernel timeout1234 and private inputs. Actual complete bank and production training not yet verified; no new submission.",
   "pilot_kernel_id": 137491819,
   "pilot_version": 1,
   "quota_available_seconds_after_bulk_cancel": 18400.639,
@@ -78,5 +78,8 @@
   "full_production_training_started": false,
   "conservative_full_frozen_forecast_seconds": 6736.867162468794,
   "full7_code_review_passed": true,
-  "v2_meanmax_comparison_training_started": false
+  "v2_meanmax_comparison_training_started": false,
+  "full_extraction_first_shard_kernel": "alanchoo/rsna-knee-ortho-http-shard-0-v2",
+  "full_extraction_first_shard_id": 137510617,
+  "full_extraction_first_shard_accepted": true
 }
