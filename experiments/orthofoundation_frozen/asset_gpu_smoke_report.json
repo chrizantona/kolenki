@@ -1,0 +1,31 @@
+{
+  "complete": true,
+  "feature_shape": [
+    1,
+    1024
+  ],
+  "finite": true,
+  "feature_abs_max": 1.5322242975234985,
+  "extraction_variant": "author_no_rope",
+  "peak_gpu_allocated_gb": 1.237056,
+  "strict_checkpoint_load": true,
+  "checked_utc": "2026-10-07T12:33:49.055019+00:00",
+  "kaggle_url": "https://www.kaggle.com/code/alanchoo/rsna-knee-ortho-asset-startup-probe",
+  "kaggle_kernel_id": 137484169,
+  "kaggle_version": 1,
+  "kaggle_status": "COMPLETE",
+  "checkpoint": {
+    "strict_checkpoint_load": true,
+    "seconds": 14.613732424000034,
+    "checkpoint_sha256": "385a775822107b68eaa486336feb982e1ce7bd6d4e8c03ceb482a0bf546f2ff9",
+    "checkpoint_bytes": 1213056638,
+    "frozen": true
+  },
+  "runtime": {
+    "torch": "2.10.0+cu128",
+    "gpu": "Tesla T4",
+    "free_bytes": 15526068224
+  },
+  "input_scope": "Model assets only; no MRI/competition/cache sources",
+  "limitation": "Synthetic one-image forward verifies CUDA/model compatibility. Actual MRI throughput, head training and quality remain untested."
+}

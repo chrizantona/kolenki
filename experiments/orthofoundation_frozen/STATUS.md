@@ -1,8 +1,10 @@
 # OrthoFoundation frozen features → 12-label head
 
-**Этап: pilot V1 и неизменённый retry V2 завершились с `ERROR` до наблюдаемого исполнения Python. Изолируем причину короткими GPU probes; полный эксперимент ещё не запущен.**
+**Этап: pilot V1 и неизменённый retry V2 завершились с `ERROR` до наблюдаемого исполнения Python. Model-assets GPU probe прошёл; проверяем подключение MRI-cache. Полный эксперимент ещё не запущен.**
 
-[Notebook pilot](https://www.kaggle.com/code/alanchoo/rsna-knee-orthofoundation-pilot), kernel `137481721`. В обеих версиях output содержит только log `[]`, traceback и наши run-файлы отсутствуют, GPU-квота не списалась. Точная причина не раскрыта API. [V1](pilot_v1_failure_summary.json) · [V2](pilot_v2_failure_summary.json). Следующий тест использует тот же T4/image с одними model assets; при повторении сбоя проверим окружение без inputs.
+[Notebook pilot](https://www.kaggle.com/code/alanchoo/rsna-knee-orthofoundation-pilot), kernel `137481721`. В обеих версиях output содержит только log `[]`, traceback и наши run-файлы отсутствуют, GPU-квота не списалась. Точная причина не раскрыта API. [V1](pilot_v1_failure_summary.json) · [V2](pilot_v2_failure_summary.json). Образ и model assets затем проверены отдельным успешным тестом ниже. Теперь короткий probe проверяет семь MRI-cache inputs вместе с competition input.
+
+Отдельный [model-assets probe](https://www.kaggle.com/code/alanchoo/rsna-knee-ortho-asset-startup-probe) завершился `COMPLETE`: Tesla T4, torch 2.10.0+cu128, строгая загрузка checkpoint за 14.61 s, frozen forward `author_no_rope` дал конечный `[1,1024]`, peak allocated 1.237 GB. Это синтетический один-image smoke test: скорость на MRI, обучение головы и точность ещё не проверены. [GPU receipt](asset_gpu_smoke_report.json).
 
 Взяли опубликованный OrthoFoundation-L, основанный на DINOv3 ViT-L/16. Checkpoint скачан: **1 213 056 638 bytes**, SHA256 `385a775822107b68eaa486336feb982e1ce7bd6d4e8c03ceb482a0bf546f2ff9`. Строгая загрузка всех 368 ключей и CPU forward прошли; выход — конечный 1024-мерный CLS-вектор. Это проверка совместимости, не проверка точности.
 

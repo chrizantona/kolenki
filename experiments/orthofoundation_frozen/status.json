@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-07T12:29:47.801088+00:00",
-  "stage": "PILOT_V2_ERROR_ISOLATING_STARTUP",
+  "updated_utc": "2026-10-07T12:33:49.055019+00:00",
+  "stage": "GPU_ASSET_SMOKE_PASS_CACHE_MOUNT_DIAGNOSTIC",
   "training_started": false,
   "model": "OrthoFoundation-L / DINOv3 ViT-L/16",
   "checkpoint_sha256": "385a775822107b68eaa486336feb982e1ce7bd6d4e8c03ceb482a0bf546f2ff9",
@@ -12,8 +12,10 @@
   "gpu_quota_available_seconds_before_experiment": 18440.8,
   "kaggle_kernel": "https://www.kaggle.com/code/alanchoo/rsna-knee-orthofoundation-pilot",
   "public_score": null,
-  "note": "Both unchanged pilot versions failed before observable Python execution, with empty logs and no charged GPU time. Isolating image/runtime versus input mounts with minimal private T4 probes; full training has not launched.",
+  "note": "Asset-only GPU probe COMPLETE: strict checkpoint load and finite frozen author_no_rope forward passed on T4. Both main pilots failed before user code. Isolating seven-cache plus competition mounts next; full training not launched.",
   "kaggle_version": 2,
   "kaggle_kernel_id": 137481721,
-  "kaggle_status": "ERROR"
+  "kaggle_status": "ERROR",
+  "gpu_asset_smoke_passed": true,
+  "asset_probe_url": "https://www.kaggle.com/code/alanchoo/rsna-knee-ortho-asset-startup-probe"
 }
