@@ -16,7 +16,7 @@
 
 Полное дообучение большого DINOv3-L сразу увеличивает стоимость и смешивает две гипотезы: полезность признаков и полезность fine-tuning. Поэтому сначала учим маленькую голову; позже можно разморозить верхние блоки.
 
-Из-за зависания Kaggle при подключении семи cache-архивов подготовлен [запуск по одному архиву](../experiments/orthofoundation_sharded/STATUS.md): глобальный выбор series сохраняется, partial features строго объединяются перед обучением. Продолжение зависит от фактического MRI pilot и GPU-квоты.
+Из-за зависания Kaggle при подключении семи cache-архивов подготовлен [запуск по одному архиву](../experiments/orthofoundation_sharded/STATUS.md): глобальный выбор series сохраняется, partial features строго объединяются перед обучением. Реальный MRI pilot уже прошёл; перед каждой extraction-частью проверяем фактические предыдущие outputs и свежую GPU-квоту.
 
 Следом подготовлен [EXP-OF-002: attention против mean+max](../experiments/orthofoundation_meanmax/STATUS.md). Он использует те же 4407 сохранённых feature-файлов, labels/split/seed/optimizer и фиксированные 12 эпох. Меняется только тип головы; извлечение признаков не повторяется. Пока полного feature bank нет, запуск остаётся в очереди. Для нового sharded bank потребуется отдельно проверенный schema adapter.
 
@@ -67,4 +67,4 @@
 
 После измеренного HTTP download581.26 s подготовлен [versioned pilotV2](../experiments/orthofoundation_http_cache0_pilot_v2/STATUS.md): только execution budget увеличен до pilot900/total9300 s, model/head settings сохранены. Full7/merge и mean+max для его нового source identity требуют своих artifacts/review; старый V1 adapter автоматически не применяем.
 
-Актуальная HTTP V2 ветка прошла реальный MRI pilot и extraction shard0: все632 partial feature files проверены независимо. [Full journal](../experiments/orthofoundation_http_sharded_v2/STATUS.md) содержит actual receipts. [V2 mean/max adapter](../experiments/orthofoundation_sharded_meanmax_http_v2/STATUS.md) уже прошёл review53 tests; его placeholder остаётся неисполняемым до завершённого полного банка и внешнего SHA pin.
+Актуальная HTTP V2 ветка прошла реальный MRI pilot; полное извлечение выполняется последовательно, каждый завершённый partial bank проверяется независимо. [Full journal](../experiments/orthofoundation_http_sharded_v2/STATUS.md) содержит actual receipts. [V2 mean/max adapter](../experiments/orthofoundation_sharded_meanmax_http_v2/STATUS.md) уже прошёл review53 tests; его placeholder остаётся неисполняемым до завершённого полного банка и внешнего SHA pin.
