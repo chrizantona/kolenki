@@ -6,6 +6,7 @@
 
 - OrthoFoundation-L действительно загружен на Tesla T4: strict checkpoint load, конечный 1024-мерный вектор и замороженные веса. Это был один синтетический image, не MRI-эксперимент.
 - Отдельный CPU notebook прочитал официальные таблицы: 4407 studies и 24 371 series; SHA256 совпали с локальными исходниками. Это проверяет таблицы, а не работу MRI-cache на GPU.
+- [Metadata+assets-only GPU probe](https://www.kaggle.com/code/alanchoo/rsna-knee-ortho-metadata-assets-probe) завершился `COMPLETE`: Tesla T4, конечная CUDA-операция, все 49 metadata members и семь fingerprint pins совпали. MRI он не декодировал; encoder load отдельно доказан model-assets probe. [Receipt](metadata_assets_gpu_probe_report.json).
 - Global metadata подготовлены в отдельном **приватном** Kaggle dataset: архив 6 272 628 bytes, без MRI и весов. Его удалённая копия проверена по SHA256. Медицинские отчёты и UID-таблицы остаются вне Git.
 - Выбор серии считается по всему датасету до разделения jobs: 21 334 серии в шести plane/FS slots, 85 336 изображений при K=4. У шести studies выбранные серии находятся в разных архивах; merge явно собирает их вместе.
 - CPU contract tests проверяют глобальный выбор, ownership, неполное/перекрывающееся покрытие, fingerprint tampering и исключение Gold из градиентов. Эти тесты не заменяют фактический GPU pilot.

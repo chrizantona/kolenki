@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-07T13:44:27.281215+00:00",
+  "updated_utc": "2026-10-07T13:51:09.525970+00:00",
   "stage": "GPU_ASSET_SMOKE_PASS_CACHE_DATASET_MIRROR_PREPARATION",
   "training_started": false,
   "model": "OrthoFoundation-L / DINOv3 ViT-L/16",
@@ -19,5 +19,6 @@
   "gpu_asset_smoke_passed": true,
   "asset_probe_url": "https://www.kaggle.com/code/alanchoo/rsna-knee-ortho-asset-startup-probe",
   "competition_cpu_probe_passed": true,
-  "active_experiment": "../orthofoundation_sharded/status.json"
+  "active_experiment": "../orthofoundation_sharded/status.json",
+  "metadata_assets_gpu_probe_passed": true
 }

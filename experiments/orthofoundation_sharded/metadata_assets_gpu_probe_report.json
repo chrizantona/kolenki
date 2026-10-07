@@ -1,0 +1,30 @@
+{
+  "complete": true,
+  "all49_metadata_member_size_SHA_verified": true,
+  "all7_cache_receipt_fingerprints_verified": true,
+  "global_counts": {
+    "studies": 4407,
+    "weak": 4349,
+    "gold": 58,
+    "series": 24371,
+    "selected_series": 21334,
+    "images": 85336
+  },
+  "cross_shard_studies": 6,
+  "selected_study_partials": 4413,
+  "cuda_finite": true,
+  "asset_manifest_verified": true,
+  "checkpoint_file_bytes_verified": true,
+  "feature_identity": "83d0eff1e0af84b242a06d1923e1e3408d27259289faa2543f2b96465359ac89",
+  "selected_plan_sha256": "1c96c4a014213e73e62470630a6e0c6999727fea4a6e9145aaff67a402b9af82",
+  "metadata_manifest_sha256": "b2a87794d768ca3f6ee3968345f840f1028cff004708a2b3e0cfdfcfb2c15e60",
+  "decoder_mri_volumes": 0,
+  "kernel_sources": 0,
+  "competition_sources": 0,
+  "checked_at_utc": "2026-10-07T13:51:09.525970+00:00",
+  "kaggle_url": "https://www.kaggle.com/code/alanchoo/rsna-knee-ortho-metadata-assets-probe",
+  "kernel_id": 137493072,
+  "version": 1,
+  "status": "COMPLETE",
+  "gpu_cost_seconds": 31.391
+}

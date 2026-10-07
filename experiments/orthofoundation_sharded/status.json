@@ -1,5 +1,5 @@
 {
-  "updated_utc": "2026-10-07T13:44:27.281215+00:00",
+  "updated_utc": "2026-10-07T13:51:09.525970+00:00",
   "stage": "SINGLE_CACHE_PRE_PYTHON_ERROR_DATASET_MIRROR_PREPARATION",
   "training_started": false,
   "public_score": null,
@@ -26,5 +26,8 @@
   "pilot_version": 1,
   "quota_available_seconds_after_bulk_cancel": 18400.639,
   "observed_python_bootstrap": false,
-  "additional_gpu_billed_seconds": 0.0
+  "additional_gpu_billed_seconds": 0.0,
+  "metadata_assets_gpu_probe_passed": true,
+  "metadata_assets_gpu_probe_id": 137493072,
+  "gpu_quota_available_seconds_last_snapshot": 18369.248
 }
