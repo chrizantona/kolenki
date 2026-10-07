@@ -26,6 +26,7 @@
 | P0 | Зафиксировать splits и experiment ledger | Ни один held-out study не участвует в обучении оцениваемой собственной модели |
 | P1 | Иерархическая голова: windows → series → study | Сохранять повторные серии вместо единственной longest-series; контроль с тем же encoder |
 | P1 | Консенсус без двойного учёта Lixin | Сменить только labels recipe, оставить training settings |
+| P1 | Meniscus bag: medial/lateral specialist | В [публичном комбинированном stack 0.945](https://www.kaggle.com/code/sujanmajhisuzan/rsna-knee-tri-specialist-superstack?scriptVersionId=355737240) есть такая ветка; контролируемый retraining на нашем split, готовые fullfit predictions не OOF |
 | P1 | Физический sampling в mm | Сравнить индексные и физические offsets при согласованном train/inference |
 | P2 | Query2Label-подобные 12 queries | Cross-attention к tokens вместо текущего attention pooling |
 | P2 | DSMIL / gated MIL / mean+max | Выбор локальной находки плюс глобальный контекст; недорогие головы на одинаковых features |
