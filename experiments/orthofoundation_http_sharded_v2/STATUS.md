@@ -111,4 +111,5 @@ Rounded forecast9154.145s fits9300s and all original caps. Remaining4/5/6 margin
 are17.073/17.826/27.247s: another2%HTTP slowdown would break4/5. The model is
 an estimate from actual jobs, not a guarantee. Hard watchdogs, fresh quota,
 sequential actual verification and a separate ROOT gate remain mandatory.
-Shard4 has not yet been launched. Production heads/AUC remain pending.
+Shard4 was accepted V1/kernel137521166 at17:59:59UTC; actualPython confirmed.
+[Actual launch receipt](shard4_launch_receipt.json). Production heads/AUC remain pending.
