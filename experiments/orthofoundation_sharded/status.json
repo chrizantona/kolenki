@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-07T18:38:55.593143+00:00",
-  "stage": "HTTP_V2_6_SHARDS_COMPLETE_READY_FOR_NEXT_GATE",
+  "updated_utc": "2026-10-07T18:42:49.537338+00:00",
+  "stage": "HTTP_V2_6_SHARDS_COMPLETE_SHARD6_ACCEPTED",
   "training_started": false,
   "public_score": null,
   "pilot_kernel": "alanchoo/rsna-knee-ortho-sharded-pilot",
@@ -21,7 +21,7 @@
   "private_metadata_manifest_sha256": "b2a87794d768ca3f6ee3968345f840f1028cff004708a2b3e0cfdfcfb2c15e60",
   "private_metadata_archive_sha256": "d039882cb40ca35f7dc1f14f73032420e2390c6950bf06f162f8523f5c192315",
   "competition_cpu_probe_passed": true,
-  "note": "Actual shards0\u20135 COMPLETE: 3853 study partials / 74540 images ROOT + independent PASS. No active extraction claimed. Full merged bank and production training/AUC incomplete; no new submission.",
+  "note": "Actual shards0\u20135 COMPLETE: 3853 study partials / 74540 images ROOT + independent PASS. Shard6 accepted exact reviewed V2. Full merged bank and production training/AUC incomplete; no new submission.",
   "pilot_kernel_id": 137491819,
   "pilot_version": 1,
   "quota_available_seconds_after_bulk_cancel": 18400.639,
@@ -94,6 +94,6 @@
   "actual_selected_images": 74540,
   "full_extraction_bank_complete": false,
   "quality_AUC_measured": false,
-  "active_extraction_shard": null,
-  "active_extraction_kernel_id": null
+  "active_extraction_shard": 6,
+  "active_extraction_kernel_id": 137525106
 }

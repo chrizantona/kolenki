@@ -132,7 +132,8 @@ new12,192images in115.784s. [Execution receipt](shard5_execution_receipt.json),
 ownerphasepolicyb71e is unchanged. Source5 preserves its fresh-DICOM provenance
 and original-NPY-byte-identity=false. Six completed parts contain3,853study
 partials/74,540images, with disjoint slot ownership; these are not unique merged
-study counts. Last shard6 is individually ROOT-approved, awaiting acceptance.
+study counts. Last shard6 was accepted as V1/kernel137525106 at18:40:17UTC; actualPython observed.
+[Launch receipt](shard6_launch_receipt.json). Full merged bank and production heads remain pending.
 
 All eight scientific source files were also downloaded from the actual immutable
 shard0–2 outputs, closing the earlier local .py inventory omission.
