@@ -1,0 +1,33 @@
+# Credentials and local configuration
+.env
+.env.*
+.kaggle/
+.kaggle_token
+**/.kaggle_token
+kaggle.json
+# MRI, labels, patient/study records, model weights and cached features
+data/
+downloads/
+models/
+private/
+artifacts/
+*.pt
+*.pth
+*.npy
+*.npz
+*.h5
+*.dcm
+*.zip
+*.parquet
+labels*.csv
+**/labels*.csv
+*train_ids.csv
+*gold_ids.csv
+*predictions.csv
+# Local runtime files
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store

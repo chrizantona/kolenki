@@ -1,0 +1,44 @@
+{
+  "checked_utc": "2026-10-07T12:05:18.058359+00:00",
+  "unit_tests": {
+    "command": "python -m unittest discover -s tests -v",
+    "passed": 9,
+    "failed": 0
+  },
+  "independent_review": "No remaining Critical or Important code findings; GPU pilot still required. Minor provenance/checkpoint-receipt findings addressed.",
+  "local_cpu_weights": "368 tensor keys strict, frozen303154176parameters, finite1024CLS in both author_no_rope andcanonicalvariants",
+  "complete_source_and_label_inventory": {
+    "studies": 4407,
+    "weak": 4349,
+    "gold": 58,
+    "series": 24371,
+    "empty_studies": 0,
+    "planned_images": 85336,
+    "pilot_images": 308
+  },
+  "checks": [
+    "Missing-slot predictions invariant",
+    "Empty study rejected",
+    "Gold gradient training rejected",
+    "Actual optimizer update",
+    "Cache7receipt fingerprints match",
+    "Latest notebook source hashes match",
+    "No raw labels embedded innotebook",
+    "Published aggregatefigures no MRI/report/UIDtables",
+    "Secretpattern andrelativeMarkdownlink scanspassed"
+  ],
+  "source_sha256": {
+    "src/orthofoundation/__init__.py": "f3df43207f5d18497b4f698aa91c746bf81dcd4edb74b81784136acd8aa52cf1",
+    "src/orthofoundation/cache.py": "700767576eb7b6d9dfa22f77bdf2088411ba4bdf6036c80db58bf608c96f7485",
+    "src/orthofoundation/data.py": "f3b63ab922f0452c065126dc2ef1c87442a0b988dff29d25c201666a8a5310aa",
+    "src/orthofoundation/encoder.py": "86defa5f943bfc161603c7b377bbf08a9d5c2a270d01b1df5c039ab59cff7ecb",
+    "src/orthofoundation/heads.py": "c814b1bcbf1ac1322b717c1f1e6ba7b9173357e956e9104b2c77d0351a833f1f",
+    "src/orthofoundation/run.py": "740c2e2599516b1876e7d7226bb0f11c51205cbdaec0b6eebf44dc740c659e10",
+    "src/orthofoundation/train.py": "928121a030aabf4fc58594da967ad98ff43a7ce915474d69a909ab09652a7dc1"
+  },
+  "limitations": [
+    "GPUthroughput/memory/FP16 stability andactualKagglemounts notyettested",
+    "Newmodelquality/publicscore notyetknown",
+    "Externalpretraining patientoverlap notcertified"
+  ]
+}

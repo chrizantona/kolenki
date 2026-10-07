@@ -1,0 +1,16 @@
+{
+  "kernel": "https://www.kaggle.com/code/alanchoo/rsna-knee-944-finetuned",
+  "accepted_version_url": "https://www.kaggle.com/code/alanchoo/rsna-knee-944-finetuned?scriptVersionId=355883025",
+  "kernel_id": 137392306,
+  "version": 1,
+  "run_id": 355883025,
+  "submission_id": 56891310,
+  "accepted_at": "2026-10-06T21:40:28.344818+00:00",
+  "status": "COMPLETE",
+  "public_score": 0.944,
+  "private_score": null,
+  "error": null,
+  "last_checked_utc": "2026-10-07T08:46:34.329060+00:00",
+  "visible_csv_rows": 3,
+  "evaluation": "Kaggle reruns submitted code on the hidden test"
+}

@@ -1,0 +1,49 @@
+{
+  "stage": "full",
+  "config": {
+    "experiment": "orthofoundation_frozen_attention_v1",
+    "encoder": "dinov3_vitl16",
+    "extraction_variant": "author_no_rope",
+    "feature_dim": 1024,
+    "checkpoint_sha256": "385a775822107b68eaa486336feb982e1ce7bd6d4e8c03ceb482a0bf546f2ff9",
+    "checkpoint_bytes": 1213056638,
+    "resolution": 224,
+    "slices_per_slot": 4,
+    "fov": 0.92,
+    "image_batch_size": 16,
+    "workers": 2,
+    "pilot_studies": 16,
+    "max_extract_seconds": 9000,
+    "head_kind": "attention",
+    "head_dim": 256,
+    "head_dropout": 0.2,
+    "head_epochs": 12,
+    "head_batch_size": 64,
+    "head_lr": 0.001,
+    "head_weight_decay": 0.01,
+    "weak_holdout_fold": 0,
+    "seed": 42
+  },
+  "source_sha256": {
+    "orthofoundation/__init__.py": "f3df43207f5d18497b4f698aa91c746bf81dcd4edb74b81784136acd8aa52cf1",
+    "orthofoundation/cache.py": "700767576eb7b6d9dfa22f77bdf2088411ba4bdf6036c80db58bf608c96f7485",
+    "orthofoundation/data.py": "f3b63ab922f0452c065126dc2ef1c87442a0b988dff29d25c201666a8a5310aa",
+    "orthofoundation/encoder.py": "86defa5f943bfc161603c7b377bbf08a9d5c2a270d01b1df5c039ab59cff7ecb",
+    "orthofoundation/heads.py": "c814b1bcbf1ac1322b717c1f1e6ba7b9173357e956e9104b2c77d0351a833f1f",
+    "orthofoundation/run.py": "740c2e2599516b1876e7d7226bb0f11c51205cbdaec0b6eebf44dc740c659e10",
+    "orthofoundation/train.py": "928121a030aabf4fc58594da967ad98ff43a7ce915474d69a909ab09652a7dc1"
+  },
+  "cache_kernel_ids": [
+    "alanchoo/rsna-knee-cnxt-cache-0-zip",
+    "alanchoo/rsna-knee-cnxt-cache-1-zip",
+    "alanchoo/rsna-knee-cnxt-cache-2-zip",
+    "alanchoo/rsna-knee-cnxt-cache-3-zip",
+    "alanchoo/rsna-knee-cnxt-cache-4-zip",
+    "alanchoo/rsna-knee-cnxt-cache-5-direct-zip",
+    "alanchoo/rsna-knee-cnxt-cache-6-zip"
+  ],
+  "assets_dataset": "alanchoo/orthofoundation-l-assets-v1",
+  "training_inputs_dataset": "alanchoo/orthofoundation-l-assets-v1",
+  "preprocess_sha256": "68601ad84ec3a0f030b5c2d37cc0d657cd3e12b17f7130e7385fba9648d324b6",
+  "resume_kernel": "alanchoo/rsna-knee-orthofoundation-pilot"
+}

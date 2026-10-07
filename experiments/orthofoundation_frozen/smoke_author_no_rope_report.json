@@ -1,0 +1,36 @@
+{
+  "strict": true,
+  "missing_keys": [],
+  "unexpected_keys": [],
+  "state_tensors": 368,
+  "prefix_removed": "backbone.",
+  "parameters": 303154176,
+  "input_shape": [
+    1,
+    3,
+    224,
+    224
+  ],
+  "cls_shape": [
+    1,
+    1024
+  ],
+  "patch_shape": [
+    1,
+    196,
+    1024
+  ],
+  "cls_finite": true,
+  "feature_mean": 0.005111189559102058,
+  "feature_std": 0.4980686902999878,
+  "seconds": 3.6865105420001782,
+  "torch": "2.8.0",
+  "device": "cpu",
+  "variant": "author_no_rope",
+  "dtype": "float32",
+  "upstream_ssl_path": [
+    "nets/dinov3_vit.py:ViT.forward_vit",
+    "nets/multicrop_wrapper.py:MultiCropWrapper.forward",
+    "tools/train.py:autocast"
+  ]
+}

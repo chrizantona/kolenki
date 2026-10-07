@@ -1,0 +1,82 @@
+{
+  "reason": "fixed_epochs_complete",
+  "planned_epochs": 2,
+  "epochs_completed": 2,
+  "next_group": 0,
+  "optimizer_steps": 1086,
+  "elapsed_seconds": 2386.6475133229997,
+  "history": [
+    {
+      "epoch": 0,
+      "processed_optimizer_groups": 543,
+      "mean_loss": 0.394793144332907,
+      "seconds": 1196.409830935,
+      "valid_views": 168200,
+      "gold_diagnostic": {
+        "macro_auc": 0.9114272243233423,
+        "per_class_auc": {
+          "ACL": 0.9681372549019607,
+          "MCL": 0.9614512471655329,
+          "Medial Meniscus": 0.9555288461538461,
+          "Lateral Meniscus": 0.8919254658385093,
+          "Medial OA": 0.9767441860465117,
+          "Lateral OA": 0.8413926499032882,
+          "PF OA": 0.8416988416988417,
+          "Effusion": 0.8795031055900622,
+          "Synovitis": 0.7467144563918757,
+          "Baker's": 0.9855072463768116,
+          "Contusion": 0.9649122807017544,
+          "Fracture": 0.9236111111111112
+        },
+        "n": 58
+      }
+    },
+    {
+      "epoch": 1,
+      "processed_optimizer_groups": 543,
+      "mean_loss": 0.3943506378481511,
+      "seconds": 1151.529139399,
+      "valid_views": 168184,
+      "gold_diagnostic": {
+        "macro_auc": 0.9111602412161779,
+        "per_class_auc": {
+          "ACL": 0.9693627450980391,
+          "MCL": 0.9569160997732427,
+          "Medial Meniscus": 0.9555288461538461,
+          "Lateral Meniscus": 0.8906832298136645,
+          "Medial OA": 0.9782945736434108,
+          "Lateral OA": 0.8491295938104448,
+          "PF OA": 0.842985842985843,
+          "Effusion": 0.8782608695652174,
+          "Synovitis": 0.7479091995221027,
+          "Baker's": 0.9818840579710145,
+          "Contusion": 0.9649122807017544,
+          "Fracture": 0.9180555555555556
+        },
+        "n": 58
+      }
+    }
+  ],
+  "pilot_only": false,
+  "peak_allocated_GB": 4.7176064,
+  "max_valid_slots_per_study": 6,
+  "max_valid_views_per_microbatch": 48,
+  "median_optimizer_group_seconds": 2.1143093504999797,
+  "full_epoch_groups": 543,
+  "selected_training_studies": 4349,
+  "studies_per_epoch_processed": 4344,
+  "studies_per_epoch_dropped": 5,
+  "projected_compute_epoch_seconds": 1148.069977321489,
+  "projection_excludes_validation_checkpoint_IO_and_variability": true,
+  "gold_diagnostics_N": 58,
+  "training_complete": true,
+  "useful_optimizer_updates": true,
+  "environment": {
+    "python": "3.12.13",
+    "torch": "2.10.0+cu128",
+    "numpy": "2.0.2",
+    "pandas": "2.3.3"
+  },
+  "attempted_optimizer_groups": 1086,
+  "amp_skipped_optimizer_updates": 0
+}

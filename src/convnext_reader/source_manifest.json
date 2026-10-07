@@ -1,0 +1,26 @@
+{
+  "knee.py": {
+    "sha256": "314c2af387a5cbd1d25f192f19f4ecc6d4ae4b30403e92e9d9b3ed2c325880b1",
+    "origin": "GoodPJ Apache2 reader datasetV1"
+  },
+  "preprocess.py": {
+    "sha256": "68601ad84ec3a0f030b5c2d37cc0d657cd3e12b17f7130e7385fba9648d324b6",
+    "origin": "GoodPJ Apache2 reader datasetV1"
+  },
+  "infer.py": {
+    "sha256": "39d4517cc33c4bb1e4a03cfb49a0673a8789055de8c3cc0957c6e3035f6be4af",
+    "origin": "GoodPJ Apache2 reader datasetV1"
+  },
+  "make_labels_reference.py": {
+    "sha256": "cc51b8f609a0aa88eb41b864df502f4f6138e58b6fe567a1880fc714fb8d423c",
+    "origin": "GoodPJ Apache2 reader datasetV1"
+  },
+  "train.py": {
+    "sha256": "626ab571a87fc469333b7cc6f2ea556f9ad07075d500ff0c79fe5b90fb742735",
+    "origin": "alanchoo Kaggle fp16 training/cache integration"
+  },
+  "zip_cache_loader.py": {
+    "sha256": "700767576eb7b6d9dfa22f77bdf2088411ba4bdf6036c80db58bf608c96f7485",
+    "origin": "alanchoo Kaggle fp16 training/cache integration"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "asset_version": "orthofoundation-l-assets-v1",
+  "checkpoint": {
+    "filename": "OrthoFoundation-L.pth",
+    "bytes": 1213056638,
+    "sha256": "385a775822107b68eaa486336feb982e1ce7bd6d4e8c03ceb482a0bf546f2ff9",
+    "source": "https://media.githubusercontent.com/media/ytrsk/OrthoFoundation/4ae0a0aa1a5eedf578c1ec8db3e82bd9fac68470/OrthoFoudation-L.pth",
+    "upstream_commit": "4ae0a0aa1a5eedf578c1ec8db3e82bd9fac68470",
+    "state_prefix": "backbone.",
+    "architecture": "DINOv3 ViT-L/16",
+    "embed_dim": 1024,
+    "layers": 24,
+    "heads": 16,
+    "storage_tokens": 4,
+    "state_tensors": 368,
+    "parameters": 303154176
+  },
+  "dinov3_source": {
+    "filename": "dinov3_source.tar.gz.bin",
+    "archive_root": "dinov3",
+    "sha256": "6327ac9ff891974879444973c0c8afcd9452fc29da0b705bfbdf225cad37ac81",
+    "repository": "https://github.com/facebookresearch/dinov3",
+    "commit": "6876159a11b4df116f30f667f8c9888617df0751"
+  },
+  "normalization": {
+    "rgb_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "rgb_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "gray": "repeat a single gray slice over RGB channels",
+    "range": "0..1 before channel normalization",
+    "ssl_training_size": 224
+  },
+  "loader": {
+    "import": "dinov3.hub.backbones.dinov3_vitl16",
+    "constructor": "dinov3_vitl16(pretrained=False)",
+    "load": "strip backbone. prefix; strict=True",
+    "feature": "model.forward_features(x)[x_norm_clstoken]",
+    "offline_dependencies": [
+      "torch",
+      "numpy"
+    ],
+    "note": "Import module before torch.device(meta). Filename weights regex in hub requires skip built-in loading."
+  },
+  "licenses": [
+    {
+      "file": "ORTHOFOUNDATION_LICENSE.txt",
+      "name": "MIT",
+      "source": "https://github.com/ytrsk/OrthoFoundation/blob/4ae0a0aa1a5eedf578c1ec8db3e82bd9fac68470/LICENSE"
+    },
+    {
+      "file": "DINOV3_LICENSE.md",
+      "name": "DINOv3 License",
+      "applies": "DINOv3 software and derived DINOv3 model weights",
+      "source": "https://github.com/facebookresearch/dinov3/blob/6876159a11b4df116f30f667f8c9888617df0751/LICENSE.md"
+    }
+  ],
+  "publication": "Private assets only; do not commit checkpoint or competition labels/data to public GitHub.",
+  "verification": {
+    "report": "smoke_report.json",
+    "strict": true,
+    "cls_finite": true,
+    "cpu_torch": "2.8.0",
+    "input": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "output": [
+      1,
+      1024
+    ]
+  },
+  "packaging_note": "The source archive uses .bin suffix to prevent Kaggle Dataset automatic archive expansion. Contents remain unchanged gzip/tar, verified by SHA256."
+}

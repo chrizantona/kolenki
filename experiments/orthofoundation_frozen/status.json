@@ -1,0 +1,16 @@
+{
+  "updated_utc": "2026-10-07T11:54:32.053656+00:00",
+  "stage": "PREPARING",
+  "training_started": false,
+  "model": "OrthoFoundation-L / DINOv3 ViT-L/16",
+  "checkpoint_sha256": "385a775822107b68eaa486336feb982e1ce7bd6d4e8c03ceb482a0bf546f2ff9",
+  "checkpoint_bytes": 1213056638,
+  "checkpoint_downloaded": true,
+  "local_cpu_strict_load_verified": true,
+  "encoder_forward_variant": "author_no_rope",
+  "gpu_validation_passed": false,
+  "gpu_quota_available_seconds_before_experiment": 18440.8,
+  "kaggle_kernel": null,
+  "public_score": null,
+  "note": "Assets upload and notebook preparation; no Kaggle training completion or new score claimed."
+}

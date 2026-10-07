@@ -1,0 +1,26 @@
+{
+  "knee.py": {
+    "source": "work/public_solutions/goodpj_knee.py",
+    "sha256": "314c2af387a5cbd1d25f192f19f4ecc6d4ae4b30403e92e9d9b3ed2c325880b1"
+  },
+  "preprocess.py": {
+    "source": "work/public_solutions/goodpj_preprocess.py",
+    "sha256": "68601ad84ec3a0f030b5c2d37cc0d657cd3e12b17f7130e7385fba9648d324b6"
+  },
+  "train_original.py": {
+    "source": "work/public_solutions/goodpj_train.py",
+    "sha256": "e41b26488ea5516c113f473c35f2391e0e97dc693b53d076f81b8953f169db2b"
+  },
+  "make_labels_original.py": {
+    "source": "work/public_solutions/goodpj_make_labels.py",
+    "sha256": "cc51b8f609a0aa88eb41b864df502f4f6138e58b6fe567a1880fc714fb8d423c"
+  },
+  "oof_original.py": {
+    "source": "work/public_solutions/goodpj_oof.py",
+    "sha256": "f324bfdfb8d41bcc953bf79cd30297bca9a3660666be46c288ad0a67fded5337"
+  },
+  "infer_original.py": {
+    "source": "work/public_solutions/goodpj_infer.py",
+    "sha256": "39d4517cc33c4bb1e4a03cfb49a0673a8789055de8c3cc0957c6e3035f6be4af"
+  }
+}

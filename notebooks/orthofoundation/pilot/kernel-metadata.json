@@ -1,0 +1,29 @@
+{
+  "id": "alanchoo/rsna-knee-orthofoundation-pilot",
+  "title": "RSNA Knee OrthoFoundation Pilot",
+  "code_file": "train.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "machine_shape": "NvidiaTeslaT4",
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "dataset_sources": [
+    "alanchoo/orthofoundation-l-assets-v1"
+  ],
+  "kernel_sources": [
+    "alanchoo/rsna-knee-cnxt-cache-0-zip",
+    "alanchoo/rsna-knee-cnxt-cache-1-zip",
+    "alanchoo/rsna-knee-cnxt-cache-2-zip",
+    "alanchoo/rsna-knee-cnxt-cache-3-zip",
+    "alanchoo/rsna-knee-cnxt-cache-4-zip",
+    "alanchoo/rsna-knee-cnxt-cache-5-direct-zip",
+    "alanchoo/rsna-knee-cnxt-cache-6-zip"
+  ],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+  "docker_image_pinning_type": "original"
+}

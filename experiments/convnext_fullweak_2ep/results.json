@@ -1,0 +1,71 @@
+{
+  "recorded_utc": "2026-10-07T08:46:34.329060+00:00",
+  "baseline": {
+    "our_notebook": "https://www.kaggle.com/code/alanchoo/rsna-knee-public-944-v2",
+    "our_version": 1,
+    "our_run_id": 355816679,
+    "submission_id": 56886017,
+    "our_score": 0.943,
+    "visible_run_seconds": 277.713145881,
+    "original_code_cells_unchanged": 29,
+    "csv_sha256": "8f0c5e7b2b561538dae55439a4d2e9173141096da3defd9bc0a4bac351eef37a",
+    "scoring_status": "COMPLETE",
+    "public_score": 0.943,
+    "private_score": null
+  },
+  "trained_candidate": {
+    "kernel": "https://www.kaggle.com/code/alanchoo/rsna-knee-944-finetuned",
+    "version": 1,
+    "kernel_id": 137392306,
+    "accepted_utc": "2026-10-06T21:32:14.794760+00:00",
+    "inference_status": "COMPLETE",
+    "submission_id": 56891310,
+    "our_score": 0.944,
+    "public_author_score": 0.944,
+    "replaced_public_reader_fold": 0,
+    "notebook_sha256": "3b165d1d2d11f644201993e9bd1cc9c24f47a2eef63fbeb82e2a1f0139af38af",
+    "run_id": 355883025,
+    "accepted_version_url": "https://www.kaggle.com/code/alanchoo/rsna-knee-944-finetuned?scriptVersionId=355883025",
+    "submission_accepted_utc": "2026-10-06T21:40:28.344818+00:00",
+    "scoring_status": "COMPLETE",
+    "verification": {
+      "accepted_visible_studies": 3,
+      "strict_cpu_trained_reader_compatibility": true,
+      "runtime_ema_sha256": "2557782563a0b416cf85c7bf98a0caaf685dc4f991409b184b8b118730dfa25a",
+      "original_stack_fingerprints_passed": true,
+      "trained_reader_blend_completed": true,
+      "rank_blend_reconstructed": true,
+      "submission_sha256": "8f0c5e7b2b561538dae55439a4d2e9173141096da3defd9bc0a4bac351eef37a",
+      "our_score": null
+    }
+  },
+  "full_training": {
+    "kernel": "https://www.kaggle.com/code/alanchoo/rsna-knee-cnxt-finetune",
+    "version": 1,
+    "accepted_utc": "2026-10-06T20:26:50.622949+00:00",
+    "epochs": 2,
+    "status": "COMPLETE",
+    "training_complete": true,
+    "last_verified_live_progress": {
+      "completed_epochs": 2,
+      "optimizer_steps": 1086,
+      "amp_skipped_optimizer_updates": 0
+    },
+    "full_python_started": true,
+    "optimizer_steps": 1086,
+    "amp_skipped_optimizer_updates": 0,
+    "elapsed_seconds": 2386.6475133229997,
+    "checkpoint_sha256": "2557782563a0b416cf85c7bf98a0caaf685dc4f991409b184b8b118730dfa25a",
+    "checkpoint_bytes": 123057035,
+    "gold_macro_auc": [
+      0.9114272243233423,
+      0.9111602412161779
+    ]
+  },
+  "notes": [
+    "Public baseline reproduction scored0.943; own candidate scored0.944.",
+    "Scores are public leaderboard observations, not proof that fine-tuning alone caused the difference.",
+    "Gold58 is diagnostic; public reader warmstart is not certified clean OOF.",
+    "Visible CSV rows=3 is the demonstration test set, not hidden scoring set coverage."
+  ]
+}
