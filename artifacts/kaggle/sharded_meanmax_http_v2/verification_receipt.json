@@ -1,0 +1,53 @@
+{
+  "schema": "http_v2_meanmax_preparation_v1",
+  "status": "NON_EXECUTABLE_PLACEHOLDER_FULL_BANK_UNSEALED",
+  "source_feature_identity": "7f0e16dc1c34e8c0920f567db2ebb68f55c470c09ce77dd7c0aa238cd5ec6c77",
+  "source_bank_sha256": null,
+  "comparison_launch_allowed": false,
+  "artifacts": {
+    "compare.ipynb": {
+      "bytes": 78283,
+      "sha256": "9b99f9e09a1fc3a02c5cfc8f4db450f5099e9ee16b2df55ee1f1f5bb3ed12797"
+    },
+    "kernel-metadata.json": {
+      "bytes": 636,
+      "sha256": "c6f0a75fac2e5ced09cb43ba98ea9c57a3b278e629cfd5f72eb257d464f64fdd"
+    },
+    "stage_config.json": {
+      "bytes": 2671,
+      "sha256": "b01a812ee73ae10d96f2e46ef0808dabf115db92813ad01cd9286ea2c9e38230"
+    }
+  },
+  "source_sha256": {
+    "scripts/compare_sharded_heads_http_v2.py": "dffad26c0739d7b5fc0f206ecf225371b3efe69809303da4977bdc55217da8a8",
+    "scripts/build_sharded_head_comparison_notebook_http_v2.py": "2bdb4604945996d06be45f6601fbf98f53f47a7787366b492bfb0a6af6d25201",
+    "configs/orthofoundation_meanmax_http_v2.yaml": "a92ebe0f2df1a6c6aab16036740f2272dbf4ed3e7ff3b8ad7251455151425bfc",
+    "tests/test_sharded_head_comparison_http_v2.py": "19a7d2e306f828deb8bac216ebd60bdadbe03529f3ce3d39046530cf8eb4a076",
+    "tests/test_sharded_head_comparison_http_v2_paths.py": "b5bc9cd8e89e010de282bcb604088af03c013690947417bd61b305e045783b28"
+  },
+  "payload_files": 10,
+  "nested_V2_runner_sha256": "86265241778c40a3822c2a8d11f4f3f746a48b47101def338120dd86937ee4f2",
+  "original_core7_runner_adapter_builder_config_unchanged": true,
+  "external_full_bank_pin_checkpoint_replay_controls_unchanged": true,
+  "placeholder_refuses_before_input_resolution": true,
+  "future_merge_kernel": "alanchoo/rsna-knee-ortho-http-merge-heads-v2",
+  "job_validation_fit_seconds": [
+    1500,
+    300,
+    1200
+  ],
+  "encoder_forward_calls": 0,
+  "MRI_or_GPU_run_invoked": false,
+  "network_API_Git_UI_activity": false,
+  "real_bank_or_metrics_measured": false,
+  "root_independent_review_required": true,
+  "verification": {
+    "command": "PYTHONPATH=src /Users/chrizantona/Documents/Codex/2026-10-06/https-www-kaggle-com-competitions-rsna/work/venv/bin/python -m unittest discover -s tests -q",
+    "tests": 53,
+    "result": "PASS",
+    "elapsed_seconds": 16.655,
+    "V2_ported_adapter_tests": 7,
+    "V2_provenance_and_vendored_namespace_tests": 2,
+    "existing_tests_retained": 44
+  }
+}

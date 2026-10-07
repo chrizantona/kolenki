@@ -70,3 +70,5 @@ Visible demo содержит 3 исследования и служит про�
 [HTTP cache0 pilot](../experiments/orthofoundation_http_cache0_pilot/STATUS.md) публикует одобренный notebook и transport sources с теми же восемью scientific modules. Его статическая проверка и исходный review 17 PASS записаны отдельно от фактического Kaggle execution; приватный файл read-only доступа в Git не включается.
 
 [Full HTTP V2](../experiments/orthofoundation_http_sharded_v2/STATUS.md) содержит семь подготовленных extraction notebooks и merge/head notebook, точные source pins и transport code. Actual pilot V2 PASS учитывается отдельно; полное обучение требует независимого review, owner gate, подходящего прогноза времени и свежей квоты.
+
+[V2 mean/max comparison](../experiments/orthofoundation_sharded_meanmax_http_v2/STATUS.md) reuses the future full HTTP V2 feature bank. Its reviewed placeholder refuses to run until an independently sealed full-bank SHA is supplied and both original attention checkpoints replay their saved validation probabilities.

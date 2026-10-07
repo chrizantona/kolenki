@@ -1,0 +1,51 @@
+{
+  "reviewed_at_utc": "2026-10-07T16:16:23.777592+00:00",
+  "result": "PASS_PREPARATION_ONLY",
+  "important_findings": [],
+  "independent_reviewer": "ortho_experiment_builder",
+  "scope": "Frozen V2 mean/max adapter, builder, source packaging and contracts; no actual full attention bank available.",
+  "focused_tests": {
+    "command": "PYTHONPATH=src python -m unittest discover -s tests -p 'test_sharded_head_comparison_http_v2*.py' -v",
+    "tests": 9,
+    "exit_code": 0,
+    "seconds": 8.568
+  },
+  "repository_suite": {
+    "command": "PYTHONPATH=src python -m unittest discover -s tests -v",
+    "tests": 53,
+    "exit_code": 0,
+    "seconds": 13.732
+  },
+  "source_sha256": {
+    "scripts/compare_sharded_heads_http_v2.py": "dffad26c0739d7b5fc0f206ecf225371b3efe69809303da4977bdc55217da8a8",
+    "scripts/build_sharded_head_comparison_notebook_http_v2.py": "2bdb4604945996d06be45f6601fbf98f53f47a7787366b492bfb0a6af6d25201",
+    "configs/orthofoundation_meanmax_http_v2.yaml": "a92ebe0f2df1a6c6aab16036740f2272dbf4ed3e7ff3b8ad7251455151425bfc",
+    "tests/test_sharded_head_comparison_http_v2.py": "19a7d2e306f828deb8bac216ebd60bdadbe03529f3ce3d39046530cf8eb4a076",
+    "tests/test_sharded_head_comparison_http_v2_paths.py": "b5bc9cd8e89e010de282bcb604088af03c013690947417bd61b305e045783b28"
+  },
+  "artifact_sha256": {
+    "compare.ipynb": "9b99f9e09a1fc3a02c5cfc8f4db450f5099e9ee16b2df55ee1f1f5bb3ed12797",
+    "kernel-metadata.json": "c6f0a75fac2e5ced09cb43ba98ea9c57a3b278e629cfd5f72eb257d464f64fdd",
+    "stage_config.json": "b01a812ee73ae10d96f2e46ef0808dabf115db92813ad01cd9286ea2c9e38230"
+  },
+  "checks": {
+    "V1_adapter_builder_runner_and_core7_unchanged": true,
+    "V2_runner_exact_SHA": "86265241778c40a3822c2a8d11f4f3f746a48b47101def338120dd86937ee4f2",
+    "executed_alias_and_actual_nested_runner_paths_hashed": true,
+    "vendored_namespace_synthetic_CPU_comparison_without_V1_runner_alias": true,
+    "payload10_byte_equal_to_reviewed_sources_no_medical_tables": true,
+    "mandatory_external_full_source_bank_pin_scored_and_unscored_mutations_rejected": true,
+    "both_attention_heads_replay_original_probabilities_with_declared_FP32_tolerances": true,
+    "Gold_excluded_from_both_fixed12epoch_heads_and_checkpoint_selection": true,
+    "config_changes_only_experiment_and_headkind_against_V2attention": true,
+    "placeholder_refuses_before_data_or_fit": true,
+    "inputs_only_small_metadata_and_future_complete_merge_output": true,
+    "caps1500_validation300_head1200_preserved": true
+  },
+  "current_launch_allowed": false,
+  "source_bank_sha256": null,
+  "feature_identity": "7f0e16dc1c34e8c0920f567db2ebb68f55c470c09ce77dd7c0aa238cd5ec6c77",
+  "future_source_kernel": "alanchoo/rsna-knee-ortho-http-merge-heads-v2",
+  "no_API_GPU_Git_UI_URL_access": true,
+  "limits": "CPU synthetic and static review; actual full-bank pin must be sealed by root from completed immutable attention output before rebuilding. No comparison AUC, production training or submission measured."
+}

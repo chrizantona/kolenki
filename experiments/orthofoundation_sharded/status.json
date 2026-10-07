@@ -62,7 +62,7 @@
   "v2_python_pilot_and_7_caps_seconds": 9297,
   "v2_total_extraction_budget_seconds": 9300,
   "v1_meanmax_adapter_ready": true,
-  "v2_meanmax_adapter_ready": false,
+  "v2_meanmax_adapter_ready": true,
   "http_v2_kernel": "alanchoo/rsna-knee-ortho-http-cache0-pilot-v2",
   "http_v2_kernel_id": 137507258,
   "http_v2_version": 1,
@@ -77,5 +77,6 @@
   "http_v2_peak_gpu_allocated_gb": 1.328124416,
   "full_production_training_started": false,
   "conservative_full_frozen_forecast_seconds": 6736.867162468794,
-  "full7_code_review_passed": true
+  "full7_code_review_passed": true,
+  "v2_meanmax_comparison_training_started": false
 }
