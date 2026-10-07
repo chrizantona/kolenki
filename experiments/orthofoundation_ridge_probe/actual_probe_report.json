@@ -1,0 +1,181 @@
+{
+  "schema": "Ortho_slot_centered_Ridge_probe_v1",
+  "completed": true,
+  "experiment": "orthofoundation_slot_centered_ridge_v1",
+  "recipe": {
+    "experiment": "orthofoundation_slot_centered_ridge_v1",
+    "pooling": "mean_across_K4_per_observed_slot",
+    "standardization": "gradient_observed_only_per_slot_per_dimension",
+    "missing_slots": "zero_with_six_mask_indicators",
+    "std_floor": 0.001,
+    "ridge_alpha": 1000.0,
+    "ridge_solver": "cholesky",
+    "fit_intercept": true,
+    "target": "logit_soft_probability",
+    "target_clip_epsilon": 0.0001,
+    "prediction": "sigmoid_once",
+    "weak_holdout_fold": 0,
+    "seed": 42,
+    "blas_threads": 2,
+    "maximum_seconds": 300,
+    "maximum_memory_bytes": 2147483648
+  },
+  "recipe_yaml_sha256": "2012d0d926356dabd96a5c3ca8ef22bac55347b04fb327fbc6a22517b23027dc",
+  "probe_source_sha256": "397be2a1b0ae95d5e782a97c0bac59984d59d63bbb878c2b0b51a232fb219240",
+  "ROOT_pre_fit_recipe_sha256": "722c24729272562f0e0a639e740b8f4eaadf6f59641a0ef393bd6a4953b004e5",
+  "ROOT_completed_attention_seal_sha256": "7bd85a75523a95e071c91b831f631d1a9674612e7443693df60a8cf19828a6ee",
+  "source_bank_receipt": {
+    "studies": 4407,
+    "bytes": 172303771,
+    "sha256": "acc8b0c85639833cb51fd101de6b0fe605667150e88d2fdb7476b94ef6f46f74",
+    "selected_slots": 21334,
+    "images_K4": 85336,
+    "digest_format": "sorted filename<TAB>bytes<TAB>sha256<LF>"
+  },
+  "source_training_feature_identity": "7f0e16dc1c34e8c0920f567db2ebb68f55c470c09ce77dd7c0aa238cd5ec6c77",
+  "source8_sha256": {
+    "orthofoundation/__init__.py": "f3df43207f5d18497b4f698aa91c746bf81dcd4edb74b81784136acd8aa52cf1",
+    "orthofoundation/cache.py": "700767576eb7b6d9dfa22f77bdf2088411ba4bdf6036c80db58bf608c96f7485",
+    "orthofoundation/data.py": "f3b63ab922f0452c065126dc2ef1c87442a0b988dff29d25c201666a8a5310aa",
+    "orthofoundation/encoder.py": "86defa5f943bfc161603c7b377bbf08a9d5c2a270d01b1df5c039ab59cff7ecb",
+    "orthofoundation/heads.py": "c814b1bcbf1ac1322b717c1f1e6ba7b9173357e956e9104b2c77d0351a833f1f",
+    "orthofoundation/run.py": "740c2e2599516b1876e7d7226bb0f11c51205cbdaec0b6eebf44dc740c659e10",
+    "orthofoundation/train.py": "928121a030aabf4fc58594da967ad98ff43a7ce915474d69a909ab09652a7dc1",
+    "sharded_frozen_extract.py": "86265241778c40a3822c2a8d11f4f3f746a48b47101def338120dd86937ee4f2",
+    "convnext_reader/preprocess.py": "68601ad84ec3a0f030b5c2d37cc0d657cd3e12b17f7130e7385fba9648d324b6"
+  },
+  "parent_attention_config_sha256": "f3c4334f97df527d22dd2b0da3b6220ec466c1333efe7e99a471b955a74ba919",
+  "inference_admission_contracts_sha256": "712d3ce2b9a32d74501afe5bc4c5dbc3724a8e6f9f5a1577248bdca6f56113c2",
+  "labels_snapshot_sha256": "043e13ea59551bc394ee1a1c2c3c946ad742f3a1649cf90cc89fd70c5c75234d",
+  "official_train_snapshot_sha256": "8ca2203c0e9d61c080c7a314c7cdb51c1b03a1d9eb4770819f7f34af53ef4e33",
+  "label_order": [
+    "ACL",
+    "MCL",
+    "Medial Meniscus",
+    "Lateral Meniscus",
+    "Medial OA",
+    "Lateral OA",
+    "PF OA",
+    "Effusion",
+    "Synovitis",
+    "Baker's",
+    "Contusion",
+    "Fracture"
+  ],
+  "heads": {
+    "weak_holdout": {
+      "n_gradient_studies": 3479,
+      "gradient_ids_sha256": "22fd6f2cacf400c9612fe7fa8227cd6d29c2d42ce850e411b781d20994d4722f",
+      "observed_gradient_slot_counts": [
+        3274,
+        3354,
+        3479,
+        3369,
+        2685,
+        685
+      ],
+      "Gold_gradient_rows": 0,
+      "scaler_fit_on_gradient_only": true,
+      "Gold_model_selection": false,
+      "parameter_search": false,
+      "closed_form_fits": 1,
+      "metrics": {
+        "n": 870,
+        "macro_auc": 0.775880843479794,
+        "per_label_auc": {
+          "ACL": 0.7570062349808404,
+          "MCL": 0.7122010152499444,
+          "Medial Meniscus": 0.7920637869977702,
+          "Lateral Meniscus": 0.753021681064132,
+          "Medial OA": 0.8231618151076177,
+          "Lateral OA": 0.790410257489356,
+          "PF OA": 0.7634377081945369,
+          "Effusion": 0.8222905282331512,
+          "Synovitis": 0.8322824868292565,
+          "Baker's": 0.7803261797729022,
+          "Contusion": 0.7321519262860045,
+          "Fracture": 0.7522165015520157
+        },
+        "target_kind": "thresholded weak report consensus",
+        "undefined_classes": 0
+      },
+      "seconds": 1.308007291983813
+    },
+    "production": {
+      "n_gradient_studies": 4349,
+      "gradient_ids_sha256": "3d2b6469ca8ab13861dd1a068e187640e43656ab74dc64084a0fb44fc94f2807",
+      "observed_gradient_slot_counts": [
+        4094,
+        4192,
+        4349,
+        4209,
+        3361,
+        844
+      ],
+      "Gold_gradient_rows": 0,
+      "scaler_fit_on_gradient_only": true,
+      "Gold_model_selection": false,
+      "parameter_search": false,
+      "closed_form_fits": 1,
+      "metrics": {
+        "n": 58,
+        "macro_auc": 0.7719155174038806,
+        "per_label_auc": {
+          "ACL": 0.7279411764705883,
+          "MCL": 0.8072562358276644,
+          "Medial Meniscus": 0.7295673076923077,
+          "Lateral Meniscus": 0.6807453416149069,
+          "Medial OA": 0.8914728682170543,
+          "Lateral OA": 0.8278529980657641,
+          "PF OA": 0.7786357786357786,
+          "Effusion": 0.8956521739130435,
+          "Synovitis": 0.7216248506571087,
+          "Baker's": 0.8532608695652174,
+          "Contusion": 0.7017543859649124,
+          "Fracture": 0.6472222222222223
+        },
+        "target_kind": "official58 expert Gold; diagnostic only",
+        "undefined_classes": 0
+      },
+      "seconds": 2.0951957090292126
+    }
+  },
+  "exported_private_files": {
+    "production_ridge.npz": {
+      "bytes": 657556,
+      "sha256": "08f92abef6e47d72c1aab0d76e087328dd5162cba606782e6091c1540dc02729"
+    },
+    "weak_holdout_ridge.npz": {
+      "bytes": 658614,
+      "sha256": "c458b82ccb58498d63afff6efe9c213a84434b4d8bf6661279c4ed10678e9948"
+    },
+    "weak_holdout_predictions.csv": {
+      "bytes": 262181,
+      "sha256": "c2e4d86f30c5eb404451c54af7a21448da166c23bb333457f88a29371b021962"
+    },
+    "production_predictions.csv": {
+      "bytes": 17502,
+      "sha256": "296d2c04d48932dd7f37618a16fd2addbd6a6902c5ac9d9af946c6b475a53b62"
+    }
+  },
+  "CPU_only": true,
+  "encoder_loads": 0,
+  "GPU_calls": 0,
+  "parameter_search": false,
+  "Gold_used_for_transform_or_gradient_or_model_selection": 0,
+  "BLAS_thread_receipts": [
+    {
+      "internal_api": "openmp",
+      "num_threads": 2
+    }
+  ],
+  "peak_memory_bytes": 1264910336,
+  "Python_seconds_before_report_export": 8.657076166011393,
+  "timer_boundary": "First Python statement including imports, validation, fits and exports; external parent300s required.",
+  "versions": {
+    "python": "3.13.3",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6"
+  },
+  "limits": "Diagnostic fixed linear probe; no new clinical truth, test prediction, blend/submission or leaderboard gain claim."
+}

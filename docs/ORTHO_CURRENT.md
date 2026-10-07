@@ -63,8 +63,9 @@ Gold не участвует в градиентах и выборе checkpoint.
 [Результаты, ограничения и следующий шаг](ORTHO_RESULTS.md),
 [фактический журнал](../experiments/orthofoundation_http_sharded_v2/STATUS.md).
 
-Сейчас сравниваем mean/max на том же банке и готовим один заранее заданный
-линейный Ridge probe с центрированием признаков отдельно по каждому слоту.
-Он поможет отличить трудности attention-головы от ограничений frozen CLS-признаков.
-Hyperparameters по Gold не подбираем. Новый leaderboard score не измеряли;
-OrthoFoundation пока не входит в сабмит 0.944.
+Mean/max и Ridge уже обучены и проверены на том же банке. Gold58 AUC:
+attention0.7361, meanmax0.7354, Ridge0.7719. Нормализация Ridge использует только
+training IDs каждого fit. Все сравнения диагностические; у полной системы0.944
+нет Gold-прогнозов для оценки совместного ансамбля.
+[Конкретные следующие эксперименты](NEXT_EXPERIMENTS.md). Ortho сейчас в общий
+submission не добавляем; новый leaderboard score не получали.

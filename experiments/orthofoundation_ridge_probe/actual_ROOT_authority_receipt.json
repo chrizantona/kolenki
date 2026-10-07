@@ -1,0 +1,17 @@
+{
+  "ROOT_authorized_exact_one_fixed_CPU_probe": true,
+  "ROOT_received_independent_repaired_source_PASS_in_current_thread": true,
+  "approved_utc": "2026-10-07T19:59:37.175695+00:00",
+  "source_pins": {
+    "scripts/probe_orthofoundation_ridge.py": "397be2a1b0ae95d5e782a97c0bac59984d59d63bbb878c2b0b51a232fb219240",
+    "configs/orthofoundation_slot_centered_ridge.yaml": "2012d0d926356dabd96a5c3ca8ef22bac55347b04fb327fbc6a22517b23027dc",
+    "tests/test_ortho_ridge_probe.py": "4d5a2223032ba122586c0d5a88188f8264e7fd508ad5503f2c2b792899268a41",
+    "experiments/orthofoundation_ridge_probe/ROOT_RECIPE.json": "722c24729272562f0e0a639e740b8f4eaadf6f59641a0ef393bd6a4953b004e5",
+    "experiments/orthofoundation_ridge_probe/preparation_receipt.json": "f45b426d6fe16d7728f45ba9d46278fb2d3b0d25e6ca4ac5d40ee4de10f72c54",
+    "scripts/http_sharded_v2/parent_guard.py": "11c5430b2e5e961189bf16a1be2e0cfc06c63baa56e3ea36f57f18492c93e50f"
+  },
+  "max_seconds": 300,
+  "BLAS_threads": 2,
+  "memory_bytes": 2147483648,
+  "no_encoder_GPU_Kaggle_or_submission": true
+}

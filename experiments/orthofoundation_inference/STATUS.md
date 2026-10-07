@@ -1,8 +1,10 @@
 # Isolated Ortho inference preparation
 
-Prepared for independent review. The production attention head and its complete
-training-bank seal are still future inputs; no Ortho test predictions, blend or
-submission have been produced by this branch.
+Code passed independent preparation review. The actual production attention
+head and full bank seal now exist and are independently validated; no real
+Ortho test predictions, blend or submission have been produced by this branch.
+Inference remains deferred after weak frozen-model quality; the additional
+selected-study Linux pixel/encoder replay is pending. [Results and next steps](../../docs/ORTHO_RESULTS.md).
 
 The [separate CLI](../../scripts/run_orthofoundation_inference.py) follows the
 [reviewed recipe](../orthofoundation_http_sharded_v2/INFERENCE_PLAN.md) and imports

@@ -9,7 +9,7 @@
 | GoodPJ, авторский baseline V2 | 0.944 | Исторический результат автора; не наш запуск |
 | Наше воспроизведение baseline | 0.943 | Завершённое Kaggle scoring |
 | Наш ансамбль с дообученным ConvNeXt | **0.944** | Submission `56891310`, статус `COMPLETE` |
-| OrthoFoundation + attention | — | Полный bank и две головы проверены: weak holdout AUC **0.7603**, Gold58 AUC **0.7361**. [Результаты и дальнейший план](docs/ORTHO_RESULTS.md) |
+| Frozen OrthoFoundation: attention / meanmax / Ridge | — | Полный bank и все readout обучены и проверены: Gold58 AUC **0.736 / 0.735 / 0.772**. [Результаты](docs/ORTHO_RESULTS.md), [следующие эксперименты](docs/NEXT_EXPERIMENTS.md) |
 
 Результаты выше проверены **7 октября 2026**. Разница между двумя сабмитами — один отображаемый шаг leaderboard; это ещё не доказательство устойчивого улучшения на независимой выборке.
 

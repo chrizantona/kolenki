@@ -1,0 +1,17 @@
+# EXP-OF-003: fixed diagnostic probe; no parameter/model/Gold search.
+experiment: orthofoundation_slot_centered_ridge_v1
+pooling: mean_across_K4_per_observed_slot
+standardization: gradient_observed_only_per_slot_per_dimension
+missing_slots: zero_with_six_mask_indicators
+std_floor: 0.001
+ridge_alpha: 1000.0
+ridge_solver: cholesky
+fit_intercept: true
+target: logit_soft_probability
+target_clip_epsilon: 0.0001
+prediction: sigmoid_once
+weak_holdout_fold: 0
+seed: 42
+blas_threads: 2
+maximum_seconds: 300
+maximum_memory_bytes: 2147483648

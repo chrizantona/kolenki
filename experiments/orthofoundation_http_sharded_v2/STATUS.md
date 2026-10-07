@@ -157,3 +157,6 @@ Production gradient start/completion and AUC remain unverified at this receipt.
 
 
 Actual merge+attention COMPLETE: exact union of all7 sealed banks, 4,407 unique studies, 21,334 slots /85,336 images. Both fixed12epoch heads trained: CV3,479 weak studies/660updates, production4,349 weak/816updates, Gold gradients/selection0. Parent139.581s, training39.490s, scratch cleaned. ROOT independently reconstructed every merged array and replayed both heads; a separate reviewer confirmed bank/state/predictions/AUC. No new submission. CPU meanmax executable now independently reviewed with actual full-bank pin; execution requires a separate one-job ROOT authority.
+
+
+The completed [CPU meanmax comparison](../orthofoundation_sharded_meanmax_http_v2/result_receipt.json) gives weak0.768476/Gold0.735397; the separately completed [fixed localCPU Ridge](../orthofoundation_ridge_probe/independent_actual_Ridge_validation.json) gives0.775881/0.771916. Both independently validated. [Final same-Gold diagnostics](gold_final_diagnostics/Gold_diagnostics.json) retain the sole predeclared50/50attention blend; no meanmax/Ridge blend search. [Current strategy](../../docs/NEXT_EXPERIMENTS.md). No new submit or running job.

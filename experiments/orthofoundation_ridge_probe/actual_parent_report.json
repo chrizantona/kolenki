@@ -1,0 +1,10 @@
+{
+  "complete": true,
+  "route": "direct_http",
+  "account_credentials_given_to_child": false,
+  "raw_child_stdout_stderr_published": false,
+  "hard_process_group_deadline": true,
+  "child_exit_code": 0,
+  "owned_tmp_removed": true,
+  "seconds": 9.020508332992904
+}

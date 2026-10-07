@@ -1,0 +1,249 @@
+{
+  "schema": "independent_actual_Ridge_CPU_probe_validation_v1",
+  "independent_PASS": true,
+  "Critical_findings": [],
+  "Important_findings": [],
+  "review_mode": "Immutable saved coefficients/scalers, fixed-objective residuals and FP64 CPU replay; no model refit",
+  "source_bank_sha256": "acc8b0c85639833cb51fd101de6b0fe605667150e88d2fdb7476b94ef6f46f74",
+  "ROOT_completed_attention_seal_sha256": "7bd85a75523a95e071c91b831f631d1a9674612e7443693df60a8cf19828a6ee",
+  "feature_identity": "7f0e16dc1c34e8c0920f567db2ebb68f55c470c09ce77dd7c0aa238cd5ec6c77",
+  "all4407_same_byte_bank_snapshots_SHA_geometry_global_masks_series_positions_finite_nonzero_checked": true,
+  "bank_bytes": 172303771,
+  "selected_slots": 21334,
+  "images_K4": 85336,
+  "source8_and_canonical_preprocess_sha256": {
+    "orthofoundation/__init__.py": "f3df43207f5d18497b4f698aa91c746bf81dcd4edb74b81784136acd8aa52cf1",
+    "orthofoundation/cache.py": "700767576eb7b6d9dfa22f77bdf2088411ba4bdf6036c80db58bf608c96f7485",
+    "orthofoundation/data.py": "f3b63ab922f0452c065126dc2ef1c87442a0b988dff29d25c201666a8a5310aa",
+    "orthofoundation/encoder.py": "86defa5f943bfc161603c7b377bbf08a9d5c2a270d01b1df5c039ab59cff7ecb",
+    "orthofoundation/heads.py": "c814b1bcbf1ac1322b717c1f1e6ba7b9173357e956e9104b2c77d0351a833f1f",
+    "orthofoundation/run.py": "740c2e2599516b1876e7d7226bb0f11c51205cbdaec0b6eebf44dc740c659e10",
+    "orthofoundation/train.py": "928121a030aabf4fc58594da967ad98ff43a7ce915474d69a909ab09652a7dc1",
+    "sharded_frozen_extract.py": "86265241778c40a3822c2a8d11f4f3f746a48b47101def338120dd86937ee4f2",
+    "convnext_reader/preprocess.py": "68601ad84ec3a0f030b5c2d37cc0d657cd3e12b17f7130e7385fba9648d324b6"
+  },
+  "probe_source_sha256": "397be2a1b0ae95d5e782a97c0bac59984d59d63bbb878c2b0b51a232fb219240",
+  "config_sha256": "2012d0d926356dabd96a5c3ca8ef22bac55347b04fb327fbc6a22517b23027dc",
+  "tests_sha256": "4d5a2223032ba122586c0d5a88188f8264e7fd508ad5503f2c2b792899268a41",
+  "preparation_receipt_sha256": "f45b426d6fe16d7728f45ba9d46278fb2d3b0d25e6ca4ac5d40ee4de10f72c54",
+  "ROOT_pre_fit_recipe_sha256": "722c24729272562f0e0a639e740b8f4eaadf6f59641a0ef393bd6a4953b004e5",
+  "actual_probe_report_sha256": "0ef272d3ed2790f6cf1b7035fd4d712ec0618e0f5031a6553dce8b516d225c39",
+  "ROOT_actual_parent_report_sha256": "bac60fe3b4def456b1bf655c80c4e18eb8abe2a046ec7f300bf92457e1626174",
+  "heads": {
+    "weak_holdout": {
+      "n_gradient_studies": 3479,
+      "n_scored": 870,
+      "gradient_ids_sha256": "22fd6f2cacf400c9612fe7fa8227cd6d29c2d42ce850e411b781d20994d4722f",
+      "Gold_gradient_rows": 0,
+      "scaler_gradient_only_recomputed": true,
+      "observed_slot_counts": [
+        3274,
+        3354,
+        3479,
+        3369,
+        2685,
+        685
+      ],
+      "maximum_mean_difference": 0.0,
+      "maximum_std_difference": 0.0,
+      "weights_and_scalers_finite_FP64": true,
+      "coefficient_shape": [
+        12,
+        6150
+      ],
+      "intercept_shape": [
+        12
+      ],
+      "sigmoid_applied_once": true,
+      "saved_probability_replay": {
+        "atol": 1e-12,
+        "rtol": 1e-10,
+        "maximum_probability_difference": 1.1102230246251565e-16,
+        "finite_logits_and_probabilities": true,
+        "prediction_csv_sha256": "c2e4d86f30c5eb404451c54af7a21448da166c23bb333457f88a29371b021962"
+      },
+      "closed_form_objective_check_without_refitting": {
+        "alpha": 1000,
+        "weight_gradient_max_abs": 2.1107027237121656e-10,
+        "weight_gradient_relative_scale": 2.005243903327315e-12,
+        "intercept_gradient_max_abs": 9.980904991380157e-13,
+        "relative_weight_tolerance": 1e-09,
+        "mean_intercept_gradient_tolerance": 1e-10
+      },
+      "metrics": {
+        "n": 870,
+        "macro_auc": 0.775880843479794,
+        "per_label_auc": {
+          "ACL": 0.7570062349808404,
+          "MCL": 0.7122010152499444,
+          "Medial Meniscus": 0.7920637869977702,
+          "Lateral Meniscus": 0.753021681064132,
+          "Medial OA": 0.8231618151076177,
+          "Lateral OA": 0.790410257489356,
+          "PF OA": 0.7634377081945369,
+          "Effusion": 0.8222905282331512,
+          "Synovitis": 0.8322824868292565,
+          "Baker's": 0.7803261797729022,
+          "Contusion": 0.7321519262860045,
+          "Fracture": 0.7522165015520157
+        },
+        "undefined_classes": 0,
+        "positive_support": {
+          "ACL": 178,
+          "MCL": 127,
+          "Medial Meniscus": 356,
+          "Lateral Meniscus": 157,
+          "Medial OA": 316,
+          "Lateral OA": 219,
+          "PF OA": 395,
+          "Effusion": 504,
+          "Synovitis": 109,
+          "Baker's": 217,
+          "Contusion": 154,
+          "Fracture": 67
+        },
+        "target_kind": "thresholded weak report consensus"
+      },
+      "saved_weights_sha256": "c458b82ccb58498d63afff6efe9c213a84434b4d8bf6661279c4ed10678e9948"
+    },
+    "production": {
+      "n_gradient_studies": 4349,
+      "n_scored": 58,
+      "gradient_ids_sha256": "3d2b6469ca8ab13861dd1a068e187640e43656ab74dc64084a0fb44fc94f2807",
+      "Gold_gradient_rows": 0,
+      "scaler_gradient_only_recomputed": true,
+      "observed_slot_counts": [
+        4094,
+        4192,
+        4349,
+        4209,
+        3361,
+        844
+      ],
+      "maximum_mean_difference": 0.0,
+      "maximum_std_difference": 0.0,
+      "weights_and_scalers_finite_FP64": true,
+      "coefficient_shape": [
+        12,
+        6150
+      ],
+      "intercept_shape": [
+        12
+      ],
+      "sigmoid_applied_once": true,
+      "saved_probability_replay": {
+        "atol": 1e-12,
+        "rtol": 1e-10,
+        "maximum_probability_difference": 4.385380947269368e-15,
+        "finite_logits_and_probabilities": true,
+        "prediction_csv_sha256": "296d2c04d48932dd7f37618a16fd2addbd6a6902c5ac9d9af946c6b475a53b62"
+      },
+      "closed_form_objective_check_without_refitting": {
+        "alpha": 1000,
+        "weight_gradient_max_abs": 3.15556469843159e-10,
+        "weight_gradient_relative_scale": 2.374007894923317e-12,
+        "intercept_gradient_max_abs": 2.2517543385447425e-12,
+        "relative_weight_tolerance": 1e-09,
+        "mean_intercept_gradient_tolerance": 1e-10
+      },
+      "metrics": {
+        "n": 58,
+        "macro_auc": 0.7719155174038806,
+        "per_label_auc": {
+          "ACL": 0.7279411764705883,
+          "MCL": 0.8072562358276644,
+          "Medial Meniscus": 0.7295673076923077,
+          "Lateral Meniscus": 0.6807453416149069,
+          "Medial OA": 0.8914728682170543,
+          "Lateral OA": 0.8278529980657641,
+          "PF OA": 0.7786357786357786,
+          "Effusion": 0.8956521739130435,
+          "Synovitis": 0.7216248506571087,
+          "Baker's": 0.8532608695652174,
+          "Contusion": 0.7017543859649124,
+          "Fracture": 0.6472222222222223
+        },
+        "undefined_classes": 0,
+        "positive_support": {
+          "ACL": 24,
+          "MCL": 9,
+          "Medial Meniscus": 26,
+          "Lateral Meniscus": 23,
+          "Medial OA": 15,
+          "Lateral OA": 11,
+          "PF OA": 21,
+          "Effusion": 35,
+          "Synovitis": 27,
+          "Baker's": 12,
+          "Contusion": 19,
+          "Fracture": 18
+        },
+        "target_kind": "official58 expert Gold; diagnostic only"
+      },
+      "saved_weights_sha256": "08f92abef6e47d72c1aab0d76e087328dd5162cba606782e6091c1540dc02729"
+    }
+  },
+  "exported_private_files": {
+    "weak_holdout_ridge.npz": {
+      "bytes": 658614,
+      "sha256": "c458b82ccb58498d63afff6efe9c213a84434b4d8bf6661279c4ed10678e9948"
+    },
+    "weak_holdout_predictions.csv": {
+      "bytes": 262181,
+      "sha256": "c2e4d86f30c5eb404451c54af7a21448da166c23bb333457f88a29371b021962"
+    },
+    "production_ridge.npz": {
+      "bytes": 657556,
+      "sha256": "08f92abef6e47d72c1aab0d76e087328dd5162cba606782e6091c1540dc02729"
+    },
+    "production_predictions.csv": {
+      "bytes": 17502,
+      "sha256": "296d2c04d48932dd7f37618a16fd2addbd6a6902c5ac9d9af946c6b475a53b62"
+    }
+  },
+  "training_and_search_policy": {
+    "CV_gradient": 3479,
+    "weak_holdout": 870,
+    "production_gradient": 4349,
+    "Gold": 58,
+    "closed_form_fits_per_saved_report": {
+      "weak_holdout": 1,
+      "production": 1
+    },
+    "no_Gold_transform_gradient_or_selection": true,
+    "no_parameter_search": true,
+    "fixed_alpha": 1000,
+    "observed_only_gradient_stats": true,
+    "CPU_only": true,
+    "encoder_loads": 0,
+    "GPU_calls": 0
+  },
+  "bounded_parent": {
+    "complete": true,
+    "exit_code": 0,
+    "hard_process_group_deadline": true,
+    "owned_tmp_removed": true,
+    "seconds": 9.020508332992904,
+    "deadline_seconds": 300,
+    "child_peak_memory_bytes": 1264910336,
+    "child_peak_memory_cap_bytes": 2147483648,
+    "no_credentials_given_to_child": true,
+    "origin": "Externally supplied SHA-pinned ROOT process-group report, not independently rerun or observed by this audit"
+  },
+  "all5_actual_outputs_immutable_pre_post": true,
+  "labels_csv_sha256": "043e13ea59551bc394ee1a1c2c3c946ad742f3a1649cf90cc89fd70c5c75234d",
+  "official_train_csv_sha256": "8ca2203c0e9d61c080c7a314c7cdb51c1b03a1d9eb4770819f7f34af53ef4e33",
+  "patient_rows_IDs_private_CSVs_coefficients_credentials_and_access_URLs_omitted": true,
+  "interpretation": "Representation readout diagnostic changes pooling, slot scaling, capacity, optimizer and squared-logit loss together. This is not a pure causal head-only ablation, clean patient OOF or a leaderboard result. Gold58 does not authorize weight fitting or model selection.",
+  "declined_to_judge": [
+    "Exact historical fit count cannot be independently established from saved outputs alone; source, pre-fit fixed recipe, reports and fixed-objective stationarity checked",
+    "External ROOT parent cleanup/deadline report origin; bytes/pin and completed exit0 checked, no process rerun",
+    "Historical peak memory sampling independently; pinned child report is checked below2GiB",
+    "Causal attribution, statistical significance, clinical efficacy, test performance or leaderboard gains"
+  ],
+  "actual_model_refits_during_audit": 0,
+  "API_calls": 0,
+  "GPU_calls_during_audit": 0,
+  "launch_authority": false,
+  "independent_validation_seconds": 7.082405957975425
+}

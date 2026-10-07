@@ -1,0 +1,563 @@
+{
+  "schema": "PRIVATE_Ortho_frozen_bank_aggregate_diagnostic_v1",
+  "status": "Actual local downloaded bytes inspected; aggregate bank SHA independently matches ROOT seal.",
+  "training_feature_identity": "7f0e16dc1c34e8c0920f567db2ebb68f55c470c09ce77dd7c0aa238cd5ec6c77",
+  "bank_receipt_diagnostic_only": {
+    "studies": 4407,
+    "valid_slots": 21334,
+    "images_K4": 85336,
+    "bytes": 172303771,
+    "sha256": "acc8b0c85639833cb51fd101de6b0fe605667150e88d2fdb7476b94ef6f46f74",
+    "digest_format": "sorted filename<TAB>bytes<TAB>sha256<LF>"
+  },
+  "input_snapshot_sha256": {
+    "labels_v0.csv": "043e13ea59551bc394ee1a1c2c3c946ad742f3a1649cf90cc89fd70c5c75234d",
+    "training_report.json": "1d99daa37023883c6f4ce5dc9ec59a851c6adc6b0c4ca15804b2d6f9155edb52",
+    "config.json": "7d8788fe098898f0fd7eb828a4a033fcfb3ea4ffc8b98e8334c4eb31e75da0c1",
+    "weak_holdout_predictions.csv": "034226bc518497df09d8a4276aab7d2e074c92af32fca9afe06b800075b7c6af"
+  },
+  "feature_stats": {
+    "all_valid_features_finite": true,
+    "all_missing_slots_zero": true,
+    "all_masks_positions_selection_consistent": true,
+    "slot_support": [
+      4150,
+      4248,
+      4407,
+      4266,
+      3406,
+      857
+    ],
+    "available_slots_per_study": {
+      "3": 4,
+      "4": 1259,
+      "5": 2578,
+      "6": 566
+    },
+    "norm": {
+      "min": 11.758874893188477,
+      "q05": 13.106261253356934,
+      "median": 14.674602031707764,
+      "q95": 16.83310604095459,
+      "max": 17.988250732421875
+    },
+    "per_dimension_std": {
+      "min": 0.0009327854495495558,
+      "q05": 0.15669169649481773,
+      "median": 0.36164334416389465,
+      "q95": 0.705911687016487,
+      "max": 1.1074609756469727
+    },
+    "constant_dimensions": 0,
+    "zero_valid_vectors": 0,
+    "exact_duplicate_full_study_array_groups": 1,
+    "random_cross_slice_cosine_seed_20261007_n8192": {
+      "min": -0.3158625066280365,
+      "q05": -0.24730864986777307,
+      "median": 0.05035516060888767,
+      "q95": 0.9806703478097916,
+      "max": 1.0
+    },
+    "study_mean_per_dimension_std": {
+      "min": 0.00022289682237897068,
+      "q05": 0.03585172388702631,
+      "median": 0.06537828966975212,
+      "q95": 0.12460584752261634,
+      "max": 0.18243089318275452
+    },
+    "centered_covariance_effective_rank_sample2048": 6.227981419930923,
+    "centered_covariance_top1_variance_fraction": 0.3516763376210294,
+    "centered_covariance_top10_variance_fraction": 0.9345498536650061,
+    "same_study_same_slot_consecutive_sampled_slices_cosine": {
+      "min": -0.33807089924812317,
+      "q05": -0.24520407542586325,
+      "median": 0.9053793549537659,
+      "q95": 0.9939502388238907,
+      "max": 0.9978864192962646
+    },
+    "per_slot_features": [
+      {
+        "slot": 0,
+        "studies": 4150,
+        "tokens": 16600,
+        "same_slot_cross_slice_cosine_n8192": {
+          "min": -0.32515785098075867,
+          "q05": -0.256877301633358,
+          "median": 0.410872682929039,
+          "q95": 0.973743411898613,
+          "max": 1.0
+        },
+        "per_dimension_std": {
+          "min": 0.0009912938112393022,
+          "q05": 0.12164717242121698,
+          "median": 0.2602148652076721,
+          "q95": 0.7132829040288922,
+          "max": 1.2729294300079346
+        },
+        "centered_covariance_effective_rank_sample2048": 2.9492815446372784,
+        "centered_covariance_top1_variance_fraction": 0.8411192447019936,
+        "centered_covariance_top10_variance_fraction": 0.9278448068065762
+      },
+      {
+        "slot": 1,
+        "studies": 4248,
+        "tokens": 16992,
+        "same_slot_cross_slice_cosine_n8192": {
+          "min": -0.3369111716747284,
+          "q05": -0.2610557869076729,
+          "median": 0.5539928674697876,
+          "q95": 0.9769157826900482,
+          "max": 1.0000001192092896
+        },
+        "per_dimension_std": {
+          "min": 0.00104607455432415,
+          "q05": 0.1247639887034893,
+          "median": 0.26608720421791077,
+          "q95": 0.7053137362003318,
+          "max": 1.229889988899231
+        },
+        "centered_covariance_effective_rank_sample2048": 3.3530998359070616,
+        "centered_covariance_top1_variance_fraction": 0.8018417720932041,
+        "centered_covariance_top10_variance_fraction": 0.9313043455219092
+      },
+      {
+        "slot": 2,
+        "studies": 4407,
+        "tokens": 17628,
+        "same_slot_cross_slice_cosine_n8192": {
+          "min": 0.011556427925825119,
+          "q05": 0.9700637638568879,
+          "median": 0.986491322517395,
+          "q95": 0.9930181175470352,
+          "max": 1.0000001192092896
+        },
+        "per_dimension_std": {
+          "min": 0.0003215592878405005,
+          "q05": 0.04631108734756708,
+          "median": 0.06214647926390171,
+          "q95": 0.08567384183406826,
+          "max": 0.11788230389356613
+        },
+        "centered_covariance_effective_rank_sample2048": 49.528106236421664,
+        "centered_covariance_top1_variance_fraction": 0.1877960596378801,
+        "centered_covariance_top10_variance_fraction": 0.6013970916517357
+      },
+      {
+        "slot": 3,
+        "studies": 4266,
+        "tokens": 17064,
+        "same_slot_cross_slice_cosine_n8192": {
+          "min": -0.30980971455574036,
+          "q05": -0.22167096883058549,
+          "median": 0.46149130165576935,
+          "q95": 0.9858525782823563,
+          "max": 0.9944329261779785
+        },
+        "per_dimension_std": {
+          "min": 0.0010693531949073076,
+          "q05": 0.1269010931253433,
+          "median": 0.2666194587945938,
+          "q95": 0.6074226915836334,
+          "max": 1.3187243938446045
+        },
+        "centered_covariance_effective_rank_sample2048": 6.529419788737844,
+        "centered_covariance_top1_variance_fraction": 0.6278981550137748,
+        "centered_covariance_top10_variance_fraction": 0.8901731559590762
+      },
+      {
+        "slot": 4,
+        "studies": 3406,
+        "tokens": 13624,
+        "same_slot_cross_slice_cosine_n8192": {
+          "min": -0.32076629996299744,
+          "q05": -0.23818643540143966,
+          "median": 0.7658031284809113,
+          "q95": 0.98388651907444,
+          "max": 0.996024489402771
+        },
+        "per_dimension_std": {
+          "min": 0.0007872360292822123,
+          "q05": 0.0915670532733202,
+          "median": 0.22807444632053375,
+          "q95": 0.6503011047840116,
+          "max": 1.455849051475525
+        },
+        "centered_covariance_effective_rank_sample2048": 2.5474696098738727,
+        "centered_covariance_top1_variance_fraction": 0.8499589878194895,
+        "centered_covariance_top10_variance_fraction": 0.9537896163502271
+      },
+      {
+        "slot": 5,
+        "studies": 857,
+        "tokens": 3428,
+        "same_slot_cross_slice_cosine_n8192": {
+          "min": 0.13674603402614594,
+          "q05": 0.9114547610282898,
+          "median": 0.9740142822265625,
+          "q95": 0.9893016904592514,
+          "max": 0.9999998807907104
+        },
+        "per_dimension_std": {
+          "min": 0.0005335985915735364,
+          "q05": 0.05737988781183958,
+          "median": 0.08858413621783257,
+          "q95": 0.14818286225199695,
+          "max": 0.22927746176719666
+        },
+        "centered_covariance_effective_rank_sample2048": 20.652447343315444,
+        "centered_covariance_top1_variance_fraction": 0.39426976722695173,
+        "centered_covariance_top10_variance_fraction": 0.7533648434534634
+      }
+    ]
+  },
+  "teacher_target_alignment": {
+    "labels_exact_order": [
+      "ACL",
+      "MCL",
+      "Medial Meniscus",
+      "Lateral Meniscus",
+      "Medial OA",
+      "Lateral OA",
+      "PF OA",
+      "Effusion",
+      "Synovitis",
+      "Baker's",
+      "Contusion",
+      "Fracture"
+    ],
+    "holdout_rows": 870,
+    "diagonal_macro_auc_recomputed": 0.7603283232686886,
+    "per_class": {
+      "ACL": {
+        "weak_soft_mean": 0.22258814286809228,
+        "weak_thresholded_positive_fraction": 0.19797654633249023,
+        "weak_oracle_soft_BCE_entropy": 0.20389281252615551,
+        "holdout_teacher_binarized_auc": 0.7312950574787296,
+        "holdout_prediction_std": 0.09528761595677245,
+        "holdout_prediction_range": [
+          0.05605803,
+          0.6218242
+        ],
+        "best_prediction_column_for_this_target": "ACL"
+      },
+      "MCL": {
+        "weak_soft_mean": 0.1528393500421553,
+        "weak_thresholded_positive_fraction": 0.1404920671418717,
+        "weak_oracle_soft_BCE_entropy": 0.2071062855012064,
+        "holdout_teacher_binarized_auc": 0.7163552738949353,
+        "holdout_prediction_std": 0.06339856827203122,
+        "holdout_prediction_range": [
+          0.044255596,
+          0.4042804
+        ],
+        "best_prediction_column_for_this_target": "MCL"
+      },
+      "Medial Meniscus": {
+        "weak_soft_mean": 0.4353026557829386,
+        "weak_thresholded_positive_fraction": 0.42331570475971486,
+        "weak_oracle_soft_BCE_entropy": 0.243066018027103,
+        "holdout_teacher_binarized_auc": 0.7522078433087045,
+        "holdout_prediction_std": 0.17214152419394224,
+        "holdout_prediction_range": [
+          0.09500233,
+          0.8744355
+        ],
+        "best_prediction_column_for_this_target": "Medial Meniscus"
+      },
+      "Lateral Meniscus": {
+        "weak_soft_mean": 0.20445907105081632,
+        "weak_thresholded_positive_fraction": 0.17521269257300529,
+        "weak_oracle_soft_BCE_entropy": 0.21870715204697433,
+        "holdout_teacher_binarized_auc": 0.7465807880937281,
+        "holdout_prediction_std": 0.09153007629865521,
+        "holdout_prediction_range": [
+          0.038772915,
+          0.5747254
+        ],
+        "best_prediction_column_for_this_target": "Lateral Meniscus"
+      },
+      "Medial OA": {
+        "weak_soft_mean": 0.37183432973097263,
+        "weak_thresholded_positive_fraction": 0.3612324672338469,
+        "weak_oracle_soft_BCE_entropy": 0.257310360724281,
+        "holdout_teacher_binarized_auc": 0.7899054060229401,
+        "holdout_prediction_std": 0.20458964383434897,
+        "holdout_prediction_range": [
+          0.039005857,
+          0.90355486
+        ],
+        "best_prediction_column_for_this_target": "Medial OA"
+      },
+      "Lateral OA": {
+        "weak_soft_mean": 0.2649600482869625,
+        "weak_thresholded_positive_fraction": 0.24488388135203495,
+        "weak_oracle_soft_BCE_entropy": 0.28357515668333977,
+        "holdout_teacher_binarized_auc": 0.7565529673351148,
+        "holdout_prediction_std": 0.14184709249195998,
+        "holdout_prediction_range": [
+          0.033769857,
+          0.72412413
+        ],
+        "best_prediction_column_for_this_target": "Lateral OA"
+      },
+      "PF OA": {
+        "weak_soft_mean": 0.4494323407679927,
+        "weak_thresholded_positive_fraction": 0.44975856518739943,
+        "weak_oracle_soft_BCE_entropy": 0.23570524740273516,
+        "holdout_teacher_binarized_auc": 0.7312511658894071,
+        "holdout_prediction_std": 0.19567852640812639,
+        "holdout_prediction_range": [
+          0.06697473,
+          0.89305246
+        ],
+        "best_prediction_column_for_this_target": "PF OA"
+      },
+      "Effusion": {
+        "weak_soft_mean": 0.5661418333716564,
+        "weak_thresholded_positive_fraction": 0.5957691423315705,
+        "weak_oracle_soft_BCE_entropy": 0.2530915520398409,
+        "holdout_teacher_binarized_auc": 0.8023028883684622,
+        "holdout_prediction_std": 0.20832938817433672,
+        "holdout_prediction_range": [
+          0.13241524,
+          0.96522206
+        ],
+        "best_prediction_column_for_this_target": "Effusion"
+      },
+      "Synovitis": {
+        "weak_soft_mean": 0.23188635318464013,
+        "weak_thresholded_positive_fraction": 0.12370659921821109,
+        "weak_oracle_soft_BCE_entropy": 0.37571817690461323,
+        "holdout_teacher_binarized_auc": 0.792113226199231,
+        "holdout_prediction_std": 0.1152223646723274,
+        "holdout_prediction_range": [
+          0.057916895,
+          0.6920472
+        ],
+        "best_prediction_column_for_this_target": "Synovitis"
+      },
+      "Baker's": {
+        "weak_soft_mean": 0.30039252318540666,
+        "weak_thresholded_positive_fraction": 0.24787307426994712,
+        "weak_oracle_soft_BCE_entropy": 0.2919928305610455,
+        "holdout_teacher_binarized_auc": 0.7807919492452416,
+        "holdout_prediction_std": 0.14804219286143913,
+        "holdout_prediction_range": [
+          0.055942565,
+          0.88040656
+        ],
+        "best_prediction_column_for_this_target": "Baker's"
+      },
+      "Contusion": {
+        "weak_soft_mean": 0.20545374415574463,
+        "weak_thresholded_positive_fraction": 0.16118647965049437,
+        "weak_oracle_soft_BCE_entropy": 0.2964885882638324,
+        "holdout_teacher_binarized_auc": 0.7350812595226003,
+        "holdout_prediction_std": 0.09143083061343013,
+        "holdout_prediction_range": [
+          0.046282124,
+          0.5766919
+        ],
+        "best_prediction_column_for_this_target": "Contusion"
+      },
+      "Fracture": {
+        "weak_soft_mean": 0.12973336782402084,
+        "weak_thresholded_positive_fraction": 0.061853299609105544,
+        "weak_oracle_soft_BCE_entropy": 0.2833043224120708,
+        "holdout_teacher_binarized_auc": 0.7895020538651698,
+        "holdout_prediction_std": 0.04027827586451915,
+        "holdout_prediction_range": [
+          0.052182637,
+          0.34042662
+        ],
+        "best_prediction_column_for_this_target": "Contusion"
+      }
+    },
+    "target_rows_by_prediction_columns_auc_matrix": [
+      [
+        0.7312950574787296,
+        0.6527976229135546,
+        0.6220692342664156,
+        0.6437942456322661,
+        0.5726764954211859,
+        0.5681301552250438,
+        0.521619471325583,
+        0.6813380853413002,
+        0.6853120737806065,
+        0.5901068389946094,
+        0.7138647139053063,
+        0.6953546145352991
+      ],
+      [
+        0.6834073398967794,
+        0.7163552738949353,
+        0.6739966723540446,
+        0.6897870942444442,
+        0.6416104110808492,
+        0.6295715390892425,
+        0.6009368277148398,
+        0.6949110331598859,
+        0.6784370661608079,
+        0.5981496592872054,
+        0.6942380856497917,
+        0.6902004005892265
+      ],
+      [
+        0.6193601626371704,
+        0.681933939579417,
+        0.7522078433087045,
+        0.7323317885716785,
+        0.7227298561622875,
+        0.706422419446509,
+        0.6911533248808639,
+        0.6981184147247846,
+        0.6890493157871727,
+        0.6477232982118655,
+        0.6389520395225812,
+        0.6588062344248677
+      ],
+      [
+        0.661955851743329,
+        0.7090163568308305,
+        0.7305544885252053,
+        0.7465807880937281,
+        0.7104546144844159,
+        0.708676892291475,
+        0.6784377484567763,
+        0.7369819815795822,
+        0.7385721049481424,
+        0.6835207832697582,
+        0.6827703879722354,
+        0.7171009728339037
+      ],
+      [
+        0.5547742539871133,
+        0.6805111273591372,
+        0.7476865603436458,
+        0.727642462185258,
+        0.7899054060229401,
+        0.7825195357126536,
+        0.7751393775990495,
+        0.6995755837865009,
+        0.7169435177992048,
+        0.7025544943563496,
+        0.6063496778321071,
+        0.6619750491248915
+      ],
+      [
+        0.5235920852359208,
+        0.6230597114379703,
+        0.6989598019204736,
+        0.6859906431271876,
+        0.7517973753059921,
+        0.7565529673351148,
+        0.7465788495395212,
+        0.6494293990979806,
+        0.6624301215551768,
+        0.6669121618304119,
+        0.5683283182178454,
+        0.6255357055180298
+      ],
+      [
+        0.48252098600932714,
+        0.6010393071285809,
+        0.6679173884077282,
+        0.6427661558960692,
+        0.7159866755496336,
+        0.7180279813457695,
+        0.7312511658894071,
+        0.6121279147235176,
+        0.6250979347101933,
+        0.6577694870086608,
+        0.5313471019320453,
+        0.5823317788141239
+      ],
+      [
+        0.7056878306878307,
+        0.7522985514788794,
+        0.7348750975800156,
+        0.742806184404545,
+        0.712209428397953,
+        0.6897226559111804,
+        0.6622159337323272,
+        0.8023028883684622,
+        0.757294106167057,
+        0.6946829733714979,
+        0.7530087171480614,
+        0.7323705438459538
+      ],
+      [
+        0.6840106571507794,
+        0.7110152021121412,
+        0.716512555907847,
+        0.7114974261293083,
+        0.7285440451361681,
+        0.7168380571194349,
+        0.6978022640417605,
+        0.7567782613413061,
+        0.792113226199231,
+        0.7035648410469083,
+        0.7125944857683637,
+        0.7340293433314447
+      ],
+      [
+        0.6222115581400273,
+        0.6795647172567589,
+        0.7216039406920205,
+        0.714066943775979,
+        0.7411803727567201,
+        0.7360780799006359,
+        0.7298395918165715,
+        0.7174084868843551,
+        0.7036471161106838,
+        0.7807919492452416,
+        0.6617666777228106,
+        0.6967135023747185
+      ],
+      [
+        0.6895360226365813,
+        0.654928172386273,
+        0.6034245084524414,
+        0.6212544438801422,
+        0.5731154320539795,
+        0.5706758325473409,
+        0.5415185373285932,
+        0.6809067329318726,
+        0.6419139519698178,
+        0.5860026844663716,
+        0.7350812595226003,
+        0.695984183414351
+      ],
+      [
+        0.7634058846489842,
+        0.7400234196390402,
+        0.7041504804743406,
+        0.7346703592870021,
+        0.6540584747495399,
+        0.6198955409750748,
+        0.5857697812308321,
+        0.7592981543093995,
+        0.7338525306221073,
+        0.6823479117488522,
+        0.7904499916358433,
+        0.7895020538651698
+      ]
+    ],
+    "weak_soft_oracle_BCE": 0.26249654192443317,
+    "constant_per_class_prevalence_BCE": 0.5671696603356612,
+    "production_final_reported_BCE": 0.5024449264189106,
+    "CV_final_reported_BCE": 0.5098097687584465,
+    "report_training_losses_not_replayed_here": true,
+    "Gold_targets_and_predictions_not_read": true
+  },
+  "scope": {
+    "encoder_loaded": false,
+    "head_loaded": false,
+    "optimizer_updates": 0,
+    "API_calls": 0,
+    "clinical_rows_or_UIDs_exported": false,
+    "scores_not_for_checkpoint_or_model_selection": true
+  },
+  "seconds": 7.281996707955841,
+  "ROOT_external_completed_bank_seal_sha256": "7bd85a75523a95e071c91b831f631d1a9674612e7443693df60a8cf19828a6ee"
+}

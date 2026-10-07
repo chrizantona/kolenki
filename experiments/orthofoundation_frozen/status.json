@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-07T19:33:39.954867+00:00",
-  "stage": "HTTP_V2_FULL_BANK_AND_ATTENTION_COMPLETE_VERIFIED",
+  "updated_utc": "2026-10-07T20:07:23.634657+00:00",
+  "stage": "HTTP_V2_ATTENTION_MEANMAX_AND_FIXED_RIDGE_COMPLETE_VERIFIED",
   "training_started": true,
   "model": "OrthoFoundation-L / DINOv3 ViT-L/16",
   "checkpoint_sha256": "385a775822107b68eaa486336feb982e1ce7bd6d4e8c03ceb482a0bf546f2ff9",
@@ -12,7 +12,7 @@
   "gpu_quota_available_seconds_before_experiment": 18440.8,
   "kaggle_kernel": "https://www.kaggle.com/code/alanchoo/rsna-knee-orthofoundation-pilot",
   "public_score": null,
-  "note": "All7 actual partials, complete4407 bank and both fixed12-epoch attention heads ROOT+independent PASS. Weak870 holdout AUC.760328; Gold58 diagnostic AUC.736061. CPU meanmax/probe prepared; no new submission, no ensemble integration.",
+  "note": "All7 shards/full4407 bank/attention/meanmax and one fixed localCPU Ridge independently validated. No new submission/ensemble integration. Next experiments are documented plans; no active training.",
   "kaggle_version": 2,
   "kaggle_kernel_id": 137481721,
   "kaggle_status": "ERROR",
@@ -85,5 +85,9 @@
   "v2_meanmax_comparison_training_started": true,
   "v2_meanmax_comparison_complete_verified": true,
   "v2_meanmax_weak_holdout_macro_auc": 0.7684756934985999,
-  "v2_meanmax_gold58_macro_auc": 0.7353974448610665
+  "v2_meanmax_gold58_macro_auc": 0.7353974448610665,
+  "active_training_jobs": 0,
+  "ridge_probe_complete_verified": true,
+  "ridge_weak_holdout_macro_auc": 0.775880843479794,
+  "ridge_gold58_macro_auc": 0.7719155174038806
 }

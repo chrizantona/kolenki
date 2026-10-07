@@ -73,3 +73,8 @@
 ## Фактическое обновление 7 октября, после полного Ortho training
 
 Attention завершён: weak holdout AUC0.760328, Gold58 AUC0.736061. Заранее заданный 50/50 probability blend с отдельным ConvNeXt дал0.908313 против0.911160 reader-only; доказанного улучшения нет. [Результаты](ORTHO_RESULTS.md). Следующие дешёвые проверки: mean/max и один заранее заданный slot-centered Ridge probe; они не повторяют encoder и не расходуют GPU. Экстракция/attention завершены, старые записи «bank pending» выше относятся к подготовке. Замороженный CLS/K4 эксперимент не оценивает полное fine-tuning OrthoFoundation.
+
+
+## Итог текущего цикла
+
+Полный Ortho bank/attention/meanmax и fixed Ridge завершены: weak AUC0.7603/0.7685/0.7759, Gold0.7361/0.7354/0.7719. Фиксированный blendattention+singleConvне улучшился. [Итог с графиками](ORTHO_RESULTS.md), [конкретная следующая очередь](NEXT_EXPERIMENTS.md). Старые preparation/pending записи выше сохранены как история; сейчас активного Ortho training нет. Нового submission не было.
