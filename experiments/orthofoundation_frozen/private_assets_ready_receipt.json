@@ -1,0 +1,13 @@
+{
+  "status": {
+    "status": "ready",
+    "current_version_number": 2
+  },
+  "required_input_sizes": {
+    "OrthoFoundation-L.pth": 1213056638,
+    "asset_manifest.json": 2648,
+    "cache_input_fingerprints.json": 4771,
+    "dinov3_source.tar.gz.bin": 13348509,
+    "labels_v0.csv": 994247
+  }
+}
