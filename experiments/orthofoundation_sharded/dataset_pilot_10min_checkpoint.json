@@ -1,0 +1,23 @@
+{
+  "checked_at_utc": "2026-10-07T14:44:41.522049+00:00",
+  "accepted_elapsed_seconds": 644.1808352470398,
+  "kernel_id": 137498512,
+  "version_number": 1,
+  "status": "RUNNING",
+  "failure_message": "",
+  "python_execution_observed": false,
+  "MRI_encoding_observed": false,
+  "head_optimizer_update_observed": false,
+  "live_snapshot_count": 5,
+  "live_events_total": 0,
+  "official_logs_characters": 0,
+  "output_bytes": 0,
+  "output_files": [],
+  "quota_used_seconds": 3851.501893,
+  "quota_billed_delta_seconds": 620.7498930000002,
+  "quota_reserved": "0s",
+  "configured_job_timeout_seconds": 600,
+  "UI_inspection_unavailable_due_user_interference": true,
+  "root_cause_not_established": true,
+  "no_cancellation_or_retry_performed": true
+}

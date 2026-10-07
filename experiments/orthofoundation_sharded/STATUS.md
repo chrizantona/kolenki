@@ -1,5 +1,7 @@
 # OrthoFoundation: извлечение признаков по одному архиву
 
+**Текущий Dataset pilot [137498512 / V1](https://www.kaggle.com/code/alanchoo/rsna-knee-ortho-dataset-pilot) — `RUNNING`, но после 644 s всё ещё без Python events, logs и output files. GPU allocation списала 620.75 s; фактическое MRI/head вычисление пока не подтверждено.** [Checkpoint проверки](dataset_pilot_10min_checkpoint.json). Runtime 600 s передан правильным SaveKernel field `sessionTimeoutSeconds`; ожидание до Python этим таймером не ограничивается.
+
 **Первый pilot [137491819 / V1](https://www.kaggle.com/code/alanchoo/rsna-knee-ortho-sharded-pilot) завершился `ERROR` до первого Python cell. GPU-квота не списалась; фактического MRI/head обучения нет.** Это отдельный способ исполнения того же первого эксперимента, выбранный после зависания Kaggle при подключении всех семи MRI-архивов.
 
 ## Что уже проверено
@@ -36,3 +38,5 @@ Source0 целиком скачан и проверен: **10 241 860 213 bytes*
 Код: [orchestrator](../../scripts/sharded_frozen_extract.py), [builder](../../scripts/build_sharded_notebooks.py), [tests](../../tests/test_sharded_fallback.py). Подготовленные notebooks: [sharded](../../notebooks/orthofoundation/sharded). Машинный журнал: [status.json](status.json); проверка подготовки: [verification_receipt.json](verification_receipt.json). Предыдущие попытки и model provenance: [основной журнал OrthoFoundation](../orthofoundation_frozen/STATUS.md).
 
 Dataset pilot [137498512 / V1](https://www.kaggle.com/code/alanchoo/rsna-knee-ortho-dataset-pilot) принят, private/offline T4, cap 600 s. На этой записи ожидаем фактические Python/MRI/head логи; статус принятого run не считается доказательством обучения. Подготовленный [CPU cloud transport](../../scripts/cache_transfer) прошёл отдельное ревью и 17 protocol tests, но production transfer ещё не запускался.
+
+Запасной HTTP transport будет подключать только model assets, небольшие global metadata и отдельный private input с временной ссылкой на один архив. Скачивание, полный SHA и MRI pilot ограничены общим hard timeout; ключ аккаунта в облако не передаётся. Пока это подготовка: URL не выпущен, второго GPU run нет.
