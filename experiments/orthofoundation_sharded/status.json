@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-07T14:12:09.559784+00:00",
-  "stage": "SINGLE_CACHE_PRE_PYTHON_ERROR_DATASET_MIRROR_PREPARATION",
+  "updated_utc": "2026-10-07T14:29:12.504368+00:00",
+  "stage": "CACHE0_DATASET_UPLOAD_ACCEPTED_READINESS_PENDING",
   "training_started": false,
   "public_score": null,
   "pilot_kernel": "alanchoo/rsna-knee-ortho-sharded-pilot",
@@ -21,7 +21,7 @@
   "private_metadata_manifest_sha256": "b2a87794d768ca3f6ee3968345f840f1028cff004708a2b3e0cfdfcfb2c15e60",
   "private_metadata_archive_sha256": "d039882cb40ca35f7dc1f14f73032420e2390c6950bf06f162f8523f5c192315",
   "competition_cpu_probe_passed": true,
-  "note": "Single notebook-output cache pilot also failed before first Python cell; no actual MRI or head training. Preparing exact-byte private dataset mirror; no full shards launched.",
+  "note": "The private Dataset upload API accepted the full source0 archive. The new resource currently returns 403 to readiness/inventory reads; verification and MRI pilot remain pending. No full feature jobs or new submission.",
   "pilot_kernel_id": 137491819,
   "pilot_version": 1,
   "quota_available_seconds_after_bulk_cancel": 18400.639,
@@ -35,5 +35,8 @@
   "cache0_full_local_sha_verified": true,
   "cache0_remote_dataset_ready": false,
   "dataset_pilot_status": "PREPARED_NOT_LAUNCHED",
-  "dataset_pilot_notebook_sha256": "b45777f46f6eef9d79aca988b474624445768bdf4fefd43f037d3798f519aab4"
+  "dataset_pilot_notebook_sha256": "b45777f46f6eef9d79aca988b474624445768bdf4fefd43f037d3798f519aab4",
+  "cache0_dataset_upload_api_status": "Ok",
+  "cache0_dataset_manifest_sha256": "b8e48ce53c2085b93f1b1396ff24a25cf5835f8f289f82f32df9074d5a029327",
+  "cache0_dataset_ref": "alanchoo/rsna-knee-cache-0-bin-v1"
 }

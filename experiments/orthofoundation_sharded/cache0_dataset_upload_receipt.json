@@ -1,0 +1,10 @@
+{
+  "api_response": {
+    "ref": "/datasets/alanchoo/rsna-knee-cache-0-bin-v1",
+    "url": "https://www.kaggle.com/datasets/alanchoo/rsna-knee-cache-0-bin-v1",
+    "status": "Ok"
+  },
+  "elapsed_seconds": 1010.3,
+  "manifest_sha256": "b8e48ce53c2085b93f1b1396ff24a25cf5835f8f289f82f32df9074d5a029327",
+  "private_requested": true
+}
