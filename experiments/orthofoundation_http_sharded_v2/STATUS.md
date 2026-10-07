@@ -1,6 +1,6 @@
 # Full HTTP OrthoFoundation V2
 
-**Actual extraction 1/7 verified: shard0 COMPLETE, 632 study partials / 12,240 images.
+**Actual extraction 2/7 verified: shards0–1 COMPLETE, 1,280 study partials / 24,768 images.
 Merge and production training have not run; AUC remains unmeasured.** [Preparation receipt](preparation_receipt.json) and
 [source-index pins](source_index.json) contain only aggregate counts, references,
 file sizes and hashes, without medical rows or scoped access URLs.
@@ -62,3 +62,12 @@ one finite update on16weak/Gold0. This is not the production12-epoch head.
 [independent actual validation](shard0_independent_partial_validation.json).
 ROOT authorized shard1 after these checks; Kaggle accepted V1/kernel137512753
 at16:41:26 UTC. [Actual shard1 launch receipt](shard1_launch_receipt.json).
+
+Actual shard1:648 independently verified feature files,3,132slots/12,528images;
+parent269.21seconds with cleanup; original ZIP10.275GB/fullSHA verified
+in105.28seconds. One finite smoke update/Gold0; production heads still untrained.
+[Execution receipt](shard1_execution_receipt.json),
+[ROOT validation](shard1_ROOT_partial_validation.json),
+[independent validation](shard1_independent_partial_validation.json).
+ROOT authorized shard2 after actual shard1 checks; Kaggle accepted
+V1/kernel137514112 at16:54:31 UTC. [Actual launch receipt](shard2_launch_receipt.json).
