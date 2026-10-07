@@ -1,0 +1,23 @@
+{
+  "schema": "predeclared_fixed_Gold58_blend_diagnostic_v1",
+  "declared_utc": "2026-10-07T17:23:17.460026+00:00",
+  "actual_Ortho_Gold_results_viewed_at_declaration": false,
+  "purpose": "One fixed ensemble diagnostic on Gold58; no weight or checkpoint selection",
+  "reference_model": "fixed-final single ConvNeXt reader two-epoch EMA; not full public .944 ensemble",
+  "reference_raw_logit_csv_sha256": "c9ef127918f1e7758853327ed1d0d2edb4ae3be38eb05935f60e4390585a7cf5",
+  "reference_probability_transform": "sigmoid exactly once",
+  "candidate_model": "Ortho class-specific attention production head; fixed final epoch12, seed42, all4349 weak training studies; Gold gradient/checkpoint-selection0",
+  "candidate_csv_pin": "ROOT independently verifies and seals actual output bytes before diagnostic execution; file does not yet exist",
+  "candidate_feature_identity": "7f0e16dc1c34e8c0920f567db2ebb68f55c470c09ce77dd7c0aa238cd5ec6c77",
+  "candidate_scientific_config_sha256": "f3c4334f97df527d22dd2b0da3b6220ec466c1333efe7e99a471b955a74ba919",
+  "blend_space": "probabilities",
+  "weights": {
+    "convnext_reader": 0.5,
+    "attention": 0.5
+  },
+  "meanmax_evaluation": "Separate same-data fixed12-epoch comparator, no alternate blend recipe selected from Gold results",
+  "weight_search": false,
+  "Gold_checkpoint_selection": false,
+  "new_submission_authorized_by_recipe": false,
+  "limitations": "Gold58 diagnostic sampling variation; no clean OOF, leaderboard improvement or full baseline ensemble comparison claim."
+}

@@ -42,6 +42,11 @@ After completed Ortho production heads and their receipts are verified:
   If used, predeclare one fixed 50:50 probability blend as an ensemble diagnostic.
   Do not fit weights, choose checkpoints or select a blend recipe on Gold.
 
+The [predeclared recipe](GOLD_RECIPE.json) fixes one 50:50 probability blend
+of the single ConvNeXt reader with the fixed-final Ortho attention production
+head before viewing any actual Ortho Gold result. Mean/max is evaluated
+separately; no alternate blend is chosen from Gold.
+
 Gold comparisons remain diagnostic. They cannot establish clean generalization,
 an Ortho leaderboard score or an expected score gain. Ortho head predictions,
 full-bank completion and any comparison metrics still require actual execution.
