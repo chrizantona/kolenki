@@ -1,6 +1,6 @@
 # OrthoFoundation: текущий запуск по одному архиву
 
-**MRI pilot PASS; проверены 4/7 extraction-частей: 2 568 study partials / 49 680срезов.** Следующий запуск ещё не принят. Полный банк, production training и AUC пока не готовы. Текущие actual receipts, Kaggle-ссылки и прогноз — в [HTTP V2 журнале](../orthofoundation_http_sharded_v2/STATUS.md). [Машинный статус](status.json).
+**MRI pilot PASS; проверены 5/7 extraction-частей: 3 208 study partials / 62 044срезов.** Shard5 запущен. Полный банк, production training и AUC пока не готовы. Текущие actual receipts, Kaggle-ссылки и прогноз — в [HTTP V2 журнале](../orthofoundation_http_sharded_v2/STATUS.md). [Машинный статус](status.json).
 
 На Kaggle pilot действительно обработал 16 weak studies / 308 MRI-срезов и сделал одно обновление пробной головы; Gold в градиентах — 0. Encoder: 72.6 images/s, peak1.33GB, owned runtime217.8s, cleanup подтверждён. [Независимо проверенный pilot](../orthofoundation_http_cache0_pilot_v2/root_MRI_validation.json). Smoke-обновление проверяет работоспособность, а не заменяет полное обучение.
 

@@ -9,7 +9,7 @@
 | GoodPJ, авторский baseline V2 | 0.944 | Исторический результат автора; не наш запуск |
 | Наше воспроизведение baseline | 0.943 | Завершённое Kaggle scoring |
 | Наш ансамбль с дообученным ConvNeXt | **0.944** | Submission `56891310`, статус `COMPLETE` |
-| OrthoFoundation | — | **MRI pilot PASS:** 16 studies / 308 images, конечные признаки и реальное обновление головы. 72.6 images/s, 1.33 GB. **4/7 extraction завершены и проверены:** 2 568 study partials / 49 680 images. Production training и AUC впереди. [Статус и ссылки](experiments/orthofoundation_sharded/STATUS.md) |
+| OrthoFoundation | — | **MRI pilot PASS:** 16 studies / 308 images, конечные признаки и реальное обновление головы. 72.6 images/s, 1.33 GB. **5/7 extraction завершены и проверены:** 3 208 study partials / 62 044 images. Production training и AUC впереди. [Статус и ссылки](experiments/orthofoundation_sharded/STATUS.md) |
 
 Результаты выше проверены **7 октября 2026**. Разница между двумя сабмитами — один отображаемый шаг leaderboard; это ещё не доказательство устойчивого улучшения на независимой выборке.
 

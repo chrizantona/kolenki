@@ -1,6 +1,6 @@
 # Full HTTP OrthoFoundation V2
 
-**Actual extraction 4/7 verified: shards0–3 COMPLETE, 2,568 study partials / 49,680 images.
+**Actual extraction 5/7 verified: shards0–4 COMPLETE, 3,208 study partials / 62,044 images.
 Merge and production training have not run; AUC remains unmeasured.** [Preparation receipt](preparation_receipt.json) and
 [source-index pins](source_index.json) contain only aggregate counts, references,
 file sizes and hashes, without medical rows or scoped access URLs.
@@ -113,3 +113,13 @@ an estimate from actual jobs, not a guarantee. Hard watchdogs, fresh quota,
 sequential actual verification and a separate ROOT gate remain mandatory.
 Shard4 was accepted V1/kernel137521166 at17:59:59UTC; actualPython confirmed.
 [Actual launch receipt](shard4_launch_receipt.json). Production heads/AUC remain pending.
+
+Actual shard4 COMPLETE:640 independently verified partials,3,091slots/12,364images;
+parent413.632s/exit0/cleanup. Full10.260GB ZIPSHA matched, HTTP210.551s;
+new12,064images in113.275s. [Execution receipt](shard4_execution_receipt.json),
+[ROOT validation](shard4_ROOT_partial_validation.json), [independent validation](shard4_independent_partial_validation.json).
+[Actual timing bounds still cover this job](shard4_ROOT_owner_bounds_revalidation.json),
+so ownerphasepolicyb71e remains unchanged. ROOT then approved shard5 only;
+accepted V1/kernel137523281 at18:21:01UTC, actualPython confirmed.
+[Launch receipt](shard5_launch_receipt.json). This source uses separatelydecoded
+DICOM; no original-NPY byte-identity claim. Two extractionparts remain incomplete.
