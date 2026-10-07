@@ -62,3 +62,5 @@
 - [ ] Проверить отсутствие скрытых приватных dependencies и фактический hidden scoring.
 
 Дедлайн entry/team merge — **15 октября 23:59 UTC**, final submissions — **22 октября 23:59 UTC**; в Москве это 16 и 23 октября в 02:59 соответственно. План ориентирован на доступные Kaggle GPU: pilot с оценкой стоимости обязателен перед большим extraction/training. Актуальную quota проверяем перед запуском, статическую оценку часов не считаем гарантией. [Официальный overview](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview).
+
+Для признаков из нового sharded execution EXP-OF-002 использует [проверенный adapter](../experiments/orthofoundation_sharded_meanmax/STATUS.md). Notebook пока является неисполняемой заготовкой: нужен отдельно зафиксированный SHA всего завершённого attention-bank и воспроизведение его исходных probabilities перед fit. Encoder повторно не запускается; реальных AUC этой ветки пока нет.

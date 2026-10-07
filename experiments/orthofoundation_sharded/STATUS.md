@@ -27,7 +27,7 @@ Python-stage caps: pilot 600 s; семь extraction jobs — 1204/1231/1236/1213
 
 Подключение inputs до первого Python cell не ограничивается этим таймером. Большой cache diagnostic превысил час, не показав пользовательского Python; он отменён через UI, официальный статус `CANCEL_ACKNOWLEDGED`, за ожидание GPU-квота не списалась. Точная причина не раскрыта Kaggle API. `RUNNING` само по себе не означает, что модель учится. Если подключение одного архива тоже не работает, нужен другой проверенный способ чтения, а не повторение полного запуска.
 
-Существующее сравнение attention/mean+max рассчитано на исходный feature schema. Для этого нового sharded bank нужен отдельный проверенный adapter; оно пока не запущено. Нового public score и подтверждённого выигрыша OrthoFoundation нет.
+Существующее сравнение attention/mean+max рассчитано на исходный feature schema. Для sharded bank подготовлен и прошёл ревью [отдельный adapter](../orthofoundation_sharded_meanmax/STATUS.md): явный SHA полного завершённого attention-bank и checkpoint replay обязательны. Пока нет bank pin, notebook не исполняется; реальное сравнение ещё не запущено. Нового public score и подтверждённого выигрыша OrthoFoundation нет.
 
 Следующий проверяемый обход — byte-identical mirror одного cache-архива в приватном dataset с расширением `.zip.bin`, аналогично рабочему model asset. Это гипотеза о способе подключения, а не установленная причина сбоя. До успешного MRI pilot остальные шесть архивов не зеркалируем. [Failure receipt](pilot_v1_failure_receipt.json).
 

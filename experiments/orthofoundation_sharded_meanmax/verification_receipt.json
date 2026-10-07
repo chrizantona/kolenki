@@ -1,0 +1,98 @@
+{
+  "schema": "sharded_meanmax_static_verification_v1",
+  "status": "non_executable_placeholder_until_root_seals_completed_attention_full_bank",
+  "source_feature_identity": "83d0eff1e0af84b242a06d1923e1e3408d27259289faa2543f2b96465359ac89",
+  "tests": {
+    "count": 44,
+    "result": "PASS",
+    "seconds": 13.738
+  },
+  "artifacts": {
+    "compare.ipynb": {
+      "bytes": 78214,
+      "sha256": "0f3efe90e7851fbd2673287a92d7a4c12438f133d0ac547f254a694f12400713"
+    },
+    "kernel-metadata.json": {
+      "bytes": 636,
+      "sha256": "3b0278195e8e5affdd319f84929f739711cab2f3bf43fd094ccabee56f54eea0"
+    },
+    "stage_config.json": {
+      "bytes": 2642,
+      "sha256": "807de92197848b0649f340817b64c79d2b84188a7a9643d35af8ee8bc14e2a0f"
+    }
+  },
+  "scripts": {
+    "compare_sharded_heads.py": "5ea847aedf70ae4842845483808b69956ca28266fb4af84ca580474450a1cf98",
+    "build_sharded_head_comparison_notebook.py": "bf16dfa4988a72f3a1c4dd5fd6754e5d69c7f8d8e0aa349c9f1e44e4062315b0"
+  },
+  "tests_sha256": "4f680f22baec0f50622a32dcca9edccc7e6ef1ade4957a7a802dd29385cf4458",
+  "source_payload_files": 10,
+  "payload_bytes_exact": true,
+  "ast_nbformat_valid": true,
+  "original_core7_runner_comparators_dataset_pilot_unchanged": true,
+  "inputs": {
+    "datasets": [
+      "alanchoo/rsna-knee-ortho-global-metadata-v1"
+    ],
+    "kernels": [
+      "alanchoo/rsna-knee-ortho-dataset-merge-heads"
+    ],
+    "competitions": []
+  },
+  "device": "cpu",
+  "job_python_stage_cap_seconds": 1500,
+  "validation_reserve_seconds": 300,
+  "unchanged_core_head_fit_seconds": 1200,
+  "requires_prior_completed_attention_heads_and_all_studies_before_fit": true,
+  "real_auc_measured": false,
+  "kaggle_api_calls": 0,
+  "provenance_policy": "Native sharded schema and global mask/selected-series/positions verified; common bank/checkpoint helpers reused without fabricated monolithic provenance",
+  "bank_sha_policy": "Measured current aggregate must equal externally supplied attention full-bank SHA; binds every scored and unscored row",
+  "seed_caveat": "Same seed does not guarantee identical minibatch order because head initialization consumes RNG differently",
+  "source_bank_sha256": null,
+  "comparison_launch_allowed": false,
+  "source_bank_pin_required": true,
+  "source_bank_pin_origin": "External trusted root receipt of completed immutable attention output; expected pin is never calculated by comparator or builder",
+  "placeholder_refusal_verified_before_data_resolution": true,
+  "attention_checkpoint_replay": {
+    "populations": [
+      "weak holdout via holdout checkpoint",
+      "Gold via production checkpoint"
+    ],
+    "comparison_space": "Source exported sigmoid probabilities, not raw logits; replay logits are finite-checked and hashed",
+    "dtype": "FP32",
+    "autocast": false,
+    "cuda_matmul_tf32": false,
+    "tolerances": {
+      "cpu": {
+        "atol": 2e-06,
+        "rtol": 2e-05
+      },
+      "cuda": {
+        "atol": 1e-06,
+        "rtol": 1e-05
+      }
+    },
+    "rule": "abs(replay-source) <= atol + rtol*abs(source)",
+    "device_receipts": true,
+    "actual_cuda_replay_tested": false
+  },
+  "mutation_rejections_verified": [
+    "scored Gold feature values",
+    "unscored weak training feature values",
+    "wrong/missing/invalid expected full-bank pin",
+    "original prediction CSV",
+    "self-consistent replaced checkpoint with updated internal receipts"
+  ],
+  "independent_review": {
+    "status": "PASS_no_critical_or_important_blockers",
+    "full_suite_tests": 44,
+    "seconds": 11.451,
+    "original_corruption_repro_rejected": true
+  },
+  "root_fresh_changed_tests": {
+    "tests": 7,
+    "seconds": 2.362,
+    "status": "PASS"
+  }
+}
