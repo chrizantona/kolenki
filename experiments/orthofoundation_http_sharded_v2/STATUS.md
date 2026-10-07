@@ -1,9 +1,7 @@
 # Full HTTP OrthoFoundation V2
 
-**Independent static review PASS; first full extraction shard authorized.
-Kaggle accepted shard0 V1/kernel137510617 at16:22:26 UTC.
-Python execution and complete bank are not yet independently verified; merge
-and production training have not run. [Actual launch receipt](shard0_launch_receipt.json).** [Preparation receipt](preparation_receipt.json) and
+**Actual extraction 1/7 verified: shard0 COMPLETE, 632 study partials / 12,240 images.
+Merge and production training have not run; AUC remains unmeasured.** [Preparation receipt](preparation_receipt.json) and
 [source-index pins](source_index.json) contain only aggregate counts, references,
 file sizes and hashes, without medical rows or scoped access URLs.
 
@@ -52,3 +50,15 @@ boundary. Actual launch and completion receipts are recorded separately.
 Future merge ID: `alanchoo/rsna-knee-ortho-http-merge-heads-v2`.
 Partials: `alanchoo/rsna-knee-ortho-http-shard-{0..6}-v2`.
 The original V1 mean/max comparator needs the separately prepared V2 adapter.
+
+Actual shard0: full10.24 GB archive SHA verified in241.77 seconds; parent
+completed and cleaned scratch in401.32 seconds. All632 FP16 feature files
+passed ROOT and independent checks of SHA/size, masks, ownership, selected
+series/positions and finite nonzero vectors.16 pilot features were resumed
+exactly;616 new studies/11,932 new images were encoded. The smoke head made
+one finite update on16weak/Gold0. This is not the production12-epoch head.
+[Execution receipt](shard0_execution_receipt.json),
+[ROOT validation](shard0_ROOT_partial_validation.json),
+[independent actual validation](shard0_independent_partial_validation.json).
+ROOT authorized shard1 after these checks; Kaggle accepted V1/kernel137512753
+at16:41:26 UTC. [Actual shard1 launch receipt](shard1_launch_receipt.json).

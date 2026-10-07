@@ -66,3 +66,5 @@
 Для признаков из нового sharded execution EXP-OF-002 использует [проверенный adapter](../experiments/orthofoundation_sharded_meanmax/STATUS.md). Notebook пока является неисполняемой заготовкой: нужен отдельно зафиксированный SHA всего завершённого attention-bank и воспроизведение его исходных probabilities перед fit. Encoder повторно не запускается; реальных AUC этой ветки пока нет.
 
 После измеренного HTTP download581.26 s подготовлен [versioned pilotV2](../experiments/orthofoundation_http_cache0_pilot_v2/STATUS.md): только execution budget увеличен до pilot900/total9300 s, model/head settings сохранены. Full7/merge и mean+max для его нового source identity требуют своих artifacts/review; старый V1 adapter автоматически не применяем.
+
+Актуальная HTTP V2 ветка прошла реальный MRI pilot и extraction shard0: все632 partial feature files проверены независимо. [Full journal](../experiments/orthofoundation_http_sharded_v2/STATUS.md) содержит actual receipts. [V2 mean/max adapter](../experiments/orthofoundation_sharded_meanmax_http_v2/STATUS.md) уже прошёл review53 tests; его placeholder остаётся неисполняемым до завершённого полного банка и внешнего SHA pin.
