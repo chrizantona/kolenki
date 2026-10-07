@@ -1,0 +1,133 @@
+{
+  "schema": "Ortho_isolated_inference_independent_preparation_review_v1",
+  "prepared_static_review_PASS": true,
+  "prepared_only": true,
+  "actual_inference_or_submission_performed": false,
+  "launch_authority_from_reviewer": false,
+  "critical_findings": [],
+  "important_findings": [],
+  "preparation_receipt_sha256": "61ed3ba09125c9c9603a9e681700607c9ef74a859827b743eca12ce3798f70a5",
+  "reviewed_source_files": {
+    "src/orthofoundation_inference/__init__.py": {
+      "bytes": 78,
+      "sha256": "84f8abba16eac96de85a56c91639f05a87e13db18e8049b15a47de28a351f582"
+    },
+    "src/orthofoundation_inference/contracts.py": {
+      "bytes": 8295,
+      "sha256": "712d3ce2b9a32d74501afe5bc4c5dbc3724a8e6f9f5a1577248bdca6f56113c2"
+    },
+    "src/orthofoundation_inference/pipeline.py": {
+      "bytes": 16445,
+      "sha256": "e2b2ffc5f3654cf27e38ae156da2257d95966a215ce69e0e9bc08adb162567e1"
+    },
+    "scripts/run_orthofoundation_inference.py": {
+      "bytes": 2592,
+      "sha256": "1293ba5c71f8f09e3e53117cb702a10656c2f4a075af0636f09c87c9c706d84e"
+    },
+    "tests/test_ortho_inference.py": {
+      "bytes": 19568,
+      "sha256": "009c49c5985b1ce6bf728bde6b417b56a75823257c4f7bee060c77c9b9786605"
+    },
+    "experiments/orthofoundation_inference/STATUS.md": {
+      "bytes": 4125,
+      "sha256": "b3d93f6ff5b6e8564f6e7f14bb59d7732120a0291fc7cb6e7cb66108fac2b5f2"
+    }
+  },
+  "frozen_training_source8_and_canonical_preprocess_sha256": {
+    "orthofoundation/__init__.py": "f3df43207f5d18497b4f698aa91c746bf81dcd4edb74b81784136acd8aa52cf1",
+    "orthofoundation/cache.py": "700767576eb7b6d9dfa22f77bdf2088411ba4bdf6036c80db58bf608c96f7485",
+    "orthofoundation/data.py": "f3b63ab922f0452c065126dc2ef1c87442a0b988dff29d25c201666a8a5310aa",
+    "orthofoundation/encoder.py": "86defa5f943bfc161603c7b377bbf08a9d5c2a270d01b1df5c039ab59cff7ecb",
+    "orthofoundation/heads.py": "c814b1bcbf1ac1322b717c1f1e6ba7b9173357e956e9104b2c77d0351a833f1f",
+    "orthofoundation/run.py": "740c2e2599516b1876e7d7226bb0f11c51205cbdaec0b6eebf44dc740c659e10",
+    "orthofoundation/train.py": "928121a030aabf4fc58594da967ad98ff43a7ce915474d69a909ab09652a7dc1",
+    "sharded_frozen_extract.py": "86265241778c40a3822c2a8d11f4f3f746a48b47101def338120dd86937ee4f2",
+    "convnext_reader/preprocess.py": "68601ad84ec3a0f030b5c2d37cc0d657cd3e12b17f7130e7385fba9648d324b6"
+  },
+  "training_config_yaml_sha256": "f3c4334f97df527d22dd2b0da3b6220ec466c1333efe7e99a471b955a74ba919",
+  "parent_training_feature_identity": "7f0e16dc1c34e8c0920f567db2ebb68f55c470c09ce77dd7c0aa238cd5ec6c77",
+  "fresh_verification": {
+    "focused_command": "work/venv/bin/python -m unittest discover -s tests -p test_ortho_inference.py -v",
+    "focused_tests": 17,
+    "focused_seconds": 0.596,
+    "focused_exit_code": 0,
+    "full_command": "work/venv/bin/python -m unittest discover -s tests -v",
+    "full_tests": 80,
+    "full_seconds": 9.253,
+    "full_exit_code": 0,
+    "execution": "CPU synthetic fixtures and offline file/array/hash review; no real encoder, Kaggle/API, GPU, Git or UI"
+  },
+  "admission": {
+    "external_ROOT_complete_merge_seal_SHA_and_production_head_SHA_required": true,
+    "expected_pins_never_derived_from_current_inputs": true,
+    "immutable_snapshot_SHA_then_weights_only_head_load": true,
+    "production_head_pt_only": true,
+    "fixed_epochs": 12,
+    "weak_gradient_studies": 4349,
+    "Gold_gradient_studies": 0,
+    "Gold_checkpoint_selection": false,
+    "production_optimizer_updates": 816,
+    "strict_finite_FP32_state_label_order_history": true,
+    "placeholder_and_invalid_admission_refuse_before_DICOM_or_encoder_reads": true,
+    "external_trust_boundary": "ROOT independently validates and supplies the actual completed-bank/production seal and its SHA; the prepared CLI does not authenticate a ROOT assertion or authorize its own launch."
+  },
+  "scientific_recipe_checked": {
+    "pinned_canonical_decoder_used": true,
+    "decode_before_deepest_selection": true,
+    "actual_capped_depth_then_UID_tie": true,
+    "official_metadata_plane_fat_suppression_slots": true,
+    "plane_name_fallback_passed_to_decoder": true,
+    "slices_per_slot": 4,
+    "slots": 6,
+    "missing_masks_features_positions_zero": true,
+    "literal_center_crop": 353,
+    "resolution": 224,
+    "replicated_grayscale_RGB": true,
+    "encoder_variant": "author_no_rope",
+    "encoder_autocast": "float16",
+    "CLS_storage_rounding": "float16",
+    "head_input_and_state": "float32",
+    "eval_frozen_head": true,
+    "sigmoid_applications": 1,
+    "separate_test_identity_no_training4407_coverage_claim": true
+  },
+  "resolved_Important_export_deadline_issue": {
+    "original_reproduction": "Synthetic elapsed clock advanced from0 to2 during CSV export with max_seconds1; old code returned completed success.",
+    "fixed_refusal_phases": [
+      "CSV export",
+      "CSV SHA snapshot",
+      "staged receipt write",
+      "first exclusive publication overrun",
+      "second exclusive publication failure"
+    ],
+    "owned_staging_and_rollback_verified": true,
+    "within_budget_matching_pair_verified": true,
+    "existing_own_csv_preserved": true,
+    "completion_deadline_checked_through_final_publication_and_cleanup": true,
+    "receipt_seconds_boundary_honestly_declared_before_staged_receipt_write": true
+  },
+  "output_and_privacy": {
+    "separate_private_predictions": "_ortho.csv",
+    "aggregate_provenance": "_ortho_provenance.json",
+    "no_own_csv_replacement": true,
+    "automatic_blend_or_submission": false,
+    "no_credentials_scoped_URLs_or_clinical_rows_in_public_review": true
+  },
+  "small_decode_parity_evidence": {
+    "private_receipt_sha256": "6be07d7ef2f443ec079746a78d0aa8bf8f00debd5681c355afd6a09932e914d6",
+    "receipt_bytes_independently_verified": true,
+    "reviewer_reexecuted_real_DICOM_decode": false,
+    "actual_independent_series": 1,
+    "decoded_slices": 27,
+    "copies_of_same_cache": 4,
+    "reported_exact_uint8_matches": 4,
+    "reported_maximum_absolute_difference": 0,
+    "limits": "One existing private series against four duplicate local cache copies; not four independent series or all-test/encoder parity."
+  },
+  "declined_to_judge": [
+    "Actual production head/complete training bank: not yet available to this inference review.",
+    "Actual CUDA encoder features/head replay, full-test coverage, runtime and memory: no real encoder inference performed.",
+    "Hard timeout and forced SIGKILL cleanup: cooperative CLI requires a separately reviewed owned-process parent and complete parent receipt.",
+    "Future fresh quota, mounted inputs, clinical predictive quality, blend gain or leaderboard score: no launch or fitting/submission authorization."
+  ]
+}

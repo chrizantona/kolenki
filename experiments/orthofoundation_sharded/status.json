@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-07T18:42:49.537338+00:00",
-  "stage": "HTTP_V2_6_SHARDS_COMPLETE_SHARD6_ACCEPTED",
+  "updated_utc": "2026-10-07T19:00:42.641344+00:00",
+  "stage": "HTTP_V2_7_SHARDS_COMPLETE_MERGE_ATTENTION_JOB_ACCEPTED",
   "training_started": false,
   "public_score": null,
   "pilot_kernel": "alanchoo/rsna-knee-ortho-sharded-pilot",
@@ -21,7 +21,7 @@
   "private_metadata_manifest_sha256": "b2a87794d768ca3f6ee3968345f840f1028cff004708a2b3e0cfdfcfb2c15e60",
   "private_metadata_archive_sha256": "d039882cb40ca35f7dc1f14f73032420e2390c6950bf06f162f8523f5c192315",
   "competition_cpu_probe_passed": true,
-  "note": "Actual shards0\u20135 COMPLETE: 3853 study partials / 74540 images ROOT + independent PASS. Shard6 accepted exact reviewed V2. Full merged bank and production training/AUC incomplete; no new submission.",
+  "note": "All7 actual partial banks ROOT+independent PASS, 4407 unique studies represented/85336 images. Exact merge+attention job V1 accepted and Python observed. Complete merged bank and production heads/AUC not yet validated; no new submission.",
   "pilot_kernel_id": 137491819,
   "pilot_version": 1,
   "quota_available_seconds_after_bulk_cancel": 18400.639,
@@ -88,12 +88,20 @@
     2,
     3,
     4,
-    5
+    5,
+    6
   ],
-  "actual_feature_partial_studies": 3853,
-  "actual_selected_images": 74540,
+  "actual_feature_partial_studies": 4413,
+  "actual_selected_images": 85336,
   "full_extraction_bank_complete": false,
   "quality_AUC_measured": false,
-  "active_extraction_shard": 6,
-  "active_extraction_kernel_id": 137525106
+  "active_extraction_shard": null,
+  "active_extraction_kernel_id": null,
+  "all7_frozen_GPU_feature_extraction_verified": true,
+  "active_merge_kernel": "alanchoo/rsna-knee-ortho-http-merge-heads-v2",
+  "active_merge_kernel_id": 137526746,
+  "active_merge_version": 1,
+  "merge_job_accepted": true,
+  "merge_actual_Python_observed": true,
+  "production_gradient_start_observed": false
 }

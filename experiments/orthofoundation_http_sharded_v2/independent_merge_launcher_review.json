@@ -1,0 +1,123 @@
+{
+  "schema": "HTTP_V2_independent_prepared_merge_launcher_review_v1",
+  "prepared_static_review_PASS": true,
+  "prepared_only": true,
+  "actual_merge_or_training_performed_by_reviewer": false,
+  "launch_authority_from_reviewer": false,
+  "critical_findings": [],
+  "important_findings": [],
+  "source_pins": {
+    "launch_merge_prepared.py": "34dcd1cc6b4464a929d96b9c391adb5b57016a397f6df708daa42e86ee895ed9",
+    "test_merge_launch_prepared_gate.py": "8a55b4888931ef570d950b378f06f0b342d65ce6d0c5238d43ca4f79ae658023",
+    "http_merge_gate_contract_UNAPPROVED.json": "ad35194d0a63f83739467b99146d1dde71012c99f8206e778abcb1f5b3420068",
+    "source_index.json": "0e450019b7f37a39701d78be46f1ea39b76614f90948c6096f0a1fe3eb2544b7",
+    "preparation_receipt.json": "f974a437550ceab02652929d4033ea60a6099e5df7da35cbf82142b90fb08689"
+  },
+  "verification": {
+    "command": "work/venv/bin/python -m unittest discover -s work/orthofoundation_execution -p test_merge_launch_prepared_gate.py -v",
+    "tests": 17,
+    "seconds": 0.003,
+    "exit_code": 0,
+    "actual7_normal_receipt_manifest_chains_accepted": true,
+    "original_wrong_independent_manifest_mutation_refused_for_each_of7": true,
+    "all56_downloaded_scientific_py_files_present_and_exact_SHA": true,
+    "file_array_SHA_review_only": true,
+    "reviewer_performed_API_or_GPU_or_Git_or_UI": false
+  },
+  "resolved_Important": {
+    "problem": "Original local receipt block omitted independent partial_manifest_sha256 equality.",
+    "repair": "Actual manifest SHA now equals external gate, watcher, ROOT and independent receipt manifest pins; exact shard, source/config flags and independently rebuilt global ownership counts are checked.",
+    "regression_coverage": [
+      "SHA-sealed independent wrong manifest",
+      "independent wrong shard",
+      "independent wrong study count",
+      "all receipts consistent but wrong global image count",
+      "ROOT wrong slots",
+      "watcher wrong shard",
+      "valid actual receipt block"
+    ]
+  },
+  "reviewed_static_gate_contract": {
+    "trusted_external_ROOT_approval_and_explicit_SHA_required": true,
+    "all7_distinct_private_COMPLETED_current_versions_required": 1,
+    "minimum_available_seconds": 2100,
+    "required_reserved_seconds": 0,
+    "required_our_active_jobs": 0,
+    "maximum_owner_observation_age_seconds": 900,
+    "global_metadata_private_READY_version": 1,
+    "scientific_source8_config_and_NB_metadata_transport_pins_rechecked": true,
+    "Python_timeout_seconds": 1500,
+    "wire_timeout_seconds": 1530,
+    "private": true,
+    "offline": true,
+    "machine_shape": "NvidiaTeslaT4",
+    "kernel_inputs": 7,
+    "competition_inputs": 0,
+    "global_metadata_dataset_only": true,
+    "one_persisted_attempt_before_push_and_no_automatic_new_attempt": true,
+    "actual_SaveKernel_hook_checks_fields_statically_reviewed": [
+      "slug",
+      "sessionTimeoutSeconds",
+      "kernelType",
+      "isPrivate",
+      "enableGpu",
+      "enableInternet",
+      "machineShape",
+      "dockerImage",
+      "datasetDataSources",
+      "kernelDataSources",
+      "competitionDataSources"
+    ],
+    "no_account_credentials_scoped_URLs_or_clinical_rows_in_public_review": true
+  },
+  "actual_independent_partial_manifest_pins": [
+    {
+      "shard": 0,
+      "independent_actual_PASS": true,
+      "partial_manifest_sha256": "950567a0e19a87737104f79f31af3ccd330d6c69333fe16cef84154becdff31a",
+      "independent_receipt_sha256": "a86de58d01486d0a2bdb21f22d66c502b1c3f07020865f7f0472a6330ba1dfb7"
+    },
+    {
+      "shard": 1,
+      "independent_actual_PASS": true,
+      "partial_manifest_sha256": "99daab1a933359c2cb26cc6150884b09a266018a86da10dae53a16bd40bb52c7",
+      "independent_receipt_sha256": "d1f37549ad0c4b5bed95b727b1556e1b6cd0fd953466d92dff535553a1edf756"
+    },
+    {
+      "shard": 2,
+      "independent_actual_PASS": true,
+      "partial_manifest_sha256": "4054aa52087aea8a84c7e941f6215fff64677993acc335ceffd7ab5e8734bb05",
+      "independent_receipt_sha256": "4fed14b708e9f6d6cbb333649704edf12fefdb642bc886101e71db13e14e2b5d"
+    },
+    {
+      "shard": 3,
+      "independent_actual_PASS": true,
+      "partial_manifest_sha256": "8ecfbd50c638b7a73bacd2c1bbd8e0276a2edf3913276694c783b973a832f474",
+      "independent_receipt_sha256": "e6631ea013a07832b2390bab2a9406fed83e58eff0eae3a5eb50385a494bdc04"
+    },
+    {
+      "shard": 4,
+      "independent_actual_PASS": true,
+      "partial_manifest_sha256": "4b7428a0ba07b17b4b8a074209d4ae25aab5c24fd17b8e9124cc7fdc85092bab",
+      "independent_receipt_sha256": "474e7d42d4140865bc6f904a8fa1f4b98509d18a92d70c11465559634d856a16"
+    },
+    {
+      "shard": 5,
+      "independent_actual_PASS": true,
+      "partial_manifest_sha256": "9ed1e8dc0a654b5036122c732ecf1e06bb9a8b02445a5b03d8d5e30ac6b0b3f3",
+      "independent_receipt_sha256": "4dec2c3dcc4ce99295db692c6354fc1ad51c2af054e9c7e5fc7a68c4acc4c6bf"
+    },
+    {
+      "shard": 6,
+      "independent_actual_PASS": true,
+      "partial_manifest_sha256": "3ed48187a79ab2af7380e2069a7b422816bbb7f600273e7789ed79d22568c1a8",
+      "independent_receipt_sha256": "6931388627576c729a28c1d69d11ea18931600a2018fe07e001d86a2e4591bd6"
+    }
+  ],
+  "external_trust_boundary": "ROOT must independently confirm the exact seven COMPLETE/private/current V1 server inputs, all actual sealed receipt hashes, fresh quota/zero reservation/zero active jobs and approve the externally pinned gate. A trusted ROOT assertion is not self-authenticating, and this static reviewer neither queried current APIs nor granted a launch.",
+  "declined_to_judge": [
+    "Actual fresh quota, READY dataset, current kernel privacy/version/status and server image at future launch: live API checks are ROOT/watcher responsibility.",
+    "Actual outgoing SaveKernel body/server accepted source: hook is reviewed statically; no request was sent by reviewer.",
+    "Actual merged4407 bank,12epoch heads, predictions, CPU replay or model quality: future completed output requires independent validation."
+  ]
+}

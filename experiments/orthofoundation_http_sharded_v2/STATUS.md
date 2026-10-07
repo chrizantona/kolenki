@@ -1,7 +1,7 @@
 # Full HTTP OrthoFoundation V2
 
-**Actual extraction 6/7 verified: shards0–5 COMPLETE, 3,853 study partials / 74,540 images.
-Merge and production training have not run; AUC remains unmeasured.** [Preparation receipt](preparation_receipt.json) and
+**Actual extraction 7/7 verified: shards0–6 COMPLETE, 4,413 study partials / 85,336 images.
+Merge+attention job accepted; complete-bank/head validation pending, AUC remains unmeasured.** [Preparation receipt](preparation_receipt.json) and
 [source-index pins](source_index.json) contain only aggregate counts, references,
 file sizes and hashes, without medical rows or scoped access URLs.
 
@@ -139,3 +139,19 @@ All eight scientific source files were also downloaded from the actual immutable
 shard0–2 outputs, closing the earlier local .py inventory omission.
 [Aggregate remote-source audit](prior_shards012_remote_source8_aggregate.json)
 records24 exactsize/SHA matches; no local source copy is presented as remote evidence.
+
+Actual shard6 COMPLETE:560 independently verified partials,2,699slots/10,796images;
+parent254.887s/exit0/cleanup, full8.773GB ZIP SHA matched, HTTP113.256s;
+new10,496images in89.900s. [Execution receipt](shard6_execution_receipt.json),
+[ROOT validation](shard6_ROOT_partial_validation.json), [independent validation](shard6_independent_partial_validation.json).
+[Actual timing bounds cover the final job](shard6_ROOT_owner_bounds_revalidation.json);
+ownerphasepolicyb71e remains unchanged. [All-seven extraction receipt](extraction_completion_receipt.json)
+confirms4,413partialstudy files representing exactly4,407unique studies,
+21,334slots/85,336images. Merge and fixed12epoch heads are the next unexecuted stage.
+
+Merge+attention accepted V1/kernel137526746 at18:56:55UTC, actualPython observed.
+[Launch receipt](merge_launch_receipt.json) binds the exact reviewed sources, all7
+actual partialmanifest seals, offline pinnedT4/image and Python1500/wire1530 caps.
+[Repaired launcher review](independent_merge_launcher_review.json) passed17fixtures
+and refused an independentlysealed mismatched manifest across all7actualsources.
+Production gradient start/completion and AUC remain unverified at this receipt.

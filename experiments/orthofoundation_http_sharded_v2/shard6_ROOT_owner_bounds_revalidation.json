@@ -1,0 +1,14 @@
+{
+  "schema": "ROOT_owner_phase_bounds_revalidation_v1",
+  "shard": 6,
+  "ROOT_prior_bounds_still_cover_new_actual_job": true,
+  "owner_measurements_sha256": "b71e1297d5e5386c14f326dfa813986f6fa6d543aa6f20cb1bd18059cc0339f7",
+  "actual": {
+    "http_bytes_per_second": 77463417.89661252,
+    "full_stage_images_per_second": 116.75213095103427,
+    "guard_residual_seconds": 51.731105356
+  },
+  "additional_bootstrap_boundary_reserve_seconds": 0.1,
+  "owner_policy_or_rates_changed": false,
+  "next_GPU_authorized_by_receipt": false
+}

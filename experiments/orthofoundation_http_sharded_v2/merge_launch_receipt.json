@@ -1,0 +1,140 @@
+{
+  "schema": "actual_http_v2_merge_training_launch",
+  "accepted_at_utc": "2026-10-07T18:56:55+00:00",
+  "kernel": "alanchoo/rsna-knee-ortho-http-merge-heads-v2",
+  "kernel_id": 137526746,
+  "version_number": 1,
+  "url": "https://www.kaggle.com/code/alanchoo/rsna-knee-ortho-http-merge-heads-v2",
+  "prepared_notebook_sha256": "dd812f249a74163f78d3f84058f708ed1836a8218fb6754d96e5adf2164115cc",
+  "prepared_metadata_sha256": "7e1404f8e6e133457bc14a38b7a5b0ecceb0a3c549b9d3fecb65692517fa281b",
+  "actual_SaveKernel_request_checked": true,
+  "actual_wire_timeout_seconds": 1530,
+  "owned_Python_timeout_seconds": 1500,
+  "core_head_fit_budget_seconds": 1200,
+  "machine_shape": "NvidiaTeslaT4",
+  "private": true,
+  "internet": false,
+  "pinned_Docker_image": "gcr.io/kaggle-private-byod/python@sha256:37c64f7dd9c54116ecd1bcc88817c5469b88387388fade02bfa8bf3fc647d461",
+  "source8_config_transport_exact_to_reviewed_V2": true,
+  "input_versions": {
+    "global_metadata": 1,
+    "compact_partial_kernels": [
+      {
+        "shard": 0,
+        "kernel_id": 137510617,
+        "version": 1
+      },
+      {
+        "shard": 1,
+        "kernel_id": 137512753,
+        "version": 1
+      },
+      {
+        "shard": 2,
+        "kernel_id": 137514112,
+        "version": 1
+      },
+      {
+        "shard": 3,
+        "kernel_id": 137515960,
+        "version": 1
+      },
+      {
+        "shard": 4,
+        "kernel_id": 137521166,
+        "version": 1
+      },
+      {
+        "shard": 5,
+        "kernel_id": 137523281,
+        "version": 1
+      },
+      {
+        "shard": 6,
+        "kernel_id": 137525106,
+        "version": 1
+      }
+    ]
+  },
+  "all7_actual_ROOT_and_independent_partial_PASS_before_launch": true,
+  "sealed_actual_partial_receipts": [
+    {
+      "shard": 0,
+      "version": 1,
+      "kernel_id": 137510617,
+      "watcher_receipt_sha256": "c7284c719ece03ca2bf28b93fe9b2ee88d2b1e2d45e21ee71b500cd082d0cc60",
+      "ROOT_receipt_sha256": "7fc6ae5c791cb9ebda5af3d34def5c6f7e1f1ad74f94c0be3d5a7e0fee5a3bee",
+      "independent_receipt_sha256": "a86de58d01486d0a2bdb21f22d66c502b1c3f07020865f7f0472a6330ba1dfb7",
+      "partial_manifest_sha256": "950567a0e19a87737104f79f31af3ccd330d6c69333fe16cef84154becdff31a"
+    },
+    {
+      "shard": 1,
+      "version": 1,
+      "kernel_id": 137512753,
+      "watcher_receipt_sha256": "6994d5e4e47fa19ff390072678183f2edce9d4e4ce9a53e43ece8301fa6f724b",
+      "ROOT_receipt_sha256": "0767a75bbf7a422188cfc247d42d8b08d919bd33818ecf18d32219706618fdb5",
+      "independent_receipt_sha256": "d1f37549ad0c4b5bed95b727b1556e1b6cd0fd953466d92dff535553a1edf756",
+      "partial_manifest_sha256": "99daab1a933359c2cb26cc6150884b09a266018a86da10dae53a16bd40bb52c7"
+    },
+    {
+      "shard": 2,
+      "version": 1,
+      "kernel_id": 137514112,
+      "watcher_receipt_sha256": "be91ecd929974ef711bb89fe4e60287f5aeb88896e4a7d11816073449be8cf96",
+      "ROOT_receipt_sha256": "8ddf87cc9c12c9b58434879e114d781e8770fc6930e8bb18e41c52beca42ba4f",
+      "independent_receipt_sha256": "4fed14b708e9f6d6cbb333649704edf12fefdb642bc886101e71db13e14e2b5d",
+      "partial_manifest_sha256": "4054aa52087aea8a84c7e941f6215fff64677993acc335ceffd7ab5e8734bb05"
+    },
+    {
+      "shard": 3,
+      "version": 1,
+      "kernel_id": 137515960,
+      "watcher_receipt_sha256": "3c02266f339f009cdb3960528bed2fb32e2604cb322ed79868cf13095f3e3f61",
+      "ROOT_receipt_sha256": "e86b15ccb86bd5255e16bf2f729577d691d898af15f5da9ddf6e27c9f5e486cf",
+      "independent_receipt_sha256": "e6631ea013a07832b2390bab2a9406fed83e58eff0eae3a5eb50385a494bdc04",
+      "partial_manifest_sha256": "8ecfbd50c638b7a73bacd2c1bbd8e0276a2edf3913276694c783b973a832f474"
+    },
+    {
+      "shard": 4,
+      "version": 1,
+      "kernel_id": 137521166,
+      "watcher_receipt_sha256": "3368379002908b690634955c73ba859c7323bb526eb24c0ae83f1d004e14b50e",
+      "ROOT_receipt_sha256": "233c5675cc985f435c296200566128c3f0e568095a2ef381cfaf6390fbad1ad5",
+      "independent_receipt_sha256": "474e7d42d4140865bc6f904a8fa1f4b98509d18a92d70c11465559634d856a16",
+      "partial_manifest_sha256": "4b7428a0ba07b17b4b8a074209d4ae25aab5c24fd17b8e9124cc7fdc85092bab"
+    },
+    {
+      "shard": 5,
+      "version": 1,
+      "kernel_id": 137523281,
+      "watcher_receipt_sha256": "d3f820488df2bb332d1d4dd7bfb91c956899e0d0fc604f038524e3d92d44f7b7",
+      "ROOT_receipt_sha256": "1edb88008694ad1c5f1eb4f35a21c77174d3828335064ca77e77998d8a1cc8fc",
+      "independent_receipt_sha256": "4dec2c3dcc4ce99295db692c6354fc1ad51c2af054e9c7e5fc7a68c4acc4c6bf",
+      "partial_manifest_sha256": "9ed1e8dc0a654b5036122c732ecf1e06bb9a8b02445a5b03d8d5e30ac6b0b3f3"
+    },
+    {
+      "shard": 6,
+      "version": 1,
+      "kernel_id": 137525106,
+      "watcher_receipt_sha256": "49f60f6170435a87d526cf022cff6d218af5dea4c513e1e6a25cd185bca4da93",
+      "ROOT_receipt_sha256": "30bc5e52f5a4efd96ff296c916e39d6162ec119116803c6aeeead1d12a3c7237",
+      "independent_receipt_sha256": "6931388627576c729a28c1d69d11ea18931600a2018fe07e001d86a2e4591bd6",
+      "partial_manifest_sha256": "3ed48187a79ab2af7380e2069a7b422816bbb7f600273e7789ed79d22568c1a8"
+    }
+  ],
+  "ROOT_gate_sha256": "bac44fb391fd2158d78e87ba6c7d5616d17a87a1f87c9dcf8a1cd0142fa9887c",
+  "live_quota_before_launch_seconds": 14082.5,
+  "quota_reserved_before_launch_seconds": 0,
+  "all_previous_our_jobs_terminal": true,
+  "every_accepted_server_cell_source_exact": true,
+  "Python_bootstrap_observed_at_receipt": true,
+  "actual_Python_bootstrap_run_seconds": 10.547885148,
+  "actual_owned_parent_launch_run_seconds": 10.611916801,
+  "production_gradient_start_observed_at_receipt": false,
+  "training_state_at_receipt": "Python bootstrap observed; gradient updates and full merge not yet observed",
+  "head_training_complete_observed_at_receipt": false,
+  "merged4407_feature_bank_verified_at_receipt": false,
+  "new_submission_sent": false,
+  "access_URLs_account_token_and_medical_rows_published": false,
+  "fresh_launch_gate_utc": "2026-10-07T18:56:55.202558+00:00"
+}

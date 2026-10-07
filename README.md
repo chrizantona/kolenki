@@ -9,7 +9,7 @@
 | GoodPJ, авторский baseline V2 | 0.944 | Исторический результат автора; не наш запуск |
 | Наше воспроизведение baseline | 0.943 | Завершённое Kaggle scoring |
 | Наш ансамбль с дообученным ConvNeXt | **0.944** | Submission `56891310`, статус `COMPLETE` |
-| OrthoFoundation | — | **MRI pilot PASS:** 16 studies / 308 images, конечные признаки и реальное обновление головы. 72.6 images/s, 1.33 GB. **6/7 extraction завершены и проверены:** 3 853 study partials / 74 540 images. Production training и AUC впереди. [Статус и ссылки](experiments/orthofoundation_sharded/STATUS.md) |
+| OrthoFoundation | — | **MRI pilot PASS:** 16 studies / 308 images, конечные признаки и реальное обновление головы. 72.6 images/s, 1.33 GB. **7/7 extraction завершены и проверены:** 4 413 study partials / 85 336 images. Сборка и обучение attention запущены на Kaggle; AUC ещё не измерен. [Статус и ссылки](experiments/orthofoundation_sharded/STATUS.md) |
 
 Результаты выше проверены **7 октября 2026**. Разница между двумя сабмитами — один отображаемый шаг leaderboard; это ещё не доказательство устойчивого улучшения на независимой выборке.
 
@@ -27,3 +27,8 @@
 Наши Kaggle notebooks и подготовленные caches сейчас приватные: наличие ссылки не даёт другому аккаунту доступ к inputs. Здесь публикуются описание и код; большие MRI, caches, checkpoints, токены и тексты медицинских отчётов в Git не хранятся.
 
 [Что именно обучаем в новой OrthoFoundation-ветке](docs/ORTHO_CURRENT.md): данные → замороженный MRI encoder → attention или mean/max голова.
+
+[Отдельная Ortho inference-ветка](experiments/orthofoundation_inference/STATUS.md) подготовлена и
+[прошла независимое ревью](experiments/orthofoundation_inference/independent_inference_preparation_review.json):
+80 CPU-тестов проходят. Она требует проверенных production-весов и ROOT seal;
+реальные test-прогнозы этой веткой ещё не получены.

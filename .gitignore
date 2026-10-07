@@ -38,3 +38,7 @@ transfer_job.json
 **/cache_read_job.json
 **/http_launch_approval.json
 **/fixture_tmp/
+
+# Private independent Ortho inference predictions
+**/_ortho.csv
+**/_ortho.csv.tmp

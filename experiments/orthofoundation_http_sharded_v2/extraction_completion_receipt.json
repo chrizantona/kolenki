@@ -1,0 +1,16 @@
+{
+  "schema": "ROOT_actual_all7_partial_extraction_complete_v1",
+  "all7_ROOT_and_independent_complete": true,
+  "unique_studies_represented_in_partials": 4407,
+  "partial_study_files": 4413,
+  "selected_slot_series": 21334,
+  "images_k4": 85336,
+  "sum_partial_parent_seconds_excluding_pilot_and_prePython_mount": 3307.1028236350003,
+  "all7_original_hard_caps_preserved": true,
+  "all7_owned_tmp_removed": true,
+  "external_ROOT_partials_map_sha256": "837077d2ea8562b3776b20a1cfbb46cebdfb810dff5ce09f0d95962f5dd4c21d",
+  "complete_merged_bank_claimed": false,
+  "production_head_training_complete": false,
+  "AUC_measured": false,
+  "new_submission": false
+}

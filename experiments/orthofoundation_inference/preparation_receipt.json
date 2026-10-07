@@ -1,0 +1,95 @@
+{
+  "schema": "Ortho_isolated_inference_preparation_v1",
+  "prepared_only": true,
+  "independent_review": "pending",
+  "source_files": {
+    "src/orthofoundation_inference/__init__.py": {
+      "bytes": 78,
+      "sha256": "84f8abba16eac96de85a56c91639f05a87e13db18e8049b15a47de28a351f582"
+    },
+    "src/orthofoundation_inference/contracts.py": {
+      "bytes": 8295,
+      "sha256": "712d3ce2b9a32d74501afe5bc4c5dbc3724a8e6f9f5a1577248bdca6f56113c2"
+    },
+    "src/orthofoundation_inference/pipeline.py": {
+      "bytes": 16445,
+      "sha256": "e2b2ffc5f3654cf27e38ae156da2257d95966a215ce69e0e9bc08adb162567e1"
+    },
+    "scripts/run_orthofoundation_inference.py": {
+      "bytes": 2592,
+      "sha256": "1293ba5c71f8f09e3e53117cb702a10656c2f4a075af0636f09c87c9c706d84e"
+    },
+    "tests/test_ortho_inference.py": {
+      "bytes": 19568,
+      "sha256": "009c49c5985b1ce6bf728bde6b417b56a75823257c4f7bee060c77c9b9786605"
+    },
+    "experiments/orthofoundation_inference/STATUS.md": {
+      "bytes": 4125,
+      "sha256": "b3d93f6ff5b6e8564f6e7f14bb59d7732120a0291fc7cb6e7cb66108fac2b5f2"
+    }
+  },
+  "frozen_training_source8_and_canonical_preprocess_sha256": {
+    "orthofoundation/__init__.py": "f3df43207f5d18497b4f698aa91c746bf81dcd4edb74b81784136acd8aa52cf1",
+    "orthofoundation/cache.py": "700767576eb7b6d9dfa22f77bdf2088411ba4bdf6036c80db58bf608c96f7485",
+    "orthofoundation/data.py": "f3b63ab922f0452c065126dc2ef1c87442a0b988dff29d25c201666a8a5310aa",
+    "orthofoundation/encoder.py": "86defa5f943bfc161603c7b377bbf08a9d5c2a270d01b1df5c039ab59cff7ecb",
+    "orthofoundation/heads.py": "c814b1bcbf1ac1322b717c1f1e6ba7b9173357e956e9104b2c77d0351a833f1f",
+    "orthofoundation/run.py": "740c2e2599516b1876e7d7226bb0f11c51205cbdaec0b6eebf44dc740c659e10",
+    "orthofoundation/train.py": "928121a030aabf4fc58594da967ad98ff43a7ce915474d69a909ab09652a7dc1",
+    "sharded_frozen_extract.py": "86265241778c40a3822c2a8d11f4f3f746a48b47101def338120dd86937ee4f2",
+    "convnext_reader/preprocess.py": "68601ad84ec3a0f030b5c2d37cc0d657cd3e12b17f7130e7385fba9648d324b6"
+  },
+  "frozen_training_config_yaml_sha256": "f3c4334f97df527d22dd2b0da3b6220ec466c1333efe7e99a471b955a74ba919",
+  "parent_training_feature_identity": "7f0e16dc1c34e8c0920f567db2ebb68f55c470c09ce77dd7c0aa238cd5ec6c77",
+  "required_external_production_checkpoint_sha256": null,
+  "required_external_ROOT_full_merge_seal_sha256": null,
+  "required_reviewed_ROOT_seal_helper_sha256": "dcb6e90aa90c14e22f901d0aedc05b592ae4d9198014a12d450b2ee7e3675ef4",
+  "placeholder_refuses_before_checkpoint_or_DICOM_reads": true,
+  "verification": {
+    "focused_fixture_command": "python -m unittest discover -s tests -p test_ortho_inference.py -v",
+    "focused_fixtures": 17,
+    "focused_seconds": 0.533,
+    "full_command": "python -m unittest discover -s tests",
+    "full_fixtures": 80,
+    "full_seconds": 9.927,
+    "all_PASS": true
+  },
+  "private_canonical_decode_parity_aggregate": {
+    "schema": "Ortho_inference_private_canonical_decode_parity_v1",
+    "prepared_only": true,
+    "canonical_preprocess_sha256": "68601ad84ec3a0f030b5c2d37cc0d657cd3e12b17f7130e7385fba9648d324b6",
+    "actual_private_series_checked": 1,
+    "existing_cache_copies_checked": 4,
+    "exact_uint8_cache_matches": 4,
+    "all_capped_depths_at_most64": true,
+    "geometry_dtype": "uint8[n,384,384]",
+    "decoded_slice_count_total": 27,
+    "maximum_absolute_uint8_difference": 0,
+    "aggregate_only_no_identifiers": true,
+    "encoder_forward_performed": false,
+    "production_head_loaded": false,
+    "inference_or_submission_performed": false,
+    "limits": "One existing private DICOM series, checked against four local copies of its canonical cache; not four independent series, all-test parity, or a model replay."
+  },
+  "private_decode_parity_receipt_sha256": "6be07d7ef2f443ec079746a78d0aa8bf8f00debd5681c355afd6a09932e914d6",
+  "no_actual_encoder_forward_or_production_head_replay": true,
+  "no_test_predictions_blend_or_submission": true,
+  "no_frozen_training_baseline_or_notebook_changes": true,
+  "limits": "Prepared source and CPU contracts only. Future actual complete production head, externally pinned ROOT seal, owned-process hard timeout and CUDA model replay are still required.",
+  "deadline_export_repair": {
+    "reviewer_repro": "monotonic0\u21922 during DataFrame.to_csv while max_seconds=1 previously returned inference_complete",
+    "owned_staged_CSV_and_receipt": true,
+    "exclusive_publication_never_overwrites_existing_outputs": true,
+    "same_deadline_checks_after_CSV_export_hash_receipt_write_each_publication_and_stage_cleanup": true,
+    "rollback_only_owned_published_inodes_on_any_caught_failure": true,
+    "regressions": [
+      "CSV_export_overrun",
+      "CSV_hash_overrun",
+      "receipt_write_overrun",
+      "publication_overrun",
+      "second_publication_failure",
+      "within_budget_pair_and_existing_own_preservation"
+    ],
+    "forced_process_kill_requires_future_parent_receipt_and_cannot_run_Python_cleanup": true
+  }
+}
