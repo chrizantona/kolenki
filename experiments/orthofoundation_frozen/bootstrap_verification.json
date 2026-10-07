@@ -1,0 +1,15 @@
+{
+  "checked_utc": "2026-10-07T12:47:02.066275+00:00",
+  "tests_passed": 20,
+  "tests_failed": 0,
+  "independent_review": "Approved; no Critical or Important findings. Original launcher AST unchanged after removing diagnostic checkpoints.",
+  "core7_and_experiment_settings_unchanged": true,
+  "published_notebook_sha256": {
+    "pilot": "fde64a7603416793b478ee8e4f2bf7fdc82fe2f0eb054709645fa6671c0f4036",
+    "full": "15071a03b2ed9e418c3685f33a79617ec49352cd2335f0b43b2766737d949e63"
+  },
+  "earliest_startup_cell": true,
+  "phase_failure_saved_and_reraised": true,
+  "gpu_launch_for_this_payload": false,
+  "limitation": "Diagnostic evidence cannot fix a failure before Python starts; mount probes still determine next launch."
+}

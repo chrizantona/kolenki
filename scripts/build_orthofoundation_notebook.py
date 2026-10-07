@@ -11,12 +11,54 @@ import base64
 import hashlib
 import json
 from pathlib import Path
+import textwrap
 import zlib
 
 import nbformat
 import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def bootstrap_start_code():
+    """Stdlib-only first cell: prove Python started before ML/input dependencies."""
+    return r'''print('{"event":"bootstrap_start","diagnostic_schema":1}',flush=True)
+import json,os,time,traceback
+BOOTSTRAP_DIR='/kaggle/working'
+BOOTSTRAP_STAGE='notebook_start'
+os.makedirs(BOOTSTRAP_DIR,exist_ok=True)
+def bootstrap_checkpoint(stage):
+    global BOOTSTRAP_STAGE
+    BOOTSTRAP_STAGE=stage
+    event={'diagnostic_schema':1,'event':'bootstrap_checkpoint','stage':stage,'unix_seconds':time.time()}
+    with open(os.path.join(BOOTSTRAP_DIR,'bootstrap_progress.json'),'w') as stream:
+        json.dump(event,stream,indent=2)
+    with open(os.path.join(BOOTSTRAP_DIR,'bootstrap_events.jsonl'),'a') as stream:
+        stream.write(json.dumps(event)+'\n')
+    print(json.dumps(event),flush=True)
+def bootstrap_save_failure(error):
+    event={'diagnostic_schema':1,'event':'bootstrap_failure','stage':BOOTSTRAP_STAGE,
+           'error_type':type(error).__name__,'error':str(error),'traceback':traceback.format_exc(),
+           'unix_seconds':time.time()}
+    try:
+        with open(os.path.join(BOOTSTRAP_DIR,'bootstrap_failure.json'),'w') as stream:
+            json.dump(event,stream,indent=2)
+    except BaseException as save_error:
+        print(json.dumps({'event':'bootstrap_failure_save_error','error_type':type(save_error).__name__}),flush=True)
+    print(json.dumps(event),flush=True)
+bootstrap_checkpoint('notebook_start')
+with open(os.path.join(BOOTSTRAP_DIR,'bootstrap_start.json'),'w') as stream:
+    json.dump({'diagnostic_schema':1,'event':'bootstrap_start','unix_seconds':time.time()},stream,indent=2)
+'''
+
+
+def instrument_bootstrap(body, compressed, settings):
+    """Keep payload/settings as top-level literals; preserve failures and reraises."""
+    code = "COMPRESSED_PAYLOAD=" + repr(compressed) + "\nSETTINGS=" + repr(settings) + "\n"
+    code += "try:\n" + textwrap.indent(body, "    ")
+    code += "except BaseException as bootstrap_error:\n    bootstrap_save_failure(bootstrap_error)\n    raise\n"
+    ast.parse(code)
+    return code
 
 
 def main():
@@ -48,14 +90,17 @@ def main():
     settings = {"stage": args.stage, "config": config, "source_sha256": hashes, "cache_kernel_ids": cache_ids,
                 "assets_dataset": args.assets_dataset, "training_inputs_dataset": args.training_inputs_dataset or args.assets_dataset,
                 "preprocess_sha256": args.preprocess_sha256, "resume_kernel": args.resume_kernel}
-    code = r'''from pathlib import Path
+    code = r'''bootstrap_checkpoint('imports')
+from pathlib import Path
 import base64,hashlib,json,os,subprocess,sys,tarfile,zlib
+bootstrap_checkpoint('vendoring')
 CODE=Path('/kaggle/working/source'); CODE.mkdir(exist_ok=True)
 for name,encoded in json.loads(zlib.decompress(base64.b64decode(COMPRESSED_PAYLOAD))).items():
     target=CODE/name; target.parent.mkdir(exist_ok=True); target.write_bytes(base64.b64decode(encoded))
     if hashlib.sha256(target.read_bytes()).hexdigest()!=SETTINGS['source_sha256'][name]:
         raise RuntimeError('Vendored source SHA mismatch: '+name)
 (CODE/'config.json').write_text(json.dumps(SETTINGS['config'],indent=2))
+bootstrap_checkpoint('input_resolution')
 INPUT=Path('/kaggle/input')
 def find_named_input(identifier,marker,kind='datasets'):
     owner,slug=identifier.split('/')
@@ -76,6 +121,7 @@ manifest=json.loads((assets/'asset_manifest.json').read_text())
 expected=SETTINGS['config']
 if manifest['checkpoint']['sha256']!=expected['checkpoint_sha256'] or manifest['checkpoint']['bytes']!=expected['checkpoint_bytes']:
     raise RuntimeError('Asset manifest checkpoint differs from frozen experiment')
+bootstrap_checkpoint('vendor_unpack')
 archive=assets/manifest['dinov3_source']['filename']
 if hashlib.sha256(archive.read_bytes()).hexdigest()!=manifest['dinov3_source']['sha256']:
     raise RuntimeError('DINOv3 source archive SHA mismatch')
@@ -86,7 +132,9 @@ with tarfile.open(archive,'r:gz') as tar:
         if member.issym() or member.islnk() or Path(member.name).is_absolute() or '..' in parts:
             raise RuntimeError('Unsafe DINOv3 source archive member')
     tar.extractall(CODE,filter='data')
+bootstrap_checkpoint('cache_resolution')
 roots=[find_named_input(identifier,'cache_summary.json','notebooks') for identifier in SETTINGS['cache_kernel_ids']]
+bootstrap_checkpoint('gpu_selection')
 env=dict(os.environ); env['PYTHONPATH']=str(CODE)+os.pathsep+env.get('PYTHONPATH','')
 env['OMP_NUM_THREADS']='1'; env['OPENBLAS_NUM_THREADS']='1'
 import torch
@@ -103,14 +151,16 @@ if SETTINGS['resume_kernel']:
     previous=find_named_input(SETTINGS['resume_kernel'],'run/provenance.json','notebooks')
     cmd+=['--resume-features',str(previous/'run/features')]
 print(json.dumps({'launch':cmd,'gpu_free_gb':[value/1e9 for value in free]}),flush=True)
+bootstrap_checkpoint('launch')
 subprocess.run(cmd,env=env,check=True)
+bootstrap_checkpoint('report')
 report_file=Path('/kaggle/working/run')/('pilot_report.json' if SETTINGS['stage']=='pilot' else 'training_report.json')
 report=json.loads(report_file.read_text())
 if SETTINGS['stage']=='full' and not report['training_complete']:raise RuntimeError('Full training did not finish')
 print(json.dumps(report,indent=2),flush=True)
+bootstrap_checkpoint('complete')
 '''
-    code = "COMPRESSED_PAYLOAD=" + repr(compressed) + "\nSETTINGS=" + repr(settings) + "\n" + code
-    ast.parse(code)
+    code = instrument_bootstrap(code, compressed, settings)
     notebook = nbformat.v4.new_notebook(cells=[nbformat.v4.new_markdown_cell(
         "# RSNA Knee OrthoFoundation " + args.stage + "\n\n"
         "New frozen DINOv3-L knee encoder, normalized CLS per MRI slice, freshly initialized 12-target study head. "
@@ -118,6 +168,7 @@ print(json.dumps(report,indent=2),flush=True)
         "The pilot verifies strict weights, finite features, one finite head update, throughput and memory. "
         "Full mode stops if measured extraction exceeds its budget. Gold studies are excluded from gradients; "
         "fixed final epochs are used without Gold checkpoint selection. No leaderboard gain is assumed."),
+        nbformat.v4.new_code_cell(bootstrap_start_code()),
         nbformat.v4.new_code_cell(code)], metadata={"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"},
                                                    "language_info": {"name": "python", "version": "3.12.13"}})
     nbformat.validate(notebook)

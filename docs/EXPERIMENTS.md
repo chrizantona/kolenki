@@ -53,6 +53,7 @@
 - [ ] Прочитать [DSMIL](https://github.com/binli123/dsmil-wsi) и проверить адаптацию к локальным MRI-находкам.
 - [ ] Сопоставить определения внешних labels с 12 RSNA-целями; отсутствующие цели маскировать, не заменять нулями.
 - [ ] Обновить snapshot discussions перед следующими дорогими экспериментами.
-- [ ] До final submit проверить offline inputs, лимит исполнения, отсутствие скрытых приватных dependencies и фактический hidden scoring.
+- [ ] До final submit проверить offline inputs, время на полном hidden scale, native dtype GPU и число fallback-прогнозов. В [discussion 744230](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/discussion/744230) участник связывает сильное замедление с BF16 на T4; это его наблюдение, не измеренный эффект для нашего ансамбля. Новый OrthoFoundation extraction использует FP16.
+- [ ] Проверить отсутствие скрытых приватных dependencies и фактический hidden scoring.
 
 Дедлайн entry/team merge — **15 октября 23:59 UTC**, final submissions — **22 октября 23:59 UTC**; в Москве это 16 и 23 октября в 02:59 соответственно. План ориентирован на доступные Kaggle GPU: pilot с оценкой стоимости обязателен перед большим extraction/training. Актуальную quota проверяем перед запуском, статическую оценку часов не считаем гарантией. [Официальный overview](https://www.kaggle.com/competitions/rsna-knee-abnormality-detection/overview).
