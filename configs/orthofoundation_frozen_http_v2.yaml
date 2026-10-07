@@ -1,0 +1,23 @@
+# EXP-OF-001. Settings are frozen before checking Gold diagnostics.
+experiment: orthofoundation_frozen_attention_http_v2
+encoder: dinov3_vitl16
+extraction_variant: author_no_rope
+feature_dim: 1024
+checkpoint_sha256: 385a775822107b68eaa486336feb982e1ce7bd6d4e8c03ceb482a0bf546f2ff9
+checkpoint_bytes: 1213056638
+resolution: 224
+slices_per_slot: 4
+fov: 0.92
+image_batch_size: 16
+workers: 2
+pilot_studies: 16
+max_extract_seconds: 9300
+head_kind: attention
+head_dim: 256
+head_dropout: 0.2
+head_epochs: 12
+head_batch_size: 64
+head_lr: 0.001
+head_weight_decay: 0.01
+weak_holdout_fold: 0
+seed: 42

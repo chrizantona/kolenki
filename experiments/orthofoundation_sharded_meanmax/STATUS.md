@@ -1,5 +1,7 @@
 # EXP-OF-002: attention против mean+max на sharded features
 
+**Этот проверенный adapter предназначен для V1 runner/config9000. Новый HTTP V2 использует другой orchestrator SHA и config9300; перед сравнением его банка нужна отдельная V2 адаптация и review. Текущий notebook её не поддерживает.**
+
 **Подготовлено и проверено; не запускалось. Полного feature bank и измеренных AUC ещё нет.** [Notebook](../../notebooks/orthofoundation/sharded_meanmax) намеренно отказывает до разрешения inputs, пока не передан настоящий SHA завершённого attention-bank.
 
 После EXP-OF-001 root отдельно фиксирует SHA полного банка из завершённого неизменяемого attention output, включая все 4407 studies. Builder получает этот pin явно; он не рассчитывает ожидаемый SHA из данных самого сравнения. Проверяются все семь cache pins, выбранные series, K4 positions, полный mask, finite values и исходные checkpoints/splits. Затем оба attention-head воспроизводят исходные weak-holdout/Gold probabilities с объявленным FP32 допуском. Это связывает сохранённые baseline metrics с теми же features. Исходный run экспортирует probabilities, не raw logits; replay logits проверяются отдельно.

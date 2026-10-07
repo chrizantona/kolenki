@@ -1,0 +1,19 @@
+{
+  "V1_identity_verified": "83d0eff1e0af84b242a06d1923e1e3408d27259289faa2543f2b96465359ac89",
+  "V2_feature_identity": "7f0e16dc1c34e8c0920f567db2ebb68f55c470c09ce77dd7c0aa238cd5ec6c77",
+  "global_counts": {
+    "studies": 4407,
+    "weak": 4349,
+    "gold": 58,
+    "series": 24371,
+    "selected_series": 21334,
+    "images": 85336
+  },
+  "changed_provenance_keys": [
+    "orchestrator_sha256",
+    "feature_identity"
+  ],
+  "core7_equal": true,
+  "MRI_processed": false,
+  "model_loaded": false
+}
