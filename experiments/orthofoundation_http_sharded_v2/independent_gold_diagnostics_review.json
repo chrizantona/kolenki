@@ -1,0 +1,66 @@
+{
+  "schema": "independent_gold_diagnostics_source_review_v1",
+  "verdict": "PASS_REPAIRED_SOURCE_AND_SYNTHETIC_FIXTURES",
+  "critical_findings": [],
+  "important_findings": [],
+  "source_sha256": "7726698ef614d5efc7ffae0275408d9fafe27717bfae874f6cbb86322be34ac4",
+  "tests_sha256": "a6d36686c336e6a28ed3035e19d1a1c237381ee7a838942929d145b58ecf2d98",
+  "focused_validation": {
+    "command": "python -m unittest discover -s tests -p test_gold_diagnostics.py -v",
+    "passed": 10,
+    "seconds": 1.59
+  },
+  "full_validation": {
+    "command": "PYTHONPATH=src python -m unittest discover -s tests -q",
+    "passed": 63,
+    "seconds": 13.219
+  },
+  "resolved_issue": {
+    "previous": "CSV replacement between separate hashing and parsing could mismatch metrics and receipt",
+    "repair": "Each baseline, candidate and official-label CSV is read once into immutable bytes; SHA, optional external-pin validation and BytesIO parsing use that same snapshot",
+    "all_three_replacement_regressions_passed": true
+  },
+  "reviewed_controls": {
+    "exact_unique_Gold58_ID_set_and_label_order": true,
+    "official_binary_labels_partial_NaNs_refused": true,
+    "nonfinite_logits_probabilities_refused": true,
+    "candidate_probability_range_checked": true,
+    "baseline_raw_logits_for_AUC_and_ranks": true,
+    "baseline_sigmoid_once_for_probability_operations": true,
+    "paired_study_bootstrap_same_draws_across_models_labels": true,
+    "tie_aware_bootstrap_matches_sklearn": true,
+    "undefined_resamples_disclosed": true,
+    "macro_requires_all_twelve_labels_defined": true,
+    "optional_single_fixed_50_50_blend_no_search_or_fit": true,
+    "aggregate_only_JSON_PNG_no_ID_prediction_CSV_export": true
+  },
+  "independent_synthetic_bootstrap_checks": 3597,
+  "synthetic_visual_QA": {
+    "synthetic_only": true,
+    "not_actual_model_results": true,
+    "outside_repository": true,
+    "filename": "SYNTHETIC_ONLY_Gold_AUC_diagnostics.png",
+    "sha256": "5aa021779ee5aa3976e75b3a0c411416d1a0ef12e20d2301d2621d78db4fa20c",
+    "visually_inspected": true,
+    "readable_labels_axes_legend_and_explicit_synthetic_title": true
+  },
+  "actual_Ortho_Gold_diagnostic_executed": false,
+  "complete_actual_feature_bank_or_production_head_claim": false,
+  "launch_authorized_by_reviewer": false,
+  "external_ROOT_conditions": [
+    "Independently verify completed Ortho source bank, production checkpoint, training and Gold exclusion receipts before using actual probability CSVs.",
+    "Supply separately verified candidate CSV SHA pins for the actual comparison.",
+    "Any optional blend source/50:50 recipe must be declared before viewing Gold comparison results; the script cannot authenticate declaration chronology.",
+    "Collect output artifacts only after a successful diagnostic process; seal actual output bytes and source SHA."
+  ],
+  "declined_to_judge": [
+    "Future actual Ortho head quality, checkpoint/source-bank authenticity and runtime because completed inputs do not yet exist.",
+    "Clean OOF/generalization or leaderboard gain; Gold58 is diagnostic and the reference is one ConvNeXt reader, not the full .944 ensemble."
+  ],
+  "validation_activity": {
+    "local_CPU_synthetic_fixtures": true,
+    "actual_MRI_or_prediction_rows_used": false,
+    "GPU_API_Git_UI_activity": false,
+    "scientific_source_mutations": false
+  }
+}

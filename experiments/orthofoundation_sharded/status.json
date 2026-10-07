@@ -1,6 +1,6 @@
 {
-  "updated_utc": "2026-10-07T16:53:44.059936+00:00",
-  "stage": "HTTP_V2_2_SHARDS_COMPLETE_SHARD2_ACCEPTED",
+  "updated_utc": "2026-10-07T17:19:34.141516+00:00",
+  "stage": "HTTP_V2_3_SHARDS_COMPLETE_SHARD3_ACCEPTED",
   "training_started": false,
   "public_score": null,
   "pilot_kernel": "alanchoo/rsna-knee-ortho-sharded-pilot",
@@ -21,7 +21,7 @@
   "private_metadata_manifest_sha256": "b2a87794d768ca3f6ee3968345f840f1028cff004708a2b3e0cfdfcfb2c15e60",
   "private_metadata_archive_sha256": "d039882cb40ca35f7dc1f14f73032420e2390c6950bf06f162f8523f5c192315",
   "competition_cpu_probe_passed": true,
-  "note": "Actualshards0-1COMPLETE:1280study partials/24768images ROOT+independentPASS. Shard2accepted exactV1/T4/wire1266. Fullbank and production training/AUC not complete; no new submission.",
+  "note": "Actual shards0\u20132 COMPLETE: 1933 study partials / 37348 images ROOT + independent PASS. Shard3 accepted exact V1/T4/wire1243. Conservative owner forecast uses measured minimum GPU rate58.7047. Full bank and production training/AUC incomplete; no new submission.",
   "pilot_kernel_id": 137491819,
   "pilot_version": 1,
   "quota_available_seconds_after_bulk_cancel": 18400.639,
@@ -76,7 +76,7 @@
   "http_v2_encoder_images_per_second": 72.6021165186807,
   "http_v2_peak_gpu_allocated_gb": 1.328124416,
   "full_production_training_started": false,
-  "conservative_full_frozen_forecast_seconds": 6736.867162468794,
+  "conservative_full_frozen_forecast_seconds": 7015.121867209428,
   "full7_code_review_passed": true,
   "v2_meanmax_comparison_training_started": false,
   "full_extraction_first_shard_kernel": "alanchoo/rsna-knee-ortho-http-shard-0-v2",
@@ -84,12 +84,13 @@
   "full_extraction_first_shard_accepted": true,
   "complete_extraction_shards": [
     0,
-    1
+    1,
+    2
   ],
-  "actual_feature_partial_studies": 1280,
-  "actual_selected_images": 24768,
+  "actual_feature_partial_studies": 1933,
+  "actual_selected_images": 37348,
   "full_extraction_bank_complete": false,
   "quality_AUC_measured": false,
-  "active_extraction_shard": 2,
-  "active_extraction_kernel_id": 137514112
+  "active_extraction_shard": 3,
+  "active_extraction_kernel_id": 137515960
 }

@@ -1,0 +1,92 @@
+{
+  "full_shard_verification_passed": true,
+  "official_status": "COMPLETE",
+  "kernel": "alanchoo/rsna-knee-ortho-http-shard-2-v2",
+  "kernel_id": 137514112,
+  "version_number": 1,
+  "shards": [
+    2
+  ],
+  "feature_identity": "7f0e16dc1c34e8c0920f567db2ebb68f55c470c09ce77dd7c0aa238cd5ec6c77",
+  "all8_scientific_sources_and_config_exact": true,
+  "all_partial_MRI_features_verified": true,
+  "partial_studies": 653,
+  "selected_slots": 3145,
+  "images_k4": 12580,
+  "feature_shape": [
+    6,
+    4,
+    1024
+  ],
+  "feature_dtype": "float16",
+  "exact_global_selection_slot_ownership_positions_masks": true,
+  "pilot_feature_files": 16,
+  "pilot_images": 296,
+  "new_feature_files_after_pilot": 637,
+  "new_images_after_pilot": 12284,
+  "new_extraction_seconds": 119.59540841700004,
+  "new_images_per_second": 102.71297337075589,
+  "full_shard_extraction_complete": true,
+  "head_optimizer_updates": 1,
+  "head_gradient_studies": 16,
+  "Gold_gradient_studies": 0,
+  "head_loss": 0.6695994734764099,
+  "head_training_complete": false,
+  "checkpoint": {
+    "filename": "smoke_head.pt",
+    "bytes": 1486132,
+    "sha256": "553f1101edf980188ce4fb447111904eaacfd91ae0a7eff571f7d1c320bfad32"
+  },
+  "download_bytes": 10302281809,
+  "download_sha256": "c7703128578cb7eac8141e309f0ada35a3eb616ff2ec6d19a611160a7ef5cc38",
+  "download_origin": {
+    "kind": "kernel",
+    "identifier": "alanchoo/rsna-knee-cnxt-cache-2-zip",
+    "version_number": 1,
+    "filename": "cache384_train.zip"
+  },
+  "download_seconds": 214.951008155,
+  "download_retries": 0,
+  "parent_seconds": 433.112420539,
+  "orchestrator_seconds": 423.48454110700004,
+  "child_exit_code": 0,
+  "owned_tmp_removed": true,
+  "peak_gpu_allocated_gb": 1.339473408,
+  "budget_projection": {
+    "images_per_second": 58.704743606303595,
+    "startup_seconds": 291.40175645499994,
+    "planned_extraction_jobs": 7,
+    "projected_extraction_seconds_for_shards": 505.69449035000304,
+    "allocated_extraction_cap_seconds": 1236,
+    "fits_allocated_shard_budget": true,
+    "reserved_pilot_seconds": 900,
+    "projected_all_shards_frozen_seconds": 3493.4597307703716,
+    "projected_total_frozen_seconds": 4393.459730770372,
+    "projected_total_including_head_seconds": 5593.459730770372,
+    "projected_total_including_head_job_seconds": 5893.459730770372,
+    "head_fit_budget_seconds": 1200,
+    "head_job_reserve_seconds": 1500,
+    "total_frozen_budget_seconds": 9300,
+    "fits_total_frozen_budget": true,
+    "timer_boundary": "Python orchestrator_start through final stage export; pre-Python Kaggle input mounting excluded",
+    "gpu_quota_guaranteed": false
+  },
+  "full7_shard_bank_complete": false,
+  "no_new_submission": true,
+  "fresh_quota": {
+    "used_seconds": 5239.41,
+    "remaining_seconds": 16360.59,
+    "reserved_seconds": 0
+  },
+  "outputs_checked_no_account_token_or_actual_scoped_URL": true,
+  "proof_sha256": {
+    "http_parent_report.json": "bc56e752c81361ccfae8ab898d7d271d4124e024e2b1695bb8505bd6da3da272",
+    "http_cache_download.json": "1d409f6dc4f886c77ddf5148c947ab455eabd78888b9c05e0b78a92713915584",
+    "run/pilot_report.json": "ec5b6e8e47898ad204f992ea5f60f7ddeee9ffc2d49715a94a5edbf80b2e330f",
+    "run/provenance.json": "2f14f3b67cbed9a8c5a3e9130cccac7d1da1fe9dab82994867e8990a8ff48f42",
+    "run/config.json": "7d8788fe098898f0fd7eb828a4a033fcfb3ea4ffc8b98e8334c4eb31e75da0c1",
+    "run/partial_manifest.json": "4054aa52087aea8a84c7e941f6215fff64677993acc335ceffd7ab5e8734bb05",
+    "run/extraction_report.json": "de7f81d37cdab63cee11a783ee5ea435e82bcaa49c5ab5d3005ef2e514874319",
+    "run/smoke_head.pt": "553f1101edf980188ce4fb447111904eaacfd91ae0a7eff571f7d1c320bfad32"
+  }
+}

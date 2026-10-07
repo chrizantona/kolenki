@@ -1,6 +1,6 @@
 # Full HTTP OrthoFoundation V2
 
-**Actual extraction 2/7 verified: shards0–1 COMPLETE, 1,280 study partials / 24,768 images.
+**Actual extraction 3/7 verified: shards0–2 COMPLETE, 1,933 study partials / 37,348 images.
 Merge and production training have not run; AUC remains unmeasured.** [Preparation receipt](preparation_receipt.json) and
 [source-index pins](source_index.json) contain only aggregate counts, references,
 file sizes and hashes, without medical rows or scoped access URLs.
@@ -71,3 +71,20 @@ in105.28seconds. One finite smoke update/Gold0; production heads still untrained
 [independent validation](shard1_independent_partial_validation.json).
 ROOT authorized shard2 after actual shard1 checks; Kaggle accepted
 V1/kernel137514112 at16:54:31 UTC. [Actual launch receipt](shard2_launch_receipt.json).
+
+Actual shard2:653 independently verified feature files,3,145slots/12,580images;
+parent433.11seconds/cleanup, original ZIP10.302GB/fullSHA verified
+in214.95seconds. One finite smoke update/Gold0; production heads still untrained.
+[Execution receipt](shard2_execution_receipt.json),
+[ROOT validation](shard2_ROOT_partial_validation.json),
+[independent validation](shard2_independent_partial_validation.json).
+The [updated owner measurements](owner_measurements.json) use the minimum
+actual same-identity short-pilot GPU rate58.7047images/s. Faster steady-state
+102.7images/s is recorded separately. Conservative full-route forecast7015.12s
+still fits total9300 and every shard cap. ROOT authorized shard3 after both actual validations; Kaggle accepted
+V1/kernel137515960 at17:12:26 UTC. [Actual launch receipt](shard3_launch_receipt.json).
+
+The fixed-model [inference plan](INFERENCE_PLAN.md) describes the separate Ortho
+branch and preprocessing parity checks. Aggregate Gold58 comparison code and its
+[independent review](independent_gold_diagnostics_review.json) are ready; actual
+Ortho probability CSVs and training receipts do not exist yet.
